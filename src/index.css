@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark-bg text-gray-200 antialiased;
+}
+
+/* Keyframe for the background emojis */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* NEW: Keyframe for staggered card animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes to apply the animations */
+.float-anim {
+  @apply absolute block pointer-events-none;
+  animation: float linear infinite;
+}
+
+.card-enter {
+  animation: fadeInUp 0.5s ease-out both;
+}
