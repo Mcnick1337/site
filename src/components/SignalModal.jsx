@@ -150,6 +150,24 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                         </div>
                     )}
                 </div>
+
+                <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10">
+                    <h3 className="text-lg font-semibold mb-2">AI Reasoning</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        {signal.Reasoning || 'No reasoning provided.'}
+                    </p>
+
+                    <h3 className="text-lg font-semibold mb-2">Relevant News</h3>
+                    <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                        {signal["Relevant News Headlines"]?.length > 0 ? (
+                            signal["Relevant News Headlines"].map((headline, index) => (
+                                <li key={index}>{headline}</li>
+                            ))
+                        ) : (
+                            <li>No relevant news provided.</li>
+                        )}
+                    </ul>
+                </div>
             </motion.div>
         </div>
     );

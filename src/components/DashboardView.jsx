@@ -2,32 +2,44 @@
 
 import { useMemo } from 'react';
 import { TabNav } from './TabNav';
-// ... (other imports)
+import { ModelInfo } from './ModelInfo';
+import { StatsGrid } from './StatsGrid';
+import { DetailsSectionDashboard } from './DetailsSectionDashboard';
+import { FilterControls } from './FilterControls';
+import { SignalCatalog } from './SignalCatalog';
 import { processSignals } from '../utils/processSignals';
-// --- IMPORT ALL THE STATS FUNCTIONS ---
 import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats } from '../utils/calculateStats';
 
-export const DashboardView = ({ /* ... (all props) ... */ }) => {
+// This is the full, correct component definition
+export const DashboardView = ({
+    models, activeTab, setActiveTab, appState,
+    handleStateChange, handlePageChange, setSelectedSignal,
+    highlightedSignalId, onSignalHover, setComparisonViewActive
+}) => {
+    // Get the data for the currently active tab from the main app state
     const currentModelData = appState[activeTab];
 
-    // --- STEP 1: Filter signals by date range first ---
+    // Step 1: Filter the raw signals based on the selected date range.
+    // This is the primary filter that affects all calculations.
     const dateFilteredSignals = useMemo(() => {
         const { startDate, endDate } = currentModelData.filters;
         if (!startDate && !endDate) {
-            return currentModelData.allSignals;
+            return currentModelData.allSignals; // No date filter applied
         }
         return currentModelData.allSignals.filter(s => {
+            if (!s.timestamp) return false; // Guard against signals with no timestamp
             const signalDate = new Date(s.timestamp);
-            if (isNaN(signalDate.getTime())) return false;
+            if (isNaN(signalDate.getTime())) return false; // Guard against invalid dates
+            
             const startMatch = !startDate || signalDate >= startDate;
             const endMatch = !endDate || signalDate <= endDate;
             return startMatch && endMatch;
         });
     }, [currentModelData.allSignals, currentModelData.filters.startDate, currentModelData.filters.endDate]);
 
-    // --- STEP 2: Recalculate all stats based on the date-filtered signals ---
+    // Step 2: Recalculate all statistics using ONLY the date-filtered signals.
     const statsForDisplay = useMemo(() => {
-        const overallStats = calculateAllStats(dateFilteredSignals); // No 'filters' needed here
+        const overallStats = calculateAllStats(dateFilteredSignals);
         const timeStats = calculateTimeBasedStats(dateFilteredSignals);
         const weeklyStats = calculateWeeklyStats(dateFilteredSignals);
         const symbolWinRates = calculateSymbolWinRates(dateFilteredSignals);
@@ -41,30 +53,40 @@ export const DashboardView = ({ /* ... (all props) ... */ }) => {
         };
     }, [dateFilteredSignals]);
 
-    // --- STEP 3: Apply the *other* filters (symbol, type, etc.) for the signal catalog view ---
+    // Step 3: Apply the other filters (symbol, type, etc.) for the Signal Catalog view.
     const displayedSignals = useMemo(() => {
-        // Pass the already date-filtered signals to be processed further
+        // Pass the already date-filtered signals to be processed further.
         return processSignals(dateFilteredSignals, currentModelData.filters, currentModelData.sort);
     }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort]);
 
     return (
         <>
-            <TabNav /* ... */ />
+            <TabNav
+                models={models}
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+                onCompareClick={() => setComparisonViewActive(true)}
+            />
             <ModelInfo modelId={activeTab} />
             
-            {/* --- USE THE NEWLY CALCULATED STATS --- */}
+            {/* Pass the newly calculated stats to the widgets */}
             <StatsGrid stats={statsForDisplay.overallStats} />
             
-            {/* We need to create a temporary appState-like object for DetailsSectionDashboard */}
             <DetailsSectionDashboard
                 modelId={activeTab}
+                // We construct a temporary object that mimics the structure `DetailsSectionDashboard` expects.
                 appState={{ [activeTab]: statsForDisplay }}
                 onSignalHover={onSignalHover}
             />
             
-            <FilterControls /* ... */ />
+            <FilterControls
+                modelId={activeTab}
+                filters={currentModelData.filters}
+                sort={currentModelData.sort}
+                onFilterChange={(key, value) => handleStateChange('filters', key, value)}
+                onSortChange={(key, value) => handleStateChange('sort', key, value)}
+            />
             
-            {/* This remains the same, as it uses the final filtered list */}
             <SignalCatalog
                 signals={displayedSignals}
                 currentPage={currentModelData.currentPage}
