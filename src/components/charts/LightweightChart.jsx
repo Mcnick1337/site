@@ -1,28 +1,17 @@
-// File: src/components/charts/LightweightChart.jsx (with EMA Overlay)
+// File: src/components/charts/LightweightChart.jsx (with EMA Ribbon and Volume)
 
 import { useEffect, useRef, useContext } from 'react';
 import { createChart, LineStyle, CrosshairMode } from 'lightweight-charts';
 import { ThemeContext } from '../../App'; 
 
-// --- ADDED: Helper function to calculate the Exponential Moving Average ---
 const calculateEMA = (data, period) => {
     if (!data || data.length < period) return [];
-
-    // First, calculate the initial SMA for the first period
-    let sum = 0;
-    for (let i = 0; i < period; i++) {
-        sum += data[i].close;
-    }
-    const sma = sum / period;
-
     const multiplier = 2 / (period + 1);
     const emaData = [];
-    
-    // Set the first EMA value to be the SMA
-    emaData.push({ time: data[period - 1].time, value: sma });
-    let previousEma = sma;
-
-    // Calculate the rest of the EMA values
+    let sum = 0;
+    for (let i = 0; i < period; i++) { sum += data[i].close; }
+    let previousEma = sum / period;
+    emaData.push({ time: data[period - 1].time, value: previousEma });
     for (let i = period; i < data.length; i++) {
         const ema = (data[i].close - previousEma) * multiplier + previousEma;
         emaData.push({ time: data[i].time, value: ema });
@@ -31,11 +20,18 @@ const calculateEMA = (data, period) => {
     return emaData;
 };
 
+const EMA_PERIODS = [
+    { period: 20, color: '#2962FF', title: 'EMA 20' },
+    { period: 50, color: '#FFD700', title: 'EMA 50' },
+    { period: 200, color: '#FFFFFF', title: 'EMA 200'},
+];
+
 const COLORS = {
     up: '#089981', down: '#F23645', upWick: '#089981', downWick: '#F23645',
     entry: '#1E88E5', stopLoss: '#F23645', takeProfit: '#089981',
     signalMarker: '#FFC107',
-    ema: '#FFD700', // --- ADDED: A distinct gold color for the EMA line ---
+    volumeUp: 'rgba(8, 153, 129, 0.5)',
+    volumeDown: 'rgba(242, 54, 69, 0.5)',
 };
 
 const darkTheme = {
@@ -58,8 +54,9 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
     const chartContainerRef = useRef(null);
     const chartRef = useRef(null);
     const seriesRef = useRef(null);
-    // --- ADDED: Ref to hold the new EMA series ---
-    const emaSeriesRef = useRef(null);
+    const emaSeriesRefs = useRef({});
+    // --- ADDED: Ref for the new volume series ---
+    const volumeSeriesRef = useRef(null);
     const priceLinesRef = useRef([]);
     const { theme } = useContext(ThemeContext);
 
@@ -67,20 +64,24 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
         if (!chartContainerRef.current) return;
         const chart = createChart(chartContainerRef.current, { width: chartContainerRef.current.clientWidth, height: chartContainerRef.current.clientHeight, trackingMode: { exitMode: 'onTouchEnd' } });
         chartRef.current = chart;
+        
+        // --- ADDED: Configure layout for main chart pane + volume pane ---
+        chart.priceScale('right').applyOptions({ scaleMargins: { top: 0.1, bottom: 0.25 } });
+        chart.priceScale('volume').applyOptions({ scaleMargins: { top: 0.75, bottom: 0 }, height: 100 });
+
         const series = chart.addCandlestickSeries({ upColor: COLORS.up, downColor: COLORS.down, borderUpColor: COLORS.up, borderDownColor: COLORS.down, wickUpColor: COLORS.upWick, wickDownColor: COLORS.downWick });
         seriesRef.current = series;
         
-        // --- ADDED: Create the EMA line series on the main chart pane ---
-        const emaSeries = chart.addLineSeries({
-            color: COLORS.ema,
-            lineWidth: 2,
-            crosshairMarkerVisible: false, // Hide crosshair marker for a cleaner look
-            lastValueVisible: false,      // Hide the axis label for the last value
-            priceLineVisible: false,      // Hide the price line
-        });
-        emaSeriesRef.current = emaSeries;
+        // --- ADDED: Create the volume histogram series ---
+        const volumeSeries = chart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: 'volume' });
+        volumeSeriesRef.current = volumeSeries;
 
-        chart.priceScale('right').applyOptions({ scaleMargins: { top: 0.1, bottom: 0.1 } });
+        // --- ADDED: Loop to create all configured EMA series ---
+        EMA_PERIODS.forEach(({ period, color, title }) => {
+            const emaSeries = chart.addLineSeries({ color, lineWidth: 2, crosshairMarkerVisible: false, lastValueVisible: true, priceLineVisible: true, title });
+            emaSeriesRefs.current[period] = emaSeries;
+        });
+
         chart.subscribeCrosshairMove(param => {
             if (param.time && param.seriesData.has(series)) { onCrosshairMove(param.seriesData.get(series)); } 
             else { onCrosshairMove(null); }
@@ -105,22 +106,52 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
 
         if (ohlcData && ohlcData.length > 0) {
             series.setData(ohlcData);
-
-            // --- ADDED: Calculate and set the data for the EMA series ---
-            if (emaSeriesRef.current) {
-                const emaData = calculateEMA(ohlcData, 50);
-                emaSeriesRef.current.setData(emaData);
+            
+            // --- ADDED: Process and set data for the volume series ---
+            if (volumeSeriesRef.current) {
+                const volumeData = ohlcData.map(d => ({
+                    time: d.time,
+                    value: d.volume,
+                    color: d.close >= d.open ? COLORS.volumeUp : COLORS.volumeDown,
+                }));
+                volumeSeriesRef.current.setData(volumeData);
             }
             
-            const addPriceLine = (value, title, color, lineStyle) => { /* ... unchanged ... */ };
-            if (signal) { /* ... unchanged ... */ }
+            // --- ADDED: Loop to calculate and set data for all EMA series ---
+            EMA_PERIODS.forEach(({ period }) => {
+                if (emaSeriesRefs.current[period]) {
+                    const emaData = calculateEMA(ohlcData, period);
+                    emaSeriesRefs.current[period].setData(emaData);
+                }
+            });
+            
+            const addPriceLine = (value, title, color, lineStyle) => {
+                const price = parseFloat(value);
+                if (!isNaN(price)) {
+                    const newLine = series.createPriceLine({ price, color, lineWidth: 2, lineStyle, axisLabelVisible: true, title, axisLabelColor: '#FFFFFF', axisLabelTextColor: color });
+                    priceLinesRef.current.push(newLine);
+                }
+            };
+            
+            if (signal) {
+                addPriceLine(signal["Entry Price"], 'ENTRY', COLORS.entry, LineStyle.Solid);
+                if (signal["Take Profit Targets"]) {
+                    addPriceLine(signal["Take Profit Targets"][0], 'TP 1', COLORS.takeProfit, LineStyle.Dashed);
+                    addPriceLine(signal["Take Profit Targets"][1], 'TP 2', COLORS.takeProfit, LineStyle.Dashed);
+                }
+                addPriceLine(signal["Stop Loss"], 'SL', COLORS.stopLoss, LineStyle.Dashed);
+                
+                const signalTime = new Date(signal.timestamp).getTime() / 1000;
+                series.setMarkers([{ time: signalTime, position: 'aboveBar', color: COLORS.signalMarker, shape: 'circle', text: 'Signal' }]);
+            }
+            
             chart.timeScale().fitContent();
         } else {
             series.setData([]);
-            // --- ADDED: Ensure the EMA line is also cleared when there's no data ---
-            if (emaSeriesRef.current) {
-                emaSeriesRef.current.setData([]);
-            }
+            if (volumeSeriesRef.current) volumeSeriesRef.current.setData([]);
+            EMA_PERIODS.forEach(({ period }) => {
+                 if (emaSeriesRefs.current[period]) emaSeriesRefs.current[period].setData([]);
+            });
         }
 
         chart.applyOptions({ watermark: { color: theme === 'light' ? 'rgba(0, 0, 0, 0.04)' : 'rgba(255, 255, 255, 0.04)', visible: true, text: signal.symbol.toUpperCase(), fontSize: 48, horzAlign: 'center', vertAlign: 'center' } });
