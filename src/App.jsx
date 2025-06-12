@@ -8,10 +8,15 @@ import { PortfolioView } from './components/PortfolioView';
 import { ComparisonView } from './components/ComparisonView';
 import { SignalModal } from './components/SignalModal';
 import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats } from './utils/calculateStats';
-import 'chartjs-adapter-date-fns';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler } from 'chart.js';
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler);
+import {
+    Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
+} from 'chart.js';
+import 'chartjs-adapter-date-fns';
+
+ChartJS.register(
+    CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
+);
 
 export const ThemeContext = createContext(null);
 
@@ -32,11 +37,26 @@ const floatingElements = [
 ];
 
 const createDefaultAiState = () => ({
-    allSignals: [], symbolWinRates: [], overallStats: {},
-    dayOfWeekStats: {}, hourOfDayStats: {}, weeklyStats: [],
-    currentPage: 1, itemsPerPage: 12,
-    filters: { symbol: '', signalType: '', status: '', minConfidence: '50', startDate: null, endDate: null },
-    sort: { by: 'timestamp' }, ohlcCache: {}, equityCurveData: [],
+    allSignals: [], 
+    symbolWinRates: [], 
+    overallStats: {},
+    dayOfWeekStats: {}, 
+    hourOfDayStats: {}, 
+    weeklyStats: [],
+    currentPage: 1, 
+    itemsPerPage: 12,
+    // --- THIS IS THE ONLY CHANGE IN THIS FILE ---
+    filters: { 
+        symbol: '', 
+        signalType: '', 
+        status: '', 
+        minConfidence: '50',
+        startDate: null, // Add startDate
+        endDate: null    // Add endDate
+    },
+    sort: { by: 'timestamp' }, 
+    ohlcCache: {}, 
+    equityCurveData: [],
 });
 
 export default function App() {
@@ -76,7 +96,15 @@ export default function App() {
             fetch(AI_MODELS[activeTab].file)
                 .then(res => res.ok ? res.json() : Promise.reject(new Error(`File not found`)))
                 .then(signals => {
-                    setAppState(prev => ({ ...prev, [activeTab]: { ...prev[activeTab], allSignals: signals } }));
+                    // Note: We no longer calculate stats here. 
+                    // This is now handled in DashboardView to react to date filters.
+                    setAppState(prev => ({
+                        ...prev,
+                        [activeTab]: {
+                            ...prev[activeTab],
+                            allSignals: signals,
+                        }
+                    }));
                 }).catch(err => console.error(err));
         }
     }, [activeTab]);
@@ -103,16 +131,20 @@ export default function App() {
                 </div>
                 <div className="relative z-10">
                     <Layout activeView={activeView} setActiveView={setActiveView}>
-                        <div className="p-4 md:p-8 flex flex-col flex-grow">
+                        <div className="p-4 md:p-8">
                             <Header />
                             {activeView === 'dashboard' && (
-                                <DashboardView
-                                    models={AI_MODELS} activeTab={activeTab} setActiveTab={setActiveTab}
-                                    appState={appState} handleStateChange={handleStateChange}
-                                    handlePageChange={handlePageChange} setSelectedSignal={setSelectedSignal}
-                                    highlightedSignalId={highlightedSignalId} onSignalHover={setHighlightedSignalId}
-                                    setComparisonViewActive={setComparisonViewActive}
-                                />
+                                comparisonViewActive ? (
+                                    <ComparisonView appState={appState} models={AI_MODELS} onExit={() => setComparisonViewActive(false)} />
+                                ) : (
+                                    <DashboardView
+                                        models={AI_MODELS} activeTab={activeTab} setActiveTab={setActiveTab}
+                                        appState={appState} handleStateChange={handleStateChange}
+                                        handlePageChange={handlePageChange} setSelectedSignal={setSelectedSignal}
+                                        highlightedSignalId={highlightedSignalId} onSignalHover={setHighlightedSignalId}
+                                        setComparisonViewActive={setComparisonViewActive}
+                                    />
+                                )
                             )}
                             {activeView === 'portfolio' && <PortfolioView appState={appState} models={AI_MODELS} activeTab={activeTab} />}
                         </div>
@@ -120,9 +152,14 @@ export default function App() {
                 </div>
                 {selectedSignal && (
                     <SignalModal
-                        signal={selectedSignal} onClose={() => setSelectedSignal(null)}
+                        signal={selectedSignal}
+                        onClose={() => setSelectedSignal(null)}
                         cache={appState[activeTab].ohlcCache}
-                        updateCache={(key, data) => setAppState(prev => ({ ...prev, [activeTab]: { ...prev[activeTab], ohlcCache: { ...prev[activeTab].ohlcCache, [key]: data } } }))}
+                        updateCache={(key, data) => setAppState(prev => ({ 
+                            ...prev, [activeTab]: { 
+                                ...prev[activeTab], ohlcCache: { ...prev[activeTab].ohlcCache, [key]: data } 
+                            } 
+                        }))}
                     />
                 )}
             </div>
