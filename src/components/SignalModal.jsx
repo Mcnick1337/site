@@ -1,8 +1,9 @@
 // File: src/components/SignalModal.jsx
 
 import { useEffect, useState } from 'react';
-import { LightweightChart } from './charts/LightweightChart';
+import { LightweightChart } from './charts/LightweightChart'; // This is now a stable component
 
+// The data fetching function remains the same
 async function fetchOHLCData(symbol, signalTime) {
     const startTime = new Date(signalTime.getTime() - 8 * 60 * 60 * 1000).getTime();
     const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${startTime}`;
@@ -27,6 +28,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [ohlcData, setOhlcData] = useState(null);
 
+    // This logic is perfect. It fetches the data and manages the loading state.
     useEffect(() => {
         requestAnimationFrame(() => setIsShowing(true));
 
@@ -45,7 +47,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
 
     const handleClose = () => {
         setIsShowing(false);
-        setTimeout(onClose, 300);
+        setTimeout(onClose, 300); // 300ms allows the closing animation to finish
     };
 
     return (
@@ -56,6 +58,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                     <h2 className="text-2xl font-bold">{signal.symbol} - Signal Details</h2>
                     <button onClick={handleClose} className="text-3xl text-gray-400 hover:text-white transition-colors">×</button>
                 </div>
+                {/* This simple conditional rendering is all that's needed now. */}
                 <div className="relative w-full h-[300px]">
                     {isLoading ? (
                         <div className="absolute inset-0 flex items-center justify-center">Loading Chart...</div>
