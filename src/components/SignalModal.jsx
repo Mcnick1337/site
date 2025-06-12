@@ -1,4 +1,4 @@
-// File: src/components/SignalModal.jsx (Updated with stable layout)
+// File: src/components/SignalModal.jsx (Corrected with a stable overlay)
 
 import { useEffect, useState, useContext } from 'react';
 import { motion } from 'framer-motion';
@@ -72,7 +72,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
             setIndicatorData(rsi);
             setIsLoading(false);
         };
-        // Add a small delay to allow the modal animation to finish before data fetching
         const timer = setTimeout(loadData, 50);
         return () => clearTimeout(timer);
     }, [signal, cache, updateCache, interval]);
@@ -86,11 +85,8 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
             <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
             <motion.div 
                 className="relative z-10 bg-gray-100 dark:bg-dark-card w-full max-w-6xl rounded-2xl border border-black/10 dark:border-white/20 shadow-2xl p-6 m-4 flex flex-col"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.2 }}
-                onClick={e => e.stopPropagation()}
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.2 }} onClick={e => e.stopPropagation()}
             >
                 <div className="flex-shrink-0 flex justify-between items-center mb-4">
                     <h2 className="text-2xl font-bold">{signal.symbol} - Signal Details</h2>
@@ -100,7 +96,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                 <div className="flex flex-col lg:flex-row gap-6 flex-grow min-h-0">
                     {/* --- LEFT COLUMN (Chart) --- */}
                     <div className="lg:w-2/3 flex flex-col gap-2">
-                         <div className="flex justify-between items-center">
+                        <div className="flex justify-between items-center">
                             <div className="flex items-center space-x-2">
                                 {availableIntervals.map(iv => (
                                     <button key={iv} onClick={() => setInterval(iv)} className={`px-3 py-1 text-sm rounded-md transition-colors ${interval === iv ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-white/20'}`}>{iv.toUpperCase()}</button>
@@ -115,59 +111,53 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                 </>)}
                             </div>
                         </div>
-                        {/* --- THE CORE FIX: This container now has a fixed height, preventing it from ever collapsing. --- */}
                         <div className="relative w-full h-[480px] bg-gray-200 dark:bg-black/20 rounded-lg">
-                            {(ohlcData) ? (
-                                <LightweightChart 
-                                    ohlcData={ohlcData} 
-                                    indicatorData={indicatorData}
-                                    signal={signal} 
-                                    onCrosshairMove={setCrosshairData}
-                                />
-                            ) : (
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    {isLoading ? (
-                                        <p className="text-gray-500 animate-pulse">Loading Chart...</p>
-                                    ) : (
-                                        <p className="text-red-400">Failed to load chart data.</p>
-                                    )}
+                            <LightweightChart 
+                                ohlcData={ohlcData} 
+                                indicatorData={indicatorData}
+                                signal={signal} 
+                                onCrosshairMove={setCrosshairData}
+                            />
+                            {/* This loading state now sits on TOP of the chart, not in place of it */}
+                            {(isLoading || !ohlcData) && (
+                                <div className="absolute inset-0 flex items-center justify-center bg-dark-card/50 backdrop-blur-sm">
+                                    <p className="text-gray-400 animate-pulse">{isLoading ? 'Loading Chart...' : 'Failed to load chart data.'}</p>
                                 </div>
                             )}
                         </div>
                     </div>
 
                     {/* --- RIGHT COLUMN (Details) --- */}
-                    <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:h-[520px] lg:overflow-y-auto custom-scrollbar pr-2">
-                        {isLoading ? (
-                            <div className="space-y-4 pt-2">
-                                <div className="grid grid-cols-2 gap-4"><Skeleton className="h-16"/><Skeleton className="h-16"/><Skeleton className="h-16"/><Skeleton className="h-16"/></div>
-                                <Skeleton className="h-24" />
-                                <Skeleton className="h-20" />
+                    {/* --- THE CORE FIX: The content is ALWAYS rendered. The loading state is a simple overlay. --- */}
+                    <div className="relative lg:w-1/3 flex-shrink-0 lg:h-[520px]">
+                        <div className="flex flex-col gap-4 lg:overflow-y-auto custom-scrollbar h-full pr-2">
+                            <div className="grid grid-cols-2 gap-4 text-center">
+                                <div><p className="text-sm text-gray-500 dark:text-gray-400">Entry Price</p><p className="text-lg font-semibold">{parseFloat(signal["Entry Price"]).toFixed(5)}</p></div>
+                                {signal["Take Profit Targets"]?.[0] && <div><p className="text-sm text-gray-500 dark:text-gray-400">Take Profit 1</p><p className="text-lg font-semibold text-green-600 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][0]).toFixed(5)}</p></div>}
+                                <div><p className="text-sm text-gray-500 dark:text-gray-400">Stop Loss</p><p className="text-lg font-semibold text-red-600 dark:text-red-400">{parseFloat(signal["Stop Loss"]).toFixed(5)}</p></div>
+                                <div><p className="text-sm text-gray-500 dark:text-gray-400">Signal Time</p><p className="text-sm font-semibold">{new Date(signal.timestamp).toLocaleString()}</p></div>
+                                {signal["Take Profit Targets"]?.[1] && <div className="col-span-2 md:col-span-1"><p className="text-sm text-gray-500 dark:text-gray-400">Take Profit 2</p><p className="text-lg font-semibold text-green-600 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][1]).toFixed(5)}</p></div>}
                             </div>
-                        ) : (
-                            <>
-                                <div className="grid grid-cols-2 gap-4 text-center">
-                                    <div><p className="text-sm text-gray-500 dark:text-gray-400">Entry Price</p><p className="text-lg font-semibold">{parseFloat(signal["Entry Price"]).toFixed(5)}</p></div>
-                                    {signal["Take Profit Targets"]?.[0] && <div><p className="text-sm text-gray-500 dark:text-gray-400">Take Profit 1</p><p className="text-lg font-semibold text-green-600 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][0]).toFixed(5)}</p></div>}
-                                    <div><p className="text-sm text-gray-500 dark:text-gray-400">Stop Loss</p><p className="text-lg font-semibold text-red-600 dark:text-red-400">{parseFloat(signal["Stop Loss"]).toFixed(5)}</p></div>
-                                    <div><p className="text-sm text-gray-500 dark:text-gray-400">Signal Time</p><p className="text-sm font-semibold">{new Date(signal.timestamp).toLocaleString()}</p></div>
-                                    {signal["Take Profit Targets"]?.[1] && <div className="col-span-2 md:col-span-1"><p className="text-sm text-gray-500 dark:text-gray-400">Take Profit 2</p><p className="text-lg font-semibold text-green-600 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][1]).toFixed(5)}</p></div>}
-                                </div>
-                                <div>
-                                    <h3 className="text-lg font-semibold mb-2">AI Reasoning</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400">{signal.Reasoning || 'No reasoning provided.'}</p>
-                                </div>
-                                <div>
-                                    <h3 className="text-lg font-semibold mb-2">Relevant News</h3>
-                                    <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                                        {Array.isArray(signal["Relevant News Headlines"]) && signal["Relevant News Headlines"].length > 0 ? (
-                                            signal["Relevant News Headlines"].map((headline, index) => <li key={index}>{headline}</li>)
-                                        ) : (
-                                            <li>No relevant news provided.</li>
-                                        )}
-                                    </ul>
-                                </div>
-                            </>
+                            <div>
+                                <h3 className="text-lg font-semibold mb-2">AI Reasoning</h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-400">{signal.Reasoning || 'No reasoning provided.'}</p>
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-semibold mb-2">Relevant News</h3>
+                                <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                                    {Array.isArray(signal["Relevant News Headlines"]) && signal["Relevant News Headlines"].length > 0 ? (
+                                        signal["Relevant News Headlines"].map((headline, index) => <li key={index}>{headline}</li>)
+                                    ) : (
+                                        <li>No relevant news provided.</li>
+                                    )}
+                                </ul>
+                            </div>
+                        </div>
+                        {/* This is the overlay for the right column */}
+                        {isLoading && (
+                            <div className="absolute inset-0 bg-dark-card/50 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                                <p className="text-gray-400 animate-pulse">Loading Details...</p>
+                            </div>
                         )}
                     </div>
                 </div>
