@@ -1,10 +1,8 @@
-// File: src/components/SignalModal.jsx (Corrected with a stable overlay)
+// File: src/components/SignalModal.jsx (Definitive flicker fix)
 
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { LightweightChart } from './charts/LightweightChart';
-import { Skeleton } from './Skeleton';
-import { ThemeContext } from '../App';
 
 // Helper functions (fetchOHLCData, fetchIndicatorData) remain unchanged
 async function fetchOHLCData(symbol, signalTime, interval) {
@@ -53,7 +51,12 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
     const [crosshairData, setCrosshairData] = useState(null);
 
     useEffect(() => {
-        setIsLoading(true); 
+        // --- THE CORE FIX ---
+        // Immediately set loading state AND clear old data to prevent showing stale content.
+        setIsLoading(true);
+        setOhlcData(null);
+        setIndicatorData(null);
+
         const loadData = async () => {
             const kucoinInterval = intervalMap[interval];
             const ohlcCacheKey = `ohlc-${signal.timestamp}-${kucoinInterval}`;
@@ -72,13 +75,14 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
             setIndicatorData(rsi);
             setIsLoading(false);
         };
+        
         const timer = setTimeout(loadData, 50);
         return () => clearTimeout(timer);
     }, [signal, cache, updateCache, interval]);
 
     const handleClose = () => setTimeout(onClose, 300);
 
-    const displayData = crosshairData || (ohlcData && ohlcData[ohlcData.length - 1]);
+    const displayData = crosshairData || (ohlcData && ohlcData.slice(-1)[0]);
 
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out" onClick={handleClose}>
@@ -94,7 +98,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-6 flex-grow min-h-0">
-                    {/* --- LEFT COLUMN (Chart) --- */}
                     <div className="lg:w-2/3 flex flex-col gap-2">
                         <div className="flex justify-between items-center">
                             <div className="flex items-center space-x-2">
@@ -103,7 +106,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                 ))}
                             </div>
                             <div className="flex space-x-4 text-xs text-gray-600 dark:text-gray-400 h-4">
-                                {displayData && !isLoading && (<>
+                                {displayData && (<>
                                     <span>O: <span className="font-mono">{displayData.open.toFixed(2)}</span></span>
                                     <span>H: <span className="font-mono">{displayData.high.toFixed(2)}</span></span>
                                     <span>L: <span className="font-mono">{displayData.low.toFixed(2)}</span></span>
@@ -118,17 +121,8 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                 signal={signal} 
                                 onCrosshairMove={setCrosshairData}
                             />
-                            {/* This loading state now sits on TOP of the chart, not in place of it */}
-                            {(isLoading || !ohlcData) && (
-                                <div className="absolute inset-0 flex items-center justify-center bg-dark-card/50 backdrop-blur-sm">
-                                    <p className="text-gray-400 animate-pulse">{isLoading ? 'Loading Chart...' : 'Failed to load chart data.'}</p>
-                                </div>
-                            )}
                         </div>
                     </div>
-
-                    {/* --- RIGHT COLUMN (Details) --- */}
-                    {/* --- THE CORE FIX: The content is ALWAYS rendered. The loading state is a simple overlay. --- */}
                     <div className="relative lg:w-1/3 flex-shrink-0 lg:h-[520px]">
                         <div className="flex flex-col gap-4 lg:overflow-y-auto custom-scrollbar h-full pr-2">
                             <div className="grid grid-cols-2 gap-4 text-center">
@@ -153,7 +147,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                 </ul>
                             </div>
                         </div>
-                        {/* This is the overlay for the right column */}
                         {isLoading && (
                             <div className="absolute inset-0 bg-dark-card/50 backdrop-blur-sm rounded-lg flex items-center justify-center">
                                 <p className="text-gray-400 animate-pulse">Loading Details...</p>
