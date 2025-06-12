@@ -65,7 +65,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                     )}
                 </div>
 
-                {/* --- NEW: Details Section Below Chart --- */}
                 <div className="mt-4 pt-4 border-t border-white/10">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                         {/* Entry Price */}
@@ -74,14 +73,16 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                             <p className="text-lg font-semibold">{parseFloat(signal["Entry Price"]).toFixed(5)}</p>
                         </div>
                         {/* Take Profit 1 */}
-                        <div>
-                            <p className="text-sm text-gray-400">Take Profit</p>
-                            <p className="text-lg font-semibold text-green-400">{parseFloat(signal.TP1).toFixed(5)}</p>
-                        </div>
+                        {signal["Take Profit Targets"]?.[0] && (
+                            <div>
+                                <p className="text-sm text-gray-400">Take Profit 1</p>
+                                <p className="text-lg font-semibold text-green-400">{parseFloat(signal["Take Profit Targets"][0]).toFixed(5)}</p>
+                            </div>
+                        )}
                         {/* Stop Loss */}
                         <div>
                             <p className="text-sm text-gray-400">Stop Loss</p>
-                            <p className="text-lg font-semibold text-red-400">{parseFloat(signal.SL).toFixed(5)}</p>
+                            <p className="text-lg font-semibold text-red-400">{parseFloat(signal["Stop Loss"]).toFixed(5)}</p>
                         </div>
                         {/* Date */}
                         <div>
@@ -89,10 +90,10 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                             <p className="text-lg font-semibold">{new Date(signal.timestamp).toLocaleString()}</p>
                         </div>
                          {/* Take Profit 2 (Optional) */}
-                         {signal.TP2 && (
-                            <div className="md:col-start-2"> {/* Aligns under TP1 on larger screens */}
+                         {signal["Take Profit Targets"]?.[1] && (
+                            <div className="md:col-start-2">
                                 <p className="text-sm text-gray-400">Take Profit 2</p>
-                                <p className="text-lg font-semibold text-green-400">{parseFloat(signal.TP2).toFixed(5)}</p>
+                                <p className="text-lg font-semibold text-green-400">{parseFloat(signal["Take Profit Targets"][1]).toFixed(5)}</p>
                             </div>
                         )}
                     </div>

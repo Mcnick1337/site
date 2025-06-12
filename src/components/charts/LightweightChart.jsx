@@ -9,51 +9,28 @@ export const LightweightChart = ({ ohlcData, signal }) => {
     const seriesRef = useRef(null);
     const priceLinesRef = useRef([]);
 
-    // This effect handles chart creation and destruction ONCE.
     useEffect(() => {
         if (!chartContainerRef.current) return;
 
-        // --- NEW: Professional "TradingView" Theme Options ---
         const chartOptions = {
             layout: {
-                background: { color: '#131722' }, // Bybit's dark background
-                textColor: '#D9D9D9', // Light gray text
+                background: { color: '#131722' }, textColor: '#D9D9D9',
                 fontFamily: `'Trebuchet MS', 'Roboto', sans-serif`,
             },
-            grid: {
-                vertLines: { color: '#1E222D' }, // Subtle vertical grid lines
-                horzLines: { color: '#1E222D' }, // Subtle horizontal grid lines
-            },
+            grid: { vertLines: { color: '#1E222D' }, horzLines: { color: '#1E222D' } },
             crosshair: {
-                mode: 'normal',
-                vertLine: { style: LineStyle.Dashed, color: '#758696' },
+                mode: 'normal', vertLine: { style: LineStyle.Dashed, color: '#758696' },
                 horzLine: { style: LineStyle.Dashed, color: '#758696' },
             },
-            rightPriceScale: {
-                borderColor: '#1E222D', // Border to match the grid
-            },
-            timeScale: {
-                borderColor: '#1E222D', // Border to match the grid
-                timeVisible: true,
-            },
-            // The iconic background watermark
+            rightPriceScale: { borderColor: '#1E222D' }, timeScale: { borderColor: '#1E222D', timeVisible: true },
             watermark: {
-                color: 'rgba(255, 255, 255, 0.04)', // Very faint
-                visible: true,
-                text: signal.symbol.toUpperCase(), // Dynamic symbol text
-                fontSize: 48,
-                horzAlign: 'center',
-                vertAlign: 'center',
+                color: 'rgba(255, 255, 255, 0.04)', visible: true, text: signal.symbol.toUpperCase(),
+                fontSize: 48, horzAlign: 'center', vertAlign: 'center',
             },
         };
 
         const chart = createChart(chartContainerRef.current, chartOptions);
-        
-        // We keep the width and height separate as they depend on the container size
-        chart.applyOptions({
-            width: chartContainerRef.current.clientWidth,
-            height: 300
-        });
+        chart.applyOptions({ width: chartContainerRef.current.clientWidth, height: 300 });
 
         const series = chart.addCandlestickSeries({
             upColor: '#26a69a', downColor: '#ef5350', borderDownColor: '#ef5350',
@@ -77,17 +54,13 @@ export const LightweightChart = ({ ohlcData, signal }) => {
                 chartRef.current = null;
             }
         };
-    }, [signal.symbol]); // IMPORTANT: Re-create chart if the symbol changes to update watermark
+    }, [signal.symbol]);
 
-    // This effect handles all DATA and MARKER updates.
     useEffect(() => {
-        if (!seriesRef.current || !chartRef.current || !ohlcData || ohlcData.length === 0) {
-            return;
-        }
+        if (!seriesRef.current || !chartRef.current || !ohlcData || ohlcData.length === 0) return;
         
         seriesRef.current.setData(ohlcData);
         seriesRef.current.setMarkers([]);
-        
         priceLinesRef.current.forEach(line => seriesRef.current.removePriceLine(line));
         priceLinesRef.current = [];
 
@@ -102,12 +75,20 @@ export const LightweightChart = ({ ohlcData, signal }) => {
                 }
             };
 
+            // --- CHANGES START HERE ---
             addPriceLine(signal["Entry Price"], ' Entry', '#45b7d1', LineStyle.Solid);
-            addPriceLine(signal["TP1"], ' TP1', '#26a69a', LineStyle.Dashed);
-            if (signal["TP2"]) {
-                addPriceLine(signal["TP2"], ' TP2', '#26a69a', LineStyle.Dashed);
+            
+            // Access the Take Profit array
+            if (signal["Take Profit Targets"] && signal["Take Profit Targets"][0]) {
+                addPriceLine(signal["Take Profit Targets"][0], ' TP1', '#26a69a', LineStyle.Dashed);
             }
-            addPriceLine(signal["SL"], ' SL', '#ef5350', LineStyle.Dashed);
+            if (signal["Take Profit Targets"] && signal["Take Profit Targets"][1]) {
+                addPriceLine(signal["Take Profit Targets"][1], ' TP2', '#26a69a', LineStyle.Dashed);
+            }
+            
+            // Access Stop Loss with a space in the name
+            addPriceLine(signal["Stop Loss"], ' SL', '#ef5350', LineStyle.Dashed);
+            // --- CHANGES END HERE ---
 
             const signalTime = new Date(signal.timestamp).getTime() / 1000;
             seriesRef.current.setMarkers([{
@@ -116,7 +97,6 @@ export const LightweightChart = ({ ohlcData, signal }) => {
         }
 
         chartRef.current.timeScale().fitContent();
-
     }, [ohlcData, signal]);
 
     return <div ref={chartContainerRef} className="w-full h-[300px]" />;
