@@ -1,18 +1,16 @@
-// File: src/components/Header.jsx
+// File: src/components/Header.jsx (Updated)
 
 import { useContext } from 'react';
-import { ThemeContext } from '../App'; // Import the context from App.jsx
+import { ThemeContext } from '../App';
 
 export const Header = () => {
-    // Use the context to get the current theme and the toggle function
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
-        <header className="flex justify-between items-center mb-8">
-            <div>
-                <h1 className="text-4xl font-bold">Signal Board</h1>
-                <p className="text-gray-500 dark:text-gray-400">Advanced AI-Powered Trading Signals</p>
-            </div>
+        // UPDATED: Changed to justify-end as the title has been removed.
+        // Removed mb-8 as the dashboard view will now manage its own spacing.
+        <header className="flex justify-end items-center">
+            {/* REMOVED: The title and subtitle div is no longer here. */}
             
             <button
                 onClick={toggleTheme}

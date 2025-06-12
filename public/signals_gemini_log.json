@@ -17376,8 +17376,12 @@
     "timestamp": "2025-06-11T01:40:45.250710",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 108400.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.72,
+      "mae_percentage": -1.12,
+      "evaluation_details": ""
     }
   },
   {
@@ -17399,8 +17403,12 @@
     "timestamp": "2025-06-11T01:42:21.584694",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2860.5,
+      "closed_by": "TP1",
+      "mfe_percentage": 3.31,
+      "mae_percentage": -1.18,
+      "evaluation_details": ""
     }
   },
   {
@@ -17422,8 +17430,12 @@
     "timestamp": "2025-06-11T01:43:26.069580",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 161.5,
+      "closed_by": "SL",
+      "mfe_percentage": 2.28,
+      "mae_percentage": -2.65,
+      "evaluation_details": ""
     }
   },
   {
@@ -17444,8 +17456,12 @@
     "timestamp": "2025-06-11T02:33:25.532477",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 108550.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.86,
+      "mae_percentage": -0.95,
+      "evaluation_details": ""
     }
   },
   {
@@ -17467,8 +17483,12 @@
     "timestamp": "2025-06-11T02:34:41.273404",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2827.75,
+      "closed_by": "TP1",
+      "mfe_percentage": 3.8,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -17490,8 +17510,12 @@
     "timestamp": "2025-06-11T02:35:51.043333",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 167.25,
+      "closed_by": "TP1",
+      "mfe_percentage": 3.37,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -17513,8 +17537,12 @@
     "timestamp": "2025-06-11T03:25:59.094346",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 108405.8,
+      "closed_by": "SL",
+      "mfe_percentage": 0.81,
+      "mae_percentage": -1.03,
+      "evaluation_details": ""
     }
   },
   {
@@ -17537,8 +17565,12 @@
     "timestamp": "2025-06-11T03:27:17.493502",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2830.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 3.69,
+      "mae_percentage": -0.04,
+      "evaluation_details": ""
     }
   },
   {
@@ -17561,8 +17593,12 @@
     "timestamp": "2025-06-11T03:28:20.376755",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 164.4,
+      "closed_by": "SL",
+      "mfe_percentage": 0.11,
+      "mae_percentage": -1.35,
+      "evaluation_details": ""
     }
   },
   {
@@ -17583,8 +17619,12 @@
     "timestamp": "2025-06-11T04:18:25.250097",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 108650.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.86,
+      "mae_percentage": -0.95,
+      "evaluation_details": ""
     }
   },
   {
@@ -17605,8 +17645,12 @@
     "timestamp": "2025-06-11T04:19:33.507961",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2859.5,
+      "closed_by": "TP1",
+      "mfe_percentage": 3.01,
+      "mae_percentage": -1.47,
+      "evaluation_details": ""
     }
   },
   {
@@ -17627,8 +17671,12 @@
     "timestamp": "2025-06-11T04:21:04.259722",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 162.5,
+      "closed_by": "SL",
+      "mfe_percentage": 1.61,
+      "mae_percentage": -2.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -17649,8 +17697,12 @@
     "timestamp": "2025-06-11T05:11:34.437409",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 107991.76,
+      "closed_by": "TP2",
+      "mfe_percentage": 1.59,
+      "mae_percentage": -0.84,
+      "evaluation_details": ""
     }
   },
   {
@@ -17671,8 +17723,12 @@
     "timestamp": "2025-06-11T05:12:45.559995",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2825.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 3.32,
+      "mae_percentage": -0.4,
+      "evaluation_details": ""
     }
   },
   {
@@ -17693,8 +17749,12 @@
     "timestamp": "2025-06-11T05:13:37.963531",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 162.5,
+      "closed_by": "SL",
+      "mfe_percentage": 2.25,
+      "mae_percentage": -1.37,
+      "evaluation_details": ""
     }
   },
   {
@@ -17716,8 +17776,12 @@
     "timestamp": "2025-06-11T06:04:05.359263",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 108500.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.81,
+      "mae_percentage": -0.99,
+      "evaluation_details": ""
     }
   },
   {
@@ -17739,8 +17803,12 @@
     "timestamp": "2025-06-11T06:05:10.049966",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2745.0,
+      "closed_by": "SL",
+      "mfe_percentage": 2.9,
+      "mae_percentage": -1.94,
+      "evaluation_details": ""
     }
   },
   {
@@ -17761,8 +17829,12 @@
     "timestamp": "2025-06-11T06:06:17.481526",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 162.95,
+      "closed_by": "SL",
+      "mfe_percentage": 1.64,
+      "mae_percentage": -1.97,
+      "evaluation_details": ""
     }
   },
   {
@@ -17785,8 +17857,12 @@
     "timestamp": "2025-06-11T06:56:34.456140",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 109250.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -0.47,
+      "evaluation_details": ""
     }
   },
   {
@@ -17808,8 +17884,12 @@
     "timestamp": "2025-06-11T06:57:49.888193",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2845.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.57,
+      "mae_percentage": -1.11,
+      "evaluation_details": ""
     }
   },
   {
@@ -17831,8 +17911,12 @@
     "timestamp": "2025-06-11T06:58:56.069317",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 163.5,
+      "closed_by": "SL",
+      "mfe_percentage": 1.24,
+      "mae_percentage": -2.35,
+      "evaluation_details": ""
     }
   },
   {
@@ -17854,8 +17938,12 @@
     "timestamp": "2025-06-11T07:49:02.129167",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 108550.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.81,
+      "mae_percentage": -0.99,
+      "evaluation_details": ""
     }
   },
   {
@@ -17877,8 +17965,12 @@
     "timestamp": "2025-06-11T07:50:12.759601",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2741.0,
+      "closed_by": "SL",
+      "mfe_percentage": 2.9,
+      "mae_percentage": -2.3,
+      "evaluation_details": ""
     }
   },
   {
@@ -17901,8 +17993,12 @@
     "timestamp": "2025-06-11T07:51:08.229891",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 163.1,
+      "closed_by": "SL",
+      "mfe_percentage": 0.66,
+      "mae_percentage": -2.91,
+      "evaluation_details": ""
     }
   },
   {
@@ -17925,8 +18021,12 @@
     "timestamp": "2025-06-11T08:41:20.850246",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 108600.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.81,
+      "mae_percentage": -0.99,
+      "evaluation_details": ""
     }
   },
   {
@@ -17949,8 +18049,12 @@
     "timestamp": "2025-06-11T08:43:40.426617",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2819.5,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.64,
+      "mae_percentage": -0.83,
+      "evaluation_details": ""
     }
   },
   {
@@ -17973,8 +18077,12 @@
     "timestamp": "2025-06-11T08:44:57.717536",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 163.7,
+      "closed_by": "SL",
+      "mfe_percentage": 1.24,
+      "mae_percentage": -2.35,
+      "evaluation_details": ""
     }
   },
   {
@@ -17996,8 +18104,12 @@
     "timestamp": "2025-06-11T09:35:42.354121",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 109450.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 0.66,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -18019,8 +18131,12 @@
     "timestamp": "2025-06-11T09:37:01.654762",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2851.75,
+      "closed_by": "TP1",
+      "mfe_percentage": 3.13,
+      "mae_percentage": -0.46,
+      "evaluation_details": ""
     }
   },
   {
@@ -18042,8 +18158,12 @@
     "timestamp": "2025-06-11T09:38:40.726001",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 162.5,
+      "closed_by": "SL",
+      "mfe_percentage": 1.73,
+      "mae_percentage": -1.88,
+      "evaluation_details": ""
     }
   },
   {
@@ -18066,8 +18186,12 @@
     "timestamp": "2025-06-11T10:29:06.269315",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 109650.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.22,
+      "mae_percentage": -0.62,
+      "evaluation_details": ""
     }
   },
   {
@@ -18089,8 +18213,12 @@
     "timestamp": "2025-06-11T10:30:13.021283",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "TIMEOUT_NEGATIVE",
+      "closed_at_price": 2750.3,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 4.02,
+      "mae_percentage": -1.28,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -18112,8 +18240,12 @@
     "timestamp": "2025-06-11T10:31:45.752013",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 160.5,
+      "closed_by": "SL",
+      "mfe_percentage": 2.66,
+      "mae_percentage": -2.29,
+      "evaluation_details": ""
     }
   },
   {
@@ -18136,8 +18268,12 @@
     "timestamp": "2025-06-11T11:22:24.355890",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "UNEVALUATED",
+      "closed_at_price": 106900.95,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 0.0,
+      "mae_percentage": 0.0,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -18160,8 +18296,12 @@
     "timestamp": "2025-06-11T11:23:57.058879",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2815.0,
+      "closed_by": "TP2",
+      "mfe_percentage": 2.26,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -18184,8 +18324,12 @@
     "timestamp": "2025-06-11T11:25:19.781112",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 168.25,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.66,
+      "mae_percentage": -0.16,
+      "evaluation_details": ""
     }
   },
   {
@@ -18208,8 +18352,12 @@
     "timestamp": "2025-06-11T12:15:28.267318",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 109630.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.11,
+      "mae_percentage": -0.44,
+      "evaluation_details": ""
     }
   },
   {
@@ -18230,8 +18378,12 @@
     "timestamp": "2025-06-11T12:16:53.205106",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2862.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 4.32,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -18252,8 +18404,12 @@
     "timestamp": "2025-06-11T12:18:22.979339",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 167.72,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.66,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -18276,8 +18432,12 @@
     "timestamp": "2025-06-11T13:08:17.623636",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 110330.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 0.66,
+      "mae_percentage": -0.02,
+      "evaluation_details": ""
     }
   },
   {
@@ -18300,8 +18460,12 @@
     "timestamp": "2025-06-11T13:09:42.028719",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2835.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.57,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -18324,8 +18488,12 @@
     "timestamp": "2025-06-11T13:11:03.586853",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 165.4,
+      "closed_by": "SL",
+      "mfe_percentage": 0.57,
+      "mae_percentage": -2.13,
+      "evaluation_details": ""
     }
   },
   {
@@ -18348,8 +18516,12 @@
     "timestamp": "2025-06-11T14:01:54.246678",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 109900.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 0.4,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -18371,8 +18543,12 @@
     "timestamp": "2025-06-11T14:03:22.653240",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2745.0,
+      "closed_by": "SL",
+      "mfe_percentage": 2.83,
+      "mae_percentage": -2.01,
+      "evaluation_details": ""
     }
   },
   {
@@ -18396,8 +18572,12 @@
     "timestamp": "2025-06-11T14:04:46.181216",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 162.0,
+      "closed_by": "SL",
+      "mfe_percentage": 1.62,
+      "mae_percentage": -1.91,
+      "evaluation_details": ""
     }
   },
   {
@@ -19217,7 +19397,11 @@
       "No news processed..."
     ],
     "timestamp": "2025-06-12T01:32:08.800375",
-    "symbol": "BTCUSDT"
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
   },
   {
     "Signal": "Sell",
@@ -19236,7 +19420,11 @@
       "No news processed..."
     ],
     "timestamp": "2025-06-12T01:33:54.912063",
-    "symbol": "ETHUSDT"
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
   },
   {
     "Signal": "Buy",
@@ -19254,6 +19442,1053 @@
       "No news processed..."
     ],
     "timestamp": "2025-06-12T01:35:09.582907",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "108550.00",
+    "Take Profit Targets": [
+      "109050.00",
+      "109550.00"
+    ],
+    "Stop Loss": "108050.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Intraday",
+    "Reasoning": "Price is currently situated in the lower portion of its Bollinger Band defined range, with notable bid-side order book dominance and a high volume node at $108,550 providing immediate support. While the 1-hour MACD exhibits bearish momentum and ADX (18.23) signifies a weak trend, longer-term EMAs on 4-hour and daily charts indicate underlying bullish structure. This trade is a tactical long position within a range-bound scenario, anticipating a mean reversion. The extremely low confluence score (5/100) and exceptionally low 24-hour volume (149) necessitate a low confidence assessment and rigorous risk control.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "timestamp": "2025-06-12T02:25:10.702680",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2750.00",
+    "Take Profit Targets": [
+      "2790.00",
+      "2860.00"
+    ],
+    "Stop Loss": "2718.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Anticipating a dip to key support at $2750.00 (1H EMA50, High Volume Node) driven by current short-term bearish indicators (1H MACD bearish cross, price below 1H EMA20, Ask dominance). Longer-term bullish structure on 4H/1D (Price > EMAs, RSI > 50) and historical performance of Range-Bound strategies support a potential bounce from this level. ADX at 22.75 indicates ranging conditions. TP1 targets near 1H EMA20, TP2 targets near upper Bollinger Band, offering favorable R/R.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "timestamp": "2025-06-12T02:26:27.799423",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "159.75",
+    "Take Profit Targets": [
+      "157.00",
+      "153.95",
+      "150.00"
+    ],
+    "Stop Loss": "162.65",
+    "Confidence": 48,
+    "Scenario": "Trend Continuation (Bearish)",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price trading below key short-term EMAs (1hr EMA20, 1hr EMA50) and VWAP, indicating bearish pressure. MACD shows a bearish cross with a negative histogram. ADX at 30.05 suggests a strengthening existing trend, which is currently downwards. Order flow indicates ask dominance (-10.99% imbalance). Targeting a move towards the 1-hour EMA200 support, then potentially lower towards $154 and the high volume node at $150 if bearish momentum persists. Stop loss placed just above the 1-hour EMA20.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "timestamp": "2025-06-12T02:28:21.300372",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "108250.00",
+    "Take Profit Targets": [
+      "107750.00",
+      "107250.00"
+    ],
+    "Stop Loss": "108750.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Intraday",
+    "Reasoning": "Strong bearish order book imbalance (-98.21%) with significant ask volume observed just above the current price. Price is trading below short-term EMAs (1h EMA20, EMA50) and VWAP, indicating short-term bearish pressure. MACD histogram is negative and declining. ADX at 17.99 suggests a weak trend or ranging market, making a play towards the lower boundary of the current range plausible. Stop loss is placed above VWAP and recent micro-resistance, approximately 1 ATR. Low RSI (36.41 on 1H) and bullish news sentiment are noted as counter-signals, hence the moderate-low confidence. The very low 24h volume (345) suggests potential for sharp moves if order flow pressure persists.",
+    "Relevant News Headlines": [
+      "XRP Price Takes a Breather\u2014Consolidation Phase or ...",
+      "Bitcoin tops $110K for 2nd day; altcoins UNI, AAVE...",
+      "Ether Technical Analysis: Prices Could Reach Mid-$..."
+    ],
+    "timestamp": "2025-06-12T03:18:54.324751",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2760.00",
+    "Take Profit Targets": [
+      "2795.00",
+      "2860.00"
+    ],
+    "Stop Loss": "2728.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price consolidating near key support ($2,750-$2,760: EMA50, High Volume Node, Strongest Bid Zone) and lower Bollinger Band. ADX (21.74) suggests a range-bound market. While 1H MACD is bearish, longer timeframes (4H/1D) and positive order book imbalance (+30.02%) support a potential bounce. Bullish news sentiment provides a favorable backdrop. Trade aims for a reversion to the mean (mid-BB) and potentially the upper range.",
+    "Relevant News Headlines": [
+      "XRP Price Takes a Breather\u2014Consolidation Phase or ...",
+      "Bitcoin tops $110K for 2nd day; altcoins UNI, AAVE...",
+      "Ether Technical Analysis: Prices Could Reach Mid-$..."
+    ],
+    "timestamp": "2025-06-12T03:20:08.297227",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "160.00",
+    "Take Profit Targets": [
+      "158.16",
+      "156.32",
+      "154.48"
+    ],
+    "Stop Loss": "161.84",
+    "Confidence": 48,
+    "Scenario": "Trend Continuation (Short-term Bearish)",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Predominantly bearish technical indicators on the 1-hour chart, including price below key short-term EMAs (20, 50) and VWAP, a confirmed bearish MACD cross, and significant negative order book imbalance (-43.07%). ADX (29.67) suggests a strengthening trend, currently downwards. This setup aims to capitalize on short-term bearish momentum. Stop loss is placed using 1x ATR ($1.84) above entry. Take profit targets are set at 1x, 2x, and 3x ATR below entry, targeting key support zones including the 1H EMA200 area. This trade acknowledges generally bullish crypto news sentiment as a counter-signal. The system's 'Estimated R/R Ratio: 0.00:1' for its default S/R highlights tight immediate conditions, this trade uses wider, ATR-based parameters.",
+    "Relevant News Headlines": [
+      "XRP Price Takes a Breather\u2014Consolidation Phase or ...",
+      "Bitcoin tops $110K for 2nd day; altcoins UNI, AAVE...",
+      "Ether Technical Analysis: Prices Could Reach Mid-$..."
+    ],
+    "timestamp": "2025-06-12T03:21:52.541515",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107870.00",
+    "Take Profit Targets": [
+      "108360.00",
+      "108850.00"
+    ],
+    "Stop Loss": "107380.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is trading near the lower Bollinger Band ($107,777.41) with RSI(14) at 31.24 (1-hour chart) indicating oversold conditions. ADX at 20.11 suggests a range-bound market, favoring a potential bounce from range lows. Targets are set towards VWAP and the 20-period EMA. Key risks include extremely low 24h volume (86 units), a low overall confluence score (-15), and a bearish MACD cross, warranting a cautious approach and lower confidence. General crypto news sentiment is mildly supportive.",
+    "Relevant News Headlines": [
+      "Bitcoin Flat, Ethereum, Dogecoin Climb Amid US-Chi...",
+      "XRP Price Takes a Breather\u2014Consolidation Phase or ..."
+    ],
+    "timestamp": "2025-06-12T04:12:04.015854",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2755.00",
+    "Take Profit Targets": [
+      "2785.00",
+      "2815.00"
+    ],
+    "Stop Loss": "2725.00",
+    "Confidence": 48,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price approaching key support zone ($2,750-$2,752) formed by 1H EMA50 and High Volume Node. Significant bid dominance (+70.46% order book imbalance) indicates immediate buying interest. While 1H MACD is bearish and overall confluence is low (-5), the 'Range-Bound' scenario (ADX 21.34, Neutral Trend) has shown reasonable past performance (58.33% WR). This trade anticipates a bounce from support, targeting resistance levels near 1H EMA20 and the $2,815 area. News sentiment is mildly supportive. High volatility warrants a clear stop.",
+    "Relevant News Headlines": [
+      "XRP Price Takes a Breather\u2014Consolidation Phase or ...",
+      "Bitcoin Flat, Ethereum, Dogecoin Climb Amid US-Chi..."
+    ],
+    "timestamp": "2025-06-12T04:13:32.718240",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "159.95",
+    "Take Profit Targets": [
+      "157.89",
+      "156.98",
+      "154.25"
+    ],
+    "Stop Loss": "161.85",
+    "Confidence": 45,
+    "Scenario": "Breakdown",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price is trading below 1H EMA20 and EMA50, with a bearish MACD cross and RSI below 50, indicating bearish momentum. ADX at 29.67 suggests a developing trend. Anticipating a breakdown below the key psychological level of $160 and the strong bid zone at $160.02. Targets are set at the Lower Bollinger Band, 1H EMA200, and a further extension. Stop loss is placed above the 1H EMA50 and recent micro-resistance. Conflicting signals include bullish news sentiment and short-term bid dominance, warranting lower confidence.",
+    "Relevant News Headlines": [
+      "Bitcoin Flat, Ethereum, Dogecoin Climb Amid US-Chi...",
+      "XRP Price Takes a Breather\u2014Consolidation Phase or ...",
+      "Bitcoin tops $110K for 2nd day; altcoins UNI, AAVE..."
+    ],
+    "timestamp": "2025-06-12T04:14:55.378215",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107600.00",
+    "Take Profit Targets": [
+      "108800.00",
+      "110100.00"
+    ],
+    "Stop Loss": "106700.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is testing the Lower Bollinger Band ($107,559.47) on the 1H timeframe, with the 1H RSI (28.90) indicating oversold conditions. Price remains above the 1H EMA200 support ($106,806.64). This suggests potential for a bullish mean reversion within a range. Targets are set towards the 1H EMA50/Middle Bollinger Band and the Upper Bollinger Band. Extremely low 24h volume (26) and a very low Confluence Score (0/100) significantly increase risk, hence the low confidence.",
+    "Relevant News Headlines": [
+      "Why Bitcoin\u2019s Calm Rally Could Be a Setup for a Ma...",
+      "Cryptocurrency firm Bullish confidentially files f..."
+    ],
+    "timestamp": "2025-06-12T05:05:19.869243",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2754.21",
+    "Take Profit Targets": [
+      "2780.95",
+      "2795.12",
+      "2846.00"
+    ],
+    "Stop Loss": "2723.50",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price testing key short-term support (1H EMA50 at $2751.23, High Volume Node at $2750) within a weak trend environment (ADX 20.71), suggesting a range-bound scenario. Longer-term charts (4H, Daily RSI/EMAs) and bullish news sentiment provide a slight bullish bias for playing a bounce from this support level. Risks include an active 1H MACD bearish cross and current price below 1H EMA20/VWAP. The first two take profit targets offer modest R/R, while the third aims for a more significant move if range dynamics play out favorably or bullish bias strengthens.",
+    "Relevant News Headlines": [
+      "Why Bitcoin\u2019s Calm Rally Could Be a Setup for a Ma...",
+      "Cryptocurrency firm Bullish confidentially files f..."
+    ],
+    "timestamp": "2025-06-12T05:06:52.830369",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "159.30",
+    "Take Profit Targets": [
+      "156.97",
+      "154.05"
+    ],
+    "Stop Loss": "161.05",
+    "Confidence": 45,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Short-term",
+    "Reasoning": "Bearish technicals (MACD, EMAs, VWAP, MTF alignment) favor downside on break of $159.45 support. ADX shows strengthening trend. Entry below support, ATR-based SL. TP1 at 1H EMA200, TP2 for ~3:1 R/R. Bullish news is a counter-signal, hence cautious confidence.",
+    "Relevant News Headlines": [
+      "Why Bitcoin\u2019s Calm Rally Could Be a Setup for a Ma..."
+    ],
+    "timestamp": "2025-06-12T05:08:14.827765",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107600.00",
+    "Take Profit Targets": [
+      "108110.00",
+      "108620.00"
+    ],
+    "Stop Loss": "107090.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "1-hour RSI at 30.04 (oversold) and price testing Lower Bollinger Band ($107,584.42) create conditions for a potential bullish mean reversion. ADX at 22.20 indicates a weak trend, supporting range-bound behavior. Entry planned near current lows, targeting a bounce towards VWAP ($108,127.70) and 1H EMA20 ($108,657.76). Stop loss set approximately 1 ATR below entry.",
+    "Relevant News Headlines": [
+      "Trump Family-Backed Bitcoin Mining Firm Acquires $..."
+    ],
+    "timestamp": "2025-06-12T05:58:47.065529",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2752.00",
+    "Take Profit Targets": [
+      "2795.66",
+      "2820.00",
+      "2848.00"
+    ],
+    "Stop Loss": "2720.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price approaching strong support confluence around $2750-$2752 (1H EMA50, High Volume Node) within a range-bound market (ADX 20.66). Longer-term timeframes (4H, Daily) show bullish structure ('MTF_BULLISH_ALIGNMENT' active factor), suggesting potential for a bounce from support. News sentiment is positive. Stop loss is placed below recent support and the 1H Lower Bollinger Band. Take profit targets offer favorable risk-reward ratios, aiming for key resistance levels. Low confidence (45%) is assigned due to conflicting short-term bearish signals (1H MACD bearish cross, significant Ask Dominance in order flow) and a very low overall Confluence Score (-5/100), indicating a mixed and uncertain immediate outlook.",
+    "Relevant News Headlines": [
+      "Trump Family-Backed Bitcoin Mining Firm Acquires $...",
+      "Critical Comparison: Defi Technologies (NASDAQ:DEF...",
+      "Brokerages Set Bitdeer Technologies Group (NASDAQ:..."
+    ],
+    "timestamp": "2025-06-12T06:00:17.417918",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "159.50",
+    "Take Profit Targets": [
+      "157.00",
+      "155.00"
+    ],
+    "Stop Loss": "161.75",
+    "Confidence": 48,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price trading below key short-term EMAs (20, 50) and VWAP on multiple timeframes, indicating bearish pressure. MACD bearish crossover and negative histogram confirm downside momentum. ADX at 30.13 suggests a strengthening trend, which appears to be downwards. Order flow shows ask dominance. Entry near key resistance zone ($159.54) with stop loss placed above 1H EMA20 ($161.66). Targets set near significant support levels (Lower Bollinger Band $157.02, 1H EMA200 $156.97). Calculated R/R for TP1 is approx 1.11:1 and for TP2 is 2:1.",
+    "Relevant News Headlines": [
+      "Trump Family-Backed Bitcoin Mining Firm Acquires $...",
+      "Critical Comparison: Defi Technologies (NASDAQ:DEF...",
+      "Brokerages Set Bitdeer Technologies Group (NASDAQ:..."
+    ],
+    "timestamp": "2025-06-12T06:01:23.713229",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107500.00",
+    "Take Profit Targets": [
+      "108700.00",
+      "109900.00"
+    ],
+    "Stop Loss": "106700.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Intraday",
+    "Reasoning": "Price approaching lower Bollinger Band ($107,466.27) with 1-hour RSI (33.83) indicating oversold conditions. Potential support from the 1-hour EMA200 ($106,806.69). Low ADX (23.26) suggests a ranging market, favoring a bounce from the lower part of the current range. Bullish news sentiment and a system-identified 'MTF_BULLISH_ALIGNMENT' provide some underlying support. Entry planned on a dip towards the lower band, with Stop Loss placed below the key 1-hour EMA200. Take Profit targets aim for mid-range (near Middle Bollinger Band/EMA50) and then towards the upper part of the potential range.",
+    "Relevant News Headlines": [
+      "Contrasting Defi Technologies (NASDAQ:DEFT) & Digi...",
+      "Bitcoin Stocks Worth Watching \u2013 June 9th...",
+      "Top Cryptocurrency Stocks To Watch Now \u2013 June 9th..."
+    ],
+    "timestamp": "2025-06-12T06:51:53.880794",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2766.00",
+    "Take Profit Targets": [
+      "2796.50",
+      "2863.00"
+    ],
+    "Stop Loss": "2735.50",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price near VWAP and 15min EMA20 support, with strong bid dominance (+95.43% order book imbalance) at current levels. Higher timeframes (4H, D1) maintain bullish structure. Stop loss placed below key support cluster (EMA50 at $2752.31, High Volume Node at $2750). Targets set at Middle Bollinger Band and near Upper Bollinger Band, offering favorable R/R for TP2 (approx 3.18:1). Scenario is 'Range-Bound', which has shown reasonable past performance for this system (58.53% WR). News sentiment is generally bullish. Low confidence reflects system's low confluence score (5/100) and mixed short-term indicators, but aligns with historically better performing confidence bracket (40-49% WR: 52.44%).",
+    "Relevant News Headlines": [
+      "Contrasting Defi Technologies (NASDAQ:DEFT) & Digi...",
+      "Bitcoin Stocks Worth Watching \u2013 June 9th...",
+      "Top Cryptocurrency Stocks To Watch Now \u2013 June 9th..."
+    ],
+    "timestamp": "2025-06-12T06:53:16.566592",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "159.10",
+    "Take Profit Targets": [
+      "157.50",
+      "156.50"
+    ],
+    "Stop Loss": "160.15",
+    "Confidence": 45,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Current price trades below short-term EMAs (20, 50 on 1hr) and VWAP, with a bearish MACD cross and negative histogram, suggesting ongoing bearish momentum. ADX at 30.13 indicates a strengthening trend, which is currently downwards. The trade anticipates a break of the immediate support/bid zone at $159.16. Targets are set towards the lower Bollinger Band and 1-hour EMA200 area. Low overall system-rated confluence score warrants caution, reflected in the confidence level.",
+    "Relevant News Headlines": [
+      "Contrasting Defi Technologies (NASDAQ:DEFT) & Digi...",
+      "Bitcoin Stocks Worth Watching \u2013 June 9th...",
+      "Top Cryptocurrency Stocks To Watch Now \u2013 June 9th..."
+    ],
+    "timestamp": "2025-06-12T06:54:36.393328",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107550.00",
+    "Take Profit Targets": [
+      "108350.00",
+      "109150.00"
+    ],
+    "Stop Loss": "106750.00",
+    "Confidence": 48,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Asset is oversold (1H RSI 29.95) at High Volume Node support ($107,550) and lower Bollinger Band, with positive order book imbalance (+60.41%). Low ADX (24.59) suggests range-bound conditions, favoring a mean reversion bounce. This is a tactical long entry against prevailing short-term EMA resistance; SL is set below 1H EMA200.",
+    "Relevant News Headlines": [
+      "Ethereum Flashes Golden Cross On Daily Chart \u2013 Is ...",
+      "Analysts Set Coinbase Global, Inc. (NASDAQ:COIN) P..."
+    ],
+    "timestamp": "2025-06-12T07:45:01.257022",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2725.00",
+    "Take Profit Targets": [
+      "2763.00",
+      "2777.00"
+    ],
+    "Stop Loss": "2695.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Intraday",
+    "Reasoning": "Price approaching lower Bollinger Band ($2,722.82) and near key support ($2,743.07) within a market characterized by low ADX (19.62) and a Neutral primary trend, suggesting range-bound conditions. This trade anticipates a mean reversion towards VWAP ($2,763.40) and EMA20 ($2,777.07). Despite short-term bearish indicators (MACD, order flow imbalance -76.32%), the 'Range-Bound' scenario has demonstrated better historical performance (58.53% WR). Stop loss is placed below the significant High Volume Node at $2,700.",
+    "Relevant News Headlines": [
+      "Ethereum Flashes Golden Cross On Daily Chart \u2013 Is ..."
+    ],
+    "timestamp": "2025-06-12T07:46:58.495585",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "157.20",
+    "Take Profit Targets": [
+      "159.20",
+      "161.00"
+    ],
+    "Stop Loss": "155.47",
+    "Confidence": 45,
+    "Scenario": "Reversal (Bullish)",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price is approaching a key 1-hour support cluster formed by the EMA200 (around $156.97) and the Lower Bollinger Band (around $156.57). The 1-hour RSI at 34.90 is nearing oversold territory, suggesting potential for a technical bounce. Current order book data indicates bid dominance, and overall news sentiment is bullish, supported by positive developments in correlated assets like Ethereum. This trade aims to capture a rebound from this significant support zone. The stop loss is placed 1x ATR ($1.73) below the entry, providing a buffer below the support cluster. Take profit targets are set at subsequent logical resistance levels.",
+    "Relevant News Headlines": [
+      "Ethereum Flashes Golden Cross On Daily Chart \u2013 Is ..."
+    ],
+    "timestamp": "2025-06-12T07:48:36.914342",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107750.00",
+    "Take Profit Targets": [
+      "108750.00",
+      "109750.00"
+    ],
+    "Stop Loss": "106750.00",
+    "Confidence": 45,
+    "Scenario": "Reversal (Bullish)",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is near the lower Bollinger Band ($107,244.07) and the 1-hour RSI (34.20) indicates oversold conditions, suggesting potential for a bounce. Strong bid dominance (Order Book Imbalance +94.50%) and a High Volume Node at $107,750.00 offer immediate support. This is a counter-trend setup against bearish short-term MA (EMA20/50) and MACD signals, taken with low confidence due to a very low overall signal confluence score (5/100). The trade aims to capture a bounce from key support levels, with price currently above the 1-hour EMA200 ($106,798.89). Stop loss is placed below the 1-hour EMA200.",
+    "Relevant News Headlines": [
+      "Miracle Mile Advisors LLC Boosts Stake in Coinbase...",
+      "XRP News: XpFinance Surpasses 35 Percent Of Presal...",
+      "France Prepaid Card and Digital Wallet Market Inte..."
+    ],
+    "timestamp": "2025-06-12T08:39:03.345259",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2750.00",
+    "Take Profit Targets": [
+      "2785.00",
+      "2820.00"
+    ],
+    "Stop Loss": "2715.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is at a key support level ($2,750) which is also a high volume node and strongest bid zone. Longer-term trends (4H, Daily) remain bullish, and news sentiment is positive. ADX indicates a weak trend/ranging market (19.64), making a bounce from support plausible. While short-term 1H indicators (MACD bearish cross, RSI < 50) are bearish, this trade anticipates a reversion from support within the range, aligning with the 'Range-Bound with Bullish Bias' scenario which has strong past performance. Order book shows slight bid dominance. Calculated R/R is 1:1 for TP1 and 2:1 for TP2.",
+    "Relevant News Headlines": [
+      "Miracle Mile Advisors LLC Boosts Stake in Coinbase...",
+      "XRP News: XpFinance Surpasses 35 Percent Of Presal...",
+      "France Prepaid Card and Digital Wallet Market Inte..."
+    ],
+    "timestamp": "2025-06-12T08:40:21.294194",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "158.90",
+    "Take Profit Targets": [
+      "156.96",
+      "156.44",
+      "155.50"
+    ],
+    "Stop Loss": "160.90",
+    "Confidence": 45,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price is below 1hr EMA20, EMA50, and VWAP, indicating short-term bearish pressure. MACD shows a bearish cross and negative histogram. ADX at 31.41 suggests a strong trend, which currently appears to be downwards on the 1-hour chart. Entry anticipates a break of immediate bid support at $159.11. Stop loss placed above VWAP and recent minor swing high. Targets are key support levels (1hr EMA200, Lower Bollinger Band, and further). Low RSI (1hr) and proximity to major support are notable risks, hence lower confidence. Bullish news sentiment is a counter-indicator.",
+    "Relevant News Headlines": [
+      "Miracle Mile Advisors LLC Boosts Stake in Coinbase...",
+      "XRP News: XpFinance Surpasses 35 Percent Of Presal...",
+      "France Prepaid Card and Digital Wallet Market Inte..."
+    ],
+    "timestamp": "2025-06-12T08:41:59.747176",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107200.00",
+    "Take Profit Targets": [
+      "108200.00",
+      "108500.00"
+    ],
+    "Stop Loss": "106700.00",
+    "Confidence": 45,
+    "Scenario": "Reversal (Bullish)",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is testing a significant support zone (1-hour EMA200 at ~$106,794, Lower Bollinger Band at ~$107,164) after a short-term decline. H1 RSI (31.76) indicates oversold conditions, suggesting potential for a bullish reversal or bounce. This aligns with the bullish structure on the daily chart and positive news sentiment. The trade targets a mean reversion. Key risks include prevailing short-term bearish momentum (MACD negative, price below H1 EMA20/50), strong ask-side order book imbalance, and very low 24h volume, warranting a cautious approach and lower confidence.",
+    "Relevant News Headlines": [
+      "Best crypto to buy now as Michael Saylor says Bitc...",
+      "VERSE token launch surpasses $1B market cap within...",
+      "Bitcoin Back At $109,000, But HODLer Profit-Taking..."
+    ],
+    "timestamp": "2025-06-12T09:32:53.062861",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "2760.00",
+    "Take Profit Targets": [
+      "2730.00",
+      "2715.00"
+    ],
+    "Stop Loss": "2790.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Short-term",
+    "Reasoning": "Price is trading below key short-term moving averages (Daily EMA20 at $2,773.25, VWAP at $2,761.05) with a bearish MACD cross (Histogram: -5.7999) and significant ask dominance in the order book (-81.64%), suggesting downward pressure. The low ADX (19.59) and 'NEUTRAL' primary trend indicate a range-bound market. The strategy targets levels towards the lower Bollinger Band ($2,714.98) and near the high volume node ($2,750). Stop loss is placed above the recent resistance cluster formed by the Daily EMA20 and Bollinger Band Middle ($2,789.53).",
+    "Relevant News Headlines": [
+      "Best crypto to buy now as Michael Saylor says Bitc...",
+      "VERSE token launch surpasses $1B market cap within...",
+      "Bitcoin Back At $109,000, But HODLer Profit-Taking..."
+    ],
+    "timestamp": "2025-06-12T09:34:42.693887",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "159.60",
+    "Take Profit Targets": [
+      "157.00",
+      "156.00"
+    ],
+    "Stop Loss": "161.30",
+    "Confidence": 58,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price trading below key short/medium-term EMAs (1hr EMA20/50, 4hr EMA20/200, 1D EMA20/200). Bearish MACD on 1hr. Strong ADX (31.82) suggests current downward momentum may continue. Negative order book imbalance. Targeting 1hr EMA200 support. Bullish news provides some counter-signal, hence moderate confidence.",
+    "Relevant News Headlines": [
+      "Best crypto to buy now as Michael Saylor says Bitc...",
+      "VERSE token launch surpasses $1B market cap within...",
+      "Bitcoin Back At $109,000, But HODLer Profit-Taking..."
+    ],
+    "timestamp": "2025-06-12T09:36:00.489160",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107250.00",
+    "Take Profit Targets": [
+      "108375.00",
+      "109500.00"
+    ],
+    "Stop Loss": "106500.00",
+    "Confidence": 45,
+    "Scenario": "Reversal (Bullish)",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Anticipating a bullish mean reversion from oversold conditions (1H RSI 28.16) and key support confluence (1H EMA200 at $106,786, Lower Bollinger Band). Current price is near a high volume node and strongest bid zone. Despite bearish short-term momentum (MACD, order flow), the oversold state offers a bounce potential. Targets are near 1H EMA20/Middle BB and the area approaching the Upper BB. The system's low confluence score (0/100) warrants caution and reflects the counter-trend nature of this setup.",
+    "Relevant News Headlines": [
+      "4 Reasons to Buy Bitcoin Before 2028...",
+      "Ethereum price prediction as ETH reclaims $2,800 l..."
+    ],
+    "timestamp": "2025-06-12T10:26:48.357405",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "2738.00",
+    "Take Profit Targets": [
+      "2698.00",
+      "2670.00"
+    ],
+    "Stop Loss": "2765.00",
+    "Confidence": 48,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is below key short-term moving averages (1H EMA20, 1H EMA50, VWAP), with a bearish MACD crossover and a negative histogram. Order book shows significant ask dominance (-68.26%). The ADX at 20.04 suggests a weak trend or ranging conditions. This trade anticipates a move towards the lower part of the current range, targeting the High Volume Node support near $2,700 and then lower. Short-term bearish technical factors are expected to drive price action, despite generally bullish news sentiment.",
+    "Relevant News Headlines": [
+      "4 Reasons to Buy Bitcoin Before 2028...",
+      "Ethereum price prediction as ETH reclaims $2,800 l...",
+      "Julia Garner and Anthony Boyle to Star in Netflix\u2019..."
+    ],
+    "timestamp": "2025-06-12T10:28:13.296806",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "158.70",
+    "Take Profit Targets": [
+      "156.50",
+      "154.30"
+    ],
+    "Stop Loss": "160.90",
+    "Confidence": 48,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Short-term",
+    "Reasoning": "Price is trading below key short-term EMAs (1hr 20EMA, 50EMA) and 1hr VWAP, indicating bearish pressure. MACD shows a bearish crossover and is below the zero line. ADX at 32.22 suggests a strengthening trend, which currently appears downwards. Order flow indicates ask dominance. Confluence of these bearish technical factors supports a short position, despite the generally bullish news sentiment reported.",
+    "Relevant News Headlines": [
+      "4 Reasons to Buy Bitcoin Before 2028...",
+      "Ethereum price prediction as ETH reclaims $2,800 l..."
+    ],
+    "timestamp": "2025-06-12T10:29:30.664752",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107050.00",
+    "Take Profit Targets": [
+      "107950.00",
+      "108400.00"
+    ],
+    "Stop Loss": "106700.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "1H RSI oversold near Lower Bollinger Band and 1H EMA200 support. Bid dominance and bullish news suggest potential bounce in a neutral, low-volatility market. Targets at 1H VWAP & EMA50. SL below 1H EMA200. High risk due to extremely low 24h volume.",
+    "Relevant News Headlines": [
+      "Ukrainian Lawmakers Submit Bill for Creation of Cr...",
+      "India CBI Busts Transnational Cybercrime Ring, Sei...",
+      "astro-perp-ccxt 1.0.0..."
+    ],
+    "timestamp": "2025-06-12T11:20:11.454692",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "2760.00",
+    "Take Profit Targets": [
+      "2715.00",
+      "2700.00",
+      "2650.00"
+    ],
+    "Stop Loss": "2801.40",
+    "Confidence": 65,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Intraday",
+    "Reasoning": "Price trading below key short-term moving averages (1H EMA20, 1H EMA50, 1H VWAP) with a recent MACD bearish crossover on the 1-hour chart. Strong order book imbalance (-90.09%) and significant ask-side volume indicate selling pressure. ADX at 20.67 suggests ranging conditions, making a short from resistance near $2,760 (confluence of 1H VWAP and near 1H EMA20) a viable strategy. Stop loss is placed above recent swing highs, key short-term resistance, and approximately 1.5x ATR. Take profit targets aim for the lower Bollinger Band, a high volume node at $2,700, and potentially the 1H EMA200. Bullish news sentiment and underlying bullishness on 4-hour/daily charts are noted as counter-factors and contribute to a moderate confidence level.",
+    "Relevant News Headlines": [
+      "Ukrainian Lawmakers Submit Bill for Creation of Cr...",
+      "India CBI Busts Transnational Cybercrime Ring, Sei...",
+      "astro-perp-ccxt 1.0.0..."
+    ],
+    "timestamp": "2025-06-12T11:21:39.845247",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "157.80",
+    "Take Profit Targets": [
+      "154.80",
+      "153.30"
+    ],
+    "Stop Loss": "160.80",
+    "Confidence": 48,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Short-term",
+    "Reasoning": "Bearish technicals: Price below 1hr EMA20 & VWAP, MACD shows bearish momentum, and ADX (33.17) indicates a strong prevailing trend, currently downwards. Confluence analysis supports a bearish outlook with active factors like MACD_BEARISH_CROSS and STRONG_TREND_ADX. Entry anticipates continuation of this downward move, with Stop Loss placed above recent resistance including the 1hr EMA20. Bullish news sentiment is noted as a potential counter-indicator.",
+    "Relevant News Headlines": [
+      "Ukrainian Lawmakers Submit Bill for Creation of Cr...",
+      "India CBI Busts Transnational Cybercrime Ring, Sei...",
+      "astro-perp-ccxt 1.0.0..."
+    ],
+    "timestamp": "2025-06-12T11:22:44.381742",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "106900.00",
+    "Take Profit Targets": [
+      "107800.00",
+      "108250.00"
+    ],
+    "Stop Loss": "106450.00",
+    "Confidence": 48,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price is testing a key support cluster (High Volume Node at $106,900, 1-hour EMA200 at $106,766, Lower Bollinger Band) within a market assessed with a 'NEUTRAL' primary trend and 'LOW' volatility. RSI is deeply oversold on 1-hour, 15-minute, and 5-minute timeframes (24.37 on 1hr), suggesting potential seller exhaustion. This setup favors a mean-reversion bounce from the lower boundary of a potential range, targeting mid-range levels such as the 1-hour EMA20 ($107,995). Past performance for 'Range-Bound with Bullish Bias' scenarios has shown a high win rate, albeit on a small sample size. The risk-reward ratio for the first target is 2:1.",
+    "Relevant News Headlines": [
+      "American Whales Back Bitcoin Rally: Coinbase Premi..."
+    ],
+    "timestamp": "2025-06-12T12:13:51.850589",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2715.00",
+    "Take Profit Targets": [
+      "2760.00",
+      "2820.00"
+    ],
+    "Stop Loss": "2695.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price is testing the Lower Bollinger Band ($2712.51) and a key bid zone ($2716.79), with RSI on lower timeframes (1m, 5m, 15m) indicating oversold conditions. The 1-hour RSI (34.83) is also approaching oversold. ADX at 22.33 suggests a weak trend or ranging market, making a bounce from the BB plausible. A High Volume Node at $2700 provides further potential support below the entry. While short-term momentum indicators (MACD, price vs short EMAs/VWAP) are bearish, this setup aims to catch a corrective bounce within a potentially range-bound environment with favorable R/R.",
+    "Relevant News Headlines": [
+      "American Whales Back Bitcoin Rally: Coinbase Premi..."
+    ],
+    "timestamp": "2025-06-12T12:15:06.452113",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "157.70",
+    "Take Profit Targets": [
+      "159.48",
+      "160.29"
+    ],
+    "Stop Loss": "156.85",
+    "Confidence": 48,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price is testing a significant support confluence (1H EMA200 at $156.92, Lower Bollinger Band at $156.98, strongest bid zone $157.65) with 1H RSI (32.49) near oversold. Despite recent bearish momentum (MACD cross, price < ST EMAs), a bounce from this support is anticipated, consistent with a 'Range-Bound with Bullish Bias' scenario, which has shown positive, albeit limited, past performance. Order book shows slight bid dominance (+7.31%). Favorable R/R for targets at VWAP and 1H EMA20/Middle BB.",
+    "Relevant News Headlines": [
+      "American Whales Back Bitcoin Rally: Coinbase Premi..."
+    ],
+    "timestamp": "2025-06-12T12:16:51.874774",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107000.00",
+    "Take Profit Targets": [
+      "107750.00",
+      "108250.00"
+    ],
+    "Stop Loss": "106500.00",
+    "Confidence": 48,
+    "Scenario": "Reversal (Bullish)",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price is testing a significant support confluence zone ($106,700-$107,000) which includes the daily EMA200, 1H EMA200, Lower Bollinger Band, and a high volume node. RSI(14) on the main chart and 1H chart are in oversold territory, suggesting potential for a bullish bounce. While short-term momentum indicators (MACD, price vs short EMAs/VWAP, order flow) are bearish, the oversold condition at strong support offers a counter-trend opportunity. The daily chart context remains structurally bullish (Price > EMA20 > EMA200), suggesting this could be a dip within a larger uptrend. Risk-reward for the proposed levels is favorable (TP1 R/R 1.5:1, TP2 R/R 2.5:1). Extremely low 24h volume (66) is a concern for liquidity and execution.",
+    "Relevant News Headlines": [
+      "PayPal Brings PYUSD Stablecoin to Stellar for Cros...",
+      "Bitcoin To $1 Million? Michael Saylor Laughs Off C...",
+      "Everstake Hires Grayscale, Fidelity Veteran David ..."
+    ],
+    "timestamp": "2025-06-12T13:07:38.652409",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "2750.00",
+    "Take Profit Targets": [
+      "2717.74",
+      "2700.00"
+    ],
+    "Stop Loss": "2770.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Short-term",
+    "Reasoning": "Price is trading below 1H EMA20 ($2761.88) and EMA50 ($2750.25), which are acting as dynamic resistance. 1H MACD shows a bearish cross and negative histogram, while 1H RSI is below 50 (42.35), indicating short-term bearish momentum. Expecting a rejection from the $2750 resistance area (near 1H EMA50) and a move towards the lower end of the current range. ADX at 23.44 suggests a weak trend, supporting range-bound tactics. Targets are the lower Bollinger Band ($2717.74) and the High Volume Node at $2700. Stop loss is placed above the 1H EMA20 and Bollinger Band Middle Line.",
+    "Relevant News Headlines": [
+      "PayPal Brings PYUSD Stablecoin to Stellar for Cros...",
+      "Bitcoin To $1 Million? Michael Saylor Laughs Off C...",
+      "Everstake Hires Grayscale, Fidelity Veteran David ..."
+    ],
+    "timestamp": "2025-06-12T13:08:42.015891",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "159.20",
+    "Take Profit Targets": [
+      "157.30",
+      "156.95"
+    ],
+    "Stop Loss": "160.40",
+    "Confidence": 48,
+    "Scenario": "Range-Bound with Bearish Bias",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price trading below key short-term moving averages (EMA20, EMA50 on 1H/4H) and VWAP, with a bearish MACD cross, suggests short-term weakness. ADX at 35.46 indicates underlying trend strength, which currently favors sellers on these timeframes. Entry anticipated on a minor rally towards near-term resistance. Targets set near the lower Bollinger Band and the 1-hour EMA200. While overall market news is bullish and order book shows slight bid dominance, the technical picture on the 1H/4H charts and the negative confluence score support a short-term bearish play within what is described as a broader neutral primary trend.",
+    "Relevant News Headlines": [
+      "PayPal Brings PYUSD Stablecoin to Stellar for Cros...",
+      "Bitcoin To $1 Million? Michael Saylor Laughs Off C...",
+      "Everstake Hires Grayscale, Fidelity Veteran David ..."
+    ],
+    "timestamp": "2025-06-12T13:10:20.720901",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107000.00",
+    "Take Profit Targets": [
+      "107750.00",
+      "107950.00"
+    ],
+    "Stop Loss": "106550.00",
+    "Confidence": 45,
+    "Scenario": "Reversal (Bullish)",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "The 1-hour RSI is oversold (28.94) and price is trading near the Lower Bollinger Band, suggesting a potential bullish bounce. Strong bid dominance in the order book (+99.45% imbalance) and a high volume node at $107,050 provide immediate support indications. Price is currently holding above the 1H EMA200 ($106,751.91), a key dynamic support. Bullish news sentiment offers a positive backdrop. Targets are set towards the 1H EMA20 and Middle Bollinger Band. The extremely low 24h volume (0) is a significant concern and typically a no-trade signal; this trade proceeds cautiously based on other indicators, acknowledging the low overall confluence score.",
+    "Relevant News Headlines": [
+      "Bitcoin nears new high as Trump says US-China trad...",
+      "Ethereum Large Transactions Jump 100% In 24 Hours,..."
+    ],
+    "timestamp": "2025-06-12T14:01:28.084534",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2750.00",
+    "Take Profit Targets": [
+      "2777.50",
+      "2800.00",
+      "2825.00"
+    ],
+    "Stop Loss": "2722.50",
+    "Confidence": 45,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price testing key support at EMA50 ($2750.57) and high-volume node ($2750). Longer-term daily/4H charts maintain bullish structure (Price > EMA200, RSI > 50 on 4H/Daily). Positive order book imbalance (+41.07%) and bullish news sentiment offer immediate support. Expecting a bounce within a low-volatility, range-bound environment (ADX 23.30). The primary risk is the MACD bearish cross on the 1H/Daily chart and price below 1H EMA20. Trade taken with lower confidence due to mixed signals but favoring range support and past performance of this scenario type.",
+    "Relevant News Headlines": [
+      "Bitcoin nears new high as Trump says US-China trad...",
+      "Ethereum Large Transactions Jump 100% In 24 Hours,..."
+    ],
+    "timestamp": "2025-06-12T14:02:52.621910",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "159.50",
+    "Take Profit Targets": [
+      "157.50",
+      "156.00",
+      "154.50"
+    ],
+    "Stop Loss": "161.00",
+    "Confidence": 55,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price action below key 1H EMAs (20, 50) and VWAP, coupled with a bearish MACD cross and RSI (1H) below 50, indicates short-term bearish pressure. High ADX (36.26) suggests potential for a directional move, supporting the continuation of this bearish momentum. Entry planned on a minor retracement to the $159.50 resistance area to improve risk-reward. Order flow shows ask dominance. Technical factors favor a short despite overall bullish news sentiment.",
+    "Relevant News Headlines": [
+      "Operation Secure disrupts global infostealer malwa...",
+      "Bitcoin nears new high as Trump says US-China trad...",
+      "Ethereum Large Transactions Jump 100% In 24 Hours,..."
+    ],
+    "timestamp": "2025-06-12T14:04:29.711608",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107100.00",
+    "Take Profit Targets": [
+      "107600.00",
+      "108100.00"
+    ],
+    "Stop Loss": "106600.00",
+    "Confidence": 48,
+    "Scenario": "Reversal (Bullish from support after breakout confirmation)",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price recently broke above the key $107,000 psychological level, supported by bullish news headlines. This trade anticipates a retest of this breakout zone, which also aligns with proximity to the EMA200 support ($106,757.53) and the lower Bollinger Band ($106,731.02). The entry is set as a limit order to capture a potential dip towards this support area for a favorable risk-reward ratio. Despite a bearish MACD cross and strong ask dominance on the order book, the overriding factor is the recent bullish breakout and associated news sentiment. Stop loss is placed below the EMA200 and the $106,700 support cluster.",
+    "Relevant News Headlines": [
+      "Bitcoin Price Break Above $107,000 Triggers Bullis..."
+    ],
+    "timestamp": "2025-06-12T14:55:42.826401",
+    "symbol": "BTCUSDT"
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2750.00",
+    "Take Profit Targets": [
+      "2835.00",
+      "2890.00"
+    ],
+    "Stop Loss": "2692.80",
+    "Confidence": 55,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price consolidating near key support (High Volume Node $2,750, 1H EMA50 $2,751.16) within a broader bullish trend (price above 1H/4H/1D EMA200s). Anticipating a bullish resolution from this consolidation phase. Strong bid dominance (+82.18%) and positive news sentiment provide underlying support. Stop loss set at $2,692.80 (utilizing the provided 2x ATR Stop Distance of $57.20) to manage high volatility, placed below recent support structures. Take profit targets are set for a potential trend continuation, aiming for R/R ratios of approximately 1.48:1 and 2.45:1. The 'Range-Bound with Bullish Bias' scenario has shown strong historical performance (100% WR in 6 trades from past feedback).",
+    "Relevant News Headlines": [
+      "Bitcoin Price Break Above $107,000 Triggers Bullis..."
+    ],
+    "timestamp": "2025-06-12T14:57:25.127275",
+    "symbol": "ETHUSDT"
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "160.70",
+    "Take Profit Targets": [
+      "159.40",
+      "158.00"
+    ],
+    "Stop Loss": "162.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price approaching resistance near 1H EMA50 ($160.76) within a perceived range-bound environment. System-indicated 'MTF_BEARISH_ALIGNMENT' and 'ASK_DOMINANCE' support a short entry. 1H RSI is sub-50. Expecting a reversion towards VWAP ($159.38) and then the lower part of the daily range. ADX (34.33) indicates sufficient volatility for range oscillations.",
+    "Relevant News Headlines": [
+      "Bitcoin Price Break Above $107,000 Triggers Bullis...",
+      "What is a supply chain attack in crypto and how to..."
+    ],
+    "timestamp": "2025-06-12T14:59:16.509210",
     "symbol": "SOLUSDT"
   }
 ]

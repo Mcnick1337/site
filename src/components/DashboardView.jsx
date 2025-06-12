@@ -19,9 +19,7 @@ export const DashboardView = ({
 
     const dateFilteredSignals = useMemo(() => {
         const { startDate, endDate } = currentModelData.filters;
-        if (!startDate && !endDate) {
-            return currentModelData.allSignals;
-        }
+        if (!startDate && !endDate) return currentModelData.allSignals;
         return currentModelData.allSignals.filter(s => {
             if (!s.timestamp) return false;
             const signalDate = new Date(s.timestamp);
@@ -56,7 +54,6 @@ export const DashboardView = ({
         [currentModelData.filters, currentModelData.sort]
     );
 
-    // ADDED: Create a unique, sorted list of symbols for the autocomplete.
     const uniqueSymbols = useMemo(() => {
         const symbols = new Set(currentModelData.allSignals.map(s => s.symbol));
         return Array.from(symbols).sort();
@@ -64,6 +61,12 @@ export const DashboardView = ({
 
     return (
         <div className="flex flex-col w-full">
+            {/* --- ADDED: The title and subtitle are now here --- */}
+            <div className="mb-6">
+                <h1 className="text-4xl font-bold">MCN AI Stats</h1>
+                <p className="text-gray-500 dark:text-gray-400">Advanced AI-Powered Trading Signals</p>
+            </div>
+
             <TabNav
                 models={models}
                 activeTab={activeTab}
@@ -83,7 +86,6 @@ export const DashboardView = ({
                 sort={currentModelData.sort}
                 onFilterChange={(key, value) => handleStateChange('filters', key, value)}
                 onSortChange={(key, value) => handleStateChange('sort', key, value)}
-                // PASS DOWN: Provide the unique symbols to the component.
                 availableSymbols={uniqueSymbols}
             />
             <div key={catalogKey} className="card-enter">

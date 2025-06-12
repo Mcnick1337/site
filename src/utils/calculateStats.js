@@ -1,11 +1,10 @@
-// File: src/utils/calculateStats.js
+// File: src/utils/calculateStats.js (Updated with advanced metrics)
 
 /**
  * This is the main calculation engine for the dashboard.
  * It contains all the logic for deriving statistics from the raw signal data.
  */
 
-// Main function to calculate all top-level statistics for a model.
 export function calculateAllStats(signals) {
     if (!signals || signals.length === 0) return {};
 
@@ -43,6 +42,7 @@ export function calculateAllStats(signals) {
                 const rr = Math.abs(tp1 - entry) / Math.abs(entry - sl);
                 totalRR += rr;
                 rrCount++;
+                // Using a simple 100-unit risk per trade for calculations
                 const profitOrLoss = status === 'win' ? (100 * rr) : -100;
                 if (status === 'win') {
                     grossProfit += profitOrLoss;
@@ -63,19 +63,39 @@ export function calculateAllStats(signals) {
         }
     });
     
+    const tradableSignals = wins + losses;
+    
+    // --- Standard Deviation and Sharpe Ratio ---
     const avgReturn = returns.length > 0 ? returns.reduce((a, b) => a + b, 0) / returns.length : 0;
     const stdDev = returns.length > 0 ? Math.sqrt(returns.map(x => Math.pow(x - avgReturn, 2)).reduce((a, b) => a + b, 0) / returns.length) : 0;
     const sharpeRatio = stdDev !== 0 ? avgReturn / stdDev : 0;
     
-    const tradableSignals = wins + losses;
+    // --- ADDED: Sortino Ratio Calculation ---
+    const negativeReturns = returns.filter(r => r < 0);
+    // Downside deviation uses the total number of returns in the denominator, a common convention.
+    const downsideDeviation = negativeReturns.length > 0 ? Math.sqrt(negativeReturns.map(x => Math.pow(x - 0, 2)).reduce((a, b) => a + b, 0) / returns.length) : 0;
+    const sortinoRatio = downsideDeviation !== 0 ? avgReturn / downsideDeviation : 0;
+
+    // --- ADDED: Average Win / Loss Calculation ---
+    const avgWin = wins > 0 ? grossProfit / wins : 0;
+    const avgLoss = losses > 0 ? grossLoss / losses : 0; // This will be a negative number
+
     return {
         winRate: tradableSignals > 0 ? (wins / tradableSignals) * 100 : 0,
         tradableSignals, wins, losses, maxWinStreak, maxLossStreak,
         profitFactor: grossLoss !== 0 ? Math.abs(grossProfit / grossLoss) : Infinity,
         avgRR: rrCount > 0 ? totalRR / rrCount : 0,
-        sharpeRatio, maxDrawdown: maxDrawdown * 100, equityCurveData
+        sharpeRatio,
+        maxDrawdown: maxDrawdown * 100, // Keep as percentage
+        equityCurveData,
+        // ADDED: New advanced stats
+        sortinoRatio,
+        avgWin,
+        avgLoss,
     };
 }
+
+// --- The rest of the file (calculateSymbolWinRates, etc.) remains unchanged. ---
 
 export function calculateSymbolWinRates(signals) {
     if (!signals) return [];
@@ -203,7 +223,6 @@ export function calculateCorrelation(signalsA, signalsB) {
     return numerator / denominator;
 }
 
-// --- THIS IS THE NEW FUNCTION ---
 export function calculateWeeklyStats(signals) {
     if (!signals || signals.length === 0) return [];
 
@@ -214,13 +233,12 @@ export function calculateWeeklyStats(signals) {
             const status = s.performance.status.toLowerCase();
             if (status === 'win' || status === 'loss') {
                 const date = new Date(s.timestamp);
-                if (isNaN(date.getTime())) return; // Skip invalid dates
+                if (isNaN(date.getTime())) return;
 
-                // Find the start of the week (Sunday) for this signal
                 const dayOfWeek = date.getDay();
                 const startOfWeek = new Date(date.setDate(date.getDate() - dayOfWeek));
-                startOfWeek.setHours(0, 0, 0, 0); // Normalize to the beginning of the day
-                const weekKey = startOfWeek.toISOString().split('T')[0]; // Use 'YYYY-MM-DD' as a key
+                startOfWeek.setHours(0, 0, 0, 0);
+                const weekKey = startOfWeek.toISOString().split('T')[0];
 
                 if (!weeklyData.has(weekKey)) {
                     weeklyData.set(weekKey, { wins: 0, losses: 0 });
@@ -236,9 +254,8 @@ export function calculateWeeklyStats(signals) {
         }
     });
 
-    // Convert the Map to a sorted array and return the last 10 weeks
     return Array.from(weeklyData.entries())
         .map(([week, data]) => ({ week, ...data }))
         .sort((a, b) => new Date(a.week) - new Date(b.week))
-        .slice(-10); // Show the last 10 weeks of data
+        .slice(-10);
 }

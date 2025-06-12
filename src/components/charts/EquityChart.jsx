@@ -1,8 +1,8 @@
+// File: src/components/charts/EquityChart.jsx (Corrected with flexible height)
+
 import { Line } from 'react-chartjs-2';
-// No 'chart.js' imports are needed here anymore
 
 export const EquityChart = ({ equityCurveData, onSignalHover, timeUnit = 'hour' }) => {
-    // ... the rest of the file is unchanged
     if (!equityCurveData || equityCurveData.length === 0) {
         return <div className="text-center text-gray-400">Not enough data for equity curve.</div>;
     }
@@ -13,7 +13,7 @@ export const EquityChart = ({ equityCurveData, onSignalHover, timeUnit = 'hour' 
             backgroundColor: context => {
                 if (!context.chart.ctx) return 'rgba(78, 205, 196, 0)';
                 const ctx = context.chart.ctx;
-                const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+                const gradient = ctx.createLinearGradient(0, 0, 0, context.chart.height); // Use dynamic height
                 gradient.addColorStop(0, 'rgba(78, 205, 196, 0.5)');
                 gradient.addColorStop(1, 'rgba(78, 205, 196, 0)');
                 return gradient;
@@ -46,6 +46,11 @@ export const EquityChart = ({ equityCurveData, onSignalHover, timeUnit = 'hour' 
             }
         },
     };
-
-    return <div style={{ height: '300px' }}><Line options={options} data={data} /></div>;
+    
+    // --- THE FIX IS HERE: Removed fixed inline style for a flexible, full-height div ---
+    return (
+        <div className="relative h-full w-full">
+            <Line options={options} data={data} />
+        </div>
+    );
 };
