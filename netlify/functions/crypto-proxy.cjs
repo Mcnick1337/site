@@ -1,9 +1,7 @@
-// netlify/functions/crypto-proxy.cjs
+// File: netlify/functions/crypto-proxy.cjs
 
-// THE FIX: Use the standard CommonJS 'require' syntax.
 const fetch = require('node-fetch');
 
-// Use 'module.exports.handler' for CommonJS compatibility.
 module.exports.handler = async function(event, context) {
     const { symbol, startTime } = event.queryStringParameters;
 
@@ -14,7 +12,11 @@ module.exports.handler = async function(event, context) {
     try {
         const kucoinSymbol = symbol.replace(/USDT$/, '-USDT');
         const startTimeInSeconds = Math.floor(parseInt(startTime) / 1000);
-        const candleType = '1min';
+        
+        // --- THE FIX IS HERE ---
+        // We are changing the candle interval from 1 minute to 1 hour
+        // to get a much larger historical time window from the API.
+        const candleType = '1hour';
 
         const apiUrl = `https://api.kucoin.com/api/v1/market/candles?type=${candleType}&symbol=${kucoinSymbol}&startAt=${startTimeInSeconds}`;
 
