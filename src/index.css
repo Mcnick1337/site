@@ -28,38 +28,6 @@ body {
   animation: fadeInUp 0.5s ease-out both;
 }
 
-<<<<<<< HEAD
-/* --- THIS IS THE CRITICAL FIX FOR THE DROPDOWNS --- */
-@layer components {
-  .custom-select {
-    @apply w-full rounded-md border-0 py-1.5 px-2.5 shadow-sm;
-    @apply bg-gray-200 text-gray-800 ring-1 ring-inset ring-gray-300;
-    @apply focus:ring-2 focus:ring-inset focus:ring-cyan-500;
-    @apply dark:bg-white/10 dark:text-white dark:ring-white/20;
-    
-    /* 1. Remove all native browser styling */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    
-    /* 2. Add our own custom arrow icon as a background */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-    background-position: right 0.5rem center;
-    background-repeat: no-repeat;
-    background-size: 1.5em 1.5em;
-    padding-right: 2.5rem; /* Make space for our arrow */
-  }
-  
-  /* 3. Use a different colored arrow for dark mode */
-  .dark .custom-select {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-  }
-}
-/* --- END OF CRITICAL FIX --- */
-
-
-=======
->>>>>>> parent of 0923356 (fix)
 /* --- React Datepicker Customization --- */
 .react-datepicker-wrapper {
   display: block;
@@ -69,17 +37,10 @@ body {
   @apply w-full bg-white/10 rounded-md border-0 py-1.5 px-2.5 text-white ring-1 ring-inset ring-white/20 focus:ring-2 focus:ring-inset focus:ring-cyan-500;
 }
 .react-datepicker {
-<<<<<<< HEAD
-  @apply border-gray-300 bg-gray-100 dark:border-white/20 dark:bg-dark-card;
-}
-.react-datepicker__header {
-  @apply border-b-gray-300 bg-gray-200 dark:border-b-white/20 dark:bg-white/10;
-=======
   @apply bg-dark-card border-white/20;
 }
 .react-datepicker__header {
   @apply bg-white/10 border-b-white/20;
->>>>>>> parent of 0923356 (fix)
 }
 .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker__day-name {
   @apply text-gray-300;
