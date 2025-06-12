@@ -1,9 +1,109 @@
-// File: src/utils/calculateStats.js (Updated with advanced metrics)
+// File: src/utils/calculateStats.js
 
 /**
  * This is the main calculation engine for the dashboard.
  * It contains all the logic for deriving statistics from the raw signal data.
  */
+
+async function fetchOHLCForBacktest(symbol, startTime, endTime) {
+    const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${startTime}&interval=1m&endTime=${endTime}`;
+    try {
+        const response = await fetch(url);
+        if (!response.ok) return [];
+        const data = await response.json();
+        return data.map(d => ({ time: parseInt(d[0]) * 1000, high: parseFloat(d[3]), low: parseFloat(d[4]), close: parseFloat(d[2]) }));
+    } catch (error) {
+        console.error("Error fetching OHLC for backtest:", error);
+        return [];
+    }
+}
+
+export async function runBacktest({ signals, strategy }) {
+    if (!signals || signals.length === 0) return null;
+
+    let equity = 10000;
+    let peakEquity = 10000;
+    let maxDrawdown = 0;
+    let wins = 0;
+    let losses = 0;
+    let grossProfit = 0;
+    let grossLoss = 0;
+    const returns = [];
+    const equityCurveData = [{ x: new Date(signals[0]?.timestamp).getTime(), y: equity }];
+
+    const sortedSignals = [...signals].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
+    for (const signal of sortedSignals) {
+        const entryPrice = parseFloat(signal["Entry Price"]);
+        const stopLossPrice = parseFloat(signal["Stop Loss"]);
+        const signalType = signal.Signal?.toLowerCase();
+
+        if (isNaN(entryPrice) || isNaN(stopLossPrice) || !signalType || !signal.timestamp) continue;
+
+        const riskPerUnit = Math.abs(entryPrice - stopLossPrice);
+        const takeProfitPrice = signalType === 'buy'
+            ? entryPrice + (riskPerUnit * strategy.takeProfitRR)
+            : entryPrice - (riskPerUnit * strategy.takeProfitRR);
+
+        const signalTime = new Date(signal.timestamp).getTime();
+        const exitTime = signalTime + (strategy.timeExitHours * 60 * 60 * 1000);
+
+        const ohlcData = await fetchOHLCForBacktest(signal.symbol, signalTime, exitTime);
+        if (ohlcData.length === 0) continue;
+
+        let outcome = { status: 'timeout', exitPrice: ohlcData[ohlcData.length - 1].close, exitTime: exitTime };
+
+        for (const candle of ohlcData) {
+            const hitsSL = signalType === 'buy' ? candle.low <= stopLossPrice : candle.high >= stopLossPrice;
+            const hitsTP = signalType === 'buy' ? candle.high >= takeProfitPrice : candle.low <= takeProfitPrice;
+
+            if (hitsSL && hitsTP) {
+                outcome = { status: 'loss', exitPrice: stopLossPrice, exitTime: candle.time };
+                break;
+            }
+            if (hitsSL) {
+                outcome = { status: 'loss', exitPrice: stopLossPrice, exitTime: candle.time };
+                break;
+            }
+            if (hitsTP) {
+                outcome = { status: 'win', exitPrice: takeProfitPrice, exitTime: candle.time };
+                break;
+            }
+        }
+        
+        const pnl = signalType === 'buy' ? outcome.exitPrice - entryPrice : entryPrice - outcome.exitPrice;
+        const pnlAsRiskUnit = pnl / riskPerUnit;
+        returns.push(pnlAsRiskUnit);
+
+        if (pnl > 0) {
+            wins++;
+            grossProfit += pnl;
+        } else {
+            losses++;
+            grossLoss += pnl;
+        }
+        
+        equity += (pnlAsRiskUnit * 100);
+        peakEquity = Math.max(peakEquity, equity);
+        maxDrawdown = Math.max(maxDrawdown, (peakEquity - equity) / peakEquity);
+        equityCurveData.push({ x: outcome.exitTime, y: equity });
+    }
+
+    const tradableSignals = wins + losses;
+    const avgReturn = returns.length > 0 ? returns.reduce((a, b) => a + b, 0) / returns.length : 0;
+    const stdDev = returns.length > 0 ? Math.sqrt(returns.map(x => Math.pow(x - avgReturn, 2)).reduce((a, b) => a + b, 0) / returns.length) : 0;
+    
+    return {
+        winRate: tradableSignals > 0 ? (wins / tradableSignals) * 100 : 0,
+        tradableSignals,
+        wins,
+        losses,
+        profitFactor: grossLoss !== 0 ? Math.abs(grossProfit / grossLoss) : Infinity,
+        sharpeRatio: stdDev !== 0 ? avgReturn / stdDev : 0,
+        maxDrawdown: maxDrawdown * 100,
+        equityCurveData,
+    };
+}
 
 export function calculateAllStats(signals) {
     if (!signals || signals.length === 0) return {};
@@ -42,7 +142,6 @@ export function calculateAllStats(signals) {
                 const rr = Math.abs(tp1 - entry) / Math.abs(entry - sl);
                 totalRR += rr;
                 rrCount++;
-                // Using a simple 100-unit risk per trade for calculations
                 const profitOrLoss = status === 'win' ? (100 * rr) : -100;
                 if (status === 'win') {
                     grossProfit += profitOrLoss;
@@ -64,38 +163,24 @@ export function calculateAllStats(signals) {
     });
     
     const tradableSignals = wins + losses;
-    
-    // --- Standard Deviation and Sharpe Ratio ---
     const avgReturn = returns.length > 0 ? returns.reduce((a, b) => a + b, 0) / returns.length : 0;
     const stdDev = returns.length > 0 ? Math.sqrt(returns.map(x => Math.pow(x - avgReturn, 2)).reduce((a, b) => a + b, 0) / returns.length) : 0;
     const sharpeRatio = stdDev !== 0 ? avgReturn / stdDev : 0;
-    
-    // --- ADDED: Sortino Ratio Calculation ---
     const negativeReturns = returns.filter(r => r < 0);
-    // Downside deviation uses the total number of returns in the denominator, a common convention.
     const downsideDeviation = negativeReturns.length > 0 ? Math.sqrt(negativeReturns.map(x => Math.pow(x - 0, 2)).reduce((a, b) => a + b, 0) / returns.length) : 0;
     const sortinoRatio = downsideDeviation !== 0 ? avgReturn / downsideDeviation : 0;
-
-    // --- ADDED: Average Win / Loss Calculation ---
     const avgWin = wins > 0 ? grossProfit / wins : 0;
-    const avgLoss = losses > 0 ? grossLoss / losses : 0; // This will be a negative number
+    const avgLoss = losses > 0 ? grossLoss / losses : 0;
 
     return {
         winRate: tradableSignals > 0 ? (wins / tradableSignals) * 100 : 0,
         tradableSignals, wins, losses, maxWinStreak, maxLossStreak,
         profitFactor: grossLoss !== 0 ? Math.abs(grossProfit / grossLoss) : Infinity,
         avgRR: rrCount > 0 ? totalRR / rrCount : 0,
-        sharpeRatio,
-        maxDrawdown: maxDrawdown * 100, // Keep as percentage
-        equityCurveData,
-        // ADDED: New advanced stats
-        sortinoRatio,
-        avgWin,
-        avgLoss,
+        sharpeRatio, maxDrawdown: maxDrawdown * 100, equityCurveData,
+        sortinoRatio, avgWin, avgLoss, returns,
     };
 }
-
-// --- The rest of the file (calculateSymbolWinRates, etc.) remains unchanged. ---
 
 export function calculateSymbolWinRates(signals) {
     if (!signals) return [];

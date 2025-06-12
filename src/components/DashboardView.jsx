@@ -1,4 +1,4 @@
-// File: src/pages/DashboardView.jsx (Updated)
+// File: src/pages/DashboardView.jsx
 
 import { useMemo } from 'react';
 import { TabNav } from '../components/TabNav';
@@ -42,12 +42,14 @@ export const DashboardView = ({
             weeklyStats,
             symbolWinRates,
             equityCurveData: overallStats.equityCurveData,
+            returns: overallStats.returns, // Ensure returns are passed through
         };
     }, [dateFilteredSignals]);
 
     const displayedSignals = useMemo(() => {
-        return processSignals(dateFilteredSignals, currentModelData.filters, currentModelData.sort);
-    }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort]);
+        // --- UPDATED: Pass the full stats object to the processing function ---
+        return processSignals(dateFilteredSignals, currentModelData.filters, currentModelData.sort, statsForDisplay);
+    }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort, statsForDisplay]);
 
     const catalogKey = useMemo(() => 
         JSON.stringify({ ...currentModelData.filters, ...currentModelData.sort }),
@@ -61,7 +63,6 @@ export const DashboardView = ({
 
     return (
         <div className="flex flex-col w-full">
-            {/* --- ADDED: The title and subtitle are now here --- */}
             <div className="mb-6">
                 <h1 className="text-4xl font-bold">MCN AI Stats</h1>
                 <p className="text-gray-500 dark:text-gray-400">Advanced AI-Powered Trading Signals</p>

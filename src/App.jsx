@@ -1,4 +1,4 @@
-// File: src/App.jsx (Corrected with on-demand data loading)
+// File: src/App.jsx
 
 import { useState, useEffect, createContext, useCallback } from 'react';
 import { Layout } from './components/Layout';
@@ -35,10 +35,13 @@ const floatingElements = [
 
 const createDefaultAiState = () => ({
     allSignals: [], 
-    isLoading: false, // --- ADDED: Per-model loading state ---
+    isLoading: false,
     symbolWinRates: [], overallStats: {}, dayOfWeekStats: {}, hourOfDayStats: {}, 
     weeklyStats: [], currentPage: 1, itemsPerPage: 12,
-    filters: { symbol: '', signalType: '', status: '', minConfidence: '50', startDate: null, endDate: null },
+    filters: { 
+        symbol: '', signalType: '', status: '', previousSignalStatus: '',
+        minConfidence: '50', startDate: null, endDate: null, reasoningSearch: '',
+    },
     sort: { by: 'timestamp' }, ohlcCache: {}, equityCurveData: [],
 });
 
@@ -64,34 +67,30 @@ export default function App() {
         localStorage.setItem('theme', theme);
     }, [theme]);
 
-    // --- ADDED: The new centralized data loading function ---
     const loadModelData = useCallback((modelId) => {
         if (!modelId || !AI_MODELS[modelId]) return;
-
         setAppState(prev => {
-            // Only fetch if signals are not loaded and not already loading
             if (prev[modelId].allSignals.length === 0 && !prev[modelId].isLoading) {
                 fetch(AI_MODELS[modelId].file)
                     .then(res => res.ok ? res.json() : Promise.reject(new Error(`File not found`)))
                     .then(signals => {
-                        setAppState(current => ({
-                            ...current,
-                            [modelId]: { ...current[modelId], allSignals: signals, isLoading: false }
-                        }));
+                        const sortedSignals = [...signals].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+                        const processedSignals = sortedSignals.map((signal, index) => {
+                            if (index === 0) return { ...signal, previousStatus: null };
+                            const prevSignal = sortedSignals[index - 1];
+                            return { ...signal, previousStatus: prevSignal.performance?.status || null };
+                        });
+                        setAppState(current => ({ ...current, [modelId]: { ...current[modelId], allSignals: processedSignals, isLoading: false } }));
                     }).catch(err => {
                         console.error(`Failed to load model ${modelId}:`, err);
                         setAppState(current => ({ ...current, [modelId]: { ...current[modelId], isLoading: false } }));
                     });
-                
-                // Return the new state with isLoading set to true
                 return { ...prev, [modelId]: { ...prev[modelId], isLoading: true } };
             }
-            // If already loaded or loading, return the previous state unchanged
             return prev;
         });
-    }, []); // Empty dependency array means this function is created only once
+    }, []);
 
-    // --- UPDATED: This effect now uses the new loading function ---
     useEffect(() => {
         localStorage.setItem('lastActiveTab', activeTab);
         loadModelData(activeTab);
@@ -112,14 +111,13 @@ export default function App() {
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <div className="bg-gray-100 dark:bg-dark-bg min-h-screen text-gray-800 dark:text-gray-200 font-sans relative transition-colors duration-300">
-                <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">{/* ... */}</div>
+                <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">{/* ... floating elements ... */}</div>
                 <div className="relative z-10">
                     <Layout activeView={activeView} setActiveView={setActiveView}>
                         <div className="p-4 md:p-8">
                             <Header />
                             {activeView === 'dashboard' && (
                                 comparisonViewActive ? (
-                                    // --- PASS DOWN: Provide the loading function to the component ---
                                     <ComparisonView 
                                         appState={appState} 
                                         models={AI_MODELS} 
@@ -136,7 +134,15 @@ export default function App() {
                                     />
                                 )
                             )}
-                            {activeView === 'portfolio' && <PortfolioView appState={appState} models={AI_MODELS} activeTab={activeTab} />}
+                            {/* --- UPDATED: Pass loadModelData to PortfolioView --- */}
+                            {activeView === 'portfolio' && (
+                                <PortfolioView 
+                                    appState={appState} 
+                                    models={AI_MODELS} 
+                                    activeTab={activeTab} 
+                                    loadModelData={loadModelData} 
+                                />
+                            )}
                         </div>
                     </Layout>
                 </div>

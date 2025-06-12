@@ -1,66 +1,90 @@
-import { useState } from 'react';
+// File: src/components/simulation/PortfolioSimulator.jsx
+
+import { useState, useMemo, useContext } from 'react';
 import { calculateCompoundingEquityCurve } from '../../utils/calculateStats';
 import { EquityChart } from '../charts/EquityChart';
+import { ThemeContext } from '../../App';
+
+// A simple, reusable card for displaying the simulation results.
+const ResultCard = ({ label, value, colorClass = 'text-white' }) => (
+    <div className="text-center">
+        <p className="text-sm text-gray-400 uppercase tracking-wider">{label}</p>
+        <p className={`text-3xl font-bold ${colorClass}`}>{value}</p>
+    </div>
+);
 
 export const PortfolioSimulator = ({ signals }) => {
-    const [config, setConfig] = useState({ capital: 10000, risk: 1, showChart: false });
-    const [simulatedData, setSimulatedData] = useState(null);
-    const [finalValue, setFinalValue] = useState(0);
+    const [initialCapital, setInitialCapital] = useState(10000);
+    const [riskPercent, setRiskPercent] = useState(1);
+    const { theme } = useContext(ThemeContext);
 
-    const handleRunSimulation = () => {
-        if (signals.length === 0) {
-            alert("No signal data loaded to run simulation.");
-            return;
-        }
-        const data = calculateCompoundingEquityCurve(signals, config.capital, config.risk);
-        setSimulatedData(data);
-        setFinalValue(data[data.length - 1]?.y || 0);
-        setConfig(prev => ({ ...prev, showChart: true }));
-    };
+    const simulationResults = useMemo(() => {
+        if (!signals || signals.length === 0) return null;
+        return calculateCompoundingEquityCurve(signals, initialCapital, riskPercent);
+    }, [signals, initialCapital, riskPercent]);
+
+    const finalBalance = simulationResults ? simulationResults[simulationResults.length - 1].y : initialCapital;
+    const totalReturn = ((finalBalance - initialCapital) / initialCapital) * 100;
+
+    const sharedInputStyles = `
+      w-full bg-transparent text-white rounded-md border-0 py-1.5 px-3 
+      ring-1 ring-inset ring-white/20 
+      focus:ring-2 focus:ring-inset focus:ring-cyan-500
+    `;
 
     return (
         <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
-            <h3 className="text-xl font-bold mb-4">Portfolio Simulation</h3>
-            <p className="text-sm text-gray-400 mb-4">
-                Simulate portfolio growth with compounding returns based on a fixed risk percentage per trade.
-            </p>
-            <div className="flex flex-wrap items-end gap-4 mb-4">
+            <h3 className="text-2xl font-bold mb-4">Compounding Portfolio Simulator</h3>
+            
+            {/* --- INPUT CONTROLS --- */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div>
-                    <label htmlFor="initialCapital" className="block text-xs font-medium text-gray-400">Initial Capital</label>
+                    <label htmlFor="initial-capital" className="block text-sm font-medium text-gray-400 mb-1">Initial Capital ($)</label>
                     <input
                         type="number"
-                        id="initialCapital"
-                        value={config.capital}
-                        onChange={e => setConfig({ ...config, capital: Number(e.target.value) })}
-                        className="w-full bg-white/10 rounded-md border-0 py-1.5 px-2.5 text-white ring-1 ring-inset ring-white/20 focus:ring-2 focus:ring-inset focus:ring-cyan-500"
+                        id="initial-capital"
+                        value={initialCapital}
+                        onChange={(e) => setInitialCapital(Number(e.target.value))}
+                        className={sharedInputStyles}
                     />
                 </div>
                 <div>
-                    <label htmlFor="riskPercent" className="block text-xs font-medium text-gray-400">Risk per Trade (%)</label>
+                    <label htmlFor="risk-percent" className="block text-sm font-medium text-gray-400 mb-1">Risk per Trade (%)</label>
                     <input
                         type="number"
-                        id="riskPercent"
-                        value={config.risk}
-                        onChange={e => setConfig({ ...config, risk: Number(e.target.value) })}
-                        className="w-full bg-white/10 rounded-md border-0 py-1.5 px-2.5 text-white ring-1 ring-inset ring-white/20 focus:ring-2 focus:ring-inset focus:ring-cyan-500"
+                        id="risk-percent"
+                        value={riskPercent}
+                        onChange={(e) => setRiskPercent(Number(e.target.value))}
+                        className={sharedInputStyles}
+                        min="0.1"
+                        step="0.1"
                     />
                 </div>
-                <button onClick={handleRunSimulation} className="bg-cyan-600 hover:bg-cyan-500 rounded-md py-2 px-4 font-semibold transition h-fit">
-                    Run Simulation
-                </button>
             </div>
-            {config.showChart && simulatedData && (
-                <div className="mt-6">
-                    <p className="text-lg font-semibold">
-                        Final Portfolio Value: 
-                        <span className="text-green-400 ml-2">
-                            ${finalValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                        </span>
-                    </p>
-                    {/* Pass the timeUnit prop to fix the timeline */}
-                    <EquityChart equityCurveData={simulatedData} timeUnit="day" />
-                </div>
-            )}
+
+            {/* --- RESULTS SUMMARY --- */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 bg-white/5 p-4 rounded-lg">
+                <ResultCard
+                    label="Final Balance"
+                    value={`$${finalBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
+                />
+                <ResultCard
+                    label="Total Return"
+                    value={`${totalReturn.toFixed(2)}%`}
+                    colorClass={totalReturn >= 0 ? 'text-green-400' : 'text-red-400'}
+                />
+            </div>
+
+            {/* --- EQUITY CHART --- */}
+            <div className="h-[350px]">
+                {simulationResults && simulationResults.length > 1 ? (
+                    <EquityChart equityCurveData={simulationResults} timeUnit="day" />
+                ) : (
+                    <div className="flex items-center justify-center h-full text-gray-500">
+                        {signals.length > 0 ? 'Run simulation to see results.' : 'Select a model with signal data to begin.'}
+                    </div>
+                )}
+            </div>
         </div>
     );
 };

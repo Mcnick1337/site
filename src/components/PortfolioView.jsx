@@ -1,45 +1,56 @@
-import { useState } from 'react';
-import { PortfolioSimulator } from './simulation/PortfolioSimulator';
-import { BacktestEngine } from './simulation/BacktestEngine';
+// File: src/pages/PortfolioView.jsx
 
-const AI_MODELS_META = {
-    'ai-max': { name: 'AI Max' },
-    'ai-bob': { name: 'AI Bob' },
-    'ai-bob-2': { name: 'AI Bob-2 (Exp)' },
-    'ai-bob-3': { name: 'AI Bob-3 (Exp)' },
-};
+import { useState, useEffect } from 'react';
+import { PortfolioSimulator } from '../components/simulation/PortfolioSimulator';
+import { BacktestEngine } from '../components/simulation/BacktestEngine';
+import { CustomSelect } from '../components/CustomSelect';
 
-export const PortfolioView = ({ appState, activeTab }) => {
-    // State to manage which model is selected ON THIS PAGE
+export const PortfolioView = ({ appState, models, activeTab, loadModelData }) => {
     const [selectedModel, setSelectedModel] = useState(activeTab);
 
-    // Get the signals for the currently selected model
+    // Actively load data for the selected model if it's not already loaded
+    useEffect(() => {
+        if (selectedModel) {
+            loadModelData(selectedModel);
+        }
+    }, [selectedModel, loadModelData]);
+
     const signals = appState[selectedModel]?.allSignals || [];
+    const isLoading = appState[selectedModel]?.isLoading || false;
+
+    const modelOptions = Object.entries(models).map(([id, { name }]) => ({
+        value: id,
+        label: name,
+    }));
 
     return (
         <div>
-            <div className="flex flex-wrap justify-between items-center mb-6">
+            <div className="flex flex-wrap justify-between items-center mb-6 gap-4">
                 <h2 className="text-3xl font-bold text-white">Portfolio & Strategy Tools</h2>
-                {/* THE NEW FEATURE: Dropdown to select the AI model */}
-                <div className="flex items-center gap-2">
-                    <label htmlFor="model-selector" className="text-sm font-medium text-gray-400">Analyse Model:</label>
-                    <select
-                        id="model-selector"
-                        value={selectedModel}
-                        onChange={(e) => setSelectedModel(e.target.value)}
-                        className="bg-dark-card rounded-md border-0 py-1.5 px-3 text-white ring-1 ring-inset ring-white/20 focus:ring-2 focus:ring-inset focus:ring-cyan-500"
-                    >
-                        {Object.entries(AI_MODELS_META).map(([id, { name }]) => (
-                            <option key={id} value={id}>{name}</option>
-                        ))}
-                    </select>
+                <div className="flex items-center gap-2 w-full sm:w-auto">
+                    <label htmlFor="model-selector" className="text-sm font-medium text-gray-400 flex-shrink-0">Analyse Model:</label>
+                    <div className="w-full sm:w-48">
+                        <CustomSelect
+                            id="model-selector"
+                            value={selectedModel}
+                            onChange={setSelectedModel}
+                            options={modelOptions}
+                        />
+                    </div>
                 </div>
             </div>
 
             <div className="space-y-8">
-                {/* Pass the correct signals array to the components */}
-                <PortfolioSimulator signals={signals} />
-                <BacktestEngine allSignals={signals} />
+                {isLoading ? (
+                    <div className="flex items-center justify-center h-96 bg-white/5 rounded-2xl">
+                        <p className="text-gray-400 animate-pulse">Loading Model Data...</p>
+                    </div>
+                ) : (
+                    <>
+                        <PortfolioSimulator signals={signals} />
+                        <BacktestEngine signals={signals} />
+                    </>
+                )}
             </div>
         </div>
     );
