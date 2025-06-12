@@ -4,92 +4,92 @@ import { useEffect, useRef } from 'react';
 import { createChart, LineStyle } from 'lightweight-charts';
 
 export const LightweightChart = ({ ohlcData, signal }) => {
-    // Refs to hold instances of the chart, series, and container.
-    // These will persist for the entire life of the component.
     const chartContainerRef = useRef(null);
     const chartRef = useRef(null);
     const seriesRef = useRef(null);
-    const priceLineRef = useRef(null); // A ref to specifically manage the price line
+    const priceLineRef = useRef(null);
 
-    // --- EFFECT 1: Handles the chart's lifecycle (creation and destruction) ---
-    // This effect runs ONLY ONCE when the component first mounts.
+    // This effect handles the creation and destruction of the chart.
     useEffect(() => {
-        if (!chartContainerRef.current) return;
+        const container = chartContainerRef.current;
+        if (!container) return;
 
-        // Create the chart instance
-        const chart = createChart(chartContainerRef.current, {
-            width: chartContainerRef.current.clientWidth,
-            height: 300,
-            layout: { background: { color: '#1a1a3e' }, textColor: '#d1d4dc' },
-            grid: { vertLines: { color: 'rgba(255, 255, 255, 0.1)' }, horzLines: { color: 'rgba(255, 255, 255, 0.1)' } },
-            timeScale: { borderColor: 'rgba(255, 255, 255, 0.2)', timeVisible: true },
-            crosshair: { mode: 'normal' },
-        });
+        // Use ResizeObserver to reliably wait for the container to have a size.
+        const resizeObserver = new ResizeObserver(entries => {
+            const { width, height } = entries[0].contentRect;
+            
+            // Only create the chart if it has a valid size AND it hasn't been created yet.
+            if (width > 0 && height > 0 && !chartRef.current) {
+                const chart = createChart(container, {
+                    width, height,
+                    layout: { background: { color: '#1a1a3e' }, textColor: '#d1d4dc' },
+                    grid: { vertLines: { color: 'rgba(255, 255, 255, 0.1)' }, horzLines: { color: 'rgba(255, 255, 255, 0.1)' } },
+                    timeScale: { borderColor: 'rgba(255, 255, 255, 0.2)', timeVisible: true },
+                    crosshair: { mode: 'normal' },
+                });
 
-        // Create the series and store references in our refs
-        const series = chart.addCandlestickSeries({
-            upColor: '#26a69a', downColor: '#ef5350', borderDownColor: '#ef5350',
-            borderUpColor: '#26a69a', wickDownColor: '#ef5350', wickUpColor: '#26a69a',
-        });
-        
-        chartRef.current = chart;
-        seriesRef.current = series;
+                const series = chart.addCandlestickSeries({
+                    upColor: '#26a69a', downColor: '#ef5350', borderDownColor: '#ef5350',
+                    borderUpColor: '#26a69a', wickDownColor: '#ef5350', wickUpColor: '#26a69a',
+                });
 
-        // Add a resize listener to keep the chart responsive
-        const handleResize = () => {
-            if (chartContainerRef.current && chartRef.current) {
-                chartRef.current.applyOptions({ width: chartContainerRef.current.clientWidth });
+                chartRef.current = chart;
+                seriesRef.current = series;
+                
+                // Once created, we don't need the observer anymore.
+                resizeObserver.disconnect();
             }
-        };
-        window.addEventListener('resize', handleResize);
+        });
 
-        // Cleanup function: This is called ONLY when the component is unmounted.
+        resizeObserver.observe(container);
+
+        // Cleanup function for when the component unmounts
         return () => {
-            window.removeEventListener('resize', handleResize);
+            resizeObserver.disconnect();
             if (chartRef.current) {
                 chartRef.current.remove();
                 chartRef.current = null;
             }
         };
-    }, []); // The empty dependency array [] is the key. It ensures this effect runs only once.
+    }, []); // Runs only on mount.
 
-    // --- EFFECT 2: Handles updates to data and markers ---
-    // This effect runs whenever ohlcData or signal changes.
+    // This effect handles all data updates.
     useEffect(() => {
-        // Don't try to update if the chart/series isn't created yet or if there's no data.
-        if (!seriesRef.current || !chartRef.current || !ohlcData || ohlcData.length === 0) {
-            return;
-        }
-        
-        // Update the data on the *existing* series.
-        seriesRef.current.setData(ohlcData);
+        if (!seriesRef.current || !ohlcData || ohlcData.length === 0) return;
 
-        // --- Clear previous markers and price line ---
+        seriesRef.current.setData(ohlcData);
+        
         seriesRef.current.setMarkers([]);
         if (priceLineRef.current) {
             seriesRef.current.removePriceLine(priceLineRef.current);
             priceLineRef.current = null;
         }
 
-        // --- Add new marker and price line if a signal is present ---
         if (signal) {
             const signalTime = new Date(signal.timestamp).getTime() / 1000;
             const entryPrice = parseFloat(signal["Entry Price"]);
-
             seriesRef.current.setMarkers([{
                 time: signalTime, position: 'aboveBar', color: '#e91e63', shape: 'arrowDown', text: 'Signal',
             }]);
-
             const newPriceLine = seriesRef.current.createPriceLine({
                 price: entryPrice, color: '#45b7d1', lineWidth: 2, lineStyle: LineStyle.Solid, axisLabelVisible: true, title: ' Entry',
             });
-            priceLineRef.current = newPriceLine; // Store the new price line so we can remove it next time
+            priceLineRef.current = newPriceLine;
         }
 
-        // Fit the chart to the new data
         chartRef.current.timeScale().fitContent();
+    }, [ohlcData, signal]); // Re-runs when data changes.
 
-    }, [ohlcData, signal]); // This effect re-runs safely whenever the data changes.
+    // This effect handles window resizing to keep the chart responsive.
+    useEffect(() => {
+        const handleResize = () => {
+            if (chartRef.current && chartContainerRef.current) {
+                chartRef.current.applyOptions({ width: chartContainerRef.current.clientWidth });
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return <div ref={chartContainerRef} className="w-full h-[300px]" />;
 };
