@@ -1,4 +1,4 @@
-// File: src/components/charts/LightweightChart.jsx (Definitive flicker fix)
+// File: src/components/charts/LightweightChart.jsx (Reverted to no indicators)
 
 import { useEffect, useRef, useContext } from 'react';
 import { createChart, LineStyle } from 'lightweight-charts';
@@ -20,11 +20,10 @@ const lightTheme = {
     timeScale: { borderColor: '#D1D4DC', timeVisible: true },
 };
 
-export const LightweightChart = ({ ohlcData, indicatorData, signal, onCrosshairMove }) => {
+export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
     const chartContainerRef = useRef(null);
     const chartRef = useRef(null);
     const seriesRef = useRef(null);
-    const indicatorSeriesRef = useRef(null);
     const priceLinesRef = useRef([]);
     const { theme } = useContext(ThemeContext);
 
@@ -37,16 +36,15 @@ export const LightweightChart = ({ ohlcData, indicatorData, signal, onCrosshairM
         chartRef.current = chart;
         const series = chart.addCandlestickSeries({ upColor: '#26a69a', downColor: '#ef5350', borderDownColor: '#ef5350', borderUpColor: '#26a69a', wickDownColor: '#ef5350', wickUpColor: '#26a69a' });
         seriesRef.current = series;
-        const rsiSeries = chart.addLineSeries({ color: '#7E57C2', lineWidth: 2, priceScaleId: 'rsi', title: 'RSI(14)' });
-        rsiSeries.createPriceLine({ price: 70, color: '#EF5350', lineWidth: 1, lineStyle: LineStyle.Dashed, axisLabelVisible: true, title: '70' });
-        rsiSeries.createPriceLine({ price: 30, color: '#26A69A', lineWidth: 1, lineStyle: LineStyle.Dashed, axisLabelVisible: true, title: '30' });
-        indicatorSeriesRef.current = rsiSeries;
-        chart.priceScale('right').applyOptions({ scaleMargins: { top: 0.1, bottom: 0.25 } });
-        chart.priceScale('rsi').applyOptions({ height: 100, scaleMargins: { top: 0.9, bottom: 0 } });
+        
+        // Reverted: Removed the second price scale for RSI
+        chart.priceScale('right').applyOptions({ scaleMargins: { top: 0.1, bottom: 0.1 } });
+
         chart.subscribeCrosshairMove(param => {
             if (param.time && param.seriesData.has(series)) { onCrosshairMove(param.seriesData.get(series)); } 
             else { onCrosshairMove(null); }
         });
+
         const handleResize = () => { if (chartContainerRef.current && chartRef.current) { chartRef.current.resize(chartContainerRef.current.clientWidth, chartContainerRef.current.clientHeight); }};
         window.addEventListener('resize', handleResize);
         return () => { window.removeEventListener('resize', handleResize); if (chartRef.current) { chartRef.current.remove(); }};
@@ -60,8 +58,6 @@ export const LightweightChart = ({ ohlcData, indicatorData, signal, onCrosshairM
     useEffect(() => {
         if (!chartRef.current || !seriesRef.current) return;
 
-        // --- THE CORE FIX ---
-        // This effect now correctly handles data arriving OR being cleared.
         if (ohlcData && ohlcData.length > 0) {
             seriesRef.current.setData(ohlcData);
             priceLinesRef.current.forEach(line => seriesRef.current.removePriceLine(line));
@@ -96,20 +92,11 @@ export const LightweightChart = ({ ohlcData, indicatorData, signal, onCrosshairM
                 seriesRef.current.priceScale().applyOptions({ autoScale: false, minValue: minPrice - padding, maxValue: maxPrice + padding });
             }
             chartRef.current.timeScale().fitContent();
-
         } else {
-            // If data is null or empty, clear the series.
             seriesRef.current.setData([]);
             seriesRef.current.setMarkers([]);
         }
 
-        if(indicatorData && indicatorData.length > 0){
-            indicatorSeriesRef.current.setData(indicatorData);
-        } else {
-            indicatorSeriesRef.current.setData([]);
-        }
-
-        // Watermark is always visible
         chartRef.current.applyOptions({
              watermark: {
                 color: theme === 'light' ? 'rgba(0, 0, 0, 0.04)' : 'rgba(255, 255, 255, 0.04)',
@@ -117,8 +104,7 @@ export const LightweightChart = ({ ohlcData, indicatorData, signal, onCrosshairM
                 horzAlign: 'center', vertAlign: 'center',
             },
         })
-
-    }, [ohlcData, indicatorData, signal, theme]);
+    }, [ohlcData, signal, theme]);
 
     return <div ref={chartContainerRef} className="w-full h-full" />;
 };
