@@ -37,11 +37,26 @@ const floatingElements = [
 ];
 
 const createDefaultAiState = () => ({
-    allSignals: [], symbolWinRates: [], overallStats: {},
-    dayOfWeekStats: {}, hourOfDayStats: {}, weeklyStats: [], // Add weeklyStats
-    currentPage: 1, itemsPerPage: 12,
-    filters: { symbol: '', signalType: '', status: '', minConfidence: '50' },
-    sort: { by: 'timestamp' }, ohlcCache: {}, equityCurveData: [],
+    allSignals: [], 
+    symbolWinRates: [], 
+    overallStats: {},
+    dayOfWeekStats: {}, 
+    hourOfDayStats: {}, 
+    weeklyStats: [],
+    currentPage: 1, 
+    itemsPerPage: 12,
+    // --- THIS IS THE ONLY CHANGE IN THIS FILE ---
+    filters: { 
+        symbol: '', 
+        signalType: '', 
+        status: '', 
+        minConfidence: '50',
+        startDate: null, // Add startDate
+        endDate: null    // Add endDate
+    },
+    sort: { by: 'timestamp' }, 
+    ohlcCache: {}, 
+    equityCurveData: [],
 });
 
 export default function App() {
@@ -81,15 +96,13 @@ export default function App() {
             fetch(AI_MODELS[activeTab].file)
                 .then(res => res.ok ? res.json() : Promise.reject(new Error(`File not found`)))
                 .then(signals => {
-                    const overallStats = calculateAllStats(signals);
-                    const timeStats = calculateTimeBasedStats(signals);
-                    const weeklyStats = calculateWeeklyStats(signals);
+                    // Note: We no longer calculate stats here. 
+                    // This is now handled in DashboardView to react to date filters.
                     setAppState(prev => ({
-                        ...prev, [activeTab]: {
-                            ...prev[activeTab], allSignals: signals, overallStats: overallStats,
-                            equityCurveData: overallStats.equityCurveData, dayOfWeekStats: timeStats.dayStats,
-                            hourOfDayStats: timeStats.hourStats, symbolWinRates: calculateSymbolWinRates(signals),
-                            weeklyStats: weeklyStats,
+                        ...prev,
+                        [activeTab]: {
+                            ...prev[activeTab],
+                            allSignals: signals,
                         }
                     }));
                 }).catch(err => console.error(err));

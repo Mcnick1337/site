@@ -2,50 +2,69 @@
 
 import { useMemo } from 'react';
 import { TabNav } from './TabNav';
-import { ModelInfo } from './ModelInfo';
-import { StatsGrid } from './StatsGrid';
-import { DetailsSectionDashboard } from './DetailsSectionDashboard';
-import { FilterControls } from './FilterControls';
-import { SignalCatalog } from './SignalCatalog';
+// ... (other imports)
 import { processSignals } from '../utils/processSignals';
-// REMOVED: No longer importing WeeklyPerformanceChart here
+// --- IMPORT ALL THE STATS FUNCTIONS ---
+import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats } from '../utils/calculateStats';
 
-export const DashboardView = ({
-    models, activeTab, setActiveTab, appState,
-    handleStateChange, handlePageChange, setSelectedSignal,
-    highlightedSignalId, onSignalHover, setComparisonViewActive
-}) => {
+export const DashboardView = ({ /* ... (all props) ... */ }) => {
     const currentModelData = appState[activeTab];
 
+    // --- STEP 1: Filter signals by date range first ---
+    const dateFilteredSignals = useMemo(() => {
+        const { startDate, endDate } = currentModelData.filters;
+        if (!startDate && !endDate) {
+            return currentModelData.allSignals;
+        }
+        return currentModelData.allSignals.filter(s => {
+            const signalDate = new Date(s.timestamp);
+            if (isNaN(signalDate.getTime())) return false;
+            const startMatch = !startDate || signalDate >= startDate;
+            const endMatch = !endDate || signalDate <= endDate;
+            return startMatch && endMatch;
+        });
+    }, [currentModelData.allSignals, currentModelData.filters.startDate, currentModelData.filters.endDate]);
+
+    // --- STEP 2: Recalculate all stats based on the date-filtered signals ---
+    const statsForDisplay = useMemo(() => {
+        const overallStats = calculateAllStats(dateFilteredSignals); // No 'filters' needed here
+        const timeStats = calculateTimeBasedStats(dateFilteredSignals);
+        const weeklyStats = calculateWeeklyStats(dateFilteredSignals);
+        const symbolWinRates = calculateSymbolWinRates(dateFilteredSignals);
+        return {
+            overallStats,
+            dayOfWeekStats: timeStats.dayStats,
+            hourOfDayStats: timeStats.hourStats,
+            weeklyStats,
+            symbolWinRates,
+            equityCurveData: overallStats.equityCurveData,
+        };
+    }, [dateFilteredSignals]);
+
+    // --- STEP 3: Apply the *other* filters (symbol, type, etc.) for the signal catalog view ---
     const displayedSignals = useMemo(() => {
-        return processSignals(currentModelData.allSignals, currentModelData.filters, currentModelData.sort);
-    }, [currentModelData.allSignals, currentModelData.filters, currentModelData.sort]);
+        // Pass the already date-filtered signals to be processed further
+        return processSignals(dateFilteredSignals, currentModelData.filters, currentModelData.sort);
+    }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort]);
 
     return (
         <>
-            <TabNav
-                models={models}
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-                onCompareClick={() => setComparisonViewActive(true)}
-            />
+            <TabNav /* ... */ />
             <ModelInfo modelId={activeTab} />
             
-            {/* This is the original layout, restored */}
-            <StatsGrid stats={currentModelData.overallStats} />
+            {/* --- USE THE NEWLY CALCULATED STATS --- */}
+            <StatsGrid stats={statsForDisplay.overallStats} />
             
+            {/* We need to create a temporary appState-like object for DetailsSectionDashboard */}
             <DetailsSectionDashboard
                 modelId={activeTab}
-                appState={appState}
+                appState={{ [activeTab]: statsForDisplay }}
                 onSignalHover={onSignalHover}
             />
-            <FilterControls
-                modelId={activeTab}
-                filters={currentModelData.filters}
-                sort={currentModelData.sort}
-                onFilterChange={(key, value) => handleStateChange('filters', key, value)}
-                onSortChange={(key, value) => handleStateChange('sort', key, value)}
-            />
+            
+            <FilterControls /* ... */ />
+            
+            {/* This remains the same, as it uses the final filtered list */}
             <SignalCatalog
                 signals={displayedSignals}
                 currentPage={currentModelData.currentPage}

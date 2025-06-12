@@ -42,3 +42,36 @@ body {
 .card-enter {
   animation: fadeInUp 0.5s ease-out both;
 }
+
+/* --- React Datepicker Customization --- */
+.react-datepicker-wrapper {
+  display: block;
+  width: 100%;
+}
+.react-datepicker__input-container input {
+  @apply w-full bg-white/10 rounded-md border-0 py-1.5 px-2.5 text-white ring-1 ring-inset ring-white/20 focus:ring-2 focus:ring-inset focus:ring-cyan-500;
+}
+.react-datepicker {
+  @apply bg-dark-card border-white/20;
+}
+.react-datepicker__header {
+  @apply bg-white/10 border-b-white/20;
+}
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker__day-name {
+  @apply text-gray-300;
+}
+.react-datepicker__day {
+  @apply text-gray-300;
+}
+.react-datepicker__day:hover {
+  @apply bg-white/20;
+}
+.react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
+  @apply bg-cyan-600 text-white;
+}
+.react-datepicker__day--disabled {
+  @apply text-gray-600;
+}
+.react-datepicker__triangle::before, .react-datepicker__triangle::after {
+  display: none;
+}
