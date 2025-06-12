@@ -1,4 +1,4 @@
-/* File: src/index.css */
+/* File: src/index.css (Updated with scrollbar styles) */
 
 @tailwind base;
 @tailwind components;
@@ -45,38 +45,45 @@ body {
   animation: fadeInUp 0.5s ease-out both;
 }
 
+/* --- ADDED: Custom scrollbar styling for a cleaner look in the modal --- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-500/30 rounded-full;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500/50;
+}
+
 /* --- React Datepicker Customization (Theme-Aware) --- */
 .react-datepicker-wrapper {
   display: block;
   width: 100%;
 }
-
-/* ADDED: New ruleset for the datepicker popper */
 .react-datepicker-popper {
-  z-index: 50; /* High z-index to ensure it appears above all other content */
+  z-index: 50;
 }
-
 .react-datepicker__input-container input {
   @apply w-full rounded-md border-0 py-1.5 px-2.5 shadow-sm;
   @apply bg-gray-200 text-gray-800 ring-1 ring-inset ring-gray-300;
   @apply focus:ring-2 focus:ring-inset focus:ring-cyan-500;
   @apply dark:bg-white/10 dark:text-white dark:ring-white/20;
 }
-
 .react-datepicker {
   @apply border-gray-300 bg-gray-100;
   @apply dark:border-white/20 dark:bg-dark-card;
 }
-
 .react-datepicker__header {
   @apply border-b-gray-300 bg-gray-200;
   @apply dark:border-b-white/20 dark:bg-white/10;
 }
-
 .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker__day-name {
   @apply text-gray-700 dark:text-gray-300;
 }
-
 .react-datepicker__day {
   @apply text-gray-800 dark:text-gray-300;
 }
@@ -89,7 +96,6 @@ body {
 .react-datepicker__day--disabled {
   @apply text-gray-500 dark:text-gray-600;
 }
-
 .react-datepicker__triangle::before, .react-datepicker__triangle::after {
   display: none;
 }

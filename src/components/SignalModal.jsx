@@ -1,4 +1,4 @@
-// File: src/components/SignalModal.jsx (Updated with a new 2-column layout)
+// File: src/components/SignalModal.jsx (Updated to prevent flashing)
 
 import { useEffect, useState, useContext } from 'react';
 import { motion } from 'framer-motion';
@@ -6,7 +6,7 @@ import { LightweightChart } from './charts/LightweightChart';
 import { Skeleton } from './Skeleton';
 import { ThemeContext } from '../App';
 
-// --- Helper functions (fetchOHLCData, fetchIndicatorData) remain unchanged ---
+// Helper functions (fetchOHLCData, fetchIndicatorData) remain unchanged
 async function fetchOHLCData(symbol, signalTime, interval) {
     const hoursToFetch = 120;
     const startTime = new Date(signalTime.getTime() - (hoursToFetch * 60 * 60 * 1000)).getTime();
@@ -46,18 +46,16 @@ const availableIntervals = ['5m', '15m', '1h', '4h', '1d'];
 const intervalMap = { '5m': '5min', '15m': '15min', '1h': '1hour', '4h': '4hour', '1d': '1day' };
 
 export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
-    const [isShowing, setIsShowing] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [ohlcData, setOhlcData] = useState(null);
     const [indicatorData, setIndicatorData] = useState(null);
     const [interval, setInterval] = useState('1h');
     const [crosshairData, setCrosshairData] = useState(null);
 
-    // --- Data fetching useEffect remains unchanged ---
     useEffect(() => {
-        requestAnimationFrame(() => setIsShowing(true));
+        // Set loading to true whenever the interval or signal changes
+        setIsLoading(true); 
         const loadData = async () => {
-            setIsLoading(true);
             const kucoinInterval = intervalMap[interval];
             const ohlcCacheKey = `ohlc-${signal.timestamp}-${kucoinInterval}`;
             const rsiCacheKey = `rsi-${signal.timestamp}-${kucoinInterval}`;
@@ -78,59 +76,48 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
         loadData();
     }, [signal, cache, updateCache, interval]);
 
-    const handleClose = () => {
-        setIsShowing(false);
-        setTimeout(onClose, 300);
-    };
+    const handleClose = () => setTimeout(onClose, 300); // Simplified close
 
     const displayData = crosshairData || (ohlcData && ohlcData[ohlcData.length - 1]);
 
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out" onClick={handleClose}>
             <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-            {/* --- UPDATED: Increased max-width for a better two-column layout --- */}
             <motion.div 
                 className="relative z-10 bg-gray-100 dark:bg-dark-card w-full max-w-6xl rounded-2xl border border-black/10 dark:border-white/20 shadow-2xl p-6 m-4 flex flex-col"
-                initial={{ opacity: 0, y: 20, scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 20, scale: 0.98 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.2 }}
                 onClick={e => e.stopPropagation()}
             >
-                {/* --- HEADER --- */}
                 <div className="flex-shrink-0 flex justify-between items-center mb-4">
                     <h2 className="text-2xl font-bold">{signal.symbol} - Signal Details</h2>
                     <button onClick={handleClose} className="text-3xl text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">×</button>
                 </div>
 
-                {/* --- NEW LAYOUT: Main content area with two columns --- */}
                 <div className="flex flex-col lg:flex-row gap-6 flex-grow min-h-0">
                     
                     {/* --- LEFT COLUMN (Chart) --- */}
                     <div className="lg:w-2/3 flex flex-col gap-2">
-                        {displayData && !isLoading && (
-                            <div className="flex space-x-4 text-xs text-gray-600 dark:text-gray-400">
-                                <span>O: <span className="font-mono">{displayData.open.toFixed(2)}</span></span>
-                                <span>H: <span className="font-mono">{displayData.high.toFixed(2)}</span></span>
-                                <span>L: <span className="font-mono">{displayData.low.toFixed(2)}</span></span>
-                                <span>C: <span className="font-mono">{displayData.close.toFixed(2)}</span></span>
+                        <div className="flex justify-between items-center">
+                            <div className="flex items-center space-x-2">
+                                {availableIntervals.map(iv => (
+                                    <button key={iv} onClick={() => setInterval(iv)} className={`px-3 py-1 text-sm rounded-md transition-colors ${interval === iv ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-white/20'}`}>{iv.toUpperCase()}</button>
+                                ))}
                             </div>
-                        )}
-                        <div className="flex items-center space-x-2">
-                            {availableIntervals.map(iv => (
-                                <button key={iv} onClick={() => setInterval(iv)}
-                                    className={`px-3 py-1 text-sm rounded-md transition-colors ${
-                                        interval === iv 
-                                        ? 'bg-blue-500 text-white' 
-                                        : 'bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-white/20'
-                                    }`}
-                                >{iv.toUpperCase()}</button>
-                            ))}
+                            <div className="flex space-x-4 text-xs text-gray-600 dark:text-gray-400">
+                                {displayData && !isLoading && (<>
+                                    <span>O: <span className="font-mono">{displayData.open.toFixed(2)}</span></span>
+                                    <span>H: <span className="font-mono">{displayData.high.toFixed(2)}</span></span>
+                                    <span>L: <span className="font-mono">{displayData.low.toFixed(2)}</span></span>
+                                    <span>C: <span className="font-mono">{displayData.close.toFixed(2)}</span></span>
+                                </>)}
+                            </div>
                         </div>
-                        <div className="relative w-full flex-grow h-[400px] lg:h-auto">
-                            {isLoading ? (
-                                <Skeleton className="w-full h-full bg-gray-300 dark:bg-white/10" />
-                            ) : ohlcData ? (
+                        {/* --- UPDATED: Chart container is now stable with an overlay for loading --- */}
+                        <div className="relative w-full flex-grow h-[400px] lg:h-auto bg-gray-200 dark:bg-black/20 rounded-lg">
+                            {(ohlcData && !isLoading) ? (
                                 <LightweightChart 
                                     ohlcData={ohlcData} 
                                     indicatorData={indicatorData}
@@ -138,19 +125,26 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                     onCrosshairMove={setCrosshairData}
                                 />
                             ) : (
-                                <div className="absolute inset-0 flex items-center justify-center text-red-400">Failed to load chart data.</div>
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    {isLoading ? (
+                                        <p className="text-gray-500">Loading Chart...</p>
+                                    ) : (
+                                        <p className="text-red-400">Failed to load chart data.</p>
+                                    )}
+                                </div>
                             )}
                         </div>
                     </div>
 
                     {/* --- RIGHT COLUMN (Details) --- */}
                     <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:max-h-[520px] lg:overflow-y-auto custom-scrollbar pr-2">
+                        {/* --- UPDATED: Skeleton is now an overlay to prevent layout shifts --- */}
                         {isLoading ? (
-                            <>
+                            <div className="space-y-4">
                                 <div className="grid grid-cols-2 gap-4"><Skeleton className="h-16"/><Skeleton className="h-16"/><Skeleton className="h-16"/><Skeleton className="h-16"/></div>
                                 <Skeleton className="h-24" />
                                 <Skeleton className="h-20" />
-                            </>
+                            </div>
                         ) : (
                             <>
                                 <div className="grid grid-cols-2 gap-4 text-center">
@@ -160,12 +154,10 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                     <div><p className="text-sm text-gray-500 dark:text-gray-400">Signal Time</p><p className="text-sm font-semibold">{new Date(signal.timestamp).toLocaleString()}</p></div>
                                     {signal["Take Profit Targets"]?.[1] && <div className="col-span-2 md:col-span-1"><p className="text-sm text-gray-500 dark:text-gray-400">Take Profit 2</p><p className="text-lg font-semibold text-green-600 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][1]).toFixed(5)}</p></div>}
                                 </div>
-                                
                                 <div>
                                     <h3 className="text-lg font-semibold mb-2">AI Reasoning</h3>
                                     <p className="text-sm text-gray-600 dark:text-gray-400">{signal.Reasoning || 'No reasoning provided.'}</p>
                                 </div>
-
                                 <div>
                                     <h3 className="text-lg font-semibold mb-2">Relevant News</h3>
                                     <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
