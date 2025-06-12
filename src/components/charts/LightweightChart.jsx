@@ -7,20 +7,52 @@ export const LightweightChart = ({ ohlcData, signal }) => {
     const chartContainerRef = useRef(null);
     const chartRef = useRef(null);
     const seriesRef = useRef(null);
-    // CHANGE: Use an array to hold all our price lines (Entry, TP, SL)
     const priceLinesRef = useRef([]);
 
     // This effect handles chart creation and destruction ONCE.
     useEffect(() => {
         if (!chartContainerRef.current) return;
 
-        const chart = createChart(chartContainerRef.current, {
+        // --- NEW: Professional "TradingView" Theme Options ---
+        const chartOptions = {
+            layout: {
+                background: { color: '#131722' }, // Bybit's dark background
+                textColor: '#D9D9D9', // Light gray text
+                fontFamily: `'Trebuchet MS', 'Roboto', sans-serif`,
+            },
+            grid: {
+                vertLines: { color: '#1E222D' }, // Subtle vertical grid lines
+                horzLines: { color: '#1E222D' }, // Subtle horizontal grid lines
+            },
+            crosshair: {
+                mode: 'normal',
+                vertLine: { style: LineStyle.Dashed, color: '#758696' },
+                horzLine: { style: LineStyle.Dashed, color: '#758696' },
+            },
+            rightPriceScale: {
+                borderColor: '#1E222D', // Border to match the grid
+            },
+            timeScale: {
+                borderColor: '#1E222D', // Border to match the grid
+                timeVisible: true,
+            },
+            // The iconic background watermark
+            watermark: {
+                color: 'rgba(255, 255, 255, 0.04)', // Very faint
+                visible: true,
+                text: signal.symbol.toUpperCase(), // Dynamic symbol text
+                fontSize: 48,
+                horzAlign: 'center',
+                vertAlign: 'center',
+            },
+        };
+
+        const chart = createChart(chartContainerRef.current, chartOptions);
+        
+        // We keep the width and height separate as they depend on the container size
+        chart.applyOptions({
             width: chartContainerRef.current.clientWidth,
-            height: 300,
-            layout: { background: { color: '#1a1a3e' }, textColor: '#d1d4dc' },
-            grid: { vertLines: { color: 'rgba(255, 255, 255, 0.1)' }, horzLines: { color: 'rgba(255, 255, 255, 0.1)' } },
-            timeScale: { borderColor: 'rgba(255, 255, 255, 0.2)', timeVisible: true },
-            crosshair: { mode: 'normal' },
+            height: 300
         });
 
         const series = chart.addCandlestickSeries({
@@ -45,7 +77,7 @@ export const LightweightChart = ({ ohlcData, signal }) => {
                 chartRef.current = null;
             }
         };
-    }, []);
+    }, [signal.symbol]); // IMPORTANT: Re-create chart if the symbol changes to update watermark
 
     // This effect handles all DATA and MARKER updates.
     useEffect(() => {
@@ -55,39 +87,28 @@ export const LightweightChart = ({ ohlcData, signal }) => {
         
         seriesRef.current.setData(ohlcData);
         seriesRef.current.setMarkers([]);
-
-        // --- NEW: Improved cleanup logic for all price lines ---
+        
         priceLinesRef.current.forEach(line => seriesRef.current.removePriceLine(line));
         priceLinesRef.current = [];
 
-        // --- NEW: Add all price lines if a signal is present ---
         if (signal) {
             const addPriceLine = (value, title, color, lineStyle) => {
                 const price = parseFloat(value);
-                // Important: Only draw the line if the price is a valid number
                 if (!isNaN(price)) {
                     const newLine = seriesRef.current.createPriceLine({
                         price, color, lineWidth: 2, lineStyle, axisLabelVisible: true, title,
                     });
-                    priceLinesRef.current.push(newLine); // Add to our array for future cleanup
+                    priceLinesRef.current.push(newLine);
                 }
             };
 
-            // Add Entry Price line (Solid Blue)
             addPriceLine(signal["Entry Price"], ' Entry', '#45b7d1', LineStyle.Solid);
-            
-            // Add TP1 line (Dashed Green)
             addPriceLine(signal["TP1"], ' TP1', '#26a69a', LineStyle.Dashed);
-            
-            // Add TP2 line if it exists (Dashed Green)
             if (signal["TP2"]) {
                 addPriceLine(signal["TP2"], ' TP2', '#26a69a', LineStyle.Dashed);
             }
-            
-            // Add SL line (Dashed Red)
             addPriceLine(signal["SL"], ' SL', '#ef5350', LineStyle.Dashed);
 
-            // Add the signal marker on the chart
             const signalTime = new Date(signal.timestamp).getTime() / 1000;
             seriesRef.current.setMarkers([{
                 time: signalTime, position: 'aboveBar', color: '#e91e63', shape: 'arrowDown', text: 'Signal',
