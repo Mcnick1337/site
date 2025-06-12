@@ -1,10 +1,11 @@
+// File: src/components/SignalCard.jsx
+
 const getConfidenceClass = (confidence) => {
     if (confidence >= 85) return 'shadow-glow-cyan border-cyan-500';
     if (confidence >= 70) return 'shadow-glow-blue border-blue-500';
     return 'border-white/20';
 };
 
-// UPDATED: Added index prop for staggered animation
 export const SignalCard = ({ signal, onClick, isHighlighted, index }) => (
     <div
         onClick={onClick}
@@ -13,7 +14,6 @@ export const SignalCard = ({ signal, onClick, isHighlighted, index }) => (
                     card-enter
                     ${getConfidenceClass(signal.Confidence)}
                     ${isHighlighted ? 'transform scale-105 bg-cyan-900/50' : 'hover:-translate-y-1'}`}
-        // NEW: Apply animation delay based on index
         style={{ animationDelay: `${index * 50}ms` }}
     >
         <div className="flex justify-between items-center mb-3">
@@ -23,8 +23,15 @@ export const SignalCard = ({ signal, onClick, isHighlighted, index }) => (
             </span>
         </div>
         <div className="text-sm space-y-2 text-gray-300">
-            <div className="flex justify-between"><span>Confidence:</span> <span className="font-semibold text-white">{signal.Confidence}%</span></div>
-            <div className="flex justify-between"><span>Status:</span> <span className="font-semibold text-white">{signal.performance.status}</span></div>
+            <div className="flex justify-between"><span>Confidence:</span> <span className="font-semibold text-white">{signal.Confidence || 'N/A'}%</span></div>
+            
+            {/* --- THIS IS THE FIX --- */}
+            {/* We use optional chaining (?.) to safely access the status. */}
+            {/* If it doesn't exist, we show 'Pending' as a fallback. */}
+            <div className="flex justify-between">
+                <span>Status:</span> 
+                <span className="font-semibold text-white">{signal.performance?.status || 'Pending'}</span>
+            </div>
         </div>
         <div className="text-xs text-gray-500 mt-3 text-right">{new Date(signal.timestamp).toLocaleString()}</div>
     </div>
