@@ -35,6 +35,7 @@ export const FilterControls = ({ modelId, filters, sort, onFilterChange, onSortC
                     endDate={filters.endDate}
                     isClearable
                     placeholderText="Anytime"
+                    // The input is styled via src/index.css
                 />
             </div>
 
@@ -51,11 +52,11 @@ export const FilterControls = ({ modelId, filters, sort, onFilterChange, onSortC
                     minDate={filters.startDate}
                     isClearable
                     placeholderText="Anytime"
+                    // The input is styled via src/index.css
                 />
             </div>
             
-            {/* --- THIS IS THE FIX --- */}
-            {/* The 'inputStyles' class is now applied to all select elements */}
+            {/* Type Filter */}
             <div className="flex-grow min-w-[100px]">
                 <label htmlFor={`type-filter-${modelId}`} className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Type</label>
                 <select 
@@ -70,6 +71,7 @@ export const FilterControls = ({ modelId, filters, sort, onFilterChange, onSortC
                 </select>
             </div>
 
+            {/* Status Filter */}
             <div className="flex-grow min-w-[100px]">
                 <label htmlFor={`status-filter-${modelId}`} className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Status</label>
                 <select 
@@ -84,6 +86,7 @@ export const FilterControls = ({ modelId, filters, sort, onFilterChange, onSortC
                 </select>
             </div>
             
+            {/* Sort By */}
             <div className="flex-grow min-w-[100px]">
                 <label htmlFor={`sort-by-${modelId}`} className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Sort By</label>
                 <select 
