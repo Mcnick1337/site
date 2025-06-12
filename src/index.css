@@ -43,35 +43,52 @@ body {
   animation: fadeInUp 0.5s ease-out both;
 }
 
-/* --- React Datepicker Customization --- */
+/* --- React Datepicker Customization (Theme-Aware) --- */
 .react-datepicker-wrapper {
   display: block;
   width: 100%;
 }
+
+/* Input field styling */
 .react-datepicker__input-container input {
-  @apply w-full bg-white/10 rounded-md border-0 py-1.5 px-2.5 text-white ring-1 ring-inset ring-white/20 focus:ring-2 focus:ring-inset focus:ring-cyan-500;
+  @apply w-full rounded-md border-0 py-1.5 px-2.5 shadow-sm;
+  @apply bg-gray-200 text-gray-800 ring-1 ring-inset ring-gray-300;
+  @apply focus:ring-2 focus:ring-inset focus:ring-cyan-500;
+  @apply dark:bg-white/10 dark:text-white dark:ring-white/20;
 }
+
+/* Main calendar popup */
 .react-datepicker {
-  @apply bg-dark-card border-white/20;
+  @apply border-gray-300 bg-gray-100;
+  @apply dark:border-white/20 dark:bg-dark-card;
 }
+
+/* Header of the calendar */
 .react-datepicker__header {
-  @apply bg-white/10 border-b-white/20;
+  @apply border-b-gray-300 bg-gray-200;
+  @apply dark:border-b-white/20 dark:bg-white/10;
 }
+
+/* Month name, day names */
 .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker__day-name {
-  @apply text-gray-300;
+  @apply text-gray-700 dark:text-gray-300;
 }
+
+/* Individual days */
 .react-datepicker__day {
-  @apply text-gray-300;
+  @apply text-gray-800 dark:text-gray-300;
 }
 .react-datepicker__day:hover {
-  @apply bg-white/20;
+  @apply bg-gray-300 dark:bg-white/20;
 }
 .react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
   @apply bg-cyan-600 text-white;
 }
 .react-datepicker__day--disabled {
-  @apply text-gray-600;
+  @apply text-gray-500 dark:text-gray-600;
 }
+
+/* Hides the default triangle arrow */
 .react-datepicker__triangle::before, .react-datepicker__triangle::after {
   display: none;
 }
