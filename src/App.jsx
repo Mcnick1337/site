@@ -1,3 +1,5 @@
+// File: src/App.jsx
+
 import { useState, useEffect } from 'react';
 import { Layout } from './components/Layout';
 import { Header } from './components/Header';
@@ -36,7 +38,7 @@ const floatingElements = [
 
 const createDefaultAiState = () => ({
     allSignals: [], symbolWinRates: [], overallStats: {},
-    dayOfWeekStats: {}, hourOfDayStats: {}, currentPage: 1, itemsPerPage: 12, // Increased page size
+    dayOfWeekStats: {}, hourOfDayStats: {}, currentPage: 1, itemsPerPage: 12,
     filters: { symbol: '', signalType: '', status: '', minConfidence: '50' },
     sort: { by: 'timestamp' }, ohlcCache: {}, equityCurveData: [],
 });
@@ -124,7 +126,15 @@ export default function App() {
                     signal={selectedSignal}
                     onClose={() => setSelectedSignal(null)}
                     cache={appState[activeTab].ohlcCache}
-                    updateCache={(signalId, data) => setAppState(prev => ({ ...prev, [activeTab]: { ...prev[activeTab], ohlcCache: { ...prev[activeTab].ohlcCache, [signalId]: data } } }))}
+                    // --- THIS IS THE ONLY CHANGE ---
+                    // The first argument is now 'key' instead of 'signalId' to support interval caching.
+                    updateCache={(key, data) => setAppState(prev => ({ 
+                        ...prev, 
+                        [activeTab]: { 
+                            ...prev[activeTab], 
+                            ohlcCache: { ...prev[activeTab].ohlcCache, [key]: data } 
+                        } 
+                    }))}
                 />
             )}
         </div>

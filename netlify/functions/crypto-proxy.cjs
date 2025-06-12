@@ -3,7 +3,11 @@
 const fetch = require('node-fetch');
 
 module.exports.handler = async function(event, context) {
-    const { symbol, startTime } = event.queryStringParameters;
+    // --- CHANGE 1: Read 'interval' from the query string ---
+    const { symbol, startTime, interval } = event.queryStringParameters;
+
+    // Set a default interval if none is provided
+    const candleType = interval || '1hour';
 
     if (!symbol || !startTime) {
         return { statusCode: 400, body: JSON.stringify({ error: 'Symbol and startTime parameters are required.' }) };
@@ -13,11 +17,7 @@ module.exports.handler = async function(event, context) {
         const kucoinSymbol = symbol.replace(/USDT$/, '-USDT');
         const startTimeInSeconds = Math.floor(parseInt(startTime) / 1000);
         
-        // --- THE FIX IS HERE ---
-        // We are changing the candle interval from 1 minute to 1 hour
-        // to get a much larger historical time window from the API.
-        const candleType = '1hour';
-
+        // --- CHANGE 2: Use the dynamic 'candleType' in the API URL ---
         const apiUrl = `https://api.kucoin.com/api/v1/market/candles?type=${candleType}&symbol=${kucoinSymbol}&startAt=${startTimeInSeconds}`;
 
         console.log(`[INFO] Fetching from KuCoin API: ${apiUrl}`);

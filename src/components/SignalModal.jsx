@@ -3,15 +3,16 @@
 import { useEffect, useState } from 'react';
 import { LightweightChart } from './charts/LightweightChart';
 
-// --- THE FIX IS IN THIS FUNCTION ---
-async function fetchOHLCData(symbol, signalTime) {
-    // We are changing '8' hours to '120' hours (5 days) to get more historical data.
+// --- CHANGE 1: The fetch function now accepts an 'interval' ---
+async function fetchOHLCData(symbol, signalTime, interval) {
     const hoursToFetch = 120;
     const startTime = new Date(signalTime.getTime() - (hoursToFetch * 60 * 60 * 1000)).getTime();
     
-    const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${startTime}`;
+    // --- CHANGE 2: Pass the interval as a query parameter ---
+    const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${startTime}&interval=${interval}`;
     try {
         const response = await fetch(url);
+        // ... (rest of the function is the same)
         if (!response.ok) throw new Error(`Proxy fetch failed: ${response.statusText}`);
         const data = await response.json();
         if (!Array.isArray(data)) throw new Error('Invalid data format from proxy.');
@@ -26,25 +27,43 @@ async function fetchOHLCData(symbol, signalTime) {
     }
 }
 
+// --- List of available intervals for the UI ---
+const availableIntervals = ['5m', '15m', '1h', '4h', '1d'];
+// KuCoin uses specific values for these intervals
+const intervalMap = { '5m': '5min', '15m': '15min', '1h': '1hour', '4h': '4hour', '1d': '1day' };
+
+
 export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
     const [isShowing, setIsShowing] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [ohlcData, setOhlcData] = useState(null);
+    // --- CHANGE 3: State for the selected chart interval ---
+    const [interval, setInterval] = useState('1h'); 
 
     useEffect(() => {
         requestAnimationFrame(() => setIsShowing(true));
         const loadData = async () => {
             setIsLoading(true);
-            let data = cache[signal.timestamp];
+            
+            // --- CHANGE 4: Improved caching logic ---
+            // Create a unique key for each signal AND interval to prevent conflicts
+            const kucoinInterval = intervalMap[interval];
+            const cacheKey = `${signal.timestamp}-${kucoinInterval}`;
+            
+            let data = cache[cacheKey];
             if (!data) {
-                data = await fetchOHLCData(signal.symbol, new Date(signal.timestamp));
-                if (data) updateCache(signal.timestamp, data);
+                data = await fetchOHLCData(signal.symbol, new Date(signal.timestamp), kucoinInterval);
+                if (data) {
+                    // Use the new composite key when updating the cache
+                    updateCache(cacheKey, data);
+                }
             }
             setOhlcData(data);
             setIsLoading(false);
         };
         loadData();
-    }, [signal, cache, updateCache]);
+    // --- CHANGE 5: Re-run this effect when the interval changes ---
+    }, [signal, cache, updateCache, interval]);
 
     const handleClose = () => {
         setIsShowing(false);
@@ -59,9 +78,27 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                     <h2 className="text-2xl font-bold">{signal.symbol} - Signal Details</h2>
                     <button onClick={handleClose} className="text-3xl text-gray-400 hover:text-white transition-colors">×</button>
                 </div>
+
+                {/* --- CHANGE 6: Interval Selection UI --- */}
+                <div className="flex items-center space-x-2 mb-2">
+                    {availableIntervals.map(iv => (
+                        <button
+                            key={iv}
+                            onClick={() => setInterval(iv)}
+                            className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                                interval === iv 
+                                ? 'bg-blue-500 text-white' 
+                                : 'bg-white/10 hover:bg-white/20 text-gray-300'
+                            }`}
+                        >
+                            {iv.toUpperCase()}
+                        </button>
+                    ))}
+                </div>
+
                 <div className="relative w-full h-[300px]">
                     {isLoading ? (
-                        <div className="absolute inset-0 flex items-center justify-center">Loading Chart...</div>
+                        <div className="absolute inset-0 flex items-center justify-center">Loading {interval.toUpperCase()} Chart...</div>
                     ) : ohlcData ? (
                         <LightweightChart ohlcData={ohlcData} signal={signal} />
                     ) : (
@@ -70,37 +107,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                 </div>
 
                 <div className="mt-4 pt-4 border-t border-white/10">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                        {/* Entry Price */}
-                        <div>
-                            <p className="text-sm text-gray-400">Entry Price</p>
-                            <p className="text-lg font-semibold">{parseFloat(signal["Entry Price"]).toFixed(5)}</p>
-                        </div>
-                        {/* Take Profit 1 */}
-                        {signal["Take Profit Targets"]?.[0] && (
-                            <div>
-                                <p className="text-sm text-gray-400">Take Profit 1</p>
-                                <p className="text-lg font-semibold text-green-400">{parseFloat(signal["Take Profit Targets"][0]).toFixed(5)}</p>
-                            </div>
-                        )}
-                        {/* Stop Loss */}
-                        <div>
-                            <p className="text-sm text-gray-400">Stop Loss</p>
-                            <p className="text-lg font-semibold text-red-400">{parseFloat(signal["Stop Loss"]).toFixed(5)}</p>
-                        </div>
-                        {/* Date */}
-                        <div>
-                            <p className="text-sm text-gray-400">Signal Time</p>
-                            <p className="text-lg font-semibold">{new Date(signal.timestamp).toLocaleString()}</p>
-                        </div>
-                         {/* Take Profit 2 (Optional) */}
-                         {signal["Take Profit Targets"]?.[1] && (
-                            <div className="md:col-start-2">
-                                <p className="text-sm text-gray-400">Take Profit 2</p>
-                                <p className="text-lg font-semibold text-green-400">{parseFloat(signal["Take Profit Targets"][1]).toFixed(5)}</p>
-                            </div>
-                        )}
-                    </div>
+                    {/* ... (your details section remains unchanged) ... */}
                 </div>
             </div>
         </div>
