@@ -4,17 +4,16 @@ import { useEffect, useRef } from 'react';
 import { createChart, LineStyle } from 'lightweight-charts';
 
 export const LightweightChart = ({ ohlcData, signal }) => {
-    // Refs to hold instances that persist for the lifetime of the component
     const chartContainerRef = useRef(null);
     const chartRef = useRef(null);
     const seriesRef = useRef(null);
-    const priceLineRef = useRef(null);
+    // CHANGE: Use an array to hold all our price lines (Entry, TP, SL)
+    const priceLinesRef = useRef([]);
 
     // This effect handles chart creation and destruction ONCE.
     useEffect(() => {
         if (!chartContainerRef.current) return;
 
-        // Create the chart
         const chart = createChart(chartContainerRef.current, {
             width: chartContainerRef.current.clientWidth,
             height: 300,
@@ -24,17 +23,14 @@ export const LightweightChart = ({ ohlcData, signal }) => {
             crosshair: { mode: 'normal' },
         });
 
-        // Add the series
         const series = chart.addCandlestickSeries({
             upColor: '#26a69a', downColor: '#ef5350', borderDownColor: '#ef5350',
             borderUpColor: '#26a69a', wickDownColor: '#ef5350', wickUpColor: '#26a69a',
         });
 
-        // Store instances in refs
         chartRef.current = chart;
         seriesRef.current = series;
 
-        // Add a resize listener
         const handleResize = () => {
             if (chartContainerRef.current && chartRef.current) {
                 chartRef.current.applyOptions({ width: chartContainerRef.current.clientWidth });
@@ -42,7 +38,6 @@ export const LightweightChart = ({ ohlcData, signal }) => {
         };
         window.addEventListener('resize', handleResize);
 
-        // Cleanup function when the component unmounts
         return () => {
             window.removeEventListener('resize', handleResize);
             if (chartRef.current) {
@@ -50,44 +45,58 @@ export const LightweightChart = ({ ohlcData, signal }) => {
                 chartRef.current = null;
             }
         };
-    }, []); // Empty array ensures this runs only ONCE.
+    }, []);
 
     // This effect handles all DATA and MARKER updates.
     useEffect(() => {
-        // Guard against running before the chart is ready
         if (!seriesRef.current || !chartRef.current || !ohlcData || ohlcData.length === 0) {
             return;
         }
         
-        // Update the data on the existing series
         seriesRef.current.setData(ohlcData);
-
-        // Clear old markers and price lines
         seriesRef.current.setMarkers([]);
-        if (priceLineRef.current) {
-            seriesRef.current.removePriceLine(priceLineRef.current);
-            priceLineRef.current = null;
-        }
 
-        // Add new marker and price line
+        // --- NEW: Improved cleanup logic for all price lines ---
+        priceLinesRef.current.forEach(line => seriesRef.current.removePriceLine(line));
+        priceLinesRef.current = [];
+
+        // --- NEW: Add all price lines if a signal is present ---
         if (signal) {
-            const signalTime = new Date(signal.timestamp).getTime() / 1000;
-            const entryPrice = parseFloat(signal["Entry Price"]);
+            const addPriceLine = (value, title, color, lineStyle) => {
+                const price = parseFloat(value);
+                // Important: Only draw the line if the price is a valid number
+                if (!isNaN(price)) {
+                    const newLine = seriesRef.current.createPriceLine({
+                        price, color, lineWidth: 2, lineStyle, axisLabelVisible: true, title,
+                    });
+                    priceLinesRef.current.push(newLine); // Add to our array for future cleanup
+                }
+            };
 
+            // Add Entry Price line (Solid Blue)
+            addPriceLine(signal["Entry Price"], ' Entry', '#45b7d1', LineStyle.Solid);
+            
+            // Add TP1 line (Dashed Green)
+            addPriceLine(signal["TP1"], ' TP1', '#26a69a', LineStyle.Dashed);
+            
+            // Add TP2 line if it exists (Dashed Green)
+            if (signal["TP2"]) {
+                addPriceLine(signal["TP2"], ' TP2', '#26a69a', LineStyle.Dashed);
+            }
+            
+            // Add SL line (Dashed Red)
+            addPriceLine(signal["SL"], ' SL', '#ef5350', LineStyle.Dashed);
+
+            // Add the signal marker on the chart
+            const signalTime = new Date(signal.timestamp).getTime() / 1000;
             seriesRef.current.setMarkers([{
                 time: signalTime, position: 'aboveBar', color: '#e91e63', shape: 'arrowDown', text: 'Signal',
             }]);
-
-            const newPriceLine = seriesRef.current.createPriceLine({
-                price: entryPrice, color: '#45b7d1', lineWidth: 2, lineStyle: LineStyle.Solid, axisLabelVisible: true, title: ' Entry',
-            });
-            priceLineRef.current = newPriceLine;
         }
 
-        // Fit the chart to the data
         chartRef.current.timeScale().fitContent();
 
-    }, [ohlcData, signal]); // Re-runs when data changes.
+    }, [ohlcData, signal]);
 
     return <div ref={chartContainerRef} className="w-full h-[300px]" />;
 };
