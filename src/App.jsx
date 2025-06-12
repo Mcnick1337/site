@@ -1,4 +1,4 @@
-// File: src/App.jsx
+// File: src/App.jsx (Updated)
 
 import { useState, useEffect, createContext } from 'react';
 import { Layout } from './components/Layout';
@@ -7,6 +7,8 @@ import { DashboardView } from './components/DashboardView';
 import { PortfolioView } from './components/PortfolioView';
 import { ComparisonView } from './components/ComparisonView';
 import { SignalModal } from './components/SignalModal';
+// ADDED: Import the new BackToTopButton component
+import { BackToTopButton } from './components/BackToTopButton';
 import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats } from './utils/calculateStats';
 
 import {
@@ -45,14 +47,13 @@ const createDefaultAiState = () => ({
     weeklyStats: [],
     currentPage: 1, 
     itemsPerPage: 12,
-    // --- THIS IS THE ONLY CHANGE IN THIS FILE ---
     filters: { 
         symbol: '', 
         signalType: '', 
         status: '', 
         minConfidence: '50',
-        startDate: null, // Add startDate
-        endDate: null    // Add endDate
+        startDate: null,
+        endDate: null
     },
     sort: { by: 'timestamp' }, 
     ohlcCache: {}, 
@@ -96,8 +97,6 @@ export default function App() {
             fetch(AI_MODELS[activeTab].file)
                 .then(res => res.ok ? res.json() : Promise.reject(new Error(`File not found`)))
                 .then(signals => {
-                    // Note: We no longer calculate stats here. 
-                    // This is now handled in DashboardView to react to date filters.
                     setAppState(prev => ({
                         ...prev,
                         [activeTab]: {
@@ -162,6 +161,8 @@ export default function App() {
                         }))}
                     />
                 )}
+                {/* ADDED: The Back to Top button is placed here to be on top of all other content */}
+                <BackToTopButton />
             </div>
         </ThemeContext.Provider>
     );

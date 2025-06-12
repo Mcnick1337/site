@@ -1,11 +1,12 @@
-// File: src/components/SignalModal.jsx
+// File: src/components/SignalModal.jsx (Updated)
 
-import { useEffect, useState, useContext } from 'react'; // Import useContext
+import { useEffect, useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { LightweightChart } from './charts/LightweightChart';
 import { Skeleton } from './Skeleton';
-import { ThemeContext } from '../App'; // Import ThemeContext
+import { ThemeContext } from '../App';
 
+// This function remains the same
 async function fetchOHLCData(symbol, signalTime, interval) {
     const hoursToFetch = 120;
     const startTime = new Date(signalTime.getTime() - (hoursToFetch * 60 * 60 * 1000)).getTime();
@@ -25,6 +26,27 @@ async function fetchOHLCData(symbol, signalTime, interval) {
     }
 }
 
+// --- ADDED: New function to fetch indicator data ---
+// We'll assume a similar proxy endpoint exists for indicators.
+async function fetchIndicatorData(symbol, signalTime, interval, indicator = 'RSI', period = 14) {
+    const hoursToFetch = 120;
+    const startTime = new Date(signalTime.getTime() - (hoursToFetch * 60 * 60 * 1000)).getTime();
+    // This URL would point to your new Netlify function for indicators
+    const url = `/.netlify/functions/indicator-proxy?symbol=${symbol.toUpperCase()}&startTime=${startTime}&interval=${interval}&indicator=${indicator}&period=${period}`;
+    try {
+        const response = await fetch(url);
+        if (!response.ok) return null; // Don't throw error, just fail silently if indicator isn't available
+        const data = await response.json();
+        if (!Array.isArray(data)) return null;
+        // Assuming the proxy returns data in a format like: [{ time: 1672531200, value: 45.32 }, ...]
+        return data.map(d => ({ time: d.time, value: d.value })).sort((a, b) => a.time - b.time);
+    } catch (error) {
+        console.error(`Failed to fetch ${indicator} data:`, error);
+        return null;
+    }
+}
+
+
 const availableIntervals = ['5m', '15m', '1h', '4h', '1d'];
 const intervalMap = { '5m': '5min', '15m': '15min', '1h': '1hour', '4h': '4hour', '1d': '1day' };
 
@@ -32,6 +54,8 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
     const [isShowing, setIsShowing] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [ohlcData, setOhlcData] = useState(null);
+    // --- ADDED: State for indicator data ---
+    const [indicatorData, setIndicatorData] = useState(null);
     const [interval, setInterval] = useState('1h');
     const [crosshairData, setCrosshairData] = useState(null);
 
@@ -40,13 +64,33 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
         const loadData = async () => {
             setIsLoading(true);
             const kucoinInterval = intervalMap[interval];
-            const cacheKey = `${signal.timestamp}-${kucoinInterval}`;
-            let data = cache[cacheKey];
-            if (!data) {
-                data = await fetchOHLCData(signal.symbol, new Date(signal.timestamp), kucoinInterval);
-                if (data) updateCache(cacheKey, data);
+            const ohlcCacheKey = `ohlc-${signal.timestamp}-${kucoinInterval}`;
+            // --- ADDED: Cache key for indicator ---
+            const rsiCacheKey = `rsi-${signal.timestamp}-${kucoinInterval}`;
+
+            let ohlc = cache[ohlcCacheKey];
+            let rsi = cache[rsiCacheKey];
+
+            if (!ohlc || !rsi) {
+                // Fetch both in parallel for speed
+                const [fetchedOhlc, fetchedRsi] = await Promise.all([
+                    ohlc ? Promise.resolve(ohlc) : fetchOHLCData(signal.symbol, new Date(signal.timestamp), kucoinInterval),
+                    rsi ? Promise.resolve(rsi) : fetchIndicatorData(signal.symbol, new Date(signal.timestamp), kucoinInterval, 'RSI')
+                ]);
+                
+                if (fetchedOhlc) {
+                    ohlc = fetchedOhlc;
+                    updateCache(ohlcCacheKey, ohlc);
+                }
+                if (fetchedRsi) {
+                    rsi = fetchedRsi;
+                    updateCache(rsiCacheKey, rsi);
+                }
             }
-            setOhlcData(data);
+
+            setOhlcData(ohlc);
+            // --- ADDED: Set indicator state ---
+            setIndicatorData(rsi);
             setIsLoading(false);
         };
         loadData();
@@ -70,6 +114,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                 transition={{ duration: 0.2 }}
                 onClick={e => e.stopPropagation()}
             >
+                {/* ... (rest of the modal header is unchanged) ... */}
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-2xl font-bold">{signal.symbol} - Signal Details</h2>
                     <button onClick={handleClose} className="text-3xl text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">×</button>
@@ -98,12 +143,15 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                     ))}
                 </div>
 
-                <div className="relative w-full h-[300px]">
+                {/* --- UPDATED: Chart area now has a larger height to accommodate the RSI pane --- */}
+                <div className="relative w-full h-[400px]">
                     {isLoading ? (
                         <Skeleton className="w-full h-full bg-gray-300 dark:bg-white/10" />
                     ) : ohlcData ? (
                         <LightweightChart 
                             ohlcData={ohlcData} 
+                            // --- PASS DOWN: Send indicator data to the chart ---
+                            indicatorData={indicatorData}
                             signal={signal} 
                             onCrosshairMove={setCrosshairData}
                         />
@@ -112,6 +160,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                     )}
                 </div>
 
+                {/* ... (rest of the modal content is unchanged) ... */}
                 <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10">
                     {isLoading ? (
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -158,11 +207,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
 
                     <h3 className="text-lg font-semibold mb-2">Relevant News</h3>
                     <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                        {/* 
-                           FIXED: Added `Array.isArray()` check here.
-                           This prevents the app from crashing if "Relevant News Headlines" is a string
-                           or another non-array type, which was causing the error.
-                        */}
                         {Array.isArray(signal["Relevant News Headlines"]) && signal["Relevant News Headlines"].length > 0 ? (
                             signal["Relevant News Headlines"].map((headline, index) => (
                                 <li key={index}>{headline}</li>

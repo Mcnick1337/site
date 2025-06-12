@@ -1,4 +1,4 @@
-// File: src/pages/DashboardView.jsx (Updated for polish)
+// File: src/pages/DashboardView.jsx (Updated)
 
 import { useMemo } from 'react';
 import { TabNav } from '../components/TabNav';
@@ -17,7 +17,6 @@ export const DashboardView = ({
 }) => {
     const currentModelData = appState[activeTab];
 
-    // ... (no changes to the memoized calculations)
     const dateFilteredSignals = useMemo(() => {
         const { startDate, endDate } = currentModelData.filters;
         if (!startDate && !endDate) {
@@ -52,12 +51,16 @@ export const DashboardView = ({
         return processSignals(dateFilteredSignals, currentModelData.filters, currentModelData.sort);
     }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort]);
 
-    // ADDED: Create a unique key based on the filters. When this changes,
-    // the component with this key will re-animate.
     const catalogKey = useMemo(() => 
         JSON.stringify({ ...currentModelData.filters, ...currentModelData.sort }),
         [currentModelData.filters, currentModelData.sort]
     );
+
+    // ADDED: Create a unique, sorted list of symbols for the autocomplete.
+    const uniqueSymbols = useMemo(() => {
+        const symbols = new Set(currentModelData.allSignals.map(s => s.symbol));
+        return Array.from(symbols).sort();
+    }, [currentModelData.allSignals]);
 
     return (
         <div className="flex flex-col w-full">
@@ -80,8 +83,9 @@ export const DashboardView = ({
                 sort={currentModelData.sort}
                 onFilterChange={(key, value) => handleStateChange('filters', key, value)}
                 onSortChange={(key, value) => handleStateChange('sort', key, value)}
+                // PASS DOWN: Provide the unique symbols to the component.
+                availableSymbols={uniqueSymbols}
             />
-            {/* UPDATED: Wrapped SignalCatalog to apply the key and animation class */}
             <div key={catalogKey} className="card-enter">
                 <SignalCatalog
                     signals={displayedSignals}
