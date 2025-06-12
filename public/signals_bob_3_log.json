@@ -2563,7 +2563,7 @@
     "timestamp": "2025-06-09T14:25:07.298957",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 109677.03,
       "closed_by": "TIMEOUT",
       "mfe_percentage": 2.71,
@@ -2625,7 +2625,7 @@
     "timestamp": "2025-06-09T14:33:05.715797",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 109677.03,
       "closed_by": "TIMEOUT",
       "mfe_percentage": 2.61,
@@ -3610,7 +3610,7 @@
     "timestamp": "2025-06-09T16:56:21.001989",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 109562.75,
       "closed_by": "TIMEOUT",
       "mfe_percentage": 2.49,
