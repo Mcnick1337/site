@@ -3,12 +3,13 @@
 import { useEffect, useRef } from 'react';
 import { createChart, LineStyle } from 'lightweight-charts';
 
-export const LightweightChart = ({ ohlcData, signal }) => {
+export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
     const chartContainerRef = useRef(null);
     const chartRef = useRef(null);
     const seriesRef = useRef(null);
     const priceLinesRef = useRef([]);
 
+    // Effect for chart creation and destruction
     useEffect(() => {
         if (!chartContainerRef.current) return;
 
@@ -40,6 +41,15 @@ export const LightweightChart = ({ ohlcData, signal }) => {
         chartRef.current = chart;
         seriesRef.current = series;
 
+        // Subscribe to crosshair movement
+        chart.subscribeCrosshairMove(param => {
+            if (param.time && param.seriesData.has(series)) {
+                onCrosshairMove(param.seriesData.get(series));
+            } else {
+                onCrosshairMove(null); // Clear data when crosshair is off the chart
+            }
+        });
+
         const handleResize = () => {
             if (chartContainerRef.current && chartRef.current) {
                 chartRef.current.applyOptions({ width: chartContainerRef.current.clientWidth });
@@ -54,49 +64,57 @@ export const LightweightChart = ({ ohlcData, signal }) => {
                 chartRef.current = null;
             }
         };
-    }, [signal.symbol]);
+    }, [signal.symbol, onCrosshairMove]); // Re-run if symbol or callback changes
 
+    // Effect for data and marker updates
     useEffect(() => {
         if (!seriesRef.current || !chartRef.current || !ohlcData || ohlcData.length === 0) return;
         
         seriesRef.current.setData(ohlcData);
-        seriesRef.current.setMarkers([]);
         priceLinesRef.current.forEach(line => seriesRef.current.removePriceLine(line));
         priceLinesRef.current = [];
+        seriesRef.current.setMarkers([]);
+
+        const prices = [];
+        const addPriceLine = (value, title, color, lineStyle) => {
+            const price = parseFloat(value);
+            if (!isNaN(price)) {
+                prices.push(price); // Collect prices for auto-scaling
+                const newLine = seriesRef.current.createPriceLine({
+                    price, color, lineWidth: 2, lineStyle, axisLabelVisible: true, title,
+                });
+                priceLinesRef.current.push(newLine);
+            }
+        };
 
         if (signal) {
-            const addPriceLine = (value, title, color, lineStyle) => {
-                const price = parseFloat(value);
-                if (!isNaN(price)) {
-                    const newLine = seriesRef.current.createPriceLine({
-                        price, color, lineWidth: 2, lineStyle, axisLabelVisible: true, title,
-                    });
-                    priceLinesRef.current.push(newLine);
-                }
-            };
-
-            // --- CHANGES START HERE ---
             addPriceLine(signal["Entry Price"], ' Entry', '#45b7d1', LineStyle.Solid);
-            
-            // Access the Take Profit array
-            if (signal["Take Profit Targets"] && signal["Take Profit Targets"][0]) {
+            if (signal["Take Profit Targets"]) {
                 addPriceLine(signal["Take Profit Targets"][0], ' TP1', '#26a69a', LineStyle.Dashed);
-            }
-            if (signal["Take Profit Targets"] && signal["Take Profit Targets"][1]) {
                 addPriceLine(signal["Take Profit Targets"][1], ' TP2', '#26a69a', LineStyle.Dashed);
             }
-            
-            // Access Stop Loss with a space in the name
             addPriceLine(signal["Stop Loss"], ' SL', '#ef5350', LineStyle.Dashed);
-            // --- CHANGES END HERE ---
-
+            
             const signalTime = new Date(signal.timestamp).getTime() / 1000;
             seriesRef.current.setMarkers([{
                 time: signalTime, position: 'aboveBar', color: '#e91e63', shape: 'arrowDown', text: 'Signal',
             }]);
         }
 
+        // Auto-adjust price range based on TP/SL levels
+        if (prices.length > 0) {
+            const minPrice = Math.min(...prices);
+            const maxPrice = Math.max(...prices);
+            const padding = (maxPrice - minPrice) * 0.2; // 20% vertical padding
+            seriesRef.current.priceScale().applyOptions({
+                autoScale: false, // Turn off default autoScale
+                minValue: minPrice - padding,
+                maxValue: maxPrice + padding,
+            });
+        }
+        
         chartRef.current.timeScale().fitContent();
+
     }, [ohlcData, signal]);
 
     return <div ref={chartContainerRef} className="w-full h-[300px]" />;

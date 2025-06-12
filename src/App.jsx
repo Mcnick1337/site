@@ -1,6 +1,6 @@
 // File: src/App.jsx
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import { Layout } from './components/Layout';
 import { Header } from './components/Header';
 import { DashboardView } from './components/DashboardView';
@@ -9,16 +9,17 @@ import { ComparisonView } from './components/ComparisonView';
 import { SignalModal } from './components/SignalModal';
 import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates } from './utils/calculateStats';
 
-// Global Chart.js Registration
 import {
-    Chart as ChartJS,
-    CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
+    Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
 } from 'chart.js';
 import 'chartjs-adapter-date-fns';
 
 ChartJS.register(
     CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
 );
+
+// Create the context to be used by child components
+export const ThemeContext = createContext(null);
 
 const AI_MODELS = {
     'ai-max': { name: 'AI Max', file: '/signals_claude_log.json', experimental: false },
@@ -56,6 +57,27 @@ export default function App() {
     const [selectedSignal, setSelectedSignal] = useState(null);
     const [highlightedSignalId, setHighlightedSignalId] = useState(null);
 
+    // --- Theme State Logic ---
+    const [theme, setTheme] = useState(() => {
+        if (typeof window !== 'undefined' && window.localStorage.getItem('theme')) {
+            return window.localStorage.getItem('theme');
+        }
+        return 'dark'; // Default to dark theme
+    });
+
+    const toggleTheme = () => {
+        setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+    };
+
+    // Effect to apply the theme class to the HTML root
+    useEffect(() => {
+        const root = window.document.documentElement;
+        root.classList.remove('light', 'dark');
+        root.classList.add(theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+    // --- End Theme State Logic ---
+
     useEffect(() => {
         localStorage.setItem('lastActiveTab', activeTab);
         const currentModel = appState[activeTab];
@@ -66,15 +88,10 @@ export default function App() {
                     const overallStats = calculateAllStats(signals);
                     const timeStats = calculateTimeBasedStats(signals);
                     setAppState(prev => ({
-                        ...prev,
-                        [activeTab]: {
-                            ...prev[activeTab],
-                            allSignals: signals,
-                            overallStats: overallStats,
-                            equityCurveData: overallStats.equityCurveData,
-                            dayOfWeekStats: timeStats.dayStats,
-                            hourOfDayStats: timeStats.hourStats,
-                            symbolWinRates: calculateSymbolWinRates(signals),
+                        ...prev, [activeTab]: {
+                            ...prev[activeTab], allSignals: signals, overallStats: overallStats,
+                            equityCurveData: overallStats.equityCurveData, dayOfWeekStats: timeStats.dayStats,
+                            hourOfDayStats: timeStats.hourStats, symbolWinRates: calculateSymbolWinRates(signals),
                         }
                     }));
                 }).catch(err => console.error(err));
@@ -92,51 +109,49 @@ export default function App() {
     };
     
     return (
-        <div className="bg-dark-bg min-h-screen text-gray-200 font-sans relative">
-            <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
-                {floatingElements.map((item, index) => (
-                    <span key={index} className={`float-anim ${item.size}`} style={{ left: item.left, animationDuration: item.duration, animationDelay: item.delay }}>
-                        {item.emoji}
-                    </span>
-                ))}
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <div className="bg-gray-100 dark:bg-dark-bg min-h-screen text-gray-800 dark:text-gray-200 font-sans relative transition-colors duration-300">
+                <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+                    {floatingElements.map((item, index) => (
+                        <span key={index} className={`float-anim ${item.size}`} style={{ left: item.left, animationDuration: item.duration, animationDelay: item.delay }}>
+                            {item.emoji}
+                        </span>
+                    ))}
+                </div>
+                <div className="relative z-10">
+                    <Layout activeView={activeView} setActiveView={setActiveView}>
+                        <div className="p-4 md:p-8">
+                            <Header />
+                            {activeView === 'dashboard' && (
+                                comparisonViewActive ? (
+                                    <ComparisonView appState={appState} models={AI_MODELS} onExit={() => setComparisonViewActive(false)} />
+                                ) : (
+                                    <DashboardView
+                                        models={AI_MODELS} activeTab={activeTab} setActiveTab={setActiveTab}
+                                        appState={appState} handleStateChange={handleStateChange}
+                                        handlePageChange={handlePageChange} setSelectedSignal={setSelectedSignal}
+                                        highlightedSignalId={highlightedSignalId} onSignalHover={setHighlightedSignalId}
+                                        setComparisonViewActive={setComparisonViewActive}
+                                    />
+                                )
+                            )}
+                            {activeView === 'portfolio' && <PortfolioView appState={appState} models={AI_MODELS} activeTab={activeTab} />}
+                        </div>
+                    </Layout>
+                </div>
+                {selectedSignal && (
+                    <SignalModal
+                        signal={selectedSignal}
+                        onClose={() => setSelectedSignal(null)}
+                        cache={appState[activeTab].ohlcCache}
+                        updateCache={(key, data) => setAppState(prev => ({ 
+                            ...prev, [activeTab]: { 
+                                ...prev[activeTab], ohlcCache: { ...prev[activeTab].ohlcCache, [key]: data } 
+                            } 
+                        }))}
+                    />
+                )}
             </div>
-            <div className="relative z-10">
-                <Layout activeView={activeView} setActiveView={setActiveView}>
-                    <div className="p-4 md:p-8">
-                        <Header />
-                        {activeView === 'dashboard' && (
-                            comparisonViewActive ? (
-                                <ComparisonView appState={appState} models={AI_MODELS} onExit={() => setComparisonViewActive(false)} />
-                            ) : (
-                                <DashboardView
-                                    models={AI_MODELS} activeTab={activeTab} setActiveTab={setActiveTab}
-                                    appState={appState} handleStateChange={handleStateChange}
-                                    handlePageChange={handlePageChange} setSelectedSignal={setSelectedSignal}
-                                    highlightedSignalId={highlightedSignalId} onSignalHover={setHighlightedSignalId}
-                                    setComparisonViewActive={setComparisonViewActive}
-                                />
-                            )
-                        )}
-                        {activeView === 'portfolio' && <PortfolioView appState={appState} models={AI_MODELS} activeTab={activeTab} />}
-                    </div>
-                </Layout>
-            </div>
-            {selectedSignal && (
-                <SignalModal
-                    signal={selectedSignal}
-                    onClose={() => setSelectedSignal(null)}
-                    cache={appState[activeTab].ohlcCache}
-                    // --- THIS IS THE ONLY CHANGE ---
-                    // The first argument is now 'key' instead of 'signalId' to support interval caching.
-                    updateCache={(key, data) => setAppState(prev => ({ 
-                        ...prev, 
-                        [activeTab]: { 
-                            ...prev[activeTab], 
-                            ohlcCache: { ...prev[activeTab].ohlcCache, [key]: data } 
-                        } 
-                    }))}
-                />
-            )}
-        </div>
+        </ThemeContext.Provider>
     );
 }
