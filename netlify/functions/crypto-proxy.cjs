@@ -3,10 +3,9 @@
 const fetch = require('node-fetch');
 
 module.exports.handler = async function(event, context) {
-    // --- CHANGE 1: Read 'interval' from the query string ---
-    const { symbol, startTime, interval } = event.queryStringParameters;
+    // --- CHANGE 1: Read the new 'endTime' parameter ---
+    const { symbol, startTime, interval, endTime } = event.queryStringParameters;
 
-    // Set a default interval if none is provided
     const candleType = interval || '1hour';
 
     if (!symbol || !startTime) {
@@ -17,8 +16,15 @@ module.exports.handler = async function(event, context) {
         const kucoinSymbol = symbol.replace(/USDT$/, '-USDT');
         const startTimeInSeconds = Math.floor(parseInt(startTime) / 1000);
         
-        // --- CHANGE 2: Use the dynamic 'candleType' in the API URL ---
-        const apiUrl = `https://api.kucoin.com/api/v1/market/candles?type=${candleType}&symbol=${kucoinSymbol}&startAt=${startTimeInSeconds}`;
+        // Use 'let' to allow modification
+        let apiUrl = `https://api.kucoin.com/api/v1/market/candles?type=${candleType}&symbol=${kucoinSymbol}&startAt=${startTimeInSeconds}`;
+
+        // --- CHANGE 2: Conditionally add the 'endAt' parameter if it exists ---
+        if (endTime) {
+            const endTimeInSeconds = Math.floor(parseInt(endTime) / 1000);
+            apiUrl += `&endAt=${endTimeInSeconds}`;
+        }
+        // --- End of changes ---
 
         console.log(`[INFO] Fetching from KuCoin API: ${apiUrl}`);
 
