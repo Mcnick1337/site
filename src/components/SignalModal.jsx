@@ -29,7 +29,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
 
     useEffect(() => {
         requestAnimationFrame(() => setIsShowing(true));
-
         const loadData = async () => {
             setIsLoading(true);
             let data = cache[signal.timestamp];
@@ -50,14 +49,8 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
 
     return (
         <div className={`fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out ${isShowing ? 'opacity-100' : 'opacity-0'}`} onClick={handleClose}>
-            {/* This is the backdrop. It blurs what's behind it. */}
             <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-            
-            {/* This is the modal content. Adding "relative z-10" lifts it above the backdrop. */}
-            <div 
-                className={`relative z-10 bg-dark-card w-full max-w-4xl rounded-2xl border border-white/20 shadow-2xl p-6 m-4 transition-all duration-300 ease-in-out ${isShowing ? 'opacity-100 transform-none' : 'opacity-0 transform -translate-y-4 scale-95'}`} 
-                onClick={e => e.stopPropagation()}
-            >
+            <div className={`relative z-10 bg-dark-card w-full max-w-4xl rounded-2xl border border-white/20 shadow-2xl p-6 m-4 transition-all duration-300 ease-in-out ${isShowing ? 'opacity-100 transform-none' : 'opacity-0 transform -translate-y-4 scale-95'}`} onClick={e => e.stopPropagation()}>
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-2xl font-bold">{signal.symbol} - Signal Details</h2>
                     <button onClick={handleClose} className="text-3xl text-gray-400 hover:text-white transition-colors">×</button>
@@ -70,6 +63,39 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                     ) : (
                         <div className="absolute inset-0 flex items-center justify-center text-red-400">Failed to load chart data.</div>
                     )}
+                </div>
+
+                {/* --- NEW: Details Section Below Chart --- */}
+                <div className="mt-4 pt-4 border-t border-white/10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        {/* Entry Price */}
+                        <div>
+                            <p className="text-sm text-gray-400">Entry Price</p>
+                            <p className="text-lg font-semibold">{parseFloat(signal["Entry Price"]).toFixed(5)}</p>
+                        </div>
+                        {/* Take Profit 1 */}
+                        <div>
+                            <p className="text-sm text-gray-400">Take Profit</p>
+                            <p className="text-lg font-semibold text-green-400">{parseFloat(signal.TP1).toFixed(5)}</p>
+                        </div>
+                        {/* Stop Loss */}
+                        <div>
+                            <p className="text-sm text-gray-400">Stop Loss</p>
+                            <p className="text-lg font-semibold text-red-400">{parseFloat(signal.SL).toFixed(5)}</p>
+                        </div>
+                        {/* Date */}
+                        <div>
+                            <p className="text-sm text-gray-400">Signal Time</p>
+                            <p className="text-lg font-semibold">{new Date(signal.timestamp).toLocaleString()}</p>
+                        </div>
+                         {/* Take Profit 2 (Optional) */}
+                         {signal.TP2 && (
+                            <div className="md:col-start-2"> {/* Aligns under TP1 on larger screens */}
+                                <p className="text-sm text-gray-400">Take Profit 2</p>
+                                <p className="text-lg font-semibold text-green-400">{parseFloat(signal.TP2).toFixed(5)}</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
