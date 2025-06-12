@@ -52,7 +52,9 @@ export const DashboardView = ({
     }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort]);
 
     return (
-        <div className="flex flex-col w-full">
+        // --- THIS IS THE FIX ---
+        // This container ensures all direct children stack vertically.
+        <div className="flex flex-col">
             <TabNav
                 models={models}
                 activeTab={activeTab}
@@ -60,12 +62,16 @@ export const DashboardView = ({
                 onCompareClick={() => setComparisonViewActive(true)}
             />
             <ModelInfo modelId={activeTab} />
+            
             <StatsGrid stats={statsForDisplay.overallStats} />
+            
             <DetailsSectionDashboard
                 modelId={activeTab}
                 appState={{ [activeTab]: statsForDisplay }}
                 onSignalHover={onSignalHover}
             />
+            
+            {/* This will now reliably appear before the SignalCatalog */}
             <FilterControls
                 modelId={activeTab}
                 filters={currentModelData.filters}
@@ -73,6 +79,7 @@ export const DashboardView = ({
                 onFilterChange={(key, value) => handleStateChange('filters', key, value)}
                 onSortChange={(key, value) => handleStateChange('sort', key, value)}
             />
+            
             <SignalCatalog
                 signals={displayedSignals}
                 currentPage={currentModelData.currentPage}
