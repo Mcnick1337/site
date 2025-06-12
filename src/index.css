@@ -45,33 +45,6 @@ body {
   animation: fadeInUp 0.5s ease-out both;
 }
 
-/* --- NEW: Custom Component Styles --- */
-@layer components {
-  .custom-select {
-    @apply w-full rounded-md border-0 py-1.5 px-2.5 shadow-sm;
-    @apply bg-gray-200 text-gray-800 ring-1 ring-inset ring-gray-300;
-    @apply focus:ring-2 focus:ring-inset focus:ring-cyan-500;
-    @apply dark:bg-white/10 dark:text-white dark:ring-white/20;
-    
-    /* Remove default browser appearance */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    
-    /* Add custom dropdown arrow */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-    background-position: right 0.5rem center;
-    background-repeat: no-repeat;
-    background-size: 1.5em 1.5em;
-    padding-right: 2.5rem; /* Make space for the arrow */
-  }
-  
-  /* Change arrow color for dark mode */
-  .dark .custom-select {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-  }
-}
-
 /* --- React Datepicker Customization (Theme-Aware) --- */
 .react-datepicker-wrapper {
   display: block;
