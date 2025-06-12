@@ -17,14 +17,14 @@ export const WeeklyPerformanceChart = ({ weeklyStats }) => {
                 {
                     label: 'Wins',
                     data: weeklyStats.map(w => w.wins),
-                    backgroundColor: 'rgba(38, 166, 154, 0.6)', // Green
+                    backgroundColor: 'rgba(38, 166, 154, 0.6)',
                     borderColor: 'rgba(38, 166, 154, 1)',
                     borderWidth: 1,
                 },
                 {
                     label: 'Losses',
                     data: weeklyStats.map(w => w.losses),
-                    backgroundColor: 'rgba(239, 83, 80, 0.6)', // Red
+                    backgroundColor: 'rgba(239, 83, 80, 0.6)',
                     borderColor: 'rgba(239, 83, 80, 1)',
                     borderWidth: 1,
                 },
@@ -71,8 +71,10 @@ export const WeeklyPerformanceChart = ({ weeklyStats }) => {
     }), [theme]);
 
     return (
-        <div className="bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-white/10 rounded-2xl p-4 h-full flex flex-col">
-            <h3 className="text-lg font-bold mb-2 text-gray-800 dark:text-gray-200">Weekly Performance</h3>
+        // --- THIS IS THE FIX ---
+        // Changed the background color and text color to match the other widgets.
+        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 h-full flex flex-col">
+            <h3 className="text-xl font-bold mb-4">Weekly Performance</h3>
             <div className="relative flex-grow">
                 <Bar data={data} options={options} />
             </div>
