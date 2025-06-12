@@ -8,7 +8,7 @@ import { DetailsSectionDashboard } from './DetailsSectionDashboard';
 import { FilterControls } from './FilterControls';
 import { SignalCatalog } from './SignalCatalog';
 import { processSignals } from '../utils/processSignals';
-import { WeeklyPerformanceChart } from './WeeklyPerformanceChart'; // Import the new chart
+// REMOVED: No longer importing WeeklyPerformanceChart here
 
 export const DashboardView = ({
     models, activeTab, setActiveTab, appState,
@@ -31,12 +31,9 @@ export const DashboardView = ({
             />
             <ModelInfo modelId={activeTab} />
             
-            {/* --- NEW 2x2 GRID LAYOUT --- */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <StatsGrid stats={currentModelData.overallStats} />
-                <WeeklyPerformanceChart weeklyStats={currentModelData.weeklyStats} />
-            </div>
-
+            {/* This is the original layout, restored */}
+            <StatsGrid stats={currentModelData.overallStats} />
+            
             <DetailsSectionDashboard
                 modelId={activeTab}
                 appState={appState}
