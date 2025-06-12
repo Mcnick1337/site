@@ -18598,8 +18598,12 @@
     "timestamp": "2025-06-11T14:55:25.358987",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 109400.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.12,
+      "mae_percentage": -0.52,
+      "evaluation_details": ""
     }
   },
   {
@@ -18620,8 +18624,12 @@
     "timestamp": "2025-06-11T14:56:58.999925",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2790.0,
+      "closed_by": "SL",
+      "mfe_percentage": 1.35,
+      "mae_percentage": -1.84,
+      "evaluation_details": ""
     }
   },
   {
@@ -18643,8 +18651,12 @@
     "timestamp": "2025-06-11T14:58:11.715713",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 163.3,
+      "closed_by": "SL",
+      "mfe_percentage": 1.31,
+      "mae_percentage": -1.88,
+      "evaluation_details": ""
     }
   },
   {
@@ -18666,8 +18678,12 @@
     "timestamp": "2025-06-11T15:48:41.869525",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 108930.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.15,
+      "mae_percentage": -1.13,
+      "evaluation_details": ""
     }
   },
   {
@@ -20452,7 +20468,11 @@
       "Bitcoin Price Break Above $107,000 Triggers Bullis..."
     ],
     "timestamp": "2025-06-12T14:55:42.826401",
-    "symbol": "BTCUSDT"
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
   },
   {
     "Signal": "Buy",
@@ -20470,7 +20490,11 @@
       "Bitcoin Price Break Above $107,000 Triggers Bullis..."
     ],
     "timestamp": "2025-06-12T14:57:25.127275",
-    "symbol": "ETHUSDT"
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
   },
   {
     "Signal": "Sell",
@@ -20489,6 +20513,70 @@
       "What is a supply chain attack in crypto and how to..."
     ],
     "timestamp": "2025-06-12T14:59:16.509210",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "TOO_RECENT",
+      "evaluation_details": "Evaluation window not yet complete."
+    }
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "107000.00",
+    "Take Profit Targets": [
+      "108300.00",
+      "108950.00"
+    ],
+    "Stop Loss": "106350.00",
+    "Confidence": 45,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price at lower boundary of potential range, testing key support (1H EMA200, Lower Bollinger Band, High Volume Node) with 1H RSI near oversold (35.89). Daily trend provides a bullish bias. Order book shows bid dominance. Expecting a bounce towards upper range/resistance levels. Low system confluence score (10/100) warrants caution and lower confidence.",
+    "Relevant News Headlines": [
+      "Ethereum ETFs Record Best Day in 4 Months With $12...",
+      "Filecoin Rises 3.6% After Establishing Support Zon..."
+    ],
+    "timestamp": "2025-06-12T15:50:25.700711",
+    "symbol": "BTCUSDT"
+  },
+  {
+    "Signal": "Buy",
+    "Entry Price": "2728.00",
+    "Take Profit Targets": [
+      "2760.00",
+      "2795.00",
+      "2825.00"
+    ],
+    "Stop Loss": "2699.00",
+    "Confidence": 75,
+    "Scenario": "Range-Bound with Bullish Bias",
+    "Trade Setup Type": "Short-term Swing",
+    "Reasoning": "Price testing key support near the strongest bid zone ($2,736.60) and approaching the lower Bollinger Band ($2,723.62), indicating potential for a bullish bounce. Significant bid dominance in order flow (+53.96%) and overall bullish news sentiment support this bias. The setup aligns with a 'Range-Bound with Bullish Bias' scenario, which has historically demonstrated strong performance in past feedback. Stop loss is placed below the psychological $2,700 level and recent high-volume node. Targets aim for the mid-Bollinger Band, upper Bollinger Band region, and a further extension, offering a favorable risk-reward profile on higher targets.",
+    "Relevant News Headlines": [
+      "Ethereum ETFs Record Best Day in 4 Months With $12...",
+      "Filecoin Rises 3.6% After Establishing Support Zon..."
+    ],
+    "timestamp": "2025-06-12T15:52:07.326078",
+    "symbol": "ETHUSDT"
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "156.66",
+    "Take Profit Targets": [
+      "153.95",
+      "151.25",
+      "150.00"
+    ],
+    "Stop Loss": "159.35",
+    "Confidence": 48,
+    "Scenario": "Trend Continuation (Bearish)",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price at $156.66 has broken below key short-term supports including the 1H EMA200 ($156.89) and the lower Bollinger Band ($157.11), indicating strong bearish momentum. MACD is bearish (-1.2260) with a negative histogram (-0.1158). Order flow shows ask dominance (-12.10%). ADX (34.55) indicates a strong trend, which current price action suggests is downwards. Multi-timeframe analysis shows price below key moving averages. Stop loss at $159.35 is placed above recent resistance and 1.5x ATR. Take profit targets aim for 1:1, 2:1, and the significant High Volume Node around $150. While short-term RSIs are low (e.g., 1H RSI 34.39) and general news sentiment is reported as bullish, the specific technicals for CRYPTO favor a bearish continuation.",
+    "Relevant News Headlines": [
+      "Ethereum ETFs Record Best Day in 4 Months With $12...",
+      "Filecoin Rises 3.6% After Establishing Support Zon...",
+      "TON Slides as Sell-Off Triggers Spike in Volume Wi..."
+    ],
+    "timestamp": "2025-06-12T15:53:23.938944",
     "symbol": "SOLUSDT"
   }
 ]
