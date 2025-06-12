@@ -3,8 +3,12 @@
 import { useEffect, useState } from 'react';
 import { LightweightChart } from './charts/LightweightChart';
 
+// --- THE FIX IS IN THIS FUNCTION ---
 async function fetchOHLCData(symbol, signalTime) {
-    const startTime = new Date(signalTime.getTime() - 8 * 60 * 60 * 1000).getTime();
+    // We are changing '8' hours to '120' hours (5 days) to get more historical data.
+    const hoursToFetch = 120;
+    const startTime = new Date(signalTime.getTime() - (hoursToFetch * 60 * 60 * 1000)).getTime();
+    
     const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${startTime}`;
     try {
         const response = await fetch(url);
