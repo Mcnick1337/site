@@ -1,13 +1,11 @@
-// File: src/components/charts/LightweightChart.jsx
+// File: src/components/charts/LightweightChart.jsx (Updated)
 
 import { useEffect, useRef, useContext } from 'react';
 import { createChart, LineStyle } from 'lightweight-charts';
-// --- THIS IS THE LINE TO FIX ---
-import { ThemeContext } from '../../App'; // Correct path is '../../App'
+import { ThemeContext } from '../../App'; 
 
-// Define our two themes for the chart
 const darkTheme = {
-    layout: { background: { color: '#131722' }, textColor: '#D9D9D9', fontFamily: `'Trebuchet MS', 'Roboto', sans-serif` },
+    layout: { background: { color: 'transparent' }, textColor: '#D9D9D9', fontFamily: `'Trebuchet MS', 'Roboto', sans-serif` }, // Transparent background
     grid: { vertLines: { color: '#1E222D' }, horzLines: { color: '#1E222D' } },
     crosshair: { mode: 'normal', vertLine: { style: LineStyle.Dashed, color: '#758696' }, horzLine: { style: LineStyle.Dashed, color: '#758696' } },
     rightPriceScale: { borderColor: '#1E222D' },
@@ -15,25 +13,29 @@ const darkTheme = {
 };
 
 const lightTheme = {
-    layout: { background: { color: '#FFFFFF' }, textColor: '#191919', fontFamily: `'Trebuchet MS', 'Roboto', sans-serif` },
+    layout: { background: { color: 'transparent' }, textColor: '#191919', fontFamily: `'Trebuchet MS', 'Roboto', sans-serif` }, // Transparent background
     grid: { vertLines: { color: '#F0F3FA' }, horzLines: { color: '#F0F3FA' } },
     crosshair: { mode: 'normal', vertLine: { style: LineStyle.Dashed, color: '#758696' }, horzLine: { style: LineStyle.Dashed, color: '#758696' } },
     rightPriceScale: { borderColor: '#D1D4DC' },
     timeScale: { borderColor: '#D1D4DC', timeVisible: true },
 };
 
-
-export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
+export const LightweightChart = ({ ohlcData, indicatorData, signal, onCrosshairMove }) => {
     const chartContainerRef = useRef(null);
     const chartRef = useRef(null);
     const seriesRef = useRef(null);
+    const indicatorSeriesRef = useRef(null);
     const priceLinesRef = useRef([]);
     const { theme } = useContext(ThemeContext);
 
     useEffect(() => {
         if (!chartContainerRef.current) return;
 
-        const chart = createChart(chartContainerRef.current);
+        // --- UPDATED: Chart dimensions are now handled automatically by the library to fill the container ---
+        const chart = createChart(chartContainerRef.current, {
+            width: chartContainerRef.current.clientWidth,
+            height: chartContainerRef.current.clientHeight,
+        });
         chartRef.current = chart;
 
         const series = chart.addCandlestickSeries({
@@ -42,38 +44,40 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
         });
         seriesRef.current = series;
 
+        const rsiSeries = chart.addLineSeries({
+            color: '#7E57C2', lineWidth: 2, priceScaleId: 'rsi', title: 'RSI(14)',
+        });
+        rsiSeries.createPriceLine({ price: 70, color: '#EF5350', lineWidth: 1, lineStyle: LineStyle.Dashed, axisLabelVisible: true, title: '70' });
+        rsiSeries.createPriceLine({ price: 30, color: '#26A69A', lineWidth: 1, lineStyle: LineStyle.Dashed, axisLabelVisible: true, title: '30' });
+        indicatorSeriesRef.current = rsiSeries;
+        
+        chart.priceScale('right').applyOptions({ scaleMargins: { top: 0.1, bottom: 0.25 } });
+        chart.priceScale('rsi').applyOptions({ height: 100, scaleMargins: { top: 0.9, bottom: 0 } });
+
         chart.subscribeCrosshairMove(param => {
-            if (param.time && param.seriesData.has(series)) {
-                onCrosshairMove(param.seriesData.get(series));
-            } else {
-                onCrosshairMove(null);
-            }
+            if (param.time && param.seriesData.has(series)) { onCrosshairMove(param.seriesData.get(series)); } 
+            else { onCrosshairMove(null); }
         });
 
         const handleResize = () => {
             if (chartContainerRef.current && chartRef.current) {
-                chartRef.current.applyOptions({ width: chartContainerRef.current.clientWidth });
+                // --- UPDATED: Resize logic is simpler ---
+                chartRef.current.resize(chartContainerRef.current.clientWidth, chartContainerRef.current.clientHeight);
             }
         };
         window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            if (chartRef.current) {
-                chartRef.current.remove();
-                chartRef.current = null;
-            }
+            if (chartRef.current) { chartRef.current.remove(); chartRef.current = null; }
         };
     }, [onCrosshairMove]);
 
     useEffect(() => {
         if (!chartRef.current) return;
-
         const chartOptions = theme === 'light' ? lightTheme : darkTheme;
         chartRef.current.applyOptions({
             ...chartOptions,
-            width: chartContainerRef.current.clientWidth,
-            height: 300,
             watermark: {
                 color: theme === 'light' ? 'rgba(0, 0, 0, 0.04)' : 'rgba(255, 255, 255, 0.04)',
                 visible: true, text: signal.symbol.toUpperCase(), fontSize: 48,
@@ -83,9 +87,10 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
     }, [theme, signal.symbol]);
 
     useEffect(() => {
+        if (seriesRef.current && ohlcData) { seriesRef.current.setData(ohlcData); }
+        if (indicatorSeriesRef.current && indicatorData) { indicatorSeriesRef.current.setData(indicatorData); }
         if (!seriesRef.current || !chartRef.current || !ohlcData || ohlcData.length === 0) return;
         
-        seriesRef.current.setData(ohlcData);
         priceLinesRef.current.forEach(line => seriesRef.current.removePriceLine(line));
         priceLinesRef.current = [];
         seriesRef.current.setMarkers([]);
@@ -119,7 +124,8 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
         }
         
         chartRef.current.timeScale().fitContent();
-    }, [ohlcData, signal]);
+    }, [ohlcData, indicatorData, signal]);
 
-    return <div ref={chartContainerRef} className="w-full h-[300px]" />;
+    // --- UPDATED: The container is now just a flexible box. The parent will control its size. ---
+    return <div ref={chartContainerRef} className="w-full h-full" />;
 };

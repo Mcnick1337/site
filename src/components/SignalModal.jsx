@@ -1,4 +1,4 @@
-// File: src/components/SignalModal.jsx (Updated to prevent flashing)
+// File: src/components/SignalModal.jsx (Updated with stable layout)
 
 import { useEffect, useState, useContext } from 'react';
 import { motion } from 'framer-motion';
@@ -53,7 +53,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
     const [crosshairData, setCrosshairData] = useState(null);
 
     useEffect(() => {
-        // Set loading to true whenever the interval or signal changes
         setIsLoading(true); 
         const loadData = async () => {
             const kucoinInterval = intervalMap[interval];
@@ -73,10 +72,12 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
             setIndicatorData(rsi);
             setIsLoading(false);
         };
-        loadData();
+        // Add a small delay to allow the modal animation to finish before data fetching
+        const timer = setTimeout(loadData, 50);
+        return () => clearTimeout(timer);
     }, [signal, cache, updateCache, interval]);
 
-    const handleClose = () => setTimeout(onClose, 300); // Simplified close
+    const handleClose = () => setTimeout(onClose, 300);
 
     const displayData = crosshairData || (ohlcData && ohlcData[ohlcData.length - 1]);
 
@@ -97,16 +98,15 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-6 flex-grow min-h-0">
-                    
                     {/* --- LEFT COLUMN (Chart) --- */}
                     <div className="lg:w-2/3 flex flex-col gap-2">
-                        <div className="flex justify-between items-center">
+                         <div className="flex justify-between items-center">
                             <div className="flex items-center space-x-2">
                                 {availableIntervals.map(iv => (
                                     <button key={iv} onClick={() => setInterval(iv)} className={`px-3 py-1 text-sm rounded-md transition-colors ${interval === iv ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-white/20'}`}>{iv.toUpperCase()}</button>
                                 ))}
                             </div>
-                            <div className="flex space-x-4 text-xs text-gray-600 dark:text-gray-400">
+                            <div className="flex space-x-4 text-xs text-gray-600 dark:text-gray-400 h-4">
                                 {displayData && !isLoading && (<>
                                     <span>O: <span className="font-mono">{displayData.open.toFixed(2)}</span></span>
                                     <span>H: <span className="font-mono">{displayData.high.toFixed(2)}</span></span>
@@ -115,9 +115,9 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                 </>)}
                             </div>
                         </div>
-                        {/* --- UPDATED: Chart container is now stable with an overlay for loading --- */}
-                        <div className="relative w-full flex-grow h-[400px] lg:h-auto bg-gray-200 dark:bg-black/20 rounded-lg">
-                            {(ohlcData && !isLoading) ? (
+                        {/* --- THE CORE FIX: This container now has a fixed height, preventing it from ever collapsing. --- */}
+                        <div className="relative w-full h-[480px] bg-gray-200 dark:bg-black/20 rounded-lg">
+                            {(ohlcData) ? (
                                 <LightweightChart 
                                     ohlcData={ohlcData} 
                                     indicatorData={indicatorData}
@@ -127,7 +127,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                             ) : (
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     {isLoading ? (
-                                        <p className="text-gray-500">Loading Chart...</p>
+                                        <p className="text-gray-500 animate-pulse">Loading Chart...</p>
                                     ) : (
                                         <p className="text-red-400">Failed to load chart data.</p>
                                     )}
@@ -137,10 +137,9 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                     </div>
 
                     {/* --- RIGHT COLUMN (Details) --- */}
-                    <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:max-h-[520px] lg:overflow-y-auto custom-scrollbar pr-2">
-                        {/* --- UPDATED: Skeleton is now an overlay to prevent layout shifts --- */}
+                    <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:h-[520px] lg:overflow-y-auto custom-scrollbar pr-2">
                         {isLoading ? (
-                            <div className="space-y-4">
+                            <div className="space-y-4 pt-2">
                                 <div className="grid grid-cols-2 gap-4"><Skeleton className="h-16"/><Skeleton className="h-16"/><Skeleton className="h-16"/><Skeleton className="h-16"/></div>
                                 <Skeleton className="h-24" />
                                 <Skeleton className="h-20" />
