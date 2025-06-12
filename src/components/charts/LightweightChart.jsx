@@ -1,8 +1,9 @@
 // File: src/components/charts/LightweightChart.jsx
 
-import { useEffect, useRef, useContext } from 'react'; // Import useContext
+import { useEffect, useRef, useContext } from 'react';
 import { createChart, LineStyle } from 'lightweight-charts';
-import { ThemeContext } from '../App'; // Import our ThemeContext
+// --- THIS IS THE LINE TO FIX ---
+import { ThemeContext } from '../../App'; // Correct path is '../../App'
 
 // Define our two themes for the chart
 const darkTheme = {
@@ -27,9 +28,8 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
     const chartRef = useRef(null);
     const seriesRef = useRef(null);
     const priceLinesRef = useRef([]);
-    const { theme } = useContext(ThemeContext); // Get the current theme from context
+    const { theme } = useContext(ThemeContext);
 
-    // Effect for chart creation and destruction
     useEffect(() => {
         if (!chartContainerRef.current) return;
 
@@ -66,7 +66,6 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
         };
     }, [onCrosshairMove]);
 
-    // Effect to apply theme and options when theme or signal changes
     useEffect(() => {
         if (!chartRef.current) return;
 
@@ -83,7 +82,6 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
         });
     }, [theme, signal.symbol]);
 
-    // Effect for data and marker updates
     useEffect(() => {
         if (!seriesRef.current || !chartRef.current || !ohlcData || ohlcData.length === 0) return;
         
