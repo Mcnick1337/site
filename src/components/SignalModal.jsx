@@ -72,7 +72,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
             >
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-2xl font-bold">{signal.symbol} - Signal Details</h2>
-                    {/* FIX: Make close button text theme-aware */}
                     <button onClick={handleClose} className="text-3xl text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">×</button>
                 </div>
 
@@ -159,7 +158,12 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
 
                     <h3 className="text-lg font-semibold mb-2">Relevant News</h3>
                     <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                        {signal["Relevant News Headlines"]?.length > 0 ? (
+                        {/* 
+                           FIXED: Added `Array.isArray()` check here.
+                           This prevents the app from crashing if "Relevant News Headlines" is a string
+                           or another non-array type, which was causing the error.
+                        */}
+                        {Array.isArray(signal["Relevant News Headlines"]) && signal["Relevant News Headlines"].length > 0 ? (
                             signal["Relevant News Headlines"].map((headline, index) => (
                                 <li key={index}>{headline}</li>
                             ))

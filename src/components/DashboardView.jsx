@@ -1,12 +1,12 @@
-// File: src/components/DashboardView.jsx
+// File: src/pages/DashboardView.jsx (Updated for polish)
 
 import { useMemo } from 'react';
-import { TabNav } from './TabNav';
-import { ModelInfo } from './ModelInfo';
-import { StatsGrid } from './StatsGrid';
-import { DetailsSectionDashboard } from './DetailsSectionDashboard';
-import { FilterControls } from './FilterControls';
-import { SignalCatalog } from './SignalCatalog';
+import { TabNav } from '../components/TabNav';
+import { ModelInfo } from '../components/ModelInfo';
+import { StatsGrid } from '../components/StatsGrid';
+import { DetailsSectionDashboard } from '../components/DetailsSectionDashboard';
+import { FilterControls } from '../components/FilterControls';
+import { SignalCatalog } from '../components/SignalCatalog';
 import { processSignals } from '../utils/processSignals';
 import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats } from '../utils/calculateStats';
 
@@ -17,6 +17,7 @@ export const DashboardView = ({
 }) => {
     const currentModelData = appState[activeTab];
 
+    // ... (no changes to the memoized calculations)
     const dateFilteredSignals = useMemo(() => {
         const { startDate, endDate } = currentModelData.filters;
         if (!startDate && !endDate) {
@@ -51,8 +52,14 @@ export const DashboardView = ({
         return processSignals(dateFilteredSignals, currentModelData.filters, currentModelData.sort);
     }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort]);
 
+    // ADDED: Create a unique key based on the filters. When this changes,
+    // the component with this key will re-animate.
+    const catalogKey = useMemo(() => 
+        JSON.stringify({ ...currentModelData.filters, ...currentModelData.sort }),
+        [currentModelData.filters, currentModelData.sort]
+    );
+
     return (
-        // This container forces all direct children to stack vertically
         <div className="flex flex-col w-full">
             <TabNav
                 models={models}
@@ -74,14 +81,17 @@ export const DashboardView = ({
                 onFilterChange={(key, value) => handleStateChange('filters', key, value)}
                 onSortChange={(key, value) => handleStateChange('sort', key, value)}
             />
-            <SignalCatalog
-                signals={displayedSignals}
-                currentPage={currentModelData.currentPage}
-                itemsPerPage={currentModelData.itemsPerPage}
-                onPageChange={handlePageChange}
-                onSignalClick={setSelectedSignal}
-                highlightedSignalId={highlightedSignalId}
-            />
+            {/* UPDATED: Wrapped SignalCatalog to apply the key and animation class */}
+            <div key={catalogKey} className="card-enter">
+                <SignalCatalog
+                    signals={displayedSignals}
+                    currentPage={currentModelData.currentPage}
+                    itemsPerPage={currentModelData.itemsPerPage}
+                    onPageChange={handlePageChange}
+                    onSignalClick={setSelectedSignal}
+                    highlightedSignalId={highlightedSignalId}
+                />
+            </div>
         </div>
     );
 };
