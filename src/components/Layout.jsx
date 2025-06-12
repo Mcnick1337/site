@@ -1,3 +1,5 @@
+// File: src/components/Layout.jsx
+
 const NavLink = ({ text, icon, isActive, onClick }) => (
     <button
         onClick={onClick}
@@ -24,7 +26,10 @@ export const Layout = ({ activeView, setActiveView, children }) => {
                     <NavLink text="Portfolio Tools" icon={<ToolsIcon />} isActive={activeView === 'portfolio'} onClick={() => setActiveView('portfolio')} />
                 </nav>
             </aside>
-            <main className="flex-grow">
+
+            {/* --- THIS IS THE FIX --- */}
+            {/* Added 'flex flex-col' to ensure a consistent vertical layout for its children */}
+            <main className="flex-grow flex flex-col">
                 {children}
             </main>
         </div>
