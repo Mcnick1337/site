@@ -10,34 +10,28 @@ import { SignalCatalog } from './SignalCatalog';
 import { processSignals } from '../utils/processSignals';
 import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats } from '../utils/calculateStats';
 
-// This is the full, correct component definition
 export const DashboardView = ({
     models, activeTab, setActiveTab, appState,
     handleStateChange, handlePageChange, setSelectedSignal,
     highlightedSignalId, onSignalHover, setComparisonViewActive
 }) => {
-    // Get the data for the currently active tab from the main app state
     const currentModelData = appState[activeTab];
 
-    // Step 1: Filter the raw signals based on the selected date range.
-    // This is the primary filter that affects all calculations.
     const dateFilteredSignals = useMemo(() => {
         const { startDate, endDate } = currentModelData.filters;
         if (!startDate && !endDate) {
-            return currentModelData.allSignals; // No date filter applied
+            return currentModelData.allSignals;
         }
         return currentModelData.allSignals.filter(s => {
-            if (!s.timestamp) return false; // Guard against signals with no timestamp
+            if (!s.timestamp) return false;
             const signalDate = new Date(s.timestamp);
-            if (isNaN(signalDate.getTime())) return false; // Guard against invalid dates
-            
+            if (isNaN(signalDate.getTime())) return false;
             const startMatch = !startDate || signalDate >= startDate;
             const endMatch = !endDate || signalDate <= endDate;
             return startMatch && endMatch;
         });
     }, [currentModelData.allSignals, currentModelData.filters.startDate, currentModelData.filters.endDate]);
 
-    // Step 2: Recalculate all statistics using ONLY the date-filtered signals.
     const statsForDisplay = useMemo(() => {
         const overallStats = calculateAllStats(dateFilteredSignals);
         const timeStats = calculateTimeBasedStats(dateFilteredSignals);
@@ -53,14 +47,14 @@ export const DashboardView = ({
         };
     }, [dateFilteredSignals]);
 
-    // Step 3: Apply the other filters (symbol, type, etc.) for the Signal Catalog view.
     const displayedSignals = useMemo(() => {
-        // Pass the already date-filtered signals to be processed further.
         return processSignals(dateFilteredSignals, currentModelData.filters, currentModelData.sort);
     }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort]);
 
     return (
-        <>
+        // --- THIS IS THE FIX ---
+        // This container ensures all direct children stack vertically.
+        <div className="flex flex-col">
             <TabNav
                 models={models}
                 activeTab={activeTab}
@@ -69,16 +63,15 @@ export const DashboardView = ({
             />
             <ModelInfo modelId={activeTab} />
             
-            {/* Pass the newly calculated stats to the widgets */}
             <StatsGrid stats={statsForDisplay.overallStats} />
             
             <DetailsSectionDashboard
                 modelId={activeTab}
-                // We construct a temporary object that mimics the structure `DetailsSectionDashboard` expects.
                 appState={{ [activeTab]: statsForDisplay }}
                 onSignalHover={onSignalHover}
             />
             
+            {/* This will now reliably appear before the SignalCatalog */}
             <FilterControls
                 modelId={activeTab}
                 filters={currentModelData.filters}
@@ -95,6 +88,6 @@ export const DashboardView = ({
                 onSignalClick={setSelectedSignal}
                 highlightedSignalId={highlightedSignalId}
             />
-        </>
+        </div>
     );
 };
