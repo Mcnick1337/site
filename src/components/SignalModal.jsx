@@ -1,4 +1,4 @@
-// File: src/components/SignalModal.jsx (Definitive flicker fix)
+// File: src/components/SignalModal.jsx (Final Anti-Flicker Implementation)
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -51,12 +51,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
     const [crosshairData, setCrosshairData] = useState(null);
 
     useEffect(() => {
-        // --- THE CORE FIX ---
-        // Immediately set loading state AND clear old data to prevent showing stale content.
         setIsLoading(true);
-        setOhlcData(null);
-        setIndicatorData(null);
-
         const loadData = async () => {
             const kucoinInterval = intervalMap[interval];
             const ohlcCacheKey = `ohlc-${signal.timestamp}-${kucoinInterval}`;
@@ -75,17 +70,15 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
             setIndicatorData(rsi);
             setIsLoading(false);
         };
-        
         const timer = setTimeout(loadData, 50);
         return () => clearTimeout(timer);
     }, [signal, cache, updateCache, interval]);
 
     const handleClose = () => setTimeout(onClose, 300);
-
     const displayData = crosshairData || (ohlcData && ohlcData.slice(-1)[0]);
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out" onClick={handleClose}>
+        <div className="fixed inset-0 flex items-center justify-center z-50" onClick={handleClose}>
             <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
             <motion.div 
                 className="relative z-10 bg-gray-100 dark:bg-dark-card w-full max-w-6xl rounded-2xl border border-black/10 dark:border-white/20 shadow-2xl p-6 m-4 flex flex-col"
@@ -106,25 +99,32 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                 ))}
                             </div>
                             <div className="flex space-x-4 text-xs text-gray-600 dark:text-gray-400 h-4">
-                                {displayData && (<>
-                                    <span>O: <span className="font-mono">{displayData.open.toFixed(2)}</span></span>
-                                    <span>H: <span className="font-mono">{displayData.high.toFixed(2)}</span></span>
-                                    <span>L: <span className="font-mono">{displayData.low.toFixed(2)}</span></span>
-                                    <span>C: <span className="font-mono">{displayData.close.toFixed(2)}</span></span>
-                                </>)}
+                                <div className={`transition-opacity duration-200 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+                                    {displayData && (<>
+                                        <span>O: <span className="font-mono">{displayData.open.toFixed(2)}</span></span>
+                                        <span className="ml-4">H: <span className="font-mono">{displayData.high.toFixed(2)}</span></span>
+                                        <span className="ml-4">L: <span className="font-mono">{displayData.low.toFixed(2)}</span></span>
+                                        <span className="ml-4">C: <span className="font-mono">{displayData.close.toFixed(2)}</span></span>
+                                    </>)}
+                                </div>
                             </div>
                         </div>
                         <div className="relative w-full h-[480px] bg-gray-200 dark:bg-black/20 rounded-lg">
-                            <LightweightChart 
-                                ohlcData={ohlcData} 
-                                indicatorData={indicatorData}
-                                signal={signal} 
-                                onCrosshairMove={setCrosshairData}
-                            />
+                            <div className={`w-full h-full transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+                                <LightweightChart 
+                                    ohlcData={ohlcData} 
+                                    indicatorData={indicatorData}
+                                    signal={signal} 
+                                    onCrosshairMove={setCrosshairData}
+                                />
+                            </div>
+                            <div className={`absolute inset-0 flex items-center justify-center bg-dark-card/30 backdrop-blur-sm transition-opacity duration-300 rounded-lg ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                                <p className="text-gray-300 animate-pulse text-lg">Loading Chart...</p>
+                            </div>
                         </div>
                     </div>
                     <div className="relative lg:w-1/3 flex-shrink-0 lg:h-[520px]">
-                        <div className="flex flex-col gap-4 lg:overflow-y-auto custom-scrollbar h-full pr-2">
+                        <div className={`flex flex-col gap-4 lg:overflow-y-auto custom-scrollbar h-full pr-2 transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
                             <div className="grid grid-cols-2 gap-4 text-center">
                                 <div><p className="text-sm text-gray-500 dark:text-gray-400">Entry Price</p><p className="text-lg font-semibold">{parseFloat(signal["Entry Price"]).toFixed(5)}</p></div>
                                 {signal["Take Profit Targets"]?.[0] && <div><p className="text-sm text-gray-500 dark:text-gray-400">Take Profit 1</p><p className="text-lg font-semibold text-green-600 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][0]).toFixed(5)}</p></div>}
@@ -147,11 +147,9 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                 </ul>
                             </div>
                         </div>
-                        {isLoading && (
-                            <div className="absolute inset-0 bg-dark-card/50 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                                <p className="text-gray-400 animate-pulse">Loading Details...</p>
-                            </div>
-                        )}
+                        <div className={`absolute inset-0 bg-dark-card/30 backdrop-blur-sm rounded-lg flex items-center justify-center transition-opacity duration-300 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                             <p className="text-gray-300 animate-pulse text-lg">Loading Details...</p>
+                        </div>
                     </div>
                 </div>
             </motion.div>
