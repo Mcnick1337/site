@@ -1,3 +1,5 @@
+// File: src/components/DashboardView.jsx
+
 import { useMemo } from 'react';
 import { TabNav } from './TabNav';
 import { ModelInfo } from './ModelInfo';
@@ -6,6 +8,7 @@ import { DetailsSectionDashboard } from './DetailsSectionDashboard';
 import { FilterControls } from './FilterControls';
 import { SignalCatalog } from './SignalCatalog';
 import { processSignals } from '../utils/processSignals';
+import { WeeklyPerformanceChart } from './WeeklyPerformanceChart'; // Import the new chart
 
 export const DashboardView = ({
     models, activeTab, setActiveTab, appState,
@@ -27,7 +30,13 @@ export const DashboardView = ({
                 onCompareClick={() => setComparisonViewActive(true)}
             />
             <ModelInfo modelId={activeTab} />
-            <StatsGrid stats={currentModelData.overallStats} />
+            
+            {/* --- NEW 2x2 GRID LAYOUT --- */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <StatsGrid stats={currentModelData.overallStats} />
+                <WeeklyPerformanceChart weeklyStats={currentModelData.weeklyStats} />
+            </div>
+
             <DetailsSectionDashboard
                 modelId={activeTab}
                 appState={appState}

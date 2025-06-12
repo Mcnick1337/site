@@ -13,7 +13,6 @@ export function calculateAllStats(signals) {
     let equity = 10000, peakEquity = 10000, maxDrawdown = 0;
     const sortedSignals = [...signals].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
     
-    // FIX: Ensure the very first signal has a valid timestamp before creating the initial equity point.
     const initialTimestamp = sortedSignals[0]?.timestamp ? new Date(sortedSignals[0].timestamp).getTime() : Date.now();
     const equityCurveData = [{ x: initialTimestamp, y: equity, signalId: null }];
     const returns = [];
@@ -21,10 +20,8 @@ export function calculateAllStats(signals) {
     let currentWinStreak = 0, maxWinStreak = 0, currentLossStreak = 0, maxLossStreak = 0;
 
     sortedSignals.forEach(signal => {
-        // FIX: Use optional chaining on every potentially missing property.
         const status = signal.performance?.status?.toLowerCase();
         
-        // Only process signals that have a definitive win/loss status.
         if (status === 'win' || status === 'loss') {
             if (status === 'win') {
                 wins++;
@@ -60,7 +57,6 @@ export function calculateAllStats(signals) {
             peakEquity = Math.max(peakEquity, equity);
             maxDrawdown = Math.max(maxDrawdown, (peakEquity - equity) / peakEquity);
             
-            // FIX: Ensure the signal has a valid timestamp before adding to the equity curve.
             if (signal.timestamp) {
                 equityCurveData.push({ x: new Date(signal.timestamp).getTime(), y: equity, signalId: signal.timestamp });
             }
@@ -81,13 +77,11 @@ export function calculateAllStats(signals) {
     };
 }
 
-// Calculates performance broken down by symbol.
 export function calculateSymbolWinRates(signals) {
     if (!signals) return [];
     const symbolStats = {};
 
     signals.forEach(s => {
-        // FIX: Check for the existence of symbol and performance status.
         if (s.symbol && s.performance?.status) {
             const status = s.performance.status.toLowerCase();
             if (status === 'win' || status === 'loss') {
@@ -119,7 +113,6 @@ export function calculateSymbolWinRates(signals) {
     }).sort((a, b) => b.total - a.total);
 }
 
-// Calculates performance broken down by time.
 export function calculateTimeBasedStats(signals) {
     if (!signals) return { dayStats: {}, hourStats: {} };
 
@@ -127,12 +120,10 @@ export function calculateTimeBasedStats(signals) {
     const hourStats = Array.from({ length: 24 }, () => ({ w: 0, l: 0 }));
 
     signals.forEach(s => {
-        // FIX: Check for performance status AND a valid timestamp.
         if (s.performance?.status && s.timestamp) {
             const status = s.performance.status.toLowerCase();
             if (status === 'win' || status === 'loss') {
                 const date = new Date(s.timestamp);
-                // FIX: Ensure the date is valid before trying to get day/hour from it.
                 if (!isNaN(date.getTime())) {
                     const day = date.getDay();
                     const hour = date.getHours();
@@ -149,9 +140,6 @@ export function calculateTimeBasedStats(signals) {
     });
     return { dayStats, hourStats };
 }
-
-// NOTE: The other two functions ('calculateCompoundingEquityCurve' and 'calculateCorrelation')
-// are not currently being used in your App.jsx, but I have made them robust as well for future use.
 
 export function calculateCompoundingEquityCurve(signals, initialCapital, riskPercent) {
     if (!signals || signals.length === 0) return [];
@@ -184,7 +172,6 @@ export function calculateCompoundingEquityCurve(signals, initialCapital, riskPer
 export function calculateCorrelation(signalsA, signalsB) {
     const getReturns = (signals) => new Map(signals.filter(s => s.performance?.status && s.timestamp).map(s => {
         const rr = Math.abs(parseFloat(s["Take Profit Targets"]?.[0]) - parseFloat(s["Entry Price"])) / Math.abs(parseFloat(s["Entry Price"]) - parseFloat(s["Stop Loss"]));
-        // FIX: Use optional chaining here as well.
         return [s.timestamp, s.performance?.status?.toUpperCase() === 'WIN' ? (rr || 1) : -1];
     }));
 
@@ -214,4 +201,44 @@ export function calculateCorrelation(signalsA, signalsB) {
     const denominator = Math.sqrt((n * sumX2 - sumX * sumX) * (n * sumY2 - sumY * sumY));
     if (denominator === 0) return 0;
     return numerator / denominator;
+}
+
+// --- THIS IS THE NEW FUNCTION ---
+export function calculateWeeklyStats(signals) {
+    if (!signals || signals.length === 0) return [];
+
+    const weeklyData = new Map();
+
+    signals.forEach(s => {
+        if (s.performance?.status && s.timestamp) {
+            const status = s.performance.status.toLowerCase();
+            if (status === 'win' || status === 'loss') {
+                const date = new Date(s.timestamp);
+                if (isNaN(date.getTime())) return; // Skip invalid dates
+
+                // Find the start of the week (Sunday) for this signal
+                const dayOfWeek = date.getDay();
+                const startOfWeek = new Date(date.setDate(date.getDate() - dayOfWeek));
+                startOfWeek.setHours(0, 0, 0, 0); // Normalize to the beginning of the day
+                const weekKey = startOfWeek.toISOString().split('T')[0]; // Use 'YYYY-MM-DD' as a key
+
+                if (!weeklyData.has(weekKey)) {
+                    weeklyData.set(weekKey, { wins: 0, losses: 0 });
+                }
+
+                const week = weeklyData.get(weekKey);
+                if (status === 'win') {
+                    week.wins++;
+                } else {
+                    week.losses++;
+                }
+            }
+        }
+    });
+
+    // Convert the Map to a sorted array and return the last 10 weeks
+    return Array.from(weeklyData.entries())
+        .map(([week, data]) => ({ week, ...data }))
+        .sort((a, b) => new Date(a.week) - new Date(b.week))
+        .slice(-10); // Show the last 10 weeks of data
 }

@@ -7,7 +7,7 @@ import { DashboardView } from './components/DashboardView';
 import { PortfolioView } from './components/PortfolioView';
 import { ComparisonView } from './components/ComparisonView';
 import { SignalModal } from './components/SignalModal';
-import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates } from './utils/calculateStats';
+import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats } from './utils/calculateStats';
 
 import {
     Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
@@ -18,7 +18,6 @@ ChartJS.register(
     CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
 );
 
-// Create the context to be used by child components
 export const ThemeContext = createContext(null);
 
 const AI_MODELS = {
@@ -39,7 +38,8 @@ const floatingElements = [
 
 const createDefaultAiState = () => ({
     allSignals: [], symbolWinRates: [], overallStats: {},
-    dayOfWeekStats: {}, hourOfDayStats: {}, currentPage: 1, itemsPerPage: 12,
+    dayOfWeekStats: {}, hourOfDayStats: {}, weeklyStats: [], // Add weeklyStats
+    currentPage: 1, itemsPerPage: 12,
     filters: { symbol: '', signalType: '', status: '', minConfidence: '50' },
     sort: { by: 'timestamp' }, ohlcCache: {}, equityCurveData: [],
 });
@@ -56,27 +56,23 @@ export default function App() {
     const [comparisonViewActive, setComparisonViewActive] = useState(false);
     const [selectedSignal, setSelectedSignal] = useState(null);
     const [highlightedSignalId, setHighlightedSignalId] = useState(null);
-
-    // --- Theme State Logic ---
     const [theme, setTheme] = useState(() => {
         if (typeof window !== 'undefined' && window.localStorage.getItem('theme')) {
             return window.localStorage.getItem('theme');
         }
-        return 'dark'; // Default to dark theme
+        return 'dark';
     });
 
     const toggleTheme = () => {
         setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
     };
 
-    // Effect to apply the theme class to the HTML root
     useEffect(() => {
         const root = window.document.documentElement;
         root.classList.remove('light', 'dark');
         root.classList.add(theme);
         localStorage.setItem('theme', theme);
     }, [theme]);
-    // --- End Theme State Logic ---
 
     useEffect(() => {
         localStorage.setItem('lastActiveTab', activeTab);
@@ -87,11 +83,13 @@ export default function App() {
                 .then(signals => {
                     const overallStats = calculateAllStats(signals);
                     const timeStats = calculateTimeBasedStats(signals);
+                    const weeklyStats = calculateWeeklyStats(signals);
                     setAppState(prev => ({
                         ...prev, [activeTab]: {
                             ...prev[activeTab], allSignals: signals, overallStats: overallStats,
                             equityCurveData: overallStats.equityCurveData, dayOfWeekStats: timeStats.dayStats,
                             hourOfDayStats: timeStats.hourStats, symbolWinRates: calculateSymbolWinRates(signals),
+                            weeklyStats: weeklyStats,
                         }
                     }));
                 }).catch(err => console.error(err));
