@@ -51,6 +51,11 @@ body {
   width: 100%;
 }
 
+/* ADDED: New ruleset for the datepicker popper */
+.react-datepicker-popper {
+  z-index: 50; /* High z-index to ensure it appears above all other content */
+}
+
 .react-datepicker__input-container input {
   @apply w-full rounded-md border-0 py-1.5 px-2.5 shadow-sm;
   @apply bg-gray-200 text-gray-800 ring-1 ring-inset ring-gray-300;

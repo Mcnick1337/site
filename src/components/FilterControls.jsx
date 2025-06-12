@@ -23,7 +23,10 @@ const selectStyles = `
 
 export const FilterControls = ({ modelId, filters, sort, onFilterChange, onSortChange }) => {
     return (
-        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 my-6 flex flex-wrap items-end gap-4">
+        // CHANGED: Added `relative` and `z-10` to the className.
+        // This ensures this component and its children (like the date picker)
+        // appear on top of the content that follows it.
+        <div className="relative z-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 my-6 flex flex-wrap items-end gap-4">
             
             <div className="flex-grow min-w-[120px]">
                 <label htmlFor={`symbol-filter-${modelId}`} className="block text-sm font-medium text-gray-400 mb-1">Symbol</label>
