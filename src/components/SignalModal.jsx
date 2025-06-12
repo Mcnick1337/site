@@ -1,9 +1,10 @@
 // File: src/components/SignalModal.jsx
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react'; // Import useContext
 import { motion } from 'framer-motion';
 import { LightweightChart } from './charts/LightweightChart';
 import { Skeleton } from './Skeleton';
+import { ThemeContext } from '../App'; // Import ThemeContext
 
 async function fetchOHLCData(symbol, signalTime, interval) {
     const hoursToFetch = 120;
@@ -71,7 +72,8 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
             >
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-2xl font-bold">{signal.symbol} - Signal Details</h2>
-                    <button onClick={handleClose} className="text-3xl text-gray-400 hover:text-white transition-colors">×</button>
+                    {/* FIX: Make close button text theme-aware */}
+                    <button onClick={handleClose} className="text-3xl text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">×</button>
                 </div>
 
                 {displayData && (
@@ -89,7 +91,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                             className={`px-3 py-1 text-sm rounded-md transition-colors ${
                                 interval === iv 
                                 ? 'bg-blue-500 text-white' 
-                                : 'bg-gray-200 dark:bg-white/10 hover:bg-gray-300 dark:hover:bg-white/20'
+                                : 'bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-white/20'
                             }`}
                         >
                             {iv.toUpperCase()}
@@ -99,7 +101,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
 
                 <div className="relative w-full h-[300px]">
                     {isLoading ? (
-                        <Skeleton className="w-full h-full" />
+                        <Skeleton className="w-full h-full bg-gray-300 dark:bg-white/10" />
                     ) : ohlcData ? (
                         <LightweightChart 
                             ohlcData={ohlcData} 
@@ -114,8 +116,10 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                 <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10">
                     {isLoading ? (
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <Skeleton className="h-12 w-full" /><Skeleton className="h-12 w-full" />
-                            <Skeleton className="h-12 w-full" /><Skeleton className="h-12 w-full" />
+                            <Skeleton className="h-12 w-full bg-gray-300 dark:bg-white/10" />
+                            <Skeleton className="h-12 w-full bg-gray-300 dark:bg-white/10" />
+                            <Skeleton className="h-12 w-full bg-gray-300 dark:bg-white/10" />
+                            <Skeleton className="h-12 w-full bg-gray-300 dark:bg-white/10" />
                         </div>
                     ) : (
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -126,12 +130,12 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                             {signal["Take Profit Targets"]?.[0] && (
                                 <div>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">Take Profit 1</p>
-                                    <p className="text-lg font-semibold text-green-500 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][0]).toFixed(5)}</p>
+                                    <p className="text-lg font-semibold text-green-600 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][0]).toFixed(5)}</p>
                                 </div>
                             )}
                             <div>
                                 <p className="text-sm text-gray-500 dark:text-gray-400">Stop Loss</p>
-                                <p className="text-lg font-semibold text-red-500 dark:text-red-400">{parseFloat(signal["Stop Loss"]).toFixed(5)}</p>
+                                <p className="text-lg font-semibold text-red-600 dark:text-red-400">{parseFloat(signal["Stop Loss"]).toFixed(5)}</p>
                             </div>
                             <div>
                                 <p className="text-sm text-gray-500 dark:text-gray-400">Signal Time</p>
@@ -140,7 +144,7 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                              {signal["Take Profit Targets"]?.[1] && (
                                 <div className="md:col-start-2">
                                     <p className="text-sm text-gray-500 dark:text-gray-400">Take Profit 2</p>
-                                    <p className="text-lg font-semibold text-green-500 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][1]).toFixed(5)}</p>
+                                    <p className="text-lg font-semibold text-green-600 dark:text-green-400">{parseFloat(signal["Take Profit Targets"][1]).toFixed(5)}</p>
                                 </div>
                             )}
                         </div>
