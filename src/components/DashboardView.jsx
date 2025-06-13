@@ -8,7 +8,7 @@ import { DetailsSectionDashboard } from '../components/DetailsSectionDashboard';
 import { FilterControls } from '../components/FilterControls';
 import { SignalCatalog } from '../components/SignalCatalog';
 import { processSignals } from '../utils/processSignals';
-import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats } from '../utils/calculateStats';
+import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats, calculateLearningStatus } from '../utils/calculateStats';
 
 export const DashboardView = ({
     models, activeTab, setActiveTab, appState,
@@ -35,6 +35,7 @@ export const DashboardView = ({
         const timeStats = calculateTimeBasedStats(dateFilteredSignals);
         const weeklyStats = calculateWeeklyStats(dateFilteredSignals);
         const symbolWinRates = calculateSymbolWinRates(dateFilteredSignals);
+        const learningStatus = calculateLearningStatus(dateFilteredSignals);
         return {
             overallStats,
             dayOfWeekStats: timeStats.dayStats,
@@ -42,12 +43,12 @@ export const DashboardView = ({
             weeklyStats,
             symbolWinRates,
             equityCurveData: overallStats.equityCurveData,
-            returns: overallStats.returns, // Ensure returns are passed through
+            returns: overallStats.returns,
+            learningStatus,
         };
     }, [dateFilteredSignals]);
 
     const displayedSignals = useMemo(() => {
-        // --- UPDATED: Pass the full stats object to the processing function ---
         return processSignals(dateFilteredSignals, currentModelData.filters, currentModelData.sort, statsForDisplay);
     }, [dateFilteredSignals, currentModelData.filters, currentModelData.sort, statsForDisplay]);
 
@@ -74,7 +75,7 @@ export const DashboardView = ({
                 setActiveTab={setActiveTab}
                 onCompareClick={() => setComparisonViewActive(true)}
             />
-            <ModelInfo modelId={activeTab} />
+            <ModelInfo modelId={activeTab} learningStatus={statsForDisplay.learningStatus} />
             <StatsGrid stats={statsForDisplay.overallStats} />
             <DetailsSectionDashboard
                 modelId={activeTab}

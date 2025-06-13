@@ -344,3 +344,51 @@ export function calculateWeeklyStats(signals) {
         .sort((a, b) => new Date(a.week) - new Date(b.week))
         .slice(-10);
 }
+
+export function calculateLearningStatus(signals) {
+    if (!signals || signals.length < 20) {
+        return { status: 'Learning', color: 'text-gray-400' };
+    }
+
+    const sortedSignals = [...signals]
+        .filter(s => s.performance?.status)
+        .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
+    if (sortedSignals.length < 20) {
+        return { status: 'Learning', color: 'text-gray-400' };
+    }
+
+    const midpoint = Math.floor(sortedSignals.length / 2);
+    const firstHalf = sortedSignals.slice(0, midpoint);
+    const secondHalf = sortedSignals.slice(midpoint);
+
+    const getProfitFactor = (tradeSet) => {
+        let grossProfit = 0;
+        let grossLoss = 0;
+        tradeSet.forEach(signal => {
+            const entry = parseFloat(signal["Entry Price"]);
+            const sl = parseFloat(signal["Stop Loss"]);
+            const tp1 = parseFloat(signal["Take Profit Targets"]?.[0]);
+            if (isNaN(entry) || isNaN(sl) || isNaN(tp1) || Math.abs(entry - sl) === 0) return;
+            
+            const rr = Math.abs(tp1 - entry) / Math.abs(entry - sl);
+            const profitOrLoss = signal.performance.status.toLowerCase() === 'win' ? (100 * rr) : -100;
+            
+            if (profitOrLoss > 0) grossProfit += profitOrLoss;
+            else grossLoss += profitOrLoss;
+        });
+        if (grossLoss === 0) return Infinity;
+        return Math.abs(grossProfit / grossLoss);
+    };
+
+    const pfFirstHalf = getProfitFactor(firstHalf);
+    const pfSecondHalf = getProfitFactor(secondHalf);
+
+    if (pfSecondHalf > pfFirstHalf * 1.2) {
+        return { status: 'Improving', color: 'text-green-400' };
+    }
+    if (pfFirstHalf > pfSecondHalf * 1.2) {
+        return { status: 'Degrading', color: 'text-red-400' };
+    }
+    return { status: 'Stable', color: 'text-amber-400' };
+}
