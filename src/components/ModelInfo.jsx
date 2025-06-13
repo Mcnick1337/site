@@ -22,9 +22,12 @@ export const ModelInfo = ({ modelId, learningStatus }) => {
                 <div className="p-4 bg-white/5 border-x border-b border-white/10 rounded-b-lg">
                     {learningStatus && (
                         <div className="mb-4 p-3 bg-black/20 rounded-lg text-center">
-                            <p className="text-sm text-gray-400">Model Learning Status</p>
+                            <p className="text-sm text-gray-400">Performance Trend</p>
                             <p className={`text-lg font-bold ${learningStatus.color}`}>
                                 {learningStatus.status}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                                (Regression Slope: {learningStatus.slope.toFixed(4)})
                             </p>
                         </div>
                     )}

@@ -4,7 +4,6 @@ import { EquityChart } from './charts/EquityChart';
 import { TimeChart } from './charts/TimeChart';
 import { SymbolWinRates } from './charts/SymbolWinRates';
 import { WeeklyPerformanceChart } from './WeeklyPerformanceChart';
-// --- ADDED: Import the new chart component ---
 import { PLDistributionChart } from './charts/PLDistributionChart';
 
 export const DetailsSectionDashboard = ({ modelId, appState, onSignalHover }) => {
@@ -16,18 +15,18 @@ export const DetailsSectionDashboard = ({ modelId, appState, onSignalHover }) =>
                 <h3 className="text-xl font-bold mb-4">Hypothetical Equity Curve</h3>
                 <EquityChart 
                     equityCurveData={data.equityCurveData} 
+                    // --- THE FIX IS HERE: Pass the trendline data to the chart ---
+                    trendlineData={data.trendlineData}
                     onSignalHover={onSignalHover} 
                     timeUnit="hour"
                 />
             </div>
 
-            {/* --- UPDATED: The grid is now 2x3 to accommodate the new chart --- */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
                      <SymbolWinRates rates={data.symbolWinRates} />
                 </div>
                 
-                {/* --- ADDED: The new P/L Distribution Chart widget --- */}
                 <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex flex-col">
                     <h3 className="text-xl font-bold mb-4">Trade P/L Distribution</h3>
                     <div className="flex-grow">

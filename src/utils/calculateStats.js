@@ -392,3 +392,49 @@ export function calculateLearningStatus(signals) {
     }
     return { status: 'Stable', color: 'text-amber-400' };
 }
+
+export function calculateTrendlineStatus(equityCurveData) {
+    if (!equityCurveData || equityCurveData.length < 10) {
+        return {
+            status: 'Learning',
+            color: 'text-gray-400',
+            slope: 0,
+            trendlineData: [],
+        };
+    }
+
+    const points = equityCurveData.map((d, i) => ({ x: i, y: d.y }));
+    const n = points.length;
+
+    let sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0;
+    for (let i = 0; i < n; i++) {
+        sumX += points[i].x;
+        sumY += points[i].y;
+        sumXY += points[i].x * points[i].y;
+        sumX2 += points[i].x * points[i].x;
+    }
+
+    const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+    const intercept = (sumY - slope * sumX) / n;
+
+    const trendlineData = equityCurveData.map((d, i) => ({
+        x: d.x,
+        y: slope * i + intercept,
+    }));
+    
+    const normalizedSlope = slope / equityCurveData[0].y * 100; 
+
+    let status, color;
+    if (normalizedSlope > 0.05) {
+        status = 'Improving';
+        color = 'text-green-400';
+    } else if (normalizedSlope < -0.05) {
+        status = 'Degrading';
+        color = 'text-red-400';
+    } else {
+        status = 'Stable';
+        color = 'text-amber-400';
+    }
+
+    return { status, color, slope, trendlineData };
+}

@@ -8,7 +8,7 @@ import { DetailsSectionDashboard } from '../components/DetailsSectionDashboard';
 import { FilterControls } from '../components/FilterControls';
 import { SignalCatalog } from '../components/SignalCatalog';
 import { processSignals } from '../utils/processSignals';
-import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats, calculateLearningStatus } from '../utils/calculateStats';
+import { calculateAllStats, calculateTimeBasedStats, calculateSymbolWinRates, calculateWeeklyStats, calculateTrendlineStatus } from '../utils/calculateStats';
 
 export const DashboardView = ({
     models, activeTab, setActiveTab, appState,
@@ -35,7 +35,9 @@ export const DashboardView = ({
         const timeStats = calculateTimeBasedStats(dateFilteredSignals);
         const weeklyStats = calculateWeeklyStats(dateFilteredSignals);
         const symbolWinRates = calculateSymbolWinRates(dateFilteredSignals);
-        const learningStatus = calculateLearningStatus(dateFilteredSignals);
+        // --- UPDATED: Use the new trendline calculation ---
+        const trendlineAnalysis = calculateTrendlineStatus(overallStats.equityCurveData);
+        
         return {
             overallStats,
             dayOfWeekStats: timeStats.dayStats,
@@ -44,7 +46,9 @@ export const DashboardView = ({
             symbolWinRates,
             equityCurveData: overallStats.equityCurveData,
             returns: overallStats.returns,
-            learningStatus,
+            // --- UPDATED: Pass both status and trendline data ---
+            learningStatus: { status: trendlineAnalysis.status, color: trendlineAnalysis.color, slope: trendlineAnalysis.slope },
+            trendlineData: trendlineAnalysis.trendlineData,
         };
     }, [dateFilteredSignals]);
 
