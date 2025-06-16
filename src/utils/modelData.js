@@ -21,10 +21,15 @@ export const modelInfoData = {
         description: "Embodies the persona of a risk-averse institutional portfolio manager with a primary directive of capital expansion.", 
         strengths: ["Risk-Averse by Design", "Systematic & Patient Framework", "Performance-Aware & Adaptive", "High-Timeframe & Trend Focused"] 
     },
-    // --- ADDED: The new model's description ---
     'ai-bob-wol': {
         title: "AI Bob WoL (Experimental)",
         description: "A specialized version of AI Bob that operates without the standard learning and adaptation systems. This model follows a fixed, core strategy, providing a stable baseline for performance analysis.",
         strengths: ["Fixed Core Strategy", "Baseline Performance Metric", "Non-Adaptive", "Systematic Execution"]
+    },
+    // --- ADDED: The new model's description ---
+    'ai-pro-x2': {
+        title: "AI PRO X2 (Experimental)",
+        description: "A dual-stage verification model based on the AI Bob framework. Each primary signal is reviewed and confirmed by a secondary, independent AI process, aiming to increase precision and reduce false positives.",
+        strengths: ["Dual-AI Verification", "High-Conviction Signals", "Error-Correction Mechanism", "Reduced False Positives"]
     }
 };

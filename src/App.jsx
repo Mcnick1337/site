@@ -17,13 +17,14 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineEleme
 
 export const ThemeContext = createContext(null);
 
-// --- UPDATED: Added the new AI Bob WoL model ---
+// --- UPDATED: Added the new AI PRO X2 model ---
 const AI_MODELS = {
     'ai-max': { name: 'AI Max', file: '/signals_claude_log.json', experimental: false },
     'ai-bob': { name: 'AI Bob', file: '/signals_gemini_log.json', experimental: false },
     'ai-bob-2': { name: 'AI Bob-2', file: '/signals_bob_2_log.json', experimental: true },
     'ai-bob-3': { name: 'AI Bob-3', file: '/signals_bob_3_log.json', experimental: true },
     'ai-bob-wol': { name: 'AI Bob WoL', file: '/signals_bob_WoL_log.json', experimental: true },
+    'ai-pro-x2': { name: 'AI PRO X2', file: '/signals_PROX2_log.json', experimental: true },
 };
 
 const floatingElements = [

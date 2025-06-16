@@ -1,0 +1,87 @@
+[
+  {
+    "Signal": "Sell",
+    "Entry Price": "145.50",
+    "Take Profit Targets": [
+      "144.50",
+      "143.00",
+      "141.80"
+    ],
+    "Stop Loss": "146.50",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is trading below key EMAs (20, 50, 200) and VWAP across multiple timeframes, indicating a strong bearish trend (ADX 25.25). Entry is set near the strongest ask zone ($145.56) and the 1-hour EMA20, anticipating resistance. The MACD bullish cross is noted but considered a minor counter-trend signal within the dominant bearish structure. The setup targets a favorable risk-reward ratio.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "Confirmation_Reason": "The current price of $145.37 is below the key resistance zone of $145.56, supporting the analyst's short entry point.  The price being below the 20 EMA and the RSI at 39.72 further reinforces the bearish sentiment. Although the analyst mentions a MACD bullish cross, the overall trend and current price action seem to favor a short position. The stop loss at $146.50 is reasonable, and the take profit at $144.50 offers a good risk/reward ratio. The CRYPTO_CORRELATED market regime doesn't contradict the trade setup.",
+    "timestamp": "2025-06-14T13:43:36.306684",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 144.5,
+      "closed_by": "TP3",
+      "mfe_percentage": 1.17,
+      "mae_percentage": -0.19,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "144.75",
+    "Take Profit Targets": [
+      "140.88",
+      "138.30"
+    ],
+    "Stop Loss": "147.33",
+    "Confidence": 85,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price trading below key EMAs (20, 50, 200) on 1H, 4H, and Daily timeframes, indicating a strong bearish trend. MACD shows a bearish cross with a negative histogram, confirming bearish momentum. ADX at 30.65 signals strong existing trend strength. Multi-timeframe analysis reveals consistent bearish alignment on higher timeframes. Order flow indicates ask dominance. Entry is planned just below the strongest ask zone ($144.79) for an improved risk-reward ratio. Stop loss is placed using 2x ATR ($2.58) above key short-term resistance levels including EMA20 and VWAP. Take profit targets aim for approximately 1.5:1 and 2.5:1 risk-reward ratios, capitalizing on potential further downside.",
+    "Relevant News Headlines": [
+      "Shaquille O\u2019Neal to pay $1.8 million to settle FTX...",
+      "Marketing Campaign"
+    ],
+    "Confirmation_Reason": "Verification data confirms the price is below key EMAs and approaching the analyst's suggested entry point. The current price being below the ask zone and above support reinforces the potential for a favorable entry. RSI and ADX from verification data support the bearish bias, and the 'CRYPTO_CORRELATED' regime doesn't contradict the trade. Stop-loss placement above resistance and EMAs is sound.",
+    "timestamp": "2025-06-14T18:16:49.546146",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "LOSS",
+      "closed_at_price": 147.33,
+      "closed_by": "SL",
+      "mfe_percentage": 1.92,
+      "mae_percentage": -1.84,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "144.60",
+    "Take Profit Targets": [
+      "143.10",
+      "142.10"
+    ],
+    "Stop Loss": "145.60",
+    "Confidence": 45,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Dominant bearish trend (price below key H1 MAs/VWAP, strong ADX). Entry anticipates rejection from near-term resistance cluster ($144.71 strongest ask, H1 EMA20 $144.95). Bearish news sentiment. Low confidence reflects conflicting short-term MACD bullish cross and the system's low overall signal strength assessment.",
+    "Relevant News Headlines": [
+      "The Me Decade...",
+      "Trump\u2019s financial disclosures reveal millions in i...",
+      "A cyberattack on United Natural Foods caused bread..."
+    ],
+    "Confirmation_Reason": "While the analyst's reasoning about bearish news sentiment and MACD cross is not verifiable with the provided data, the core technical setup is valid. Current price ($144.57) is near the proposed entry ($144.60) and just above key support ($144.50), offering a tight stop loss ($145.60). The trade anticipates rejection from a confirmed resistance cluster ($144.71). The CRYPTO_CORRELATED regime, price being below the 20 EMA, and a reasonable RSI (44.63) all support a short position. The analyst's low confidence is understandable given the conflicting short-term MACD signal, but the overall risk/reward profile is acceptable.",
+    "timestamp": "2025-06-14T23:25:06.425814",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "LOSS",
+      "closed_at_price": 145.6,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -0.84,
+      "evaluation_details": ""
+    }
+  }
+]
