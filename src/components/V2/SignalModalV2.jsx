@@ -1,6 +1,6 @@
 // File: src/components/v2/SignalModalV2.jsx
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react'; // --- ADDED: useMemo ---
 import { motion } from 'framer-motion';
 import { LightweightChart } from '../charts/LightweightChart';
 import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
@@ -49,13 +49,16 @@ export const SignalModalV2 = ({ signal, onClose }) => {
 
     const displayData = crosshairData || (ohlcData && ohlcData.slice(-1)[0]);
     
-    const chartSignalProp = {
+    // --- THE FIX IS HERE: Memoize the prop object ---
+    // This prevents a new object from being created on every render,
+    // which stops the chart from re-rendering unnecessarily.
+    const chartSignalProp = useMemo(() => ({
         symbol: signal.symbol,
         timestamp: signal.timestamp,
         "Entry Price": signal.entry,
         "Take Profit Targets": [signal.take_profit],
         "Stop Loss": signal.stop_loss,
-    };
+    }), [signal]);
 
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50" onClick={handleClose}>
@@ -101,7 +104,6 @@ export const SignalModalV2 = ({ signal, onClose }) => {
                             )}
                         </div>
                     </div>
-                    {/* --- UPDATED: Redesigned right-hand panel --- */}
                     <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:h-[440px] lg:overflow-y-auto custom-scrollbar pr-2">
                         <div className="grid grid-cols-2 gap-4 text-center bg-black/20 p-3 rounded-lg">
                             <div>
