@@ -9,8 +9,7 @@ import { ComparisonView } from './components/ComparisonView';
 import { SignalModal } from './components/SignalModal';
 import { BackToTopButton } from './components/BackToTopButton';
 import { DashboardV2 } from './pages/DashboardV2';
-// --- THE FIX IS HERE: Corrected the import path ---
-import { SignalModalV2 } from './components/v2/SignalModalV2'; 
+import { SignalModalV2 } from './components/v2/SignalModalV2';
 import {
     Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
 } from 'chart.js';
