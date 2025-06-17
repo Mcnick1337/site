@@ -3,10 +3,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { LightweightChart } from '../charts/LightweightChart';
-import { Skeleton } from '../Skeleton';
 import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
 
-// This is a new, separate fetch function specifically for the V2 modal
 async function fetchOHLCDataV2(symbol, signalTime, interval) {
     const hoursToFetch = 120;
     const startTime = new Date(new Date(signalTime).getTime() - (hoursToFetch * 60 * 60 * 1000)).getTime();
@@ -51,7 +49,6 @@ export const SignalModalV2 = ({ signal, onClose }) => {
 
     const displayData = crosshairData || (ohlcData && ohlcData.slice(-1)[0]);
     
-    // Adapt the V2 signal to the V1 chart's expected prop format
     const chartSignalProp = {
         symbol: signal.symbol,
         timestamp: signal.timestamp,
@@ -104,7 +101,18 @@ export const SignalModalV2 = ({ signal, onClose }) => {
                             )}
                         </div>
                     </div>
+                    {/* --- UPDATED: Redesigned right-hand panel --- */}
                     <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:h-[440px] lg:overflow-y-auto custom-scrollbar pr-2">
+                        <div className="grid grid-cols-2 gap-4 text-center bg-black/20 p-3 rounded-lg">
+                            <div>
+                                <p className="text-sm text-gray-400">Leverage</p>
+                                <p className="text-2xl font-bold">{signal.final_leverage}x</p>
+                            </div>
+                            <div>
+                                <p className="text-sm text-gray-400">R:R Ratio</p>
+                                <p className="text-2xl font-bold">{signal.rr_ratio.toFixed(2)}</p>
+                            </div>
+                        </div>
                         <div>
                             <h3 className="text-lg font-semibold mb-2">AI Summary</h3>
                             <p className="text-sm text-gray-400">{signal.ai_summary}</p>
@@ -122,10 +130,6 @@ export const SignalModalV2 = ({ signal, onClose }) => {
                                     {signal.ai_counters.map((item, index) => <li key={index}>{item}</li>)}
                                 </ul>
                             </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4 text-center bg-black/20 p-3 rounded-lg">
-                            <div><p className="text-xs text-gray-400">Leverage</p><p className="text-lg font-bold">{signal.final_leverage}x</p></div>
-                            <div><p className="text-xs text-gray-400">R:R Ratio</p><p className="text-lg font-bold">{signal.rr_ratio.toFixed(2)}</p></div>
                         </div>
                     </div>
                 </div>

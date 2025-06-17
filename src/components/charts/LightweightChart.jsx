@@ -1,22 +1,20 @@
-// File: src/components/charts/LightweightChart.jsx (Professional Redesign)
+// File: src/components/charts/LightweightChart.jsx
 
 import { useEffect, useRef, useContext } from 'react';
 import { createChart, LineStyle, CrosshairMode } from 'lightweight-charts';
 import { ThemeContext } from '../../App'; 
 
-// --- Professional Color Palette ---
 const COLORS = {
-    up: '#089981',      // A calming, professional green
-    down: '#F23645',    // A clear, but not overly aggressive red
+    up: '#089981',
+    down: '#F23645',
     upWick: '#089981',
     downWick: '#F23645',
-    entry: '#1E88E5',   // A distinct blue for entry
+    entry: '#1E88E5',
     stopLoss: '#F23645',
     takeProfit: '#089981',
-    signalMarker: '#FFC107', // Amber/gold for the signal marker
+    signalMarker: '#FFC107',
 };
 
-// --- Professional Theming ---
 const darkTheme = {
     layout: { background: { color: 'transparent' }, textColor: '#D1D4DC', fontFamily: `'Inter', sans-serif` },
     grid: { vertLines: { color: 'rgba(255, 255, 255, 0.07)' }, horzLines: { color: 'rgba(255, 255, 255, 0.07)' } },
@@ -40,14 +38,12 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
     const priceLinesRef = useRef([]);
     const { theme } = useContext(ThemeContext);
 
-    // --- Chart Initialization Effect (runs once) ---
     useEffect(() => {
         if (!chartContainerRef.current) return;
 
         const chart = createChart(chartContainerRef.current, {
             width: chartContainerRef.current.clientWidth,
             height: chartContainerRef.current.clientHeight,
-            // --- ADDED: Kinetic scrolling for a smoother feel ---
             trackingMode: { exitMode: 'onTouchEnd' },
         });
         chartRef.current = chart;
@@ -75,17 +71,14 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
         };
     }, [onCrosshairMove]);
 
-    // --- Data & Theme Update Effect ---
     useEffect(() => {
         const chart = chartRef.current;
         const series = seriesRef.current;
         if (!chart || !series) return;
 
-        // Apply theme first
         const currentTheme = theme === 'light' ? lightTheme : darkTheme;
         chart.applyOptions(currentTheme);
         
-        // --- ADDED: More professional time formatting ---
         chart.timeScale().applyOptions({
             tickMarkFormatter: (time) => {
                 const date = new Date(time * 1000);
@@ -93,7 +86,6 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
             }
         });
 
-        // Clear old data
         priceLinesRef.current.forEach(line => series.removePriceLine(line));
         priceLinesRef.current = [];
         series.setMarkers([]);
@@ -106,7 +98,6 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
                 if (!isNaN(price)) {
                     const newLine = series.createPriceLine({
                         price, color, lineWidth: 2, lineStyle, axisLabelVisible: true, title,
-                        // --- ADDED: Background for axis labels for clarity ---
                         axisLabelColor: '#FFFFFF',
                         axisLabelTextColor: color,
                     });
@@ -116,10 +107,17 @@ export const LightweightChart = ({ ohlcData, signal, onCrosshairMove }) => {
             
             if (signal) {
                 addPriceLine(signal["Entry Price"], 'ENTRY', COLORS.entry, LineStyle.Solid);
-                if (signal["Take Profit Targets"]) {
-                    addPriceLine(signal["Take Profit Targets"][0], 'TP 1', COLORS.takeProfit, LineStyle.Dashed);
-                    addPriceLine(signal["Take Profit Targets"][1], 'TP 2', COLORS.takeProfit, LineStyle.Dashed);
+                
+                // --- THE FIX IS HERE: Check if Take Profit Targets is an array before accessing ---
+                if (Array.isArray(signal["Take Profit Targets"])) {
+                    if (signal["Take Profit Targets"][0]) {
+                        addPriceLine(signal["Take Profit Targets"][0], 'TP 1', COLORS.takeProfit, LineStyle.Dashed);
+                    }
+                    if (signal["Take Profit Targets"][1]) {
+                        addPriceLine(signal["Take Profit Targets"][1], 'TP 2', COLORS.takeProfit, LineStyle.Dashed);
+                    }
                 }
+
                 addPriceLine(signal["Stop Loss"], 'SL', COLORS.stopLoss, LineStyle.Dashed);
                 
                 const signalTime = new Date(signal.timestamp).getTime() / 1000;
