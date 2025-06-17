@@ -1,0 +1,26 @@
+{
+  "BTCUSDT": {
+    "LONG": {
+      "wins": 8,
+      "losses": 5,
+      "total": 13
+    },
+    "SHORT": {
+      "wins": 1,
+      "losses": 3,
+      "total": 4
+    }
+  },
+  "ETHUSDT": {
+    "LONG": {
+      "wins": 0,
+      "losses": 1,
+      "total": 1
+    },
+    "SHORT": {
+      "wins": 8,
+      "losses": 4,
+      "total": 12
+    }
+  }
+}

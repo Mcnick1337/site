@@ -1,0 +1,828 @@
+[
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.65,
+    "entry": 107114.76,
+    "stop_loss": 106000.0,
+    "take_profit": 109000.0,
+    "ai_summary": "BTCUSDT exhibits a cautiously bullish short-term outlook based on the provided data. While the 1h timeframe shows a neutral RSI and a negative MACD histogram, the 4h timeframe presents a more bullish picture with an RSI above 50, a positive MACD, and a rising OBV slope. The current price is trading above the 1h and 4h EMAs, suggesting underlying strength. Market sentiment is positive, further supporting the bullish thesis. However, the 15m timeframe shows a negative MACD and a declining OBV slope, indicating potential short-term weakness. The Wyckoff phase on the lower timeframes is undetermined, adding to the uncertainty. The primary concern is the negative funding rates, which could lead to a short-term pullback.",
+    "ai_confluence": [
+      "4h RSI above 50",
+      "4h MACD positive and rising",
+      "4h OBV slope positive",
+      "Price above key moving averages (1h & 4h EMA)",
+      "Positive market sentiment"
+    ],
+    "ai_counters": [
+      "15m MACD negative",
+      "15m OBV slope negative",
+      "Wyckoff phase undetermined on lower timeframes"
+    ],
+    "rr_ratio": 1.6911622232588306,
+    "theoretical_position_size_pct": 0.11076043368483628,
+    "signal_var_95": -0.0055088808237350045,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T01:16:22.710864"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "entry": 107000.0,
+    "stop_loss": 105500.0,
+    "take_profit": 109500.0,
+    "ai_summary": "BTCUSDT presents a cautiously bullish short-term outlook based on the confluence of technical indicators and positive market sentiment. While the 1h timeframe shows a slight pullback with decreasing OBV and MACD histogram, the 4h timeframe paints a more bullish picture with rising MACD and OBV, suggesting potential accumulation. The current price sits above key moving averages on both timeframes, further supporting the bullish bias. However, the 'Accumulation/Distribution' phase identified in the 15m and 1h Wyckoff analysis suggests a potential range-bound market, warranting caution and precise entry/exit strategies.",
+    "ai_confluence": [
+      "4h MACD and OBV trending upwards",
+      "Price above key EMAs (50 & 200) on 1h and 4h",
+      "Positive market sentiment (0.68)",
+      "BTC Dominance at 61.66% indicating capital flow into BTC"
+    ],
+    "ai_counters": [
+      "Decreasing OBV and MACD Histogram on 1h timeframe",
+      "Wyckoff 'Accumulation/Distribution' phase suggests potential range-bound movement",
+      "15m RSI below 50, indicating potential weakness"
+    ],
+    "rr_ratio": 1.6666666666666667,
+    "theoretical_position_size_pct": 0.25,
+    "signal_var_95": -0.0055088808237350045,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T01:19:56.011326"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "entry": 2585.0,
+    "stop_loss": 2515.0,
+    "take_profit": 2700.0,
+    "ai_summary": "ETH is currently consolidating within a defined range, showing signs of potential upside breakout. Positive sentiment, coupled with a bullish MACD crossover on the 4h chart, suggests increasing buying pressure. However, bearish divergence on the 1h timeframe warrants caution. The overall market sentiment leans towards greed, while on-chain data is currently neutral.",
+    "ai_confluence": [
+      "4h MACD bullish crossover",
+      "Positive market sentiment (0.68)",
+      "Price above key moving averages (50 & 200 EMA) on the 4h chart",
+      "Consolidating near the upper bound of the Bollinger Bands on the 1h and 4h charts"
+    ],
+    "ai_counters": [
+      "Bearish divergence on the 1h RSI",
+      "Decreasing volume on the 1h chart",
+      "Wyckoff phase undetermined"
+    ],
+    "rr_ratio": 1.6428571428571428,
+    "theoretical_position_size_pct": 0.10923913043478262,
+    "signal_var_95": -0.010210136424481176,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T01:21:06.671015"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "entry": 2580.0,
+    "stop_loss": 2610.0,
+    "take_profit": 2500.0,
+    "ai_summary": "ETH is currently consolidating below a key resistance level around $2600. While positive sentiment prevails, technical indicators present a mixed picture, suggesting a potential short-term pullback before a possible continuation of the upward trend. On-chain data is missing, limiting a comprehensive assessment.",
+    "ai_confluence": [
+      "1h MACD bearish divergence",
+      "Resistance at $2600",
+      "1h RSI below 50",
+      "Price below key EMAs (50 & 200) on the 1h timeframe"
+    ],
+    "ai_counters": [
+      "Positive market sentiment (0.68)",
+      "4h RSI above 50",
+      "4h MACD showing positive momentum"
+    ],
+    "rr_ratio": 2.6666666666666665,
+    "theoretical_position_size_pct": 0.1296875,
+    "signal_var_95": -0.010210136424481176,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T01:52:53.715404"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 2575.0,
+    "stop_loss": 2610.0,
+    "take_profit": 2500.0,
+    "ai_summary": "ETH is currently consolidating below a key resistance level around $2600. While market sentiment leans greedy, technical indicators present a mixed picture. The 1-hour timeframe shows weakening momentum with a negative MACD histogram, but the 4-hour timeframe offers a slightly more bullish outlook with a positive MACD histogram and rising RSI. On-chain data is absent, limiting a comprehensive assessment.",
+    "ai_confluence": [
+      "4h RSI approaching overbought territory suggests potential short-term weakness.",
+      "1h MACD histogram negative, indicating bearish momentum.",
+      "Price consolidating below key resistance at $2600."
+    ],
+    "ai_counters": [
+      "Positive market sentiment could fuel a breakout.",
+      "4h MACD histogram is positive, suggesting underlying bullish strength."
+    ],
+    "rr_ratio": 2.142857142857143,
+    "theoretical_position_size_pct": 0.25,
+    "signal_var_95": -0.010210136424481176,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T02:39:07.908891"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 107000.0,
+    "stop_loss": 105500.0,
+    "take_profit": 110000.0,
+    "ai_summary": "BTCUSDT presents a complex short-term outlook with bullish momentum on the higher timeframes conflicting with bearish signals on the 15m timeframe.  Price is currently consolidating above key EMAs (50 & 200) on the 1h and 4h charts, suggesting underlying strength. The positive market sentiment and BTC dominance further support a bullish bias. However, the 15m RSI and MACD show bearish divergence, hinting at a potential short-term pullback. The current price is also nearing the upper Bollinger Band on the 1h and 15m timeframes, indicating potential overbought conditions.",
+    "ai_confluence": [
+      "Price above 1h and 4h EMA (50 & 200)",
+      "Positive market sentiment (0.68)",
+      "BTC Dominance at 61.67%",
+      "4h MACD bullish",
+      "1h Wyckoff Mark Up phase"
+    ],
+    "ai_counters": [
+      "15m RSI and MACD bearish divergence",
+      "Price approaching upper Bollinger Band on 1h and 15m",
+      "1h MACDH negative"
+    ],
+    "rr_ratio": 2.0,
+    "theoretical_position_size_pct": 0.25,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T02:56:33.481291"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 107000.0,
+    "stop_loss": 105500.0,
+    "take_profit": 110000.0,
+    "ai_summary": "BTCUSDT exhibits a cautiously bullish short-term outlook based on the provided data. While the 1h timeframe shows a positive momentum score and RSI above 50, the MACD histogram is still negative, suggesting the bullish momentum might not be fully confirmed yet. The 4h timeframe presents a more optimistic picture with positive MACD and MACDH values, along with an RSI above 50, indicating a potential trend reversal. However, the price is currently trading near the upper Bollinger Band on both 1h and 4h timeframes, suggesting a possible pullback or consolidation before further upward movement. The relatively high market sentiment score of 0.68 also hints at potential overbought conditions in the short term.",
+    "ai_confluence": [
+      "4h RSI above 50 and rising MACD",
+      "Positive momentum score on 1h and 4h",
+      "Price trading above key moving averages (EMA 50 & 200) on both 1h and 4h"
+    ],
+    "ai_counters": [
+      "Price near upper Bollinger Band on 1h and 4h",
+      "Negative MACD histogram on 1h",
+      "High market sentiment potentially indicating overbought conditions"
+    ],
+    "rr_ratio": 2.0,
+    "theoretical_position_size_pct": 0.25,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T04:38:02.562337"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 107000.0,
+    "stop_loss": 105500.0,
+    "take_profit": 110000.0,
+    "ai_summary": "Bitcoin is showing signs of short-term bullish momentum within a broader consolidation phase. Technical indicators across multiple timeframes suggest a potential upward move, supported by positive market sentiment and a relatively high BTC dominance. However, cautious optimism is warranted due to the current price trading near the upper Bollinger Band on the 1h and 4h charts, indicating potential overbought conditions.",
+    "ai_confluence": [
+      "4h MACD showing bullish crossover",
+      "Positive market sentiment (0.68)",
+      "BTC dominance at 61.63%",
+      "Price trading above key moving averages (50, 200) on the 4h chart"
+    ],
+    "ai_counters": [
+      "1h and 4h RSI approaching overbought levels",
+      "Price nearing upper Bollinger Band on 1h and 4h charts",
+      "Wyckoff phase undetermined on 4h"
+    ],
+    "rr_ratio": 2.0,
+    "theoretical_position_size_pct": 0.15625,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T05:52:57.316138"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 106500.0,
+    "stop_loss": 105400.0,
+    "take_profit": 108750.0,
+    "ai_summary": "BTCUSDT exhibits a mixed market structure. While positive sentiment and a bullish 4h MACD cross suggest upside potential, the 1h timeframe shows bearish divergence with declining OBV. Key resistance at $108,754 requires a strong catalyst to break. Price is currently consolidating above the 1h VWAP and near the 15m lower Bollinger Band, indicating potential for a short-term bounce.",
+    "ai_confluence": [
+      "4h bullish MACD cross",
+      "Positive market sentiment (0.68)",
+      "Price consolidating above 1h VWAP",
+      "BTC Dominance at 61.59%"
+    ],
+    "ai_counters": [
+      "Bearish divergence on 1h OBV",
+      "15m RSI below 50",
+      "Resistance at $108,754"
+    ],
+    "rr_ratio": 2.0454545454545454,
+    "theoretical_position_size_pct": 0.17555555555555558,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T07:27:07.032360"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 2575.0,
+    "stop_loss": 2605.0,
+    "take_profit": 2500.0,
+    "ai_summary": "ETH is currently consolidating below a key resistance level around $2600. While market sentiment leans towards greed, technical indicators on the 1h and 4h timeframes show mixed signals. The 4h RSI is approaching overbought territory, while the MACD remains negative but shows potential for a bullish crossover. On-chain data is absent, limiting a comprehensive assessment.",
+    "ai_confluence": [
+      "4h RSI approaching overbought suggests potential pullback",
+      "1h MACD bearish, indicating short-term weakness",
+      "Price consolidating below resistance, creating a potential short entry"
+    ],
+    "ai_counters": [
+      "Positive market sentiment could fuel further upside",
+      "4h MACD hinting at a bullish crossover",
+      "BTC dominance relatively high, potentially limiting ETH upside"
+    ],
+    "rr_ratio": 2.5,
+    "theoretical_position_size_pct": 0.25,
+    "signal_var_95": -0.010210136424481176,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T07:29:22.905313"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 106600.0,
+    "stop_loss": 107200.0,
+    "take_profit": 105000.0,
+    "ai_summary": "BTCUSDT presents a complex short-term outlook with bullish momentum on the 4h chart conflicting with bearish signals on the 15m and 1h timeframes. While the 4h RSI and MACD suggest upward momentum, the lower timeframes show weakness with declining OBV and price action near the lower Bollinger Band. Market sentiment leans greedy, yet the price struggles near a key resistance level. The confluence of mixed technical signals, high market sentiment, and price action near resistance suggests a potential short-term pullback before a possible continuation of the upward trend.",
+    "ai_confluence": [
+      "4h bullish momentum (RSI, MACD)",
+      "High market sentiment (0.68)",
+      "Price near 4h resistance (107964.99)"
+    ],
+    "ai_counters": [
+      "Bearish lower timeframe momentum (1h, 15m OBV slope)",
+      "Price rejection at 1h upper Bollinger Band"
+    ],
+    "rr_ratio": 2.6666666666666665,
+    "theoretical_position_size_pct": 0.11249999999999999,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T08:47:22.474369"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 2570.0,
+    "stop_loss": 2600.0,
+    "take_profit": 2500.0,
+    "ai_summary": "ETH is currently consolidating below a key resistance level around $2,600. Technical indicators on the 1h and 4h timeframes suggest a potential short-term pullback, while positive market sentiment and increasing BTC dominance hint at a possible bullish continuation in the mid-term. The current price action appears to be forming a potential Wyckoff accumulation pattern, but confirmation is needed.",
+    "ai_confluence": [
+      "Bearish RSI divergence on the 1h timeframe",
+      "MACD showing bearish momentum",
+      "Price rejection at the upper Bollinger Band on the 1h",
+      "Resistance at $2,600"
+    ],
+    "ai_counters": [
+      "Positive market sentiment",
+      "Increasing BTC dominance",
+      "Potential Wyckoff accumulation pattern forming"
+    ],
+    "rr_ratio": 2.3333333333333335,
+    "theoretical_position_size_pct": 0.13095238095238093,
+    "signal_var_95": -0.010210136424481176,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T09:24:21.367740"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 106150.0,
+    "stop_loss": 107000.0,
+    "take_profit": 104000.0,
+    "ai_summary": "BTCUSDT exhibits a mixed market outlook. While the 4h timeframe suggests bullish momentum with rising MACD and RSI above 50, the shorter timeframes (1h, 15m) display bearish signals like declining RSI and negative MACD. The current price is trading within a tight range, close to the upper Bollinger Band on the 15m and 1h charts, indicating potential resistance. Market sentiment leans towards greed, which could foreshadow a short-term pullback. The Wyckoff accumulation/distribution phase on the lower timeframes adds to the uncertainty.  The macro context appears neutral, with BTC dominance stable.",
+    "ai_confluence": [
+      "4h RSI above 50 and rising MACD",
+      "Price near upper Bollinger Bands on 1h and 15m suggesting potential short-term resistance",
+      "Wyckoff Accumulation/Distribution phase on lower timeframes"
+    ],
+    "ai_counters": [
+      "Positive market sentiment",
+      "4h bullish momentum"
+    ],
+    "rr_ratio": 2.5294117647058822,
+    "theoretical_position_size_pct": 0.25,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T10:09:12.108370"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 15,
+    "entry": 2555.0,
+    "stop_loss": 2600.0,
+    "take_profit": 2450.0,
+    "ai_summary": "ETH is showing mixed signals. While the 1h timeframe indicates a potential short opportunity with a bearish RSI and MACD, the 4h timeframe presents a more bullish outlook with a positive MACD histogram and RSI nearing overbought territory. The overall market sentiment leans towards greed, which could suggest a short-term top, but the 4h chart's bullishness hints at underlying strength. The current price is hovering around the VWAP and POC, indicating a potential turning point.",
+    "ai_confluence": [
+      "1h bearish RSI and MACD",
+      "Current price near VWAP and POC",
+      "Greed sentiment suggesting potential local top"
+    ],
+    "ai_counters": [
+      "4h bullish MACD crossover",
+      "4h RSI approaching overbought, indicating potential further upside",
+      "Wyckoff Accumulation phase on 1h timeframe"
+    ],
+    "rr_ratio": 2.3333333333333335,
+    "theoretical_position_size_pct": 0.07142857142857142,
+    "signal_var_95": -0.010210136424481176,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T10:43:44.142180"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 106000.0,
+    "stop_loss": 107000.0,
+    "take_profit": 103500.0,
+    "ai_summary": "BTCUSDT presents a complex short-term outlook with mixed signals across timeframes. While the 4h chart shows bullish momentum with rising RSI and MACD above zero, the 1h chart paints a bearish picture with decreasing RSI and MACD below zero, suggesting a potential pullback. The current price sits near the upper Bollinger Band on the 1h timeframe, indicating potential overextension. Market sentiment leans towards greed, which could foreshadow a correction. The lack of significant on-chain data makes it difficult to gauge institutional or whale activity.  The key will be observing price action around the 1h VWAP and POC levels.",
+    "ai_confluence": [
+      "4h bullish momentum (RSI, MACD)",
+      "1h overbought conditions (Bollinger Bands)",
+      "Price rejection at 1h VWAP"
+    ],
+    "ai_counters": [
+      "Positive market sentiment",
+      "4h chart still bullish",
+      "BTC dominance remains high"
+    ],
+    "rr_ratio": 2.5,
+    "theoretical_position_size_pct": 0.075,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T11:26:13.680153"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 104800.0,
+    "stop_loss": 103421.05,
+    "take_profit": 107964.99,
+    "ai_summary": "BTCUSDT presents a mixed short-term outlook with underlying bullish momentum on higher timeframes.  Current price action suggests a potential short-term pullback within a broader uptrend. Technical indicators on the 1h timeframe show oversold conditions (RSI 33.44, low Stochastic K), while the 4h timeframe paints a more bullish picture (RSI 54.22, MACD bullish crossover). Market sentiment leans towards greed (0.68), which could indicate a short-term top, but macro context with high BTC dominance (61.62%) suggests continued strength.",
+    "ai_confluence": [
+      "1h Oversold RSI and Stochastic",
+      "4h Bullish MACD Crossover and Uptrend",
+      "High BTC Dominance"
+    ],
+    "ai_counters": [
+      "1h price below key EMAs",
+      "Greed sentiment potentially topping out",
+      "Lack of strong on-chain confirmation"
+    ],
+    "rr_ratio": 2.295217375539368,
+    "theoretical_position_size_pct": 0.19017964248438918,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T11:33:56.002824"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 2545.59,
+    "stop_loss": 2572.57,
+    "take_profit": 2480.0,
+    "ai_summary": "ETH is showing mixed signals. While the 1h timeframe indicates a potential short opportunity with a bearish RSI and MACD, the 4h timeframe presents a more bullish outlook with a positive MACD histogram and an RSI approaching overbought territory. The overall market sentiment leans towards greed, suggesting potential overextension. On-chain data is missing, limiting a comprehensive assessment. The primary timeframe (1h) technicals combined with negative OBV slope on both 1h and 4h timeframes suggest a cautious approach.  The current price is also trading above key moving averages on higher timeframes, hinting at underlying strength.",
+    "ai_confluence": [
+      "1h RSI below 40",
+      "Negative OBV slope on 1h and 4h",
+      "1h MACD bearish",
+      "Price above key MAs on higher timeframes"
+    ],
+    "ai_counters": [
+      "4h MACD bullish",
+      "Market sentiment is greedy",
+      "4h RSI approaching overbought"
+    ],
+    "rr_ratio": 2.431060044477394,
+    "theoretical_position_size_pct": 0.10886568074401591,
+    "signal_var_95": -0.010210136424481176,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T11:47:17.349478"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 105200.0,
+    "stop_loss": 106000.0,
+    "take_profit": 103000.0,
+    "ai_summary": "BTCUSDT presents a mixed market picture. While the 1h timeframe shows bearish signals like a low RSI and negative OBV slope, the 4h timeframe offers bullish counterpoints such as a positive MACD and rising OBV. The overall sentiment leans towards greed, but the price action appears corrective within a larger uptrend. The primary timeframe (1h) suggests a potential short-term pullback, but the 4h timeframe hints at a continuation of the uptrend.  The confluence of 1h bearish indicators and a relatively high market sentiment suggests a potential short-term reversal. However, the 4h bullish structure and BTC dominance indicate underlying strength.",
+    "ai_confluence": [
+      "1h RSI below 30 suggests oversold conditions.",
+      "1h negative OBV slope indicates distribution.",
+      "1h price below key EMAs (50 & 200).",
+      "High market sentiment (0.68) can precede a correction."
+    ],
+    "ai_counters": [
+      "4h RSI above 50 suggests bullish momentum.",
+      "4h MACD and MACDH are positive.",
+      "4h OBV slope is positive."
+    ],
+    "rr_ratio": 2.75,
+    "theoretical_position_size_pct": 0.022727272727272714,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T13:51:14.190331"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 2550.0,
+    "stop_loss": 2600.0,
+    "take_profit": 2450.0,
+    "ai_summary": "ETH is currently consolidating below a key resistance level around $2600. While market sentiment leans greedy, technical indicators on the 1h and 4h charts show mixed signals. The 4h MACD is showing a bullish crossover, while the 1h MACD remains bearish. The price is currently trading below the VWAP on all timeframes, suggesting potential for a short-term pullback. On-chain data is missing, limiting a comprehensive analysis. The relatively high BTC dominance suggests capital may be flowing out of altcoins.",
+    "ai_confluence": [
+      "1h RSI below 50",
+      "Price below VWAP across multiple timeframes",
+      "BTC dominance above 60%",
+      "1h MACD bearish",
+      "Consolidating below resistance"
+    ],
+    "ai_counters": [
+      "4h MACD bullish crossover",
+      "Positive market sentiment",
+      "Wyckoff phase undetermined, potential for accumulation"
+    ],
+    "rr_ratio": 2.0,
+    "theoretical_position_size_pct": 0.12499999999999999,
+    "signal_var_95": -0.010210136424481176,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T13:53:29.773967"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 15,
+    "entry": 2550.0,
+    "stop_loss": 2580.0,
+    "take_profit": 2480.0,
+    "ai_summary": "ETH is showing mixed signals. While the 1h timeframe indicates a potential short opportunity with a bearish RSI and MACD, the 4h timeframe presents a more bullish outlook with a positive MACD histogram and higher RSI. Market sentiment is positive, but the declining OBV slope across timeframes raises concerns. The current price is trading within a tight range, suggesting a potential breakout or breakdown soon.",
+    "ai_confluence": [
+      "Bearish 1h RSI and MACD",
+      "Declining OBV slope across timeframes",
+      "Price trading below key EMAs on the 1h chart"
+    ],
+    "ai_counters": [
+      "Positive 4h MACD histogram",
+      "Bullish market sentiment",
+      "4h RSI approaching overbought territory"
+    ],
+    "rr_ratio": 2.3333333333333335,
+    "theoretical_position_size_pct": 0.09693877551020408,
+    "signal_var_95": -0.010210136424481176,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T14:53:56.422741"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 104800.0,
+    "stop_loss": 103421.05,
+    "take_profit": 107900.0,
+    "ai_summary": "BTCUSDT presents a mixed short-term outlook with underlying bullish momentum. While the 1h timeframe shows oversold conditions with a negative MACD and declining OBV, the 4h timeframe reveals a bullish MACD crossover and rising OBV. The current price sits near the lower Bollinger Band on the 1h but above key EMAs on the 4h, suggesting a potential bounce. Positive market sentiment and high BTC dominance further support a bullish bias.",
+    "ai_confluence": [
+      "4h bullish MACD crossover",
+      "4h rising OBV slope",
+      "Oversold 1h RSI",
+      "Positive market sentiment",
+      "High BTC dominance"
+    ],
+    "ai_counters": [
+      "1h negative MACD and declining OBV",
+      "Current price below 1h Bollinger Band mid-point",
+      "Wyckoff accumulation/distribution phase undetermined"
+    ],
+    "rr_ratio": 2.2480873128104766,
+    "theoretical_position_size_pct": 0.19839919354838711,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T15:00:31.857386"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 104250.0,
+    "stop_loss": 103000.0,
+    "take_profit": 107000.0,
+    "ai_summary": "BTCUSDT presents a complex short-term picture with bearish signals on the 1h chart contrasted by bullish signs on the 4h.  The 1h timeframe shows oversold RSI and negative MACD, suggesting a potential bounce. However, the 4h timeframe paints a more bullish picture with positive MACD and RSI above 50, hinting at underlying strength. The current price sits near the lower Bollinger Band on the 1h, indicating a potential buying opportunity if the broader trend remains bullish. Market sentiment is positive, adding to the potential for upward movement. The key lies in whether the 1h bearishness is a temporary pullback within a larger uptrend or the start of a deeper correction.  Caution is advised given the mixed signals.",
+    "ai_confluence": [
+      "Oversold 1h RSI",
+      "4h MACD bullish cross and positive momentum",
+      "Positive market sentiment",
+      "Price near 1h lower Bollinger Band",
+      "BTC Dominance above 60%"
+    ],
+    "ai_counters": [
+      "Negative 1h MACD and MACD Histogram",
+      "1h OBV slope is negative",
+      "Wyckoff phase undetermined on 4H"
+    ],
+    "rr_ratio": 2.2,
+    "theoretical_position_size_pct": 0.20454545454545456,
+    "signal_var_95": -0.0055088808237350045,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T16:02:22.466358"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 15,
+    "entry": 2480.0,
+    "stop_loss": 2510.0,
+    "take_profit": 2400.0,
+    "ai_summary": "ETH is showing mixed signals. While the 1h timeframe indicates a bearish trend with a low RSI and negative MACD, the 4h timeframe presents a more neutral outlook with a recovering RSI and positive MACD histogram. The overall market sentiment leans towards greed, which could suggest a potential short-term pullback. The Wyckoff Phase Mark Down (Phase D/E) on the 1h chart suggests potential for further downside, but the 4h chart remains undetermined. The current price is below the 1h and 4h VWAP, suggesting bearish pressure. Key support levels are around 2492 (VAL) and 2475 (4h BB_lower).",
+    "ai_confluence": [
+      "1h RSI oversold",
+      "1h Wyckoff Phase Mark Down (Phase D/E)",
+      "Price below 1h and 4h VWAP",
+      "Negative 1h MACD and MACDH"
+    ],
+    "ai_counters": [
+      "4h RSI and MACD recovering",
+      "Positive market sentiment",
+      "BTC Dominance relatively high"
+    ],
+    "rr_ratio": 2.6666666666666665,
+    "theoretical_position_size_pct": 0.12109375,
+    "signal_var_95": -0.010610312024294797,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T16:35:08.905918"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.7,
+    "ai_leverage_suggestion": 10,
+    "entry": 103421.05,
+    "stop_loss": 102000.0,
+    "take_profit": 107964.99,
+    "ai_summary": "BTCUSDT presents a complex short-term picture with bearish signals on the 1h chart conflicting with a more bullish outlook on the 4h and higher timeframes. The 1h RSI is deeply oversold, suggesting a potential short-term bounce. However, the declining OBV slope on the 1h timeframe raises concerns about the sustainability of any upward movement.  The 4h chart shows a more positive outlook with rising MACD and a healthy RSI. The current price is testing a key support level, coinciding with the VAL and a historical POC, creating a potential high-reward entry point for a long position. Market sentiment is generally positive, but on-chain data is lacking to confirm this sentiment. The high BTC dominance suggests capital may flow into BTC during market uncertainty.",
+    "ai_confluence": [
+      "1h RSI oversold (potential bounce)",
+      "Current price near key support (VAL, historical POC)",
+      "4h MACD bullish crossover",
+      "Positive market sentiment",
+      "High BTC dominance"
+    ],
+    "ai_counters": [
+      "Declining OBV slope on 1h",
+      "Lack of confirmation from on-chain data",
+      "Potential for further downside if support breaks"
+    ],
+    "rr_ratio": 3.19759332887653,
+    "theoretical_position_size_pct": 0.1770702664794576,
+    "signal_var_95": -0.00561739418907063,
+    "final_leverage": 35,
+    "final_confidence": 0.7,
+    "timestamp": "2025-06-17T17:05:28.399140"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 2475.0,
+    "stop_loss": 2505.0,
+    "take_profit": 2400.0,
+    "ai_summary": "ETH is showing mixed signals. While the 4h timeframe indicates a potential reversal with a positive MACD histogram and decent RSI, the 1h timeframe paints a bearish picture with a low RSI and negative MACD. Market sentiment leans towards greed, which could indicate a short-term top. The Wyckoff Phase on the 1h chart suggests a potential markdown phase, adding to the bearish outlook. However, the price is currently trading above the 4h VWAP, and the 4h RSI is not yet in the oversold region.",
+    "ai_confluence": [
+      "1h Wyckoff Markdown Phase",
+      "1h Low RSI (29.2)",
+      "1h Negative MACD Histogram",
+      "High Market Sentiment (0.68)"
+    ],
+    "ai_counters": [
+      "4h Positive MACD Histogram",
+      "Price above 4h VWAP",
+      "4h RSI not oversold"
+    ],
+    "rr_ratio": 2.5,
+    "theoretical_position_size_pct": 0.09444444444444446,
+    "signal_var_95": -0.010674187556184628,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T17:43:12.429518"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 15,
+    "entry": 103900.0,
+    "stop_loss": 102500.0,
+    "take_profit": 107000.0,
+    "ai_summary": "BTCUSDT presents a mixed short-term outlook with bearish signals on the 1h chart contrasted by bullish signs on the 4h. The 1h timeframe shows a low RSI, negative MACD, and downward OBV slope, suggesting potential further downside. However, the 4h chart reveals a healthier RSI, positive and rising MACD, and upward OBV slope, hinting at underlying bullish momentum. The market sentiment leans towards greed, which could indicate a potential local top, but the 4h bullishness and BTC dominance suggest a possible continuation of the upward trend. The current price is trading near the lower Bollinger Band on the 1h chart, offering a potential entry point for a long position if the 4h strength prevails.",
+    "ai_confluence": [
+      "4h MACD bullish cross and positive momentum",
+      "4h OBV slope positive",
+      "Current price near 1h lower Bollinger Band",
+      "BTC Dominance above 60%"
+    ],
+    "ai_counters": [
+      "1h RSI oversold but still declining",
+      "1h MACD negative and declining",
+      "Market sentiment leaning towards greed"
+    ],
+    "rr_ratio": 2.2142857142857144,
+    "theoretical_position_size_pct": 0.1774193548387097,
+    "signal_var_95": -0.00561739418907063,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T18:11:47.604271"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.7,
+    "ai_leverage_suggestion": 15,
+    "entry": 2530.0,
+    "stop_loss": 2580.0,
+    "take_profit": 2400.0,
+    "ai_summary": "ETH is showing mixed signals. While the 4h timeframe indicates a potential reversal with a positive MACD histogram and rising RSI, the 1h timeframe suggests a bearish continuation with a negative MACD histogram and a lower RSI. The current price is trading below the key EMAs and VWAP across multiple timeframes, suggesting a bearish bias. Market sentiment is positive, which could lead to a short-term bounce, but the overall technical picture remains cautious. The Wyckoff Phase 'Mark Down' on the 1h chart further supports a bearish outlook. The relatively high BTC dominance suggests that capital may flow towards BTC, potentially putting downward pressure on ETH.",
+    "ai_confluence": [
+      "1h Wyckoff Phase Mark Down (Phase D/E)",
+      "Price below key EMAs (50, 200) on multiple timeframes",
+      "Negative MACD histogram on 1h",
+      "1h OBV Slope negative"
+    ],
+    "ai_counters": [
+      "Positive market sentiment",
+      "4h MACD histogram turning positive",
+      "4h RSI above 50"
+    ],
+    "rr_ratio": 2.6,
+    "theoretical_position_size_pct": 0.11153846153846153,
+    "signal_var_95": -0.010674187556184628,
+    "final_leverage": 35,
+    "final_confidence": 0.7,
+    "timestamp": "2025-06-17T19:35:47.834876"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 10,
+    "entry": 104700.0,
+    "stop_loss": 103288.0,
+    "take_profit": 108296.0,
+    "ai_summary": "BTCUSDT presents a mixed short-term outlook with underlying bullish momentum. While the 1h timeframe exhibits bearish signals like a negative MACD and price below key EMAs, the 4h timeframe suggests a bullish bias with a positive MACD crossover and price above the 200-day EMA. The overall market sentiment leans towards greed, and BTC dominance remains relatively high, potentially attracting further capital inflow. The current price sits near the lower end of the 1h Bollinger Bands, creating a potential bounce opportunity.",
+    "ai_confluence": [
+      "4h MACD crossover above zero",
+      "Price approaching lower Bollinger Band on 1h",
+      "Positive market sentiment",
+      "High BTC dominance"
+    ],
+    "ai_counters": [
+      "1h MACD remains negative",
+      "Price below key EMAs on 1h",
+      "Wyckoff phase undetermined"
+    ],
+    "rr_ratio": 2.546742209631728,
+    "theoretical_position_size_pct": 0.1550460107189807,
+    "signal_var_95": -0.00561739418907063,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T20:06:23.724124"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 104455.17,
+    "stop_loss": 103120.81,
+    "take_profit": 107964.99,
+    "ai_summary": "BTCUSDT presents a mixed short-term outlook with underlying bullish momentum. While lower timeframes show bearish signals like negative MACD and declining RSI, the 4h timeframe paints a more bullish picture with positive MACD and RSI above 50. The current price is consolidating near the VWAP and POC, suggesting potential for a breakout. Positive market sentiment and high BTC dominance further support a bullish bias.",
+    "ai_confluence": [
+      "4h MACD and RSI bullish",
+      "Price consolidating near VWAP and POC",
+      "Positive market sentiment (0.68)",
+      "High BTC dominance (61.58%)"
+    ],
+    "ai_counters": [
+      "Negative MACD on lower timeframes (15m, 1h)",
+      "1h RSI below 50",
+      "Wyckoff phase undetermined on 1h and 4h"
+    ],
+    "rr_ratio": 2.6303396384783757,
+    "theoretical_position_size_pct": 0.134985079956617,
+    "signal_var_95": -0.00561739418907063,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T21:07:56.514773"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 2515.0,
+    "stop_loss": 2545.0,
+    "take_profit": 2450.0,
+    "ai_summary": "ETH price shows signs of a potential short-term reversal. Despite positive sentiment and BTC dominance, technical indicators suggest weakening momentum. Price is trading below key moving averages (EMA 50 & 200) on the 1h and 4h timeframes, with bearish MACD crossovers observed. While the 4h RSI shows some strength, the 1h and 15m RSIs are below 50, indicating potential selling pressure. The price is also near the upper Bollinger Band on the 1h timeframe, suggesting a possible rejection.",
+    "ai_confluence": [
+      "Bearish MACD crossover on 1h and 4h",
+      "Price below EMA 50 & 200 on 1h and 4h",
+      "RSI below 50 on 1h and 15m",
+      "Price near upper Bollinger Band on 1h"
+    ],
+    "ai_counters": [
+      "Positive market sentiment",
+      "4h RSI above 50",
+      "BTC dominance increasing"
+    ],
+    "rr_ratio": 2.1666666666666665,
+    "theoretical_position_size_pct": 0.11713286713286714,
+    "signal_var_95": -0.010674187556184628,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T21:27:35.210658"
+  }
+]
