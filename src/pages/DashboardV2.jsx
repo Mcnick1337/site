@@ -1,9 +1,9 @@
 // File: src/pages/DashboardV2.jsx
 
 import React, { useMemo } from 'react';
-import { SignalCatalogV2 } from '../components/v2/SignalCatalogV2';
-import { FilterControlsV2 } from '../components/v2/FilterControlsV2';
-import { StatsGridV2 } from '../components/v2/StatsGridV2';
+import { SignalCatalogV2 } from '../components/V2/SignalCatalogV2';
+import { FilterControlsV2 } from '../components/V2/FilterControlsV2';
+import { StatsGridV2 } from '../components/V2/StatsGridV2';
 import { Pagination } from '../components/Pagination';
 
 export const DashboardV2 = ({ proModelState, setSelectedSignal, onFilterChange, onPageChange }) => {
