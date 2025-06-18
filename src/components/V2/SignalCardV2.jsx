@@ -1,7 +1,8 @@
 // File: src/components/v2/SignalCardV2.jsx
 
-import React from 'react';
-import { ArrowUpIcon, ArrowDownIcon, CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
+import React, { useState, useEffect } from 'react';
+import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
+import { NotesIcon } from '../icons/NotesIcon';
 
 const Stat = ({ label, value, valueClass = '' }) => (
     <div className="text-center">
@@ -10,14 +11,31 @@ const Stat = ({ label, value, valueClass = '' }) => (
     </div>
 );
 
-// --- UPDATED: Component now accepts an onClick prop ---
 export const SignalCardV2 = ({ signal, metrics, onClick }) => {
+    const [hasNote, setHasNote] = useState(false);
+
+    useEffect(() => {
+        const note = localStorage.getItem(`note_${signal.timestamp}`);
+        setHasNote(!!note);
+    }, [signal.timestamp]);
+    
+    useEffect(() => {
+        const handleStorageChange = (e) => {
+            if (e.key === `note_${signal.timestamp}`) {
+                setHasNote(!!e.newValue);
+            }
+        };
+        window.addEventListener('storage', handleStorageChange);
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, [signal.timestamp]);
+
     const isLong = signal.direction.toUpperCase() === 'LONG';
     const symbolMetrics = metrics[signal.symbol]?.[signal.direction.toUpperCase()] || { wins: 0, losses: 0, total: 0 };
     const winRate = symbolMetrics.total > 0 ? (symbolMetrics.wins / symbolMetrics.total) * 100 : 0;
 
     return (
-        // --- UPDATED: The whole container is now a clickable button ---
         <button 
             onClick={onClick}
             className="w-full text-left bg-dark-card/60 backdrop-blur-md border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:border-cyan-500 hover:shadow-2xl hover:shadow-cyan-500/10"
@@ -30,9 +48,12 @@ export const SignalCardV2 = ({ signal, metrics, onClick }) => {
                         </span>
                         <h3 className="text-lg font-bold text-white">{signal.symbol}</h3>
                     </div>
-                    <p className="text-xs text-gray-500 mt-1">
-                        {new Date(signal.timestamp).toLocaleString()}
-                    </p>
+                    <div className="flex items-center gap-2 mt-1">
+                        {hasNote && <NotesIcon className="h-4 w-4 text-amber-400" />}
+                        <p className="text-xs text-gray-500">
+                            {new Date(signal.timestamp).toLocaleString()}
+                        </p>
+                    </div>
                 </div>
                 <div className="text-right">
                     <p className="text-xs text-gray-400">Confidence</p>
