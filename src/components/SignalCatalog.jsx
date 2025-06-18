@@ -1,65 +1,59 @@
-// File: src/components/SignalCard.jsx
+import { SignalCard } from './SignalCard';
 
-import { useState, useEffect } from 'react';
-import { NotesIcon } from './icons/NotesIcon';
+const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
+    if (totalPages <= 1) return null;
+    return (
+        <div className="flex justify-center items-center gap-4 mt-6">
+            <button
+                onClick={() => onPageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="px-4 py-2 rounded-lg text-sm font-semibold bg-white/10 hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            >
+                Previous
+            </button>
+            <span className="text-sm text-gray-400">
+                Page {currentPage} of {totalPages}
+            </span>
+            <button
+                onClick={() => onPageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 rounded-lg text-sm font-semibold bg-white/10 hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            >
+                Next
+            </button>
+        </div>
+    );
+}
 
-const getConfidenceClass = (confidence) => {
-    if (confidence >= 85) return 'shadow-glow-cyan border-cyan-500';
-    if (confidence >= 70) return 'shadow-glow-blue border-blue-500';
-    return 'border-white/20';
-};
-
-export const SignalCard = ({ signal, onClick, isHighlighted, index }) => {
-    const [hasNote, setHasNote] = useState(false);
-
-    useEffect(() => {
-        const note = localStorage.getItem(`note_${signal.timestamp}`);
-        setHasNote(!!note);
-    }, [signal.timestamp]);
-
-    useEffect(() => {
-        const handleStorageChange = (e) => {
-            if (e.key === `note_${signal.timestamp}`) {
-                setHasNote(!!e.newValue);
-            }
-        };
-        window.addEventListener('storage', handleStorageChange);
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-        };
-    }, [signal.timestamp]);
+export const SignalCatalog = ({ signals, currentPage, itemsPerPage, onPageChange, onSignalClick, highlightedSignalId }) => {
+    const paginatedSignals = signals.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+    const totalPages = Math.ceil(signals.length / itemsPerPage);
 
     return (
-        <div
-            onClick={onClick}
-            className={`bg-dark-card p-4 rounded-lg border cursor-pointer 
-                        transition-[transform,box-shadow,border-color] duration-300 ease-in-out
-                        card-enter relative
-                        ${getConfidenceClass(signal.Confidence)}
-                        ${isHighlighted ? 'transform scale-105 bg-cyan-900/50' : 'hover:-translate-y-1'}`}
-            style={{ animationDelay: `${index * 50}ms` }}
-        >
-            <div className="flex justify-between items-center mb-3">
-                <span className="font-bold text-lg">{signal.symbol}</span>
-                <span className={`px-3 py-1 text-xs font-bold rounded-full ${signal.Signal === 'Buy' ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
-                    {signal.Signal}
-                </span>
-            </div>
-            <div className="text-sm space-y-2 text-gray-300">
-                <div className="flex justify-between"><span>Confidence:</span> <span className="font-semibold text-white">{signal.Confidence || 'N/A'}%</span></div>
-                <div className="flex justify-between">
-                    <span>Status:</span> 
-                    <span className="font-semibold text-white">{signal.performance?.status || 'Pending'}</span>
-                </div>
-            </div>
-            <div className="flex justify-between items-center mt-3">
-                {hasNote ? (
-                    <NotesIcon className="h-4 w-4 text-amber-400" />
-                ) : (
-                    <div />
-                )}
-                <div className="text-xs text-gray-500 text-right">{new Date(signal.timestamp).toLocaleString()}</div>
-            </div>
+        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
+            <h2 className="text-2xl font-bold mb-4">Signal Catalog</h2>
+            {signals.length > 0 ? (
+                <>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        {paginatedSignals.map((signal, index) => (
+                            <SignalCard
+                                key={signal.timestamp}
+                                signal={signal}
+                                index={index}
+                                onClick={() => onSignalClick(signal)}
+                                isHighlighted={highlightedSignalId === signal.timestamp}
+                            />
+                        ))}
+                    </div>
+                    <PaginationControls
+                        currentPage={currentPage}
+                        totalPages={totalPages}
+                        onPageChange={onPageChange}
+                    />
+                </>
+            ) : (
+                <p className="text-center text-gray-400 py-8">No signals match your criteria.</p>
+            )}
         </div>
     );
 };

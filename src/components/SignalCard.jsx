@@ -12,13 +12,11 @@ const getConfidenceClass = (confidence) => {
 export const SignalCard = ({ signal, onClick, isHighlighted, index }) => {
     const [hasNote, setHasNote] = useState(false);
 
-    // Check for a note in localStorage when the component mounts or the signal changes.
     useEffect(() => {
         const note = localStorage.getItem(`note_${signal.timestamp}`);
         setHasNote(!!note);
     }, [signal.timestamp]);
 
-    // This allows the card to update if a note is changed in the modal.
     useEffect(() => {
         const handleStorageChange = (e) => {
             if (e.key === `note_${signal.timestamp}`) {
@@ -58,7 +56,7 @@ export const SignalCard = ({ signal, onClick, isHighlighted, index }) => {
                 {hasNote ? (
                     <NotesIcon className="h-4 w-4 text-amber-400" />
                 ) : (
-                    <div /> // Empty div to maintain layout
+                    <div />
                 )}
                 <div className="text-xs text-gray-500 text-right">{new Date(signal.timestamp).toLocaleString()}</div>
             </div>
