@@ -1,9 +1,9 @@
 {
   "BTCUSDT": {
     "LONG": {
-      "wins": 8,
+      "wins": 10,
       "losses": 5,
-      "total": 13
+      "total": 15
     },
     "SHORT": {
       "wins": 1,
@@ -19,8 +19,8 @@
     },
     "SHORT": {
       "wins": 8,
-      "losses": 4,
-      "total": 12
+      "losses": 5,
+      "total": 13
     }
   }
 }

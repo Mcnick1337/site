@@ -824,5 +824,88 @@
     "final_leverage": 35,
     "final_confidence": 0.75,
     "timestamp": "2025-06-17T21:27:35.210658"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 104000.0,
+    "stop_loss": 102500.0,
+    "take_profit": 108000.0,
+    "ai_summary": "BTCUSDT presents a mixed short-term outlook with underlying bullish momentum. While the 1h timeframe shows bearish signals like a declining MACD and price below key EMAs, the 4h timeframe reveals a bullish MACD crossover and price above the 200-day EMA. The positive market sentiment and relatively high BTC dominance suggest potential upside. However, the price is currently trading within a tight range, near the lower Bollinger Band on the 1h chart, indicating potential for a short-term pullback before a continuation of the upward trend.",
+    "ai_confluence": [
+      "4h bullish MACD crossover",
+      "Price above 4h 200 EMA",
+      "Positive market sentiment (0.68)",
+      "High BTC dominance (61.68%)"
+    ],
+    "ai_counters": [
+      "1h bearish MACD",
+      "Price below 1h 50 and 200 EMAs",
+      "Price near lower Bollinger Band on 1h"
+    ],
+    "rr_ratio": 2.6666666666666665,
+    "theoretical_position_size_pct": 0.11778846153846155,
+    "signal_var_95": -0.00561739418907063,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T22:18:31.554397"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "ai_recommendation": "LONG",
+    "confidence": 0.75,
+    "ai_leverage_suggestion": 15,
+    "entry": 104500.0,
+    "stop_loss": 102800.0,
+    "take_profit": 108000.0,
+    "ai_summary": "BTCUSDT presents a complex short-term outlook with bullish mid-term signals. The 1h timeframe shows bearish indicators like a negative MACD and price below the 50-day EMA, suggesting potential short-term downside. However, the 4h timeframe reveals a bullish MACD crossover and price above the 200-day EMA, indicating a possible trend reversal. The relatively high market sentiment (0.68) and BTC dominance (61.71%) further support a potential bullish scenario in the mid-term.  The current price is consolidating near the 1h VWAP and POC, suggesting a potential turning point.",
+    "ai_confluence": [
+      "4h bullish MACD crossover",
+      "Price above 4h 200 EMA",
+      "Positive market sentiment",
+      "High BTC dominance",
+      "Consolidation near 1h VWAP and POC"
+    ],
+    "ai_counters": [
+      "1h negative MACD",
+      "Price below 1h 50 EMA",
+      "15m RSI below 50"
+    ],
+    "rr_ratio": 2.0588235294117645,
+    "theoretical_position_size_pct": 0.11734693877551022,
+    "signal_var_95": -0.00561739418907063,
+    "final_leverage": 35,
+    "final_confidence": 0.75,
+    "timestamp": "2025-06-17T23:19:48.501352"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "ai_recommendation": "SHORT",
+    "confidence": 0.65,
+    "ai_leverage_suggestion": 10,
+    "entry": 2525.0,
+    "stop_loss": 2560.0,
+    "take_profit": 2450.0,
+    "ai_summary": "ETH is currently consolidating below a key resistance level around $2530, coinciding with the POC on the 1h and 4h timeframes. While market sentiment leans greedy, technical indicators present a mixed picture. The 1h MACD is bearish, but the 4h MACD shows bullish divergence. The relatively low ADX values across timeframes suggest a lack of strong directional trend, favoring range-bound trading.",
+    "ai_confluence": [
+      "4h MACD bullish divergence",
+      "Consolidation below key resistance/POC",
+      "Neutral to bearish momentum on shorter timeframes"
+    ],
+    "ai_counters": [
+      "Greedy market sentiment",
+      "Potential for a breakout above resistance given positive sentiment"
+    ],
+    "rr_ratio": 2.142857142857143,
+    "theoretical_position_size_pct": 0.12777777777777777,
+    "signal_var_95": -0.010674187556184628,
+    "final_leverage": 35,
+    "final_confidence": 0.65,
+    "timestamp": "2025-06-17T23:28:31.732409"
   }
 ]
