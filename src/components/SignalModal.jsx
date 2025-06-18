@@ -1,10 +1,9 @@
-// File: src/components/SignalModal.jsx (Reverted to no indicators)
+// File: src/components/SignalModal.jsx
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { LightweightChart } from './charts/LightweightChart';
 
-// Reverted: Removed fetchIndicatorData
 async function fetchOHLCData(symbol, signalTime, interval) {
     const hoursToFetch = 120;
     const startTime = new Date(signalTime.getTime() - (hoursToFetch * 60 * 60 * 1000)).getTime();
@@ -30,11 +29,14 @@ const intervalMap = { '5m': '5min', '15m': '15min', '1h': '1hour', '4h': '4hour'
 export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [ohlcData, setOhlcData] = useState(null);
-    // Reverted: Removed indicatorData state
     const [interval, setInterval] = useState('1h');
     const [crosshairData, setCrosshairData] = useState(null);
+    const [note, setNote] = useState('');
 
     useEffect(() => {
+        const savedNote = localStorage.getItem(`note_${signal.timestamp}`) || '';
+        setNote(savedNote);
+
         setIsLoading(true);
         const loadData = async () => {
             const kucoinInterval = intervalMap[interval];
@@ -52,6 +54,16 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
     }, [signal, interval, cache, updateCache]);
 
     const handleClose = () => setTimeout(onClose, 300);
+    
+    const handleNoteChange = (e) => {
+        setNote(e.target.value);
+        const saveTimer = setTimeout(() => {
+            localStorage.setItem(`note_${signal.timestamp}`, e.target.value);
+            window.dispatchEvent(new StorageEvent('storage', { key: `note_${signal.timestamp}`, newValue: e.target.value }));
+        }, 500);
+        return () => clearTimeout(saveTimer);
+    };
+
     const displayData = crosshairData || (ohlcData && ohlcData.slice(-1)[0]);
 
     return (
@@ -85,7 +97,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                                 </div>
                             </div>
                         </div>
-                        {/* Reverted: Chart container height is now smaller */}
                         <div className="relative w-full h-[400px] bg-gray-200 dark:bg-black/20 rounded-lg">
                             <div className={`w-full h-full transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
                                 <LightweightChart ohlcData={ohlcData} signal={signal} onCrosshairMove={setCrosshairData} />
@@ -95,7 +106,6 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                             </div>
                         </div>
                     </div>
-                    {/* Reverted: Details container height is now smaller */}
                     <div className="relative lg:w-1/3 flex-shrink-0 lg:h-[440px]">
                         <div className={`flex flex-col gap-4 lg:overflow-y-auto custom-scrollbar h-full pr-2 transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
                             <div className="grid grid-cols-2 gap-4 text-center">
@@ -107,6 +117,15 @@ export const SignalModal = ({ signal, onClose, cache, updateCache }) => {
                             </div>
                             <div><h3 className="text-lg font-semibold mb-2">AI Reasoning</h3><p className="text-sm text-gray-600 dark:text-gray-400">{signal.Reasoning || 'No reasoning provided.'}</p></div>
                             <div><h3 className="text-lg font-semibold mb-2">Relevant News</h3><ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">{Array.isArray(signal["Relevant News Headlines"]) && signal["Relevant News Headlines"].length > 0 ? (signal["Relevant News Headlines"].map((headline, index) => <li key={index}>{headline}</li>)) : (<li>No relevant news provided.</li>)}</ul></div>
+                            <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10">
+                                <h3 className="text-lg font-semibold mb-2">My Notes</h3>
+                                <textarea
+                                    value={note}
+                                    onChange={handleNoteChange}
+                                    placeholder="Add your personal notes for this trade..."
+                                    className="w-full h-24 p-2 bg-black/20 rounded-md text-sm text-gray-300 border border-white/10 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition"
+                                />
+                            </div>
                         </div>
                         <div className={`absolute inset-0 bg-dark-card/30 backdrop-blur-sm rounded-lg flex items-center justify-center transition-opacity duration-300 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                              <p className="text-gray-300 animate-pulse text-lg">Loading Details...</p>
