@@ -1,6 +1,6 @@
 // File: src/components/v2/SignalModalV2.jsx
 
-import { useEffect, useState, useMemo } from 'react'; // --- ADDED: useMemo ---
+import { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { LightweightChart } from '../charts/LightweightChart';
 import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
@@ -32,8 +32,12 @@ export const SignalModalV2 = ({ signal, onClose }) => {
     const [ohlcData, setOhlcData] = useState(null);
     const [interval, setInterval] = useState('1h');
     const [crosshairData, setCrosshairData] = useState(null);
+    const [note, setNote] = useState('');
 
     useEffect(() => {
+        const savedNote = localStorage.getItem(`note_${signal.timestamp}`) || '';
+        setNote(savedNote);
+
         setIsLoading(true);
         const loadData = async () => {
             const kucoinInterval = intervalMap[interval];
@@ -47,11 +51,17 @@ export const SignalModalV2 = ({ signal, onClose }) => {
 
     const handleClose = () => setTimeout(onClose, 300);
 
+    const handleNoteChange = (e) => {
+        setNote(e.target.value);
+        const saveTimer = setTimeout(() => {
+            localStorage.setItem(`note_${signal.timestamp}`, e.target.value);
+            window.dispatchEvent(new StorageEvent('storage', { key: `note_${signal.timestamp}`, newValue: e.target.value }));
+        }, 500);
+        return () => clearTimeout(saveTimer);
+    };
+
     const displayData = crosshairData || (ohlcData && ohlcData.slice(-1)[0]);
     
-    // --- THE FIX IS HERE: Memoize the prop object ---
-    // This prevents a new object from being created on every render,
-    // which stops the chart from re-rendering unnecessarily.
     const chartSignalProp = useMemo(() => ({
         symbol: signal.symbol,
         timestamp: signal.timestamp,
@@ -106,14 +116,8 @@ export const SignalModalV2 = ({ signal, onClose }) => {
                     </div>
                     <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:h-[440px] lg:overflow-y-auto custom-scrollbar pr-2">
                         <div className="grid grid-cols-2 gap-4 text-center bg-black/20 p-3 rounded-lg">
-                            <div>
-                                <p className="text-sm text-gray-400">Leverage</p>
-                                <p className="text-2xl font-bold">{signal.final_leverage}x</p>
-                            </div>
-                            <div>
-                                <p className="text-sm text-gray-400">R:R Ratio</p>
-                                <p className="text-2xl font-bold">{signal.rr_ratio.toFixed(2)}</p>
-                            </div>
+                            <div><p className="text-sm text-gray-400">Leverage</p><p className="text-2xl font-bold">{signal.final_leverage}x</p></div>
+                            <div><p className="text-sm text-gray-400">R:R Ratio</p><p className="text-2xl font-bold">{signal.rr_ratio.toFixed(2)}</p></div>
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold mb-2">AI Summary</h3>
@@ -132,6 +136,15 @@ export const SignalModalV2 = ({ signal, onClose }) => {
                                     {signal.ai_counters.map((item, index) => <li key={index}>{item}</li>)}
                                 </ul>
                             </div>
+                        </div>
+                        <div className="mt-auto pt-4 border-t border-white/10">
+                            <h3 className="text-lg font-semibold mb-2">My Notes</h3>
+                            <textarea
+                                value={note}
+                                onChange={handleNoteChange}
+                                placeholder="Add your personal notes for this trade..."
+                                className="w-full h-24 p-2 bg-black/20 rounded-md text-sm text-gray-300 border border-white/10 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition"
+                            />
                         </div>
                     </div>
                 </div>
