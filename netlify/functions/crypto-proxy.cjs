@@ -2,28 +2,34 @@
 
 const fetch = require('node-fetch');
 
-module.exports.handler = async function(event, context) {
+exports.handler = async function(event, context) {
     const { symbol, startTime, interval, endTime } = event.queryStringParameters;
 
-    const candleType = interval || '1hour';
-
     if (!symbol || !startTime) {
-        return { statusCode: 400, body: JSON.stringify({ error: 'Symbol and startTime parameters are required.' }) };
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ error: 'Symbol and startTime parameters are required.' })
+        };
     }
 
     try {
         const kucoinSymbol = symbol.replace(/USDT$/, '-USDT');
-        
-        // --- THE FIX IS HERE: Convert incoming millisecond timestamps to seconds ---
-        const startTimeInSeconds = Math.floor(parseInt(startTime) / 1000);
-        
-        let apiUrl = `https://api.kucoin.com/api/v1/market/candles?type=${candleType}&symbol=${kucoinSymbol}&startAt=${startTimeInSeconds}`;
+        const candleType = interval || '1hour';
+
+        // --- REWRITTEN: Use URL and URLSearchParams for robust URL construction ---
+        const baseUrl = 'https://api.kucoin.com/api/v1/market/candles';
+        const params = new URLSearchParams({
+            symbol: kucoinSymbol,
+            type: candleType,
+            startAt: Math.floor(parseInt(startTime) / 1000),
+        });
 
         if (endTime) {
-            // --- AND HERE: Also convert the endTime to seconds ---
-            const endTimeInSeconds = Math.floor(parseInt(endTime) / 1000);
-            apiUrl += `&endAt=${endTimeInSeconds}`;
+            params.append('endAt', Math.floor(parseInt(endTime) / 1000));
         }
+
+        const apiUrl = `${baseUrl}?${params.toString()}`;
+        // --- End of rewrite ---
 
         console.log(`[INFO] Fetching from KuCoin API: ${apiUrl}`);
 
@@ -34,14 +40,20 @@ module.exports.handler = async function(event, context) {
         
         if (!response.ok) {
             console.error(`[ERROR] KuCoin API request failed. Status: ${response.status}. Body: ${responseBodyText}`);
-            throw new Error(`KuCoin API Error: ${response.statusText}`);
+            return {
+                statusCode: response.status,
+                body: JSON.stringify({ error: `KuCoin API Error: ${response.statusText}`, details: responseBodyText }),
+            };
         }
         
         const data = JSON.parse(responseBodyText);
 
         if (data.code !== '200000') {
             console.error(`[ERROR] KuCoin API returned a logical error:`, data.msg);
-            throw new Error(data.msg || 'An unknown error occurred with the KuCoin API');
+            return {
+                statusCode: 400,
+                body: JSON.stringify({ error: 'KuCoin API returned an error.', details: data.msg }),
+            };
         }
 
         return {
