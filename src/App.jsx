@@ -9,8 +9,8 @@ import { ComparisonView } from './components/ComparisonView';
 import { SignalModal } from './components/SignalModal';
 import { BackToTopButton } from './components/BackToTopButton';
 import { DashboardV2 } from './pages/DashboardV2';
-// --- THE FIX IS HERE: Corrected the case from 'v2' to 'V2' ---
 import { SignalModalV2 } from './components/V2/SignalModalV2';
+import { SignalModalV2_Advanced } from './components/V2/SignalModalV2_Advanced';
 import {
     Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler
 } from 'chart.js';
@@ -29,10 +29,9 @@ const AI_MODELS = {
     'ai-pro-x2': { name: 'AI PRO X2', file: '/signals_PROX2_log.json', experimental: true },
 };
 
-const AI_PRO_MODEL = {
-    id: 'ai-pro',
-    signalsFile: '/signals_pro_log.json',
-    metricsFile: '/signal_metrics.json',
+export const V2_MODELS = {
+    'ai-pro': { name: 'AI PRO', signalsFile: '/signals_pro_log.json', metricsFile: '/signal_metrics.json', advanced: false },
+    'ai-pro-advanced': { name: 'AI Pro Advanced', signalsFile: '/signals.json', metricsFile: null, advanced: true },
 };
 
 const floatingElements = [
@@ -45,7 +44,7 @@ const floatingElements = [
 ];
 
 const createDefaultAiState = () => ({
-    allSignals: [], 
+    allSignals: [],
     isLoading: false,
     symbolWinRates: [],
     overallStats: {},
@@ -55,37 +54,35 @@ const createDefaultAiState = () => ({
     currentPage: 1,
     itemsPerPage: 12,
     filters: { 
-        symbol: '',
-        signalType: '',
-        status: '',
-        previousSignalStatus: '',
-        minConfidence: '50',
-        startDate: null,
-        endDate: null,
-        reasoningSearch: '',
+        symbol: '', 
+        signalType: '', 
+        status: '', 
+        previousSignalStatus: '', 
+        minConfidence: '50', 
+        startDate: null, 
+        endDate: null, 
+        reasoningSearch: '' 
     },
     sort: { by: 'timestamp' },
     ohlcCache: {},
     equityCurveData: [],
 });
 
-const createDefaultProState = () => ({
+const createDefaultV2State = () => ({
     signals: [],
     metrics: {},
     isLoading: false,
-    filters: {
-        symbol: '',
-        direction: '',
-        minConfidence: 0.5,
-    },
+    filters: { symbol: '', direction: '', minConfidence: 0.5 },
     currentPage: 1,
     itemsPerPage: 9,
 });
 
 export default function App() {
     const [appState, setAppState] = useState(() => {
-        const initialState = { proModel: createDefaultProState() };
+        const initialState = {};
         Object.keys(AI_MODELS).forEach(id => initialState[id] = createDefaultAiState());
+        initialState.v2_models = {};
+        Object.keys(V2_MODELS).forEach(id => initialState.v2_models[id] = createDefaultV2State());
         return initialState;
     });
 
@@ -94,6 +91,7 @@ export default function App() {
     const [comparisonViewActive, setComparisonViewActive] = useState(false);
     const [selectedSignal, setSelectedSignal] = useState(null);
     const [selectedSignalV2, setSelectedSignalV2] = useState(null);
+    const [selectedSignalV2Advanced, setSelectedSignalV2Advanced] = useState(null);
     const [highlightedSignalId, setHighlightedSignalId] = useState(null);
     const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
 
@@ -136,26 +134,39 @@ export default function App() {
         });
     }, []);
 
-    const loadProModelData = useCallback(() => {
+    const loadV2ModelData = useCallback((modelId) => {
+        if (!modelId || !V2_MODELS[modelId]) return;
+
         setAppState(prev => {
-            if (prev.proModel.signals.length === 0 && !prev.proModel.isLoading) {
-                Promise.all([
-                    fetch(AI_PRO_MODEL.signalsFile).then(res => res.ok ? res.json() : Promise.reject('Failed to load signals')),
-                    fetch(AI_PRO_MODEL.metricsFile).then(res => res.ok ? res.json() : Promise.reject('Failed to load metrics'))
-                ]).then(([signals, metrics]) => {
-                    const sortedSignals = [...signals].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-                    setAppState(current => ({
-                        ...current,
-                        proModel: { ...current.proModel, signals: sortedSignals, metrics, isLoading: false }
-                    }));
-                }).catch(err => {
-                    console.error('Failed to load AI PRO model data:', err);
-                    setAppState(current => ({
-                        ...current,
-                        proModel: { ...current.proModel, isLoading: false }
-                    }));
-                });
-                return { ...prev, proModel: { ...prev.proModel, isLoading: true } };
+            const modelState = prev.v2_models[modelId];
+            if (modelState.signals.length === 0 && !modelState.isLoading) {
+                const modelConfig = V2_MODELS[modelId];
+                const signalFetch = fetch(modelConfig.signalsFile)
+                    .then(res => res.ok ? res.json() : Promise.reject('Failed to load signals'));
+                const metricsFetch = modelConfig.metricsFile 
+                    ? fetch(modelConfig.metricsFile)
+                        .then(res => res.ok ? res.json() : Promise.reject('Failed to load metrics'))
+                    : Promise.resolve({}); 
+
+                Promise.all([signalFetch, metricsFetch])
+                    .then(([signals, metrics]) => {
+                        const sortedSignals = [...signals].sort((a, b) => new Date(b.timestamp || b.timestamp_utc) - new Date(a.timestamp || a.timestamp_utc));
+                        setAppState(current => ({
+                            ...current,
+                            v2_models: {
+                                ...current.v2_models,
+                                [modelId]: { ...current.v2_models[modelId], signals: sortedSignals, metrics, isLoading: false }
+                            }
+                        }));
+                    }).catch(err => {
+                        console.error(`Failed to load V2 model data for ${modelId}:`, err);
+                        setAppState(current => ({
+                            ...current,
+                            v2_models: { ...current.v2_models, [modelId]: { ...current.v2_models[modelId], isLoading: false } }
+                        }));
+                    });
+
+                return { ...prev, v2_models: { ...prev.v2_models, [modelId]: { ...prev.v2_models[modelId], isLoading: true } } };
             }
             return prev;
         });
@@ -163,13 +174,13 @@ export default function App() {
 
     useEffect(() => {
         if (activeView === 'dashboardV2') {
-            loadProModelData();
+            loadV2ModelData(Object.keys(V2_MODELS)[0]);
         } else {
             localStorage.setItem('lastActiveTab', activeTab);
             loadModelData(activeTab);
         }
-    }, [activeView, activeTab, loadModelData, loadProModelData]);
-
+    }, [activeView, activeTab, loadModelData, loadV2ModelData]);
+    
     const handleStateChange = useCallback((type, key, value) => {
         setAppState(prev => ({ 
             ...prev, 
@@ -198,27 +209,24 @@ export default function App() {
         }));
     }, [activeTab]);
 
-    const handleProFilterChange = useCallback((key, value) => {
+    const handleProFilterChange = useCallback((modelId, key, value) => {
         setAppState(prev => ({
             ...prev,
-            proModel: {
-                ...prev.proModel,
-                currentPage: 1,
-                filters: {
-                    ...prev.proModel.filters,
-                    [key]: value
+            v2_models: {
+                ...prev.v2_models,
+                [modelId]: {
+                    ...prev.v2_models[modelId],
+                    currentPage: 1,
+                    filters: { ...prev.v2_models[modelId].filters, [key]: value }
                 }
             }
         }));
     }, []);
 
-    const handleProPageChange = useCallback((newPage) => {
+    const handleProPageChange = useCallback((modelId, newPage) => {
         setAppState(prev => ({
             ...prev,
-            proModel: {
-                ...prev.proModel,
-                currentPage: newPage,
-            }
+            v2_models: { ...prev.v2_models, [modelId]: { ...prev.v2_models[modelId], currentPage: newPage } }
         }));
     }, []);
 
@@ -240,27 +248,31 @@ export default function App() {
                     <Layout activeView={activeView} setActiveView={setActiveView}>
                         <div className="p-4 md:p-8">
                             <Header />
-                            {activeView === 'dashboard' && !comparisonViewActive && (
-                                <DashboardView
-                                    models={AI_MODELS}
-                                    activeTab={activeTab}
-                                    setActiveTab={setActiveTab}
-                                    appState={appState}
-                                    handleStateChange={handleStateChange}
-                                    handlePageChange={handlePageChange}
-                                    setSelectedSignal={setSelectedSignal}
-                                    highlightedSignalId={highlightedSignalId}
-                                    onSignalHover={setHighlightedSignalId}
-                                    setComparisonViewActive={setComparisonViewActive}
-                                />
-                            )}
-                            {activeView === 'dashboard' && comparisonViewActive && (
-                                <ComparisonView 
-                                    appState={appState}
-                                    models={AI_MODELS}
-                                    onExit={() => setComparisonViewActive(false)}
-                                    loadModelData={loadModelData}
-                                />
+                            {activeView === 'dashboard' && (
+                                <>
+                                    {!comparisonViewActive && (
+                                        <DashboardView
+                                            models={AI_MODELS}
+                                            activeTab={activeTab}
+                                            setActiveTab={setActiveTab}
+                                            appState={appState}
+                                            handleStateChange={handleStateChange}
+                                            handlePageChange={handlePageChange}
+                                            setSelectedSignal={setSelectedSignal}
+                                            highlightedSignalId={highlightedSignalId}
+                                            onSignalHover={setHighlightedSignalId}
+                                            setComparisonViewActive={v => setComparisonViewActive(v)}
+                                        />
+                                    )}
+                                    {comparisonViewActive && (
+                                        <ComparisonView 
+                                            appState={appState}
+                                            models={AI_MODELS}
+                                            onExit={() => setComparisonViewActive(false)}
+                                            loadModelData={loadModelData}
+                                        />
+                                    )}
+                                </>
                             )}
                             {activeView === 'portfolio' && (
                                 <PortfolioView 
@@ -272,10 +284,12 @@ export default function App() {
                             )}
                             {activeView === 'dashboardV2' && (
                                 <DashboardV2
-                                    proModelState={appState.proModel}
-                                    setSelectedSignal={setSelectedSignalV2}
+                                    v2ModelsState={appState.v2_models}
+                                    onSelectSignalV2={setSelectedSignalV2}
+                                    onSelectSignalV2Advanced={setSelectedSignalV2Advanced}
                                     onFilterChange={handleProFilterChange}
                                     onPageChange={handleProPageChange}
+                                    loadV2ModelData={loadV2ModelData}
                                 />
                             )}
                         </div>
@@ -293,6 +307,12 @@ export default function App() {
                     <SignalModalV2 
                         signal={selectedSignalV2}
                         onClose={() => setSelectedSignalV2(null)}
+                    />
+                )}
+                {selectedSignalV2Advanced && (
+                    <SignalModalV2_Advanced 
+                        signal={selectedSignalV2Advanced} 
+                        onClose={() => setSelectedSignalV2Advanced(null)} 
                     />
                 )}
                 <BackToTopButton />

@@ -1,3 +1,5 @@
+// File: src/components/TabNav.jsx
+
 export const TabNav = ({ models, activeTab, setActiveTab, onCompareClick }) => (
     <div className="flex justify-center items-center gap-4 mb-6 flex-wrap">
         <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-1.5 flex gap-2 flex-wrap">
@@ -11,8 +13,11 @@ export const TabNav = ({ models, activeTab, setActiveTab, onCompareClick }) => (
                 </button>
             ))}
         </div>
-        <button onClick={onCompareClick} className="px-4 py-2 rounded-lg text-sm font-semibold bg-purple-600 hover:bg-purple-500 transition-colors">
-            Compare Models
-        </button>
+        {/* Conditionally render the compare button only if the prop is provided */}
+        {onCompareClick && (
+            <button onClick={onCompareClick} className="px-4 py-2 rounded-lg text-sm font-semibold bg-purple-600 hover:bg-purple-500 transition-colors">
+                Compare Models
+            </button>
+        )}
     </div>
 );

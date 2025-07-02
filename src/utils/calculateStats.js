@@ -438,3 +438,45 @@ export function calculateTrendlineStatus(equityCurveData) {
 
     return { status, color, slope, trendlineData };
 }
+
+// --- ADDED: New function to verify a single V2 Advanced signal ---
+export async function verifySignalOutcome(signal) {
+    const { symbol, decision, trade_parameters, timestamp_utc } = signal;
+    const { entry_price, stop_loss, take_profit } = trade_parameters;
+
+    const signalTime = new Date(timestamp_utc).getTime();
+    // Check for up to 7 days after the signal for an outcome
+    const endTime = signalTime + (7 * 24 * 60 * 60 * 1000);
+
+    const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${signalTime}&interval=1m&endTime=${endTime}`;
+    
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Failed to fetch price data.");
+        const ohlcData = await response.json();
+
+        if (!ohlcData || ohlcData.length === 0) {
+            return { status: 'unknown', message: 'Could not fetch price data to verify signal.' };
+        }
+
+        for (const candle of ohlcData) {
+            const high = parseFloat(candle[2]);
+            const low = parseFloat(candle[3]);
+            const candleTime = parseInt(candle[0]) * 1000;
+
+            if (decision === 'LONG') {
+                if (high >= take_profit) return { status: 'win', message: `Take Profit hit at ${new Date(candleTime).toLocaleString()}` };
+                if (low <= stop_loss) return { status: 'loss', message: `Stop Loss hit at ${new Date(candleTime).toLocaleString()}` };
+            } else { // SHORT
+                if (low <= take_profit) return { status: 'win', message: `Take Profit hit at ${new Date(candleTime).toLocaleString()}` };
+                if (high >= stop_loss) return { status: 'loss', message: `Stop Loss hit at ${new Date(candleTime).toLocaleString()}` };
+            }
+        }
+
+        return { status: 'expired', message: 'Signal did not hit TP or SL within 7 days.' };
+
+    } catch (error) {
+        console.error("Signal verification failed:", error);
+        return { status: 'error', message: 'An error occurred during verification.' };
+    }
+}

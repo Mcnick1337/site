@@ -1,0 +1,90 @@
+[
+    {
+        "timestamp_utc": "2025-07-02T13:08:03.090836+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish news regarding major payment network integration and significant miner accumulation indicates robust institutional confidence and adoption, providing a strong fundamental tailwind. This, combined with a bullish HIKKAKE candlestick pattern and a slightly bullish ML forecast, suggests an upward price movement. While short-term technicals (MACD, Supertrend, OBV) show bearish momentum, the powerful fundamental drivers are expected to override these transient signals.",
+        "trade_parameters": {
+            "entry_price": 107483.17,
+            "stop_loss": 106500.0,
+            "take_profit": 109450.0,
+            "leverage": 74,
+            "size": 7.527,
+            "collateral_required": 10932.307739251624
+        },
+        "market_snapshot": {
+            "price": 107483.17,
+            "rsi_14": 56.675951492621124,
+            "macd_hist": -89.5945739846662,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:10:42.439960+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "Strong bullish news indicating significant corporate accumulation and financial integration, coupled with a positive ML forecast and a bullish HIKKAKE candlestick pattern, suggests an imminent upward movement. While MACD, Supertrend, and OBV currently show bearish momentum, the HIKKAKE is a reversal pattern, implying these lagging indicators may soon shift. The confluence of fundamental strength and a bullish reversal signal outweighs the current bearish technicals for a potential long entry.",
+        "trade_parameters": {
+            "entry_price": 107486.0,
+            "stop_loss": 106900.0,
+            "take_profit": 108658.0,
+            "leverage": 68,
+            "size": 11.604,
+            "collateral_required": 18342.32081911263
+        },
+        "market_snapshot": {
+            "price": 107486.0,
+            "rsi_14": 56.76861087992421,
+            "macd_hist": -89.41460817269837,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.8
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:12:02.224143+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish market sentiment and news (major miner accumulation, TradFi integration) provide a robust fundamental tailwind. This is supported by a bullish HIKKAKE candlestick reversal pattern and a slightly bullish ML forecast. While Supertrend, MACD histogram, and OBV indicate short-term bearish pressure, the HIKKAKE pattern suggests a potential reversal of this trend, aligning with the dominant bullish sentiment.",
+        "trade_parameters": {
+            "entry_price": 107493.41,
+            "stop_loss": 106680.0,
+            "take_profit": 108700.0,
+            "leverage": 71,
+            "size": 8.729,
+            "collateral_required": 13215.157177806956
+        },
+        "market_snapshot": {
+            "price": 107493.41,
+            "rsi_14": 57.01053392425819,
+            "macd_hist": -88.94108110717352,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.75
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:13:18.106201+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish sentiment driven by significant institutional interest and accumulation, reinforced by bullish candlestick patterns (CLOSINGMARUBOZU, HIKKAKE). While some technical indicators (MACD, Supertrend, OBV) suggest bearish momentum, the fundamental news and immediate price action indicate a higher probability of an upward move. Prioritizing the impact of institutional activity and immediate price patterns.",
+        "trade_parameters": {
+            "entry_price": 107593.5,
+            "stop_loss": 106800.0,
+            "take_profit": 108800.0,
+            "leverage": 74,
+            "size": 9.326,
+            "collateral_required": 13559.357277882797
+        },
+        "market_snapshot": {
+            "price": 107593.5,
+            "rsi_14": 60.02785991098874,
+            "macd_hist": -82.55357113566569,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.75
+        }
+    }
+]

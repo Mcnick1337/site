@@ -26,10 +26,15 @@ export const modelInfoData = {
         description: "A specialized version of AI Bob that operates without the standard learning and adaptation systems. This model follows a fixed, core strategy, providing a stable baseline for performance analysis.",
         strengths: ["Fixed Core Strategy", "Baseline Performance Metric", "Non-Adaptive", "Systematic Execution"]
     },
-    // --- ADDED: The new model's description ---
     'ai-pro-x2': {
         title: "AI PRO X2 (Experimental)",
         description: "A dual-stage verification model based on the AI Bob framework. Each primary signal is reviewed and confirmed by a secondary, independent AI process, aiming to increase precision and reduce false positives.",
         strengths: ["Dual-AI Verification", "High-Conviction Signals", "Error-Correction Mechanism", "Reduced False Positives"]
+    },
+    // --- ADDED: The new model's description ---
+    'ai-pro-advanced': {
+        title: "AI Pro Advanced (Experimental)",
+        description: "The flagship model utilizing a vast array of over 80 indicators and 50+ candlestick patterns. It incorporates a machine learning layer and an integrated backtesting engine to continuously refine its high-conviction trade ideas.",
+        strengths: ["80+ Indicator Analysis", "50+ Candlestick Pattern Recognition", "Integrated Backtesting Engine", "Machine Learning Forecast Layer"]
     }
 };

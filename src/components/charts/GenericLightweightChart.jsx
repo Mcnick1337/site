@@ -1,3 +1,5 @@
+// File: \src\components\charts\GenericLightweightChart.jsx
+
 import { useEffect, useRef } from 'react';
 import * as LightweightCharts from 'lightweight-charts';
 
