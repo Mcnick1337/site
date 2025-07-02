@@ -3,10 +3,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { V2_MODELS } from '../App';
 import { TabNav } from '../components/TabNav';
-import { SignalCatalogV2 } from '../components/v2/SignalCatalogV2';
-import { SignalCardV2_Advanced } from '../components/v2/SignalCardV2_Advanced';
-import { FilterControlsV2 } from '../components/v2/FilterControlsV2';
-import { StatsGridV2 } from '../components/v2/StatsGridV2';
+import { SignalCatalogV2 } from '../components/V2/SignalCatalogV2';
+import { SignalCardV2_Advanced } from '../components/V2/SignalCardV2_Advanced';
+import { FilterControlsV2 } from '../components/V2/FilterControlsV2';
+import { StatsGridV2 } from '../components/V2/StatsGridV2';
 import { Pagination } from '../components/Pagination';
 import { EmptyState } from '../components/EmptyState';
 

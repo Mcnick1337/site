@@ -86,5 +86,929 @@
             "supertrend_direction": -1.0,
             "sentiment_score": 0.75
         }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:27:30.875516+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish news (institutional adoption, positive sentiment) and positive On-Balance Volume (OBV) indicate underlying buying pressure. Despite short-term bearish candlestick patterns and a downtrending Supertrend, the overall market sentiment and ML forecast suggest an upward bias. Entering long with defined risk management is prudent.",
+        "trade_parameters": {
+            "entry_price": 107516.38,
+            "stop_loss": 106500.0,
+            "take_profit": 109500.0,
+            "leverage": 78,
+            "size": 7.674,
+            "collateral_required": 10578.364391270932
+        },
+        "market_snapshot": {
+            "price": 107516.38,
+            "rsi_14": 56.02554225807979,
+            "macd_hist": -70.64319649468757,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:30:23.998702+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish news (major institutional integration, global access expansion) and positive On-Balance Volume (OBV) slope indicate significant underlying buying pressure and a robust fundamental outlook. While short-term technicals (MACD histogram, Supertrend, bearish candlestick patterns) suggest a current downtrend or consolidation on the 15m timeframe, these are likely temporary pullbacks within a larger bullish narrative. The ML forecast also supports a slight upward movement. The decision to LONG prioritizes the strong fundamental drivers, viewing current technical weakness as a potential buying opportunity.",
+        "trade_parameters": {
+            "entry_price": 107537.29,
+            "stop_loss": 107200.0,
+            "take_profit": 108050.0,
+            "leverage": 71,
+            "size": 21.05,
+            "collateral_required": 31882.738889383625
+        },
+        "market_snapshot": {
+            "price": 107537.29,
+            "rsi_14": 56.80452003368709,
+            "macd_hist": -69.30813096762517,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:31:42.280525+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "Strong bullish news sentiment, positive OBV slope, and a bullish HIKKAKE candlestick pattern suggest a potential upward reversal. While Supertrend indicates a downtrend and MACD is negative, the confluence of sentiment, volume accumulation, and a reversal pattern outweighs the lagging trend indicators for a short-term long position. ML forecast also points slightly higher.",
+        "trade_parameters": {
+            "entry_price": 107502.64,
+            "stop_loss": 106900.0,
+            "take_profit": 108500.0,
+            "leverage": 68,
+            "size": 11.284,
+            "collateral_required": 17838.616752953687
+        },
+        "market_snapshot": {
+            "price": 107502.64,
+            "rsi_14": 55.42326471309078,
+            "macd_hist": -64.01204417316663,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.65
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:33:03.259022+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish market sentiment (0.85) driven by increasing institutional engagement and positive volume accumulation (OBV slope positive) are key drivers. While Supertrend indicates a downtrend and MACD histogram is negative, these are outweighed by the fundamental bullishness and volume. ML forecast is slightly bullish. Candlestick patterns show mixed signals but include bullish indicators like HIKKAKE and DOJI_10_0.1, suggesting potential for upward movement after consolidation.",
+        "trade_parameters": {
+            "entry_price": 107523.55,
+            "stop_loss": 107300.0,
+            "take_profit": 107850.0,
+            "leverage": 74,
+            "size": 33.102,
+            "collateral_required": 48098.21069111994
+        },
+        "market_snapshot": {
+            "price": 107523.55,
+            "rsi_14": 56.33680058682976,
+            "macd_hist": -62.5301980193141,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:34:18.870029+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "The market exhibits strong bullish sentiment driven by institutional adoption and positive news. Multiple bullish candlestick patterns (DOJI, DRAGONFLYDOJI, HARAMI, etc.) and a positive OBV slope indicate buying pressure. While Supertrend shows a downtrend and MACD is negative, the confluence of strong fundamental bullishness and immediate price action signals a potential upward move, outweighing the lagging indicators.",
+        "trade_parameters": {
+            "entry_price": 107553.24,
+            "stop_loss": 107000.0,
+            "take_profit": 108100.0,
+            "leverage": 78,
+            "size": 14.099,
+            "collateral_required": 19440.611669438036
+        },
+        "market_snapshot": {
+            "price": 107553.24,
+            "rsi_14": 57.309434216072695,
+            "macd_hist": -60.783508560622124,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.75
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:35:36.139901+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Bullish market sentiment, positive OBV slope, and a HIKKAKE bullish candlestick pattern indicate potential upward momentum. While Supertrend shows a downtrend and MACD is negative, the confluence of sentiment, volume, and the HIKKAKE pattern suggests a likely short-term reversal or bounce.",
+        "trade_parameters": {
+            "entry_price": 107499.49,
+            "stop_loss": 106900.0,
+            "take_profit": 108600.0,
+            "leverage": 71,
+            "size": 11.843,
+            "collateral_required": 17931.823716825813
+        },
+        "market_snapshot": {
+            "price": 107499.49,
+            "rsi_14": 55.30161262685773,
+            "macd_hist": -64.21306981418934,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.65
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:36:56.086804+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish news sentiment and positive OBV indicate underlying accumulation and a favorable long-term outlook. Bullish HARAMI and HIKKAKE candlestick patterns suggest a potential reversal or end of the current short-term downtrend indicated by Supertrend and negative MACD Histogram. Entering on a potential dip before a continuation of the broader bullish trend.",
+        "trade_parameters": {
+            "entry_price": 107570.0,
+            "stop_loss": 107000.0,
+            "take_profit": 108500.0,
+            "leverage": 71,
+            "size": 12.456,
+            "collateral_required": 18871.929824561405
+        },
+        "market_snapshot": {
+            "price": 107589.99,
+            "rsi_14": 58.395260885354794,
+            "macd_hist": -58.43757123869332,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.7
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:38:14.845047+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "A strong confluence of multiple bullish candlestick patterns (DOJI, HARAMI, HIKKAKE, etc.), coupled with a positive market sentiment score and an upward-sloping OBV, suggests potential upward momentum. While the Supertrend indicates a downtrend and MACD histogram is negative, the overwhelming bullish pattern recognition and positive sentiment provide a strong bullish bias for a short-term trade.",
+        "trade_parameters": {
+            "entry_price": 107553.77,
+            "stop_loss": 106800.0,
+            "take_profit": 108685.0,
+            "leverage": 71,
+            "size": 9.419,
+            "collateral_required": 14268.778274539904
+        },
+        "market_snapshot": {
+            "price": 107553.77,
+            "rsi_14": 57.32579489788816,
+            "macd_hist": -60.74904702216341,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:39:40.601995+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish market sentiment, institutional interest, and positive OBV indicate underlying strength and accumulation. Bullish candlestick patterns (HARAMI, SPINNINGTOP) suggest a potential reversal or continuation after recent 'minor price dips.' While Supertrend indicates a downtrend and MACD is negative, these likely reflect the short-term dips which are now showing signs of reversal. The confluence of sentiment, volume, and candlestick patterns outweighs the lagging bearish technicals for a short-term bounce.",
+        "trade_parameters": {
+            "entry_price": 107600.0,
+            "stop_loss": 107400.0,
+            "take_profit": 107950.0,
+            "leverage": 71,
+            "size": 35.5,
+            "collateral_required": 53800.0
+        },
+        "market_snapshot": {
+            "price": 107600.0,
+            "rsi_14": 58.68143634189279,
+            "macd_hist": -57.79875642387384,
+            "supertrend_direction": -1.0,
+            "sentiment_score": 0.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:41:04.877946+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "A strong confluence of bullish indicators, including an 'Uptrend' from Supertrend, positive OBV slope, RSI above 60, and a 'CLOSINGMARUBOZU' bullish candlestick pattern, supports a long position. Market sentiment is cautiously positive due to institutional interest. While the MACD Histogram is negative and the ML forecast suggests a minor pullback, the overall momentum and trend indicators outweigh these short-term concerns, indicating a likely continuation of the uptrend.",
+        "trade_parameters": {
+            "entry_price": 107745.09,
+            "stop_loss": 107500.0,
+            "take_profit": 108235.0,
+            "leverage": 74,
+            "size": 30.193,
+            "collateral_required": 43961.43865518852
+        },
+        "market_snapshot": {
+            "price": 107745.09,
+            "rsi_14": 62.42717050777037,
+            "macd_hist": -48.54008975720686,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.35
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:43:44.863376+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "Confluence of strong bullish signals including Supertrend uptrend, positive OBV slope, and a powerful CLOSINGMARUBOZU candlestick, supported by positive news on institutional adoption. While MACD shows bearish momentum and the ML forecast suggests a slight dip, the underlying trend and immediate price action indicate buying pressure. A calculated risk is warranted.",
+        "trade_parameters": {
+            "entry_price": 107725.8,
+            "stop_loss": 106500.0,
+            "take_profit": 110200.0,
+            "leverage": 68,
+            "size": 5.547,
+            "collateral_required": 8788.203622124307
+        },
+        "market_snapshot": {
+            "price": 107725.8,
+            "rsi_14": 62.13639485799508,
+            "macd_hist": -49.324408845523834,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:47:50.400730+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish fundamental news and sentiment, coupled with an established uptrend (Supertrend) and positive volume (OBV). The bullish SHORTLINE candlestick pattern reinforces upward potential. While MACD shows negative momentum and a slight ML forecast dip suggests a minor pullback, the overall confluence points to a continuation of the uptrend, making a long position favorable.",
+        "trade_parameters": {
+            "entry_price": 107591.01,
+            "stop_loss": 107053.05,
+            "take_profit": 109200.0,
+            "leverage": 71,
+            "size": 13.198,
+            "collateral_required": 19999.815971447995
+        },
+        "market_snapshot": {
+            "price": 107825.32,
+            "rsi_14": 64.33491717811323,
+            "macd_hist": -29.390867196434726,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:49:11.226177+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Overwhelmingly bullish sentiment driven by institutional adoption news, robust demand, and increased utility. This fundamental strength is strongly supported by a confluence of bullish candlestick patterns (BELTHOLD, CLOSINGMARUBOZU, LONGLINE, MARUBOZU), an active Supertrend uptrend, and positive OBV slope indicating accumulation. While the MACD histogram is negative and the ML forecast suggests a slight short-term dip, these are likely minor consolidations within a strong prevailing uptrend and are outweighed by the significant bullish confluence.",
+        "trade_parameters": {
+            "entry_price": 107933.96,
+            "stop_loss": 107500.0,
+            "take_profit": 108700.0,
+            "leverage": 82,
+            "size": 18.896,
+            "collateral_required": 24871.86837496507
+        },
+        "market_snapshot": {
+            "price": 107933.96,
+            "rsi_14": 66.64908943808729,
+            "macd_hist": -22.45835437592268,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:51:59.179289+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Strong bullish sentiment from institutional adoption news, coupled with an established uptrend (Supertrend) and positive volume flow (OBV), outweighs minor bearish signals from MACD histogram and ML forecast. A LONG position is favored.",
+        "trade_parameters": {
+            "entry_price": 107672.89,
+            "stop_loss": 106500.0,
+            "take_profit": 109400.0,
+            "leverage": 82,
+            "size": 6.991,
+            "collateral_required": 9180.135392065757
+        },
+        "market_snapshot": {
+            "price": 107672.89,
+            "rsi_14": 59.38689611552771,
+            "macd_hist": -39.11923186880685,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.6
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:54:34.278593+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits strong bullish sentiment driven by institutional adoption and increasing utility. The Supertrend indicator confirms an uptrend, and the positive OBV slope suggests accumulation. While the MACD histogram is negative, indicating short-term bearish momentum, it is likely a minor pullback within the established uptrend, supported by a neutral RSI and price within Bollinger Bands. The confluence of overall bullish factors outweighs the short-term MACD signal.",
+        "trade_parameters": {
+            "entry_price": 107583.05,
+            "stop_loss": 107000.0,
+            "take_profit": 108450.0,
+            "leverage": 74,
+            "size": 12.692,
+            "collateral_required": 18451.770860131972
+        },
+        "market_snapshot": {
+            "price": 107633.97,
+            "rsi_14": 57.958108183736854,
+            "macd_hist": -41.60301534457048,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:55:50.193294+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Overall market sentiment is strongly bullish due to increasing corporate adoption and positive utility developments, which aligns with the Supertrend indicating an uptrend and positive OBV slope. While the MACD histogram suggests short-term momentum loss and the ML forecast is slightly lower, this presents a potential entry opportunity on a minor dip within the broader bullish trend.",
+        "trade_parameters": {
+            "entry_price": 107580.0,
+            "stop_loss": 107000.0,
+            "take_profit": 108500.0,
+            "leverage": 82,
+            "size": 14.138,
+            "collateral_required": 18548.275862068967
+        },
+        "market_snapshot": {
+            "price": 107633.96,
+            "rsi_14": 57.95774990929281,
+            "macd_hist": -41.60365352121099,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:57:11.230136+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Strong bullish sentiment driven by news of corporate and institutional adoption, alongside positive fundamental developments in the crypto space. Technical indicators like Supertrend confirm an uptrend, and positive OBV indicates buying pressure. RSI is strong at 62.88. While MACD is negative and some candlestick patterns suggest indecision, the overall confluence of fundamental strength and trend-following indicators favors a long position. The ML forecast suggests a slight dip, offering a potentially better entry point.",
+        "trade_parameters": {
+            "entry_price": 107588.45,
+            "stop_loss": 106000.0,
+            "take_profit": 109970.0,
+            "leverage": 82,
+            "size": 5.162,
+            "collateral_required": 6773.17196008689
+        },
+        "market_snapshot": {
+            "price": 107763.83,
+            "rsi_14": 62.876815097534475,
+            "macd_hist": -33.31501534458167,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:58:30.502698+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "The market exhibits strong bullish sentiment (0.70) driven by increasing institutional and corporate accumulation, alongside expanding utility. This fundamental strength is supported by a confirmed uptrend (Supertrend) and positive buying pressure (OBV slope). RSI is neutral-bullish, indicating room for further upside. While the MACD histogram is negative and the ML forecast is slightly lower, these suggest a potential minor pullback or consolidation within the dominant bullish trend, rather than a reversal. The confluence of strong fundamentals and trend indicators outweighs these minor counter-signals, presenting a favorable long opportunity.",
+        "trade_parameters": {
+            "entry_price": 107670.12,
+            "stop_loss": 106000.0,
+            "take_profit": 110500.0,
+            "leverage": 86,
+            "size": 5.149,
+            "collateral_required": 6446.849328192004
+        },
+        "market_snapshot": {
+            "price": 107670.12,
+            "rsi_14": 59.2828825887184,
+            "macd_hist": -39.29600679757223,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.7
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T13:59:50.595959+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Market sentiment is strongly bullish due to fundamental drivers like corporate adoption and expanding utility. Technical indicators such as Supertrend and OBV confirm an ongoing uptrend. While MACD shows negative momentum and the ML forecast suggests a slight dip, these are likely minor corrections within the dominant bullish trend. The confluence of strong bullish sentiment and confirmed uptrend outweighs the minor bearish signals, favoring a long position.",
+        "trade_parameters": {
+            "entry_price": 107590.0,
+            "stop_loss": 106500.0,
+            "take_profit": 109200.0,
+            "leverage": 78,
+            "size": 7.156,
+            "collateral_required": 9870.642201834862
+        },
+        "market_snapshot": {
+            "price": 107766.32,
+            "rsi_14": 62.93792640769743,
+            "macd_hist": -33.156747538320815,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:01:08.961938+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "Overwhelmingly bullish market sentiment and news, coupled with a confirmed uptrend by Supertrend and positive OBV slope, indicate strong buying pressure. Bullish candlestick patterns (INSIDE, SHORTLINE) further support upward movement. While MACD histogram shows weakening momentum and ML forecast suggests a slight dip, the confluence of strong fundamental and technical bullish signals outweighs these minor short-term concerns, presenting an opportunity to long on a potential minor pullback.",
+        "trade_parameters": {
+            "entry_price": 107608.51,
+            "stop_loss": 106500.0,
+            "take_profit": 109270.0,
+            "leverage": 86,
+            "size": 7.758,
+            "collateral_required": 9707.49113675118
+        },
+        "market_snapshot": {
+            "price": 107846.15,
+            "rsi_14": 64.93554002942682,
+            "macd_hist": -18.793131208038687,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:02:29.761783+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish news and sentiment, coupled with an established uptrend (Supertrend, positive OBV). While MACD and mixed candlestick patterns suggest short-term consolidation or minor pullback, this is likely a temporary pause offering a strategic entry point before the continuation of the primary bullish trend.",
+        "trade_parameters": {
+            "entry_price": 107605.16,
+            "stop_loss": 106800.0,
+            "take_profit": 108800.0,
+            "leverage": 74,
+            "size": 9.191,
+            "collateral_required": 13364.444334045349
+        },
+        "market_snapshot": {
+            "price": 107765.36,
+            "rsi_14": 62.85711737894641,
+            "macd_hist": -23.94832209124303,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:03:48.758899+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.88,
+        "ai_reasoning": "The market exhibits strong bullish sentiment driven by significant corporate accumulation, increasing utility, and major partnerships. Technical indicators like Supertrend and a positive OBV slope confirm an uptrend, further supported by multiple bullish candlestick patterns (GAPSIDESIDEWHITE, INSIDE, SHORTLINE). While the ML forecast suggests a slight short-term pullback and MACD histogram is negative, these are minor short-term signals against an overwhelmingly bullish confluence, presenting a potential optimal entry point before continued upward movement.",
+        "trade_parameters": {
+            "entry_price": 107606.59,
+            "stop_loss": 106900.0,
+            "take_profit": 110500.0,
+            "leverage": 88,
+            "size": 12.454,
+            "collateral_required": 15228.999844322807
+        },
+        "market_snapshot": {
+            "price": 107799.99,
+            "rsi_14": 63.80560376840517,
+            "macd_hist": -21.73895456986807,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:05:03.750668+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.88,
+        "ai_reasoning": "Overwhelmingly bullish market sentiment driven by strong institutional adoption and high probabilities for new ETF approvals. This is strongly supported by a confirmed Supertrend uptrend, positive OBV slope, and bullish RSI. Multiple bullish candlestick patterns reinforce the upward momentum. While MACD histogram is negative and ML forecast suggests a slight dip, these are minor counter-signals likely indicating a brief consolidation or pullback, which presents a favorable entry point within the dominant uptrend.",
+        "trade_parameters": {
+            "entry_price": 107816.8,
+            "stop_loss": 107200.0,
+            "take_profit": 109300.0,
+            "leverage": 88,
+            "size": 14.267,
+            "collateral_required": 17480.025940337146
+        },
+        "market_snapshot": {
+            "price": 107816.8,
+            "rsi_14": 64.59020913662825,
+            "macd_hist": -19.713381920292306,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:06:22.536438+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.88,
+        "ai_reasoning": "Overwhelmingly bullish sentiment driven by high odds for altcoin ETF approvals and significant capital infusions. This fundamental strength is strongly supported by technical indicators: Supertrend confirms an uptrend, OBV slope is positive indicating accumulation, and all identified candlestick patterns are bullish. While MACD shows short-term negative momentum and the ML forecast suggests a slight dip, these are interpreted as potential opportunities for a favorable entry within the broader, strong bullish trend.",
+        "trade_parameters": {
+            "entry_price": 107700.0,
+            "stop_loss": 107150.0,
+            "take_profit": 109000.0,
+            "leverage": 88,
+            "size": 16.0,
+            "collateral_required": 19581.81818181818
+        },
+        "market_snapshot": {
+            "price": 107819.74,
+            "rsi_14": 64.29809591577394,
+            "macd_hist": -20.477917532823767,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:07:40.945225+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "Overwhelming bullish sentiment from news (high odds of altcoin ETF approvals, significant capital raises, major platform expansions) is strongly supported by multiple bullish technical indicators including an 'Uptrend' from Supertrend, positive OBV slope, and bullish candlestick patterns (CLOSINGMARUBOZU, INSIDE, LONGLINE). RSI indicates strong buying pressure. While the ML forecast suggests a minor dip and MACD histogram is negative, these are outweighed by the strong confluence of bullish factors, indicating a likely continuation of the uptrend.",
+        "trade_parameters": {
+            "entry_price": 107902.91,
+            "stop_loss": 106800.0,
+            "take_profit": 110100.0,
+            "leverage": 86,
+            "size": 7.798,
+            "collateral_required": 9783.473719523776
+        },
+        "market_snapshot": {
+            "price": 107902.91,
+            "rsi_14": 66.23181436506317,
+            "macd_hist": -15.170840609751906,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:09:00.682302+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "The market sentiment is overwhelmingly bullish (0.80 score) driven by institutional expansion, altcoin ETF prospects, and new infrastructure. This strong fundamental tailwind is supported by a confirmed uptrend (Supertrend), positive volume accumulation (OBV), and bullish candlestick patterns (INSIDE, SHORTLINE). While the MACD histogram is negative and the ML forecast suggests a slight short-term dip, the confluence of strong bullish factors indicates a high probability of continued upward movement after potential minor consolidation.",
+        "trade_parameters": {
+            "entry_price": 107889.5,
+            "stop_loss": 107000.0,
+            "take_profit": 110600.0,
+            "leverage": 86,
+            "size": 9.668,
+            "collateral_required": 12129.229904440695
+        },
+        "market_snapshot": {
+            "price": 107889.5,
+            "rsi_14": 65.93428235137671,
+            "macd_hist": -16.026635481548283,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:10:16.079008+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "Overwhelmingly bullish market sentiment, confirmed by strong institutional interest and regulatory advancements, aligns with a Supertrend uptrend, positive OBV, and bullish candlestick patterns (INSIDE, SHORTLINE). While MACD shows negative momentum and ML forecasts a slight dip, these are considered minor pullbacks within a strong overall uptrend, potentially offering a better entry point. Capital preservation is prioritized by setting a clear stop-loss below potential support.",
+        "trade_parameters": {
+            "entry_price": 107609.26,
+            "stop_loss": 106500.0,
+            "take_profit": 110000.0,
+            "leverage": 86,
+            "size": 7.753,
+            "collateral_required": 9700.99525810004
+        },
+        "market_snapshot": {
+            "price": 107864.08,
+            "rsi_14": 65.35541518302668,
+            "macd_hist": -17.64951867243812,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.9
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:11:35.338421+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Strong bullish sentiment from news, confirmed by Supertrend uptrend, positive OBV, and bullish candlestick patterns (INSIDE, SHORTLINE). While MACD histogram is negative and ML forecast suggests a minor short-term dip, these are likely minor pullbacks within a strong overall uptrend. The confluence of factors points to continued upward momentum.",
+        "trade_parameters": {
+            "entry_price": 107887.82,
+            "stop_loss": 106269.51,
+            "take_profit": 110585.01,
+            "leverage": 82,
+            "size": 5.067,
+            "collateral_required": 6666.696739190835
+        },
+        "market_snapshot": {
+            "price": 107887.82,
+            "rsi_14": 65.87890692467215,
+            "macd_hist": -16.18426511118028,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:12:57.193554+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Market sentiment is strongly bullish due to significant institutional adoption, project funding, and high probabilities of crypto ETF approvals. This is strongly supported by an uptrending Supertrend, positive OBV slope, and multiple bullish candlestick patterns (CLOSINGMARUBOZU, INSIDE, LONGLINE). While the MACD histogram is negative and the ML forecast suggests a slight dip, the overwhelming confluence of bullish indicators outweighs these minor counterpoints, indicating strong upward momentum.",
+        "trade_parameters": {
+            "entry_price": 107942.8,
+            "stop_loss": 107000.0,
+            "take_profit": 109500.0,
+            "leverage": 82,
+            "size": 8.697,
+            "collateral_required": 11449.172677131912
+        },
+        "market_snapshot": {
+            "price": 107942.8,
+            "rsi_14": 67.08692033506529,
+            "macd_hist": -12.625154000069728,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:14:15.183432+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Strong bullish market sentiment driven by institutional adoption and ETF optimism, reinforced by an established uptrend (Supertrend, positive OBV) and bullish candlestick patterns. Despite a negative MACD histogram and a minor ML forecast dip, the overall confluence strongly favors an upward move. The high RSI indicates strong momentum.",
+        "trade_parameters": {
+            "entry_price": 107957.5,
+            "stop_loss": 106500.0,
+            "take_profit": 110650.0,
+            "leverage": 82,
+            "size": 5.626,
+            "collateral_required": 7407.032590051458
+        },
+        "market_snapshot": {
+            "price": 107957.5,
+            "rsi_14": 67.39121901905072,
+            "macd_hist": -11.687034341952085,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.88
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:18:07.930900+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Overwhelmingly bullish news and sentiment (0.85 score) combined with a confirmed uptrend (Supertrend) and positive accumulation (OBV slope) strongly indicate upward momentum. While short-term candlestick patterns (BELTHOLD, ENGULFING) and MACD histogram show minor bearish signals, these are likely indicative of consolidation within the broader bullish trend rather than a reversal. The confluence of strong fundamental support and underlying technical strength outweighs short-term bearish indicators.",
+        "trade_parameters": {
+            "entry_price": 107700.0,
+            "stop_loss": 107000.0,
+            "take_profit": 109500.0,
+            "leverage": 82,
+            "size": 11.714,
+            "collateral_required": 15385.714285714284
+        },
+        "market_snapshot": {
+            "price": 107748.9,
+            "rsi_14": 58.822816040624026,
+            "macd_hist": -10.949141224837035,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.85
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:22:08.671015+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits a strong bullish sentiment (0.68) supported by significant investments and regulatory advancements. The Supertrend indicates an ongoing uptrend, and the positive OBV slope confirms sustained buying pressure. While the ML forecast suggests a slight short-term dip and the MACD histogram is negative, along with a bearish BELTHOLD candlestick, these are likely minor pullbacks or consolidations within an overall robust uptrend. Entering on a slight dip aligns with capital preservation while capitalizing on the prevailing bullish momentum.",
+        "trade_parameters": {
+            "entry_price": 107642.15,
+            "stop_loss": 106000.0,
+            "take_profit": 110900.0,
+            "leverage": 74,
+            "size": 4.506,
+            "collateral_required": 6554.952349054616
+        },
+        "market_snapshot": {
+            "price": 107824.98,
+            "rsi_14": 61.254307702071145,
+            "macd_hist": -6.515089942785096,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.68
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:23:32.701345+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish sentiment (0.60) and positive news, combined with an active Supertrend uptrend and positive OBV, indicate robust underlying strength. While short-term indicators like the ML forecast, MACD histogram, and BELTHOLD candlestick pattern suggest minor pullbacks, they are considered temporary within the established uptrend. The confluence favors a continuation of the upward movement.",
+        "trade_parameters": {
+            "entry_price": 107700.0,
+            "stop_loss": 106600.0,
+            "take_profit": 110000.0,
+            "leverage": 78,
+            "size": 7.091,
+            "collateral_required": 9790.90909090909
+        },
+        "market_snapshot": {
+            "price": 107788.57,
+            "rsi_14": 59.955581913237765,
+            "macd_hist": -8.838691082389659,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.6
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:24:52.178675+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "The overall market sentiment is strongly bullish (0.70), reinforced by a clear Supertrend uptrend and positive OBV slope, indicating robust buying pressure. RSI is also in bullish territory. While the MACD histogram is negative and a BELTHOLD (bearish) candlestick pattern is present, these suggest a potential minor pullback or consolidation within the dominant uptrend, rather than a reversal. The ML forecast also points to a slight dip, presenting a strategic entry opportunity. The confluence of strong fundamental and trend indicators outweighs the short-term bearish signals.",
+        "trade_parameters": {
+            "entry_price": 107640.0,
+            "stop_loss": 107000.0,
+            "take_profit": 108800.0,
+            "leverage": 82,
+            "size": 12.812,
+            "collateral_required": 16818.75
+        },
+        "market_snapshot": {
+            "price": 107815.3,
+            "rsi_14": 60.90356773675628,
+            "macd_hist": -7.132844928538077,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.7
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:26:12.194928+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Overwhelmingly bullish sentiment and strong technical indicators (Supertrend, MACD, OBV, RSI) confirm an ongoing uptrend. While bearish candlestick patterns (HANGINGMAN, HARAMI) and a slightly lower ML forecast suggest a potential minor pullback, this is likely a short-term dip within the broader bullish trend, offering a strategic entry point.",
+        "trade_parameters": {
+            "entry_price": 107650.0,
+            "stop_loss": 107000.0,
+            "take_profit": 108800.0,
+            "leverage": 78,
+            "size": 12.0,
+            "collateral_required": 16561.53846153846
+        },
+        "market_snapshot": {
+            "price": 107955.24,
+            "rsi_14": 66.40003215424728,
+            "macd_hist": 1.7977989461015795,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.6
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:27:31.049013+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "The market exhibits strong bullish sentiment, supported by positive news regarding adoption, funding, and regulatory advancements. Technical indicators like Supertrend, MACD histogram, and OBV slope all confirm a robust uptrend and sustained buying pressure. While the RSI is high, it's not yet overbought, suggesting room for further upside. The HANGINGMAN candlestick pattern and a slightly lower ML forecast indicate potential for a minor pullback or consolidation, but these are outweighed by the dominant bullish confluence. A long position is favored, with a stop loss to manage the risk of a deeper correction.",
+        "trade_parameters": {
+            "entry_price": 108067.55,
+            "stop_loss": 107000.0,
+            "take_profit": 110500.0,
+            "leverage": 86,
+            "size": 8.056,
+            "collateral_required": 10122.94974474261
+        },
+        "market_snapshot": {
+            "price": 108067.55,
+            "rsi_14": 69.60219843285792,
+            "macd_hist": 8.965160769466195,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:28:48.665708+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Overall market sentiment is strongly bullish, supported by positive news, an active Supertrend uptrend, and positive OBV slope indicating buying pressure. RSI also confirms bullish momentum. While a bearish HARAMI candlestick pattern and a slightly lower ML forecast suggest a potential minor pullback or consolidation, the confluence of macro and trend indicators points to a continuation of the uptrend. A long position is favored, ideally entered on a slight dip.",
+        "trade_parameters": {
+            "entry_price": 107750.0,
+            "stop_loss": 107450.0,
+            "take_profit": 108800.0,
+            "leverage": 78,
+            "size": 26.0,
+            "collateral_required": 35916.666666666664
+        },
+        "market_snapshot": {
+            "price": 107864.42,
+            "rsi_14": 62.72573808850961,
+            "macd_hist": -3.998759458449314,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.6
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:32:40.948255+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits strong bullish sentiment (0.70) and a confirmed uptrend by the Supertrend indicator, suggesting a continuation of upward movement. While short-term indicators like MACD histogram, OBV slope, and candlestick patterns (INSIDE, SHORTLINE) show bearish signals and the ML forecast suggests a slight dip to $107670.05, this confluence indicates a minor pullback within a dominant bullish trend. This presents an opportune entry to long, capitalizing on the overarching positive market dynamics.",
+        "trade_parameters": {
+            "entry_price": 107670.05,
+            "stop_loss": 107000.0,
+            "take_profit": 108800.0,
+            "leverage": 74,
+            "size": 11.044,
+            "collateral_required": 16068.957540481984
+        },
+        "market_snapshot": {
+            "price": 107798.55,
+            "rsi_14": 60.16457863739338,
+            "macd_hist": -6.894169341895804,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.7
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:39:10.382046+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.88,
+        "ai_reasoning": "Strong confluence of bullish technical indicators including an active Supertrend uptrend, positive MACD histogram, positive OBV slope, and bullish candlestick patterns (HARAMI, INSIDE). RSI is in bullish territory. Market sentiment is moderately positive. While the ML forecast suggests a minor short-term dip, the overwhelming technical strength indicates a high probability of continued upward movement.",
+        "trade_parameters": {
+            "entry_price": 107943.51,
+            "stop_loss": 106334.85,
+            "take_profit": 110102.38,
+            "leverage": 88,
+            "size": 5.47,
+            "collateral_required": 6710.150684420619
+        },
+        "market_snapshot": {
+            "price": 107943.51,
+            "rsi_14": 64.35697056087105,
+            "macd_hist": 2.3574773817489927,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.5
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:43:31.595111+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "The market exhibits strong bullish confluence across multiple indicators. Technicals show a clear uptrend (Supertrend, positive MACD, positive OBV slope), and RSI is in bullish territory. All identified candlestick patterns (CLOSINGMARUBOZU, ENGULFING, INSIDE) are bullish. News sentiment is moderately positive, driven by innovation and adoption efforts. While the ML forecast suggests a slight pullback to $107551.10, the overwhelming bullish signals indicate this could be a minor consolidation or an optimal entry point within an ongoing uptrend.",
+        "trade_parameters": {
+            "entry_price": 108000.0,
+            "stop_loss": 107000.0,
+            "take_profit": 110000.0,
+            "leverage": 86,
+            "size": 8.6,
+            "collateral_required": 10800.0
+        },
+        "market_snapshot": {
+            "price": 108049.99,
+            "rsi_14": 66.54267818968137,
+            "macd_hist": 9.152782225066716,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:44:49.751398+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "Overwhelming bullish confluence from market sentiment (0.45 score, positive news drivers), strong technical indicators (Supertrend in Uptrend, positive MACD histogram, positive OBV slope, RSI at 63.76), and multiple bullish candlestick patterns (HARAMI, INSIDE, SPINNINGTOP). The ML forecast suggests a minor pullback, which could be seen as a brief consolidation or a better entry point, but does not negate the strong underlying bullish momentum.",
+        "trade_parameters": {
+            "entry_price": 107916.74,
+            "stop_loss": 107350.0,
+            "take_profit": 109500.0,
+            "leverage": 86,
+            "size": 15.175,
+            "collateral_required": 19041.666372586904
+        },
+        "market_snapshot": {
+            "price": 107916.74,
+            "rsi_14": 63.76427738967369,
+            "macd_hist": 0.6560984643808752,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T14:47:27.986698+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "Confluence of strong bullish candlestick patterns (ENGULFING, INSIDE, SHORTLINE) and Supertrend indicating an uptrend. News sentiment is cautiously positive. While the ML forecast suggests a slight dip and OBV/MACD histogram show negative momentum, the immediate price action signals are bullish, warranting a long position with robust risk management.",
+        "trade_parameters": {
+            "entry_price": 107890.0,
+            "stop_loss": 107300.0,
+            "take_profit": 108900.0,
+            "leverage": 68,
+            "size": 11.525,
+            "collateral_required": 18286.4406779661
+        },
+        "market_snapshot": {
+            "price": 107892.02,
+            "rsi_14": 62.475977344072156,
+            "macd_hist": -3.7084608103806715,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.4
+        }
     }
 ]
