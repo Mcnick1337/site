@@ -3,7 +3,6 @@
 const fetch = require('node-fetch');
 
 module.exports.handler = async function(event, context) {
-    // --- CHANGE 1: Read the new 'endTime' parameter ---
     const { symbol, startTime, interval, endTime } = event.queryStringParameters;
 
     const candleType = interval || '1hour';
@@ -14,17 +13,17 @@ module.exports.handler = async function(event, context) {
 
     try {
         const kucoinSymbol = symbol.replace(/USDT$/, '-USDT');
+        
+        // --- THE FIX IS HERE: Convert incoming millisecond timestamps to seconds ---
         const startTimeInSeconds = Math.floor(parseInt(startTime) / 1000);
         
-        // Use 'let' to allow modification
         let apiUrl = `https://api.kucoin.com/api/v1/market/candles?type=${candleType}&symbol=${kucoinSymbol}&startAt=${startTimeInSeconds}`;
 
-        // --- CHANGE 2: Conditionally add the 'endAt' parameter if it exists ---
         if (endTime) {
+            // --- AND HERE: Also convert the endTime to seconds ---
             const endTimeInSeconds = Math.floor(parseInt(endTime) / 1000);
             apiUrl += `&endAt=${endTimeInSeconds}`;
         }
-        // --- End of changes ---
 
         console.log(`[INFO] Fetching from KuCoin API: ${apiUrl}`);
 
