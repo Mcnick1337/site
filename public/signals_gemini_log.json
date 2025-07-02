@@ -263,9 +263,9 @@
     "timestamp": "2025-06-03T15:42:24.626168",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 2667.93,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 2.29,
       "mae_percentage": -1.72,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -537,9 +537,9 @@
     "timestamp": "2025-06-03T20:09:49.616293",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 154.53,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 3.75,
       "mae_percentage": 0.0,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -699,9 +699,9 @@
     "timestamp": "2025-06-03T22:09:36.607132",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 153.53,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 1.6,
       "mae_percentage": -1.39,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -783,9 +783,9 @@
     "timestamp": "2025-06-03T23:41:42.009500",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 153.26,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 1.46,
       "mae_percentage": -1.78,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -862,9 +862,9 @@
     "timestamp": "2025-06-04T00:09:39.918104",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 153.81,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 1.14,
       "mae_percentage": -2.11,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -7605,9 +7605,9 @@
     "timestamp": "2025-06-06T17:55:08.118222",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 105393.21,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 1.13,
       "mae_percentage": -0.72,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -8627,9 +8627,9 @@
     "timestamp": "2025-06-07T03:25:57.502719",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 2511.72,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 2.18,
       "mae_percentage": -0.4,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -9583,9 +9583,9 @@
     "timestamp": "2025-06-07T13:25:46.534268",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 105627.9,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 0.58,
       "mae_percentage": -0.56,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -9663,9 +9663,9 @@
     "timestamp": "2025-06-07T14:17:17.088630",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 105829.66,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 0.46,
       "mae_percentage": -0.67,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -9830,9 +9830,9 @@
     "timestamp": "2025-06-07T15:57:33.147916",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 105984.52,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 0.63,
       "mae_percentage": -0.51,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -9858,9 +9858,9 @@
     "timestamp": "2025-06-07T15:58:52.064923",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 2514.44,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 1.17,
       "mae_percentage": -0.97,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -10161,9 +10161,9 @@
     "timestamp": "2025-06-07T19:24:26.780704",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 106289.99,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 0.58,
       "mae_percentage": -0.74,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -10603,9 +10603,9 @@
     "timestamp": "2025-06-08T00:29:34.023010",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 105706.34,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 1.03,
       "mae_percentage": -0.41,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -10851,9 +10851,9 @@
     "timestamp": "2025-06-08T02:32:59.076896",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TIMEOUT_POSITIVE",
+      "status": "WIN",
       "closed_at_price": 105560.89,
-      "closed_by": "TIMEOUT",
+      "closed_by": "TP1",
       "mfe_percentage": 0.98,
       "mae_percentage": -0.46,
       "evaluation_details": "Signal timed out after 24 hours."
@@ -20532,8 +20532,12 @@
     "timestamp": "2025-06-12T12:13:51.850589",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 107800.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 0.86,
+      "mae_percentage": -0.28,
+      "evaluation_details": ""
     }
   },
   {
@@ -20554,8 +20558,12 @@
     "timestamp": "2025-06-12T12:15:06.452113",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2760.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.04,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -20576,8 +20584,12 @@
     "timestamp": "2025-06-12T12:16:51.874774",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 160.29,
+      "closed_by": "TP2",
+      "mfe_percentage": 1.86,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -20600,8 +20612,12 @@
     "timestamp": "2025-06-12T13:07:38.652409",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 107750.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 0.77,
+      "mae_percentage": -0.1,
+      "evaluation_details": ""
     }
   },
   {
@@ -20624,8 +20640,12 @@
     "timestamp": "2025-06-12T13:08:42.015891",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2770.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.1,
+      "mae_percentage": -0.74,
+      "evaluation_details": ""
     }
   },
   {
@@ -20648,8 +20668,12 @@
     "timestamp": "2025-06-12T13:10:20.720901",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 160.4,
+      "closed_by": "SL",
+      "mfe_percentage": 0.25,
+      "mae_percentage": -0.9,
+      "evaluation_details": ""
     }
   },
   {
@@ -20671,8 +20695,12 @@
     "timestamp": "2025-06-12T14:01:28.084534",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 107750.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 0.77,
+      "mae_percentage": -0.1,
+      "evaluation_details": ""
     }
   },
   {
@@ -20695,8 +20723,12 @@
     "timestamp": "2025-06-12T14:02:52.621910",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2722.5,
+      "closed_by": "SL",
+      "mfe_percentage": 0.84,
+      "mae_percentage": -1.33,
+      "evaluation_details": ""
     }
   },
   {
@@ -20720,8 +20752,12 @@
     "timestamp": "2025-06-12T14:04:29.711608",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 157.5,
+      "closed_by": "TP3",
+      "mfe_percentage": 1.92,
+      "mae_percentage": -0.52,
+      "evaluation_details": ""
     }
   },
   {
@@ -20742,8 +20778,12 @@
     "timestamp": "2025-06-12T14:55:42.826401",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 107600.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 0.67,
+      "mae_percentage": -0.2,
+      "evaluation_details": ""
     }
   },
   {
@@ -20764,8 +20804,12 @@
     "timestamp": "2025-06-12T14:57:25.127275",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2692.8,
+      "closed_by": "SL",
+      "mfe_percentage": 0.84,
+      "mae_percentage": -2.15,
+      "evaluation_details": ""
     }
   },
   {
@@ -20787,8 +20831,12 @@
     "timestamp": "2025-06-12T14:59:16.509210",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 158.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.47,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -20810,8 +20858,12 @@
     "timestamp": "2025-06-12T15:50:25.700711",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 108300.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.36,
+      "mae_percentage": -0.01,
+      "evaluation_details": ""
     }
   },
   {
@@ -20834,8 +20886,12 @@
     "timestamp": "2025-06-12T15:52:07.326078",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2760.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.58,
+      "mae_percentage": -0.48,
+      "evaluation_details": ""
     }
   },
   {
@@ -20859,8 +20915,12 @@
     "timestamp": "2025-06-12T15:53:23.938944",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 159.35,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -2.43,
+      "evaluation_details": ""
     }
   },
   {
@@ -20882,8 +20942,12 @@
     "timestamp": "2025-06-12T16:44:54.857273",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 106690.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.77,
+      "mae_percentage": -0.88,
+      "evaluation_details": ""
     }
   },
   {
@@ -20906,8 +20970,12 @@
     "timestamp": "2025-06-12T16:46:27.507029",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2756.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.69,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -20930,8 +20998,12 @@
     "timestamp": "2025-06-12T16:47:54.131861",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 159.95,
+      "closed_by": "SL",
+      "mfe_percentage": 0.03,
+      "mae_percentage": -1.46,
+      "evaluation_details": ""
     }
   },
   {
@@ -20952,8 +21024,12 @@
     "timestamp": "2025-06-12T17:39:27.172478",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 107650.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.15,
+      "mae_percentage": -0.95,
+      "evaluation_details": ""
     }
   },
   {
@@ -20974,8 +21050,12 @@
     "timestamp": "2025-06-12T17:41:21.025358",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2748.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.14,
+      "mae_percentage": -1.52,
+      "evaluation_details": ""
     }
   },
   {
@@ -20998,8 +21078,12 @@
     "timestamp": "2025-06-12T20:24:10.194843",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 106500.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -0.88,
+      "evaluation_details": ""
     }
   },
   {
@@ -21022,8 +21106,12 @@
     "timestamp": "2025-06-12T20:26:21.788399",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2650.0,
+      "closed_by": "TP2",
+      "mfe_percentage": 2.0,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -21046,8 +21134,12 @@
     "timestamp": "2025-06-12T20:27:39.118712",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 148.58,
+      "closed_by": "TP1",
+      "mfe_percentage": 7.96,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -21070,8 +21162,12 @@
     "timestamp": "2025-06-12T21:18:42.902614",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 105550.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -2.86,
+      "evaluation_details": ""
     }
   },
   {
@@ -21094,8 +21190,12 @@
     "timestamp": "2025-06-12T21:20:11.730221",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2565.5,
+      "closed_by": "TP2",
+      "mfe_percentage": 5.72,
+      "mae_percentage": -0.41,
+      "evaluation_details": ""
     }
   },
   {
@@ -21118,8 +21218,12 @@
     "timestamp": "2025-06-12T21:21:56.293932",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 149.85,
+      "closed_by": "SL",
+      "mfe_percentage": 0.07,
+      "mae_percentage": -6.88,
+      "evaluation_details": ""
     }
   },
   {
@@ -21141,8 +21245,12 @@
     "timestamp": "2025-06-12T22:22:49.313268",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 105700.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.18,
+      "mae_percentage": -0.26,
+      "evaluation_details": ""
     }
   },
   {
@@ -21165,8 +21273,12 @@
     "timestamp": "2025-06-12T22:24:20.431591",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2505.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 5.43,
+      "mae_percentage": -0.71,
+      "evaluation_details": ""
     }
   },
   {
@@ -21189,8 +21301,12 @@
     "timestamp": "2025-06-12T22:25:50.861424",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 148.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 6.66,
+      "mae_percentage": -0.3,
+      "evaluation_details": ""
     }
   },
   {
@@ -21213,8 +21329,12 @@
     "timestamp": "2025-06-12T23:16:19.433137",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 105204.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -2.49,
+      "evaluation_details": ""
     }
   },
   {
@@ -21237,8 +21357,12 @@
     "timestamp": "2025-06-12T23:17:40.662655",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2620.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.21,
+      "mae_percentage": -5.43,
+      "evaluation_details": ""
     }
   },
   {
@@ -21260,8 +21384,12 @@
     "timestamp": "2025-06-13T00:12:32.514251",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 102850.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.62,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -21282,8 +21410,12 @@
     "timestamp": "2025-06-13T01:04:40.796863",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 104300.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.05,
+      "mae_percentage": -0.42,
+      "evaluation_details": ""
     }
   },
   {
@@ -21304,8 +21436,12 @@
     "timestamp": "2025-06-13T01:06:05.059310",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2475.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.15,
+      "mae_percentage": -2.33,
+      "evaluation_details": ""
     }
   },
   {
@@ -21326,8 +21462,12 @@
     "timestamp": "2025-06-13T01:07:21.609899",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 147.5,
+      "closed_by": "SL",
+      "mfe_percentage": 2.63,
+      "mae_percentage": -2.63,
+      "evaluation_details": ""
     }
   },
   {
@@ -21348,8 +21488,12 @@
     "timestamp": "2025-06-13T01:58:12.476222",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 104559.49,
+      "closed_by": "SL",
+      "mfe_percentage": 0.65,
+      "mae_percentage": -0.82,
+      "evaluation_details": ""
     }
   },
   {
@@ -21370,8 +21514,12 @@
     "timestamp": "2025-06-13T01:59:20.819002",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2567.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 3.41,
+      "mae_percentage": -1.02,
+      "evaluation_details": ""
     }
   },
   {
@@ -21392,8 +21540,12 @@
     "timestamp": "2025-06-13T02:00:37.979175",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 145.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.41,
+      "mae_percentage": -0.47,
+      "evaluation_details": ""
     }
   },
   {
@@ -21414,8 +21566,12 @@
     "timestamp": "2025-06-13T02:51:22.789166",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 105252.06,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -1.77,
+      "evaluation_details": ""
     }
   },
   {
@@ -21436,8 +21592,12 @@
     "timestamp": "2025-06-13T02:53:11.598464",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2530.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.63,
+      "mae_percentage": -1.78,
+      "evaluation_details": ""
     }
   },
   {
@@ -21458,8 +21618,12 @@
     "timestamp": "2025-06-13T02:54:38.730002",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 145.1,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -2.34,
+      "evaluation_details": ""
     }
   },
   {
@@ -21478,8 +21642,12 @@
     "timestamp": "2025-06-13T03:44:59.740801",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 104700.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -1.23,
+      "evaluation_details": ""
     }
   },
   {
@@ -21500,8 +21668,12 @@
     "timestamp": "2025-06-13T03:46:26.474271",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2545.5,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.82,
+      "mae_percentage": -0.32,
+      "evaluation_details": ""
     }
   },
   {
@@ -21522,8 +21694,12 @@
     "timestamp": "2025-06-13T03:47:46.597758",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 146.46,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -2.93,
+      "evaluation_details": ""
     }
   },
   {
@@ -21544,8 +21720,12 @@
     "timestamp": "2025-06-13T04:38:53.585748",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 105863.89,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.74,
+      "mae_percentage": -0.33,
+      "evaluation_details": ""
     }
   },
   {
@@ -21567,8 +21747,12 @@
     "timestamp": "2025-06-13T04:40:42.919150",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2539.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.08,
+      "mae_percentage": -1.94,
+      "evaluation_details": ""
     }
   },
   {
@@ -21589,8 +21773,12 @@
     "timestamp": "2025-06-13T04:42:13.627940",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 146.5,
+      "closed_by": "SL",
+      "mfe_percentage": 0.92,
+      "mae_percentage": -1.92,
+      "evaluation_details": ""
     }
   },
   {
@@ -21611,8 +21799,12 @@
     "timestamp": "2025-06-13T05:32:57.857233",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 105750.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.12,
+      "mae_percentage": -1.95,
+      "evaluation_details": ""
     }
   },
   {
@@ -21633,8 +21825,12 @@
     "timestamp": "2025-06-13T05:34:28.017537",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 2541.5,
+      "closed_by": "SL",
+      "mfe_percentage": 0.28,
+      "mae_percentage": -1.73,
+      "evaluation_details": ""
     }
   },
   {
@@ -21655,8 +21851,12 @@
     "timestamp": "2025-06-13T05:35:36.401567",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 145.2,
+      "closed_by": "SL",
+      "mfe_percentage": 0.92,
+      "mae_percentage": -1.08,
+      "evaluation_details": ""
     }
   },
   {
@@ -21677,8 +21877,12 @@
     "timestamp": "2025-06-13T06:26:32.656542",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 105920.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.37,
+      "mae_percentage": -1.42,
+      "evaluation_details": ""
     }
   },
   {
@@ -21697,8 +21901,12 @@
     "timestamp": "2025-06-13T06:28:17.510209",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "TIMEOUT_NEGATIVE",
+      "closed_at_price": 2543.53,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 0.68,
+      "mae_percentage": -2.59,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -21719,8 +21927,12 @@
     "timestamp": "2025-06-13T06:29:45.385302",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 145.91,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -2.21,
+      "evaluation_details": ""
     }
   },
   {
@@ -21741,8 +21953,12 @@
     "timestamp": "2025-06-13T07:20:47.988675",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 105400.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 0.99,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -21764,8 +21980,12 @@
     "timestamp": "2025-06-13T07:22:38.150148",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2537.5,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.23,
+      "mae_percentage": -0.98,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -21784,8 +22004,12 @@
     "timestamp": "2025-06-13T07:24:10.305379",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 146.6,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -1.68,
+      "evaluation_details": ""
     }
   },
   {
@@ -21806,8 +22030,12 @@
     "timestamp": "2025-06-13T08:15:16.928162",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 106000.0,
+      "closed_by": "SL",
+      "mfe_percentage": 1.26,
+      "mae_percentage": -0.69,
+      "evaluation_details": ""
     }
   },
   {
@@ -21830,8 +22058,12 @@
     "timestamp": "2025-06-13T08:16:46.079648",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2535.69,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.23,
+      "mae_percentage": -0.98,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -21854,8 +22086,12 @@
     "timestamp": "2025-06-13T08:18:02.107455",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 145.82,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.74,
+      "mae_percentage": -1.87,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -21878,8 +22114,12 @@
     "timestamp": "2025-06-13T09:09:13.254819",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 105450.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.51,
+      "mae_percentage": -1.05,
+      "evaluation_details": ""
     }
   },
   {
@@ -21902,8 +22142,12 @@
     "timestamp": "2025-06-13T09:10:43.183435",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "TIMEOUT_NEGATIVE",
+      "closed_at_price": 2523.0,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 0.76,
+      "mae_percentage": -2.51,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -21926,8 +22170,12 @@
     "timestamp": "2025-06-13T09:12:11.489292",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "TIMEOUT_NEGATIVE",
+      "closed_at_price": 145.15,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 0.86,
+      "mae_percentage": -2.79,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -21948,8 +22196,12 @@
     "timestamp": "2025-06-13T10:03:14.862773",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 105550.0,
+      "closed_by": "SL",
+      "mfe_percentage": 0.69,
+      "mae_percentage": -0.87,
+      "evaluation_details": ""
     }
   },
   {
@@ -21971,8 +22223,12 @@
     "timestamp": "2025-06-13T10:05:01.828761",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2540.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.82,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   },
   {
@@ -21995,8 +22251,12 @@
     "timestamp": "2025-06-13T10:06:19.883008",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "LOSS",
+      "closed_at_price": 146.86,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -2.92,
+      "evaluation_details": ""
     }
   },
   {
@@ -22019,8 +22279,12 @@
     "timestamp": "2025-06-13T10:57:28.387417",
     "symbol": "BTCUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 105011.92,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.12,
+      "mae_percentage": -0.9,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -22043,8 +22307,12 @@
     "timestamp": "2025-06-13T10:59:03.165808",
     "symbol": "ETHUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 2531.1,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.61,
+      "mae_percentage": -0.59,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -22067,8 +22335,12 @@
     "timestamp": "2025-06-13T11:00:20.043256",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "WIN",
+      "closed_at_price": 145.86,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.42,
+      "mae_percentage": -2.01,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -22087,7 +22359,15 @@
       "Bitcoin, Ethereum, XRP, Dogecoin Slide On Thursday..."
     ],
     "timestamp": "2025-06-13T11:51:18.663031",
-    "symbol": "BTCUSDT"
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 105082.01,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.12,
+      "mae_percentage": -0.9,
+      "evaluation_details": "Signal timed out after 24 hours."
+    }
   },
   {
     "Signal": "Sell",
@@ -22105,7 +22385,15 @@
       "Bitcoin, Ethereum, XRP, Dogecoin Slide On Thursday..."
     ],
     "timestamp": "2025-06-13T11:52:44.184190",
-    "symbol": "ETHUSDT"
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 2538.52,
+      "closed_by": "TP1",
+      "mfe_percentage": 2.04,
+      "mae_percentage": -1.18,
+      "evaluation_details": "Signal timed out after 24 hours."
+    }
   },
   {
     "Signal": "Sell",
@@ -22124,6 +22412,14 @@
       "Mercurity Fintech to raise $800M for Bitcoin treas..."
     ],
     "timestamp": "2025-06-13T11:54:28.457397",
-    "symbol": "SOLUSDT"
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "LOSS",
+      "closed_at_price": 148.8,
+      "closed_by": "SL",
+      "mfe_percentage": 0.54,
+      "mae_percentage": -2.93,
+      "evaluation_details": ""
+    }
   }
 ]

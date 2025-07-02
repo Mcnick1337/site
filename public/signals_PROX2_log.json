@@ -105,8 +105,12 @@
     "timestamp": "2025-06-17T10:46:21.803850",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "TIMEOUT_POSITIVE",
+      "closed_at_price": 145.69,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 3.49,
+      "mae_percentage": -0.55,
+      "evaluation_details": "Signal timed out after 24 hours."
     }
   },
   {
@@ -128,8 +132,543 @@
     "timestamp": "2025-06-17T16:32:05.063208",
     "symbol": "SOLUSDT",
     "performance": {
-      "status": "TOO_RECENT",
-      "evaluation_details": "Evaluation window not yet complete."
+      "status": "TIMEOUT_POSITIVE",
+      "closed_at_price": 144.83,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 2.47,
+      "mae_percentage": -2.03,
+      "evaluation_details": "Signal timed out after 24 hours."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "146.35",
+    "Take Profit Targets": [
+      "143.88",
+      "141.40"
+    ],
+    "Stop Loss": "148.00",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Primary trend is bearish with price trading below key EMAs (20, 50, 200) on 1H, 4H, and 1D timeframes. Entry targeted at key short-term resistance ($146.35, strongest ask zone & near 1H EMA20). Order flow shows ask dominance (-10.94% imbalance). Higher timeframe RSIs (4H, 1D) support bearish outlook. Counter-signals include low ADX (18.95) indicating weak trend momentum and a MACD bullish cross below the zero line on the 1H chart. Multi-timeframe alignment is mixed in lower timeframes but predominantly bearish on higher ones. Stop loss is placed above the 1H EMA50 and Upper Bollinger Band, using a 1x ATR buffer from entry. Take profit targets aim for technically significant levels including the area beyond the Lower Bollinger Band, offering a favorable risk-reward ratio.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "Confirmation_Reason": "Verification data confirms the price is near a key resistance level, matching the analyst's entry target. The current price being slightly below the entry allows for a tighter stop-loss. Although the RSI is neutral and not bearish, the trade setup relies on price rejection from resistance, aligning with the bearish EMAs configuration.",
+    "timestamp": "2025-06-19T04:53:42.144399",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 143.88,
+      "closed_by": "TP2",
+      "mfe_percentage": 1.74,
+      "mae_percentage": -0.55,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "145.50",
+    "Take Profit Targets": [
+      "143.10",
+      "141.90"
+    ],
+    "Stop Loss": "146.70",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Primary trend is bearish with price below key H1 EMAs (20, 50, 200) and VWAP. Multi-timeframe analysis shows general bearish alignment. Order flow indicates ask dominance. Entry targeted at $145.50 resistance (strongest ask zone & near H1 EMA20) for trend continuation. MACD H1 bullish crossover and low ADX (15) warrant caution, leading to moderate confidence.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "Confirmation_Reason": "While the analyst's reasoning about MACD and ADX is questionable given the overall bearish trend, the core setup is valid. Current price being below the 20 EMA and near a key resistance/ask zone supports the short entry. The stop loss is reasonably tight, and the take profit target offers a good risk/reward ratio. The market correlation regime doesn't contradict the trade. The fact that the current price ($145.32) is close to the entry ($145.50) and slightly above the key support ($145.19) further strengthens the setup, allowing for a tighter stop loss.",
+    "timestamp": "2025-06-20T04:06:42.531143",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "LOSS",
+      "closed_at_price": 146.7,
+      "closed_by": "SL",
+      "mfe_percentage": 0.69,
+      "mae_percentage": -1.57,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "142.50",
+    "Take Profit Targets": [
+      "137.55",
+      "134.25"
+    ],
+    "Stop Loss": "145.80",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price has broken below the lower Bollinger Band, signaling bearish momentum. Strong bearish alignment across multiple timeframes with price below key EMAs (20, 50, 200) on 1H, 4H, and Daily charts. MACD is bearish and trending downwards. Primary trend is bearish. While RSI is oversold and ADX indicates a developing trend, the confluence of bearish technical factors supports a short position. Stop loss is placed above the 1-hour EMA20. Order book bid dominance and generic bullish news are noted but outweighed by technicals.",
+    "Relevant News Headlines": [
+      "NEAR Protocol Surges 5% as Buyers Dominate Amid Mi...",
+      "Martini Market Launches $MRT Token Presale, Introd...",
+      "Musk's X to Debut Trading and Payment System. But ..."
+    ],
+    "Confirmation_Reason": "Current price is below the entry price, which is a favorable entry condition.  The stop loss is reasonably placed above resistance and the take profit target is realistic. Key technical indicators (RSI, EMA cross) align with the analyst's bearish assessment. The 'CRYPTO_CORRELATED' regime implies potential broader market support for the trade.",
+    "timestamp": "2025-06-20T16:18:13.581458",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 137.55,
+      "closed_by": "TP2",
+      "mfe_percentage": 4.78,
+      "mae_percentage": -0.12,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "103400.00",
+    "Take Profit Targets": [
+      "102200.00",
+      "101000.00"
+    ],
+    "Stop Loss": "104600.00",
+    "Confidence": 68,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Strong bearish trend confirmed by price below key EMAs (20, 50, 200) and VWAP. MACD indicates significant bearish momentum. ADX at 27.52 supports trend strength. Multi-timeframe analysis shows bearish alignment. Order flow demonstrates strong ask dominance. Entry planned on a minor pullback, targeting continuation of the established downtrend.",
+    "Relevant News Headlines": [
+      "Litecoin Surges as ETF Decision Nears; DRML Miner ...",
+      "Hackers Are Turning Tech Support Into a Threat...",
+      "ITBIOMETRICS\u2122 Unveils the DOGOOD\u2122 Card Transformin..."
+    ],
+    "Confirmation_Reason": "Verification data confirms the bearish trend suggested by the analyst. Price being below key EMAs and the current price being close to the entry point supports the proposal. The RSI indicates the market is not yet oversold, allowing room for further downside movement. While the tight spread between support and resistance warrants caution, the overall confluence of factors favors the short position.",
+    "timestamp": "2025-06-20T19:07:43.414815",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "TIMEOUT_POSITIVE",
+      "closed_at_price": 102245.1,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 1.15,
+      "mae_percentage": -0.56,
+      "evaluation_details": "Signal timed out after 24 hours."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "140.25",
+    "Take Profit Targets": [
+      "133.29",
+      "129.81"
+    ],
+    "Stop Loss": "143.73",
+    "Confidence": 68,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Strong bearish trend confirmed by price below key EMAs (20, 50, 200) on H1, H4, D1. MACD is bearish, and ADX (29.22) indicates strong trend momentum. Price is below VWAP. Entry planned near key short-term resistance ($140.31), with SL above H1 EMA20 using 2x ATR. Favorable R/R targets.",
+    "Relevant News Headlines": [
+      "Telegram Boss Pavel Durov Temporarily Permitted to...",
+      "No, the 16 billion credentials leak is not a new d...",
+      "These Are the Best Privacy Apps You Can Use on Any..."
+    ],
+    "Confirmation_Reason": "The current price ($140.12) is favorable for entry, being just below the key resistance ($140.31) and above the key support ($140.09). The RSI(14) at 34.91 suggests the asset is not overbought and has room to move lower. The price being below the 20 EMA confirms the short-term bearish trend. The analyst's reasoning regarding broader EMAs and MACD reinforces the bearish outlook. The CRYPTO_CORRELATED regime doesn't contradict the trade. The stop-loss at 143.73 seems reasonable, and the take-profit target at 133.29 offers a good risk/reward ratio.",
+    "timestamp": "2025-06-20T22:00:47.855430",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 133.29,
+      "closed_by": "TP2",
+      "mfe_percentage": 6.67,
+      "mae_percentage": -1.68,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "2420.00",
+    "Take Profit Targets": [
+      "2355.00",
+      "2300.00"
+    ],
+    "Stop Loss": "2460.00",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Strong bearish trend confirmed by price action below key EMAs (1H, 4H, 1D) and a high ADX (38.4). MACD bearish cross and RSI below 50 support further downside. Entry set for trend continuation, with SL above 1H EMA20 ($2454.39). Despite bullish news sentiment and short-term bid dominance, the overall technical picture favors a short position. TP targets align with key support levels including the Lower Bollinger Band and offer favorable R/R.",
+    "Relevant News Headlines": [
+      "World Bank urges 'radical' debt transparency for d...",
+      "A government-backed tech trial in Australia finds ...",
+      "Insiders Spill the Secrets Behind a Bezos-Sized \u2018S..."
+    ],
+    "Confirmation_Reason": "The trade setup aligns with the verification data. Current price is near the entry, slightly below, which is favorable. Key support is right below the current price, offering a tight stop-loss placement. The bearish trend indicated by EMAs and RSI supports the short position. Although news sentiment is bullish, the technical picture and market regime favor the trade. TP1 at 2355.00 offers a good risk/reward ratio.",
+    "timestamp": "2025-06-21T02:32:44.619743",
+    "symbol": "ETHUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 2300.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 7.23,
+      "mae_percentage": -1.19,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "139.80",
+    "Take Profit Targets": [
+      "138.90",
+      "138.00"
+    ],
+    "Stop Loss": "140.40",
+    "Confidence": 80,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Strong bearish trend confirmed by price below key EMAs (20, 50, 200) on H1, H4, D1. MACD bearish cross and negative histogram indicate downward momentum. ADX (32.54) confirms strong bearish trend strength. Price is below VWAP. Multi-timeframe analysis shows consistent bearish signals. Order flow indicates ask dominance. Overwhelming bearish technical confluence outweighs bullish news sentiment.",
+    "Relevant News Headlines": [
+      "World Bank urges 'radical' debt transparency for d...",
+      "A government-backed tech trial in Australia finds ...",
+      "Insiders Spill the Secrets Behind a Bezos-Sized \u2018S..."
+    ],
+    "Confirmation_Reason": "Verification data confirms the price is below key EMAs and slightly below the current price, supporting a short position. RSI suggests the asset is not oversold, allowing room for further downside. The price being close to a key support level reinforces the analyst's stop-loss placement. The 'CRYPTO_CORRELATED' regime doesn't contradict the bearish outlook. Overall, the proposal seems well-reasoned and aligns with the provided data.",
+    "timestamp": "2025-06-21T02:33:55.755478",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "LOSS",
+      "closed_at_price": 140.4,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -1.1,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "140.40",
+    "Take Profit Targets": [
+      "136.50",
+      "134.00"
+    ],
+    "Stop Loss": "143.33",
+    "Confidence": 70,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Strong bearish trend confirmed by price trading below key EMAs (20, 50, 200) on multiple timeframes (1H, 4H, Daily). MACD indicates bearish momentum, and ADX at 31.89 shows strong trend strength. Entry proposed near key resistance ($140.40) and 1H VWAP. Stop loss based on 2x ATR ($2.93) above entry. Take profit targets aim for logical support levels, offering a favorable risk-reward ratio (TP1 ~1.3R, TP2 ~2.2R). Multi-timeframe analysis shows consistent bearish signals, despite overall bullish news sentiment.",
+    "Relevant News Headlines": [
+      "These Cheap Bitcoin Plays Are Spiking As BTC Strug...",
+      "Trump-Connected Company Pulls Back From Family Cry..."
+    ],
+    "Confirmation_Reason": "Current price at $140.22 is near the proposed entry of $140.40 and within the key resistance zone.  The 'CRYPTO_CORRELATED' regime suggests potential for broader market influence.  Bearish trend confirmed by price being below the 20 EMA, aligning with the analyst's multi-timeframe EMA observation. RSI at 39.71 indicates room for further downside before reaching oversold conditions. Stop-loss at $143.33 seems reasonable.  Overall, the setup appears favorable for a short position.",
+    "timestamp": "2025-06-21T04:50:02.581999",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 134.0,
+      "closed_by": "TP1",
+      "mfe_percentage": 6.77,
+      "mae_percentage": -1.57,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "140.50",
+    "Take Profit Targets": [
+      "136.69",
+      "134.15"
+    ],
+    "Stop Loss": "143.04",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Primary bearish trend confirmed by price below key EMAs (1H, 4H, Daily) and strong ADX. MTF analysis, order flow (ask dominance), and news sentiment are also bearish. Entry anticipates a minor retracement towards immediate resistance, potentially due to the MACD bullish crossover within the downtrend. Stop loss set at 2x ATR above entry, respecting key resistance zones. Take profit targets aim for continuation towards lower support levels, with TP1 near the lower Bollinger Band, offering a favorable risk-reward.",
+    "Relevant News Headlines": [
+      "South Korean Regulators Prepare for Spot Crypto ET...",
+      "Soluna (NASDAQ:SLNHP) Shares Down 15% \u2013 Here\u2019s Why...",
+      "Contrasting Digi Power X (NASDAQ:DGXX) & DeFi Tech..."
+    ],
+    "Confirmation_Reason": "Current price at $140.24 is below the proposed entry of $140.50 and just above key support at $140.16. The market regime being CRYPTO_CORRELATED increases the likelihood of a successful short in the current market conditions. The analyst's reasoning regarding EMAs and ADX, combined with the favorable price action near support, makes this a reasonable trade setup. The stop-loss at $143.04 respects resistance zones, while the take-profit target of $136.69 offers a good risk/reward ratio.",
+    "timestamp": "2025-06-21T07:06:40.063268",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 134.15,
+      "closed_by": "TP1",
+      "mfe_percentage": 6.83,
+      "mae_percentage": -1.49,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "140.65",
+    "Take Profit Targets": [
+      "137.00",
+      "133.30"
+    ],
+    "Stop Loss": "143.10",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Dominant bearish trend confirmed by price action below key EMAs (20, 50, 200) on 1H, 4H, and Daily charts. RSI consistently below 50 across multiple timeframes, indicating sustained bearish momentum. Order flow shows ask dominance and price is below VWAP. The MACD bullish crossover is viewed as a potential minor retracement within the larger downtrend, offering a favorable entry for shorts at the specified resistance level (strongest ask zone).",
+    "Relevant News Headlines": [
+      "No significant news processed affecting the current trade decision."
+    ],
+    "Confirmation_Reason": "The verification data confirms the analyst's observations. The current price at $140.60 is near the proposed entry of $140.65 and within the identified resistance/ask zone.  The RSI at 42.78 indicates bearish momentum, aligning with the analyst's view. Importantly, the price being below the 20 EMA supports the bearish trend assessment. The CRYPTO_CORRELATED regime doesn't contradict the proposed trade. While the stop loss is relatively tight, the potential reward justifies the risk.",
+    "timestamp": "2025-06-21T15:06:22.864469",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 137.0,
+      "closed_by": "TP2",
+      "mfe_percentage": 2.72,
+      "mae_percentage": -0.28,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "103600.00",
+    "Take Profit Targets": [
+      "102800.00",
+      "102250.00"
+    ],
+    "Stop Loss": "104150.00",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is in a clear downtrend below key EMAs (1H EMA20: $103,707.15, EMA50: $104,063.67, EMA200: $105,235.76) and shows bearish alignment across multiple timeframes (price < EMA20 on 1m to 1D). Entry planned near 1H VWAP ($103,592.85) and BB Middle Band ($103,546.10) for potential rejection. Stop loss placed above 1H EMA50. MACD bullish crossover and order book bid dominance are noted as minor counter-trend signals within the prevailing bearish structure. ADX at 21.81 suggests a non-impulsive trend, supporting moderate targets.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "Confirmation_Reason": "The verification data supports the analyst's bearish bias. Current price is below the 20 EMA and aligns with the proposed entry near the VWAP and BB Middle Band. The stop loss above the 50 EMA is reasonable, and the take profit target is achievable given the ADX reading. While the MACD crossover and order book data present minor counter-trend signals, the overall confluence of factors favors the short position, especially within the correlated crypto market regime.",
+    "timestamp": "2025-06-21T16:11:29.559926",
+    "symbol": "BTCUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 102800.0,
+      "closed_by": "TP2",
+      "mfe_percentage": 0.93,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "135.85",
+    "Take Profit Targets": [
+      "127.17",
+      "122.83"
+    ],
+    "Stop Loss": "140.19",
+    "Confidence": 68,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is below key EMAs (20, 50, 200) on multiple higher timeframes (1H, 4H, 1D), indicating a strong bearish trend. MACD confirms bearish momentum with its line below the signal line and a negative histogram. ADX at 35.01 signifies a strong prevailing trend. Entry is anticipated on a potential retest of the current resistance zone around $135.85, which aligns with the strongest ask zone and VWAP. Multi-timeframe analysis shows consistent bearish pressure. Stop loss is placed using the provided 2x ATR distance ($4.34) above entry, also clearing recent short-term resistance structures like the 1H EMA20 and Middle Bollinger Band. Take profit targets are set based on a 2:1 and 3:1 risk-reward ratio, projecting further downside movement in line with the established trend.",
+    "Relevant News Headlines": [
+      "Bitcoin futures premium falls to 3-month low despi...",
+      "XRP and DOGE are back with a bang, and the environ...",
+      "Bitcoin Bullish Divergence That Appeared Before Th..."
+    ],
+    "Confirmation_Reason": "The trade setup aligns with the verification data. Current price ($135.71) is near the proposed entry ($135.85) and slightly above the key support/bid zone at $135.62, offering a favorable entry point. The price being below the 20 EMA confirms the bearish short-term trend, supporting the analyst's multi-timeframe bearish observation.  The RSI at 38.22 suggests the market is not yet oversold, allowing room for further downside movement. The 'CRYPTO_CORRELATED' regime implies potential broader market influence, which could amplify the bearish move if the overall crypto market sentiment is negative. The analyst's reasoning regarding resistance at $135.85 is acknowledged, but the slight difference between current price and resistance is acceptable given the other confirming factors. The stop-loss placement above recent resistance structures is also a positive aspect of the trade plan.",
+    "timestamp": "2025-06-22T01:51:57.347978",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 127.17,
+      "closed_by": "TP2",
+      "mfe_percentage": 6.65,
+      "mae_percentage": -0.48,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "134.60",
+    "Take Profit Targets": [
+      "128.10",
+      "121.60"
+    ],
+    "Stop Loss": "138.92",
+    "Confidence": 68,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Strong multi-timeframe bearish trend confirmed by EMAs (price below 20, 50, 200 on primary timeframe), bearish MACD, and ADX indicating strong trend strength (35.60). Price is trading below VWAP with order book showing ask dominance (-15.26% imbalance). Anticipating continuation of the established downtrend. 4H RSI is oversold, which is a minor caution, but other factors strongly support bearish continuation.",
+    "Relevant News Headlines": [
+      "Thailand Eyes Bold Crypto Overhaul: Exchanges May ...",
+      "CoinMarketCap has 'identified and removed' malicio...",
+      "Dogecoin Breaks Free\u2014Could Soar 60%, Analyst Says..."
+    ],
+    "Confirmation_Reason": "Verification data confirms the price is below the 20 EMA, supporting the bearish trend.  The current price ($134.52) being very close to the entry ($134.60) and above the key support ($134.35) makes it an acceptable entry point. The RSI (35.22) is not oversold as the analyst stated, but it is below 50, which still suggests bearish momentum. The order book imbalance, while negative, doesn't negate the other bearish signals. The CRYPTO_CORRELATED regime doesn't contradict the trade. The stop loss at 138.92 seems reasonable, and the take profit target at 128.10 offers a good risk/reward ratio.",
+    "timestamp": "2025-06-22T03:33:14.462542",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 128.1,
+      "closed_by": "TP2",
+      "mfe_percentage": 5.78,
+      "mae_percentage": -1.41,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "SELL",
+    "Entry Price": "134.40",
+    "Take Profit Targets": [
+      "131.80",
+      "129.20"
+    ],
+    "Stop Loss": "137.00",
+    "Confidence": 68,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Strong bearish trend confirmed by price trading below key EMAs (20, 50, 200) on multiple timeframes (1H, 4H, 1D) and below VWAP. ADX at 34.69 indicates a strong ongoing trend. Multi-timeframe analysis shows consistent bearish signals. Entry planned near immediate order flow resistance ($134.43 ask zone), targeting continuation of the downtrend. Stop loss placed above 1H EMA20 and middle Bollinger Band.",
+    "Relevant News Headlines": [
+      "Semler Scientific\u2019s Bitcoin vision: 42K BTC buy in...",
+      "Road to a $3.7 trillion Stablecoin market is full ..."
+    ],
+    "Confirmation_Reason": "The verification data supports the analyst's bearish bias. Price is below key EMAs and approaching the proposed entry near a resistance zone. The RSI suggests the asset is not yet oversold, allowing room for further downside movement. The 'CRYPTO_CORRELATED' regime doesn't contradict the trade. Stop-loss placement is reasonable, and the take-profit target is achievable.",
+    "timestamp": "2025-06-22T08:41:07.542667",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "UNEVALUATED",
+      "closed_at_price": 134.36,
+      "closed_by": "TIMEOUT",
+      "mfe_percentage": 0.0,
+      "mae_percentage": 0.0,
+      "evaluation_details": "Signal timed out after 24 hours."
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "143.30",
+    "Take Profit Targets": [
+      "140.00",
+      "136.70"
+    ],
+    "Stop Loss": "145.50",
+    "Confidence": 68,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is trading below key short-term and long-term EMAs (1H EMA20: $144.75, 1H EMA50: $143.63, 1H EMA200: $144.46). MACD shows a bearish crossover (-0.1265 vs signal 0.1941) with a negative histogram (-0.3206). RSI (42.93) is below 50, indicating bearish momentum. ADX at 25.10 suggests existing trend strength. Entry is targeted near the strongest ask zone ($143.34) acting as resistance. Confluence analysis shows active bearish factors (MACD_BEARISH_CROSS, MTF_BEARISH_ALIGNMENT). High volatility regime supports potential for a sustained move. Stop loss placed above 1H VWAP and Middle Bollinger Band.",
+    "Relevant News Headlines": [
+      "AIXAMiner Ushers in New Era of Passive Crypto Inco...",
+      "Bitcoin Treasury Corporation Announces TSX Venture...",
+      "Crypto Bears Rekt: $359M Gone As Bitcoin, Ethereum..."
+    ],
+    "Confirmation_Reason": "Verification data confirms the analyst's observations. Current price is below key EMAs and near a resistance zone, supporting a short entry. RSI and ADX are in line with the bearish bias. The stop loss is reasonably placed above resistance, while the take profit targets a significant support level. The correlated crypto regime further strengthens the rationale for the trade.",
+    "timestamp": "2025-06-25T22:48:18.826642",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "LOSS",
+      "closed_at_price": 145.5,
+      "closed_by": "SL",
+      "mfe_percentage": 0.73,
+      "mae_percentage": -2.02,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "144.70",
+    "Take Profit Targets": [
+      "144.10",
+      "143.50"
+    ],
+    "Stop Loss": "145.20",
+    "Confidence": 60,
+    "Scenario": "Range-Bound",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price is encountering resistance near the strongest ask zone ($144.81), EMA20 ($144.90), and Middle Bollinger Band ($144.86). Current price is below VWAP ($145.45). Order flow shows slight ask dominance. The system noted 'MTF_BEARISH_ALIGNMENT' as an active factor. This short setup targets a move towards key short-term support levels around EMA50/EMA200. ADX indicates a weak trend, suggesting range-bound conditions, playing the upper part of the potential range.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "Confirmation_Reason": "Verification data confirms the analyst's observations. Price is indeed below VWAP and encountering resistance near the specified levels. The 'MTF_BEARISH_ALIGNMENT' further strengthens the short bias.  The entry at $144.70, just below resistance, with a tight stop-loss at $145.20, offers a favorable risk/reward profile. The take-profit target of $144.10 aligns with the identified support levels. RSI being near 50 suggests room for downside movement. The CRYPTO_CORRELATED regime doesn't contradict this short setup.",
+    "timestamp": "2025-06-26T06:20:26.299768",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "LOSS",
+      "closed_at_price": 145.2,
+      "closed_by": "SL",
+      "mfe_percentage": 0.0,
+      "mae_percentage": -0.85,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "143.90",
+    "Take Profit Targets": [
+      "141.65",
+      "139.40"
+    ],
+    "Stop Loss": "145.40",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price is below key EMAs (1hr: 20, 50, 200; Daily: 20, 200), with a bearish MACD crossover on the 1-hour chart. Short-term multi-timeframe analysis (1min-1hr) shows bearish alignment. Order flow indicates slight ask dominance. This setup targets a continuation of the observed short-term bearish momentum. Low ADX (21.23) suggests caution regarding trend strength, reflected in the moderate confidence.",
+    "Relevant News Headlines": [],
+    "Confirmation_Reason": "Verification data confirms the price is below key EMAs and near a support level, validating the short entry.  The bearish MACD crossover adds to the confluence of signals. While the ADX is low, the other indicators support the short-term bearish momentum thesis. The current price being below the entry and stop loss further strengthens the setup.",
+    "timestamp": "2025-06-26T09:49:06.620559",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 141.65,
+      "closed_by": "TP2",
+      "mfe_percentage": 1.73,
+      "mae_percentage": -0.22,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "144.00",
+    "Take Profit Targets": [
+      "142.80",
+      "141.30"
+    ],
+    "Stop Loss": "145.35",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Swing",
+    "Reasoning": "Price trading below key EMAs (20, 50, 200) and VWAP, indicating short-term bearish pressure. MACD shows a bearish crossover and negative histogram. Multi-timeframe analysis indicates bearish sentiment on lower timeframes. Entry planned at $144.00, near EMA50 ($144.07) and the strongest ask zone ($144.14). Stop loss placed above VWAP ($145.20) and recent resistance at $145.35. TP1 at $142.80 targets just above Bollinger Band Lower ($142.76). TP2 at $141.30 aims for a 2:1 risk-reward ratio. While ADX indicates a weak trend (20.13), the confluence of other bearish signals supports a potential downward drift. This setup aligns with historically successful 'Trend Continuation' sell signals in the 60-69% confidence range.",
+    "Relevant News Headlines": [
+      "No significant news processed."
+    ],
+    "Confirmation_Reason": "Current price ($143.94) is near the analyst's proposed entry ($144.00) and favorably positioned just above key support ($143.83). The price being below the 20 EMA confirms the short-term bearish pressure suggested by the analyst.  While ADX is weak, the confluence of price action near EMAs, bearish MACD crossover, and reasonable stop-loss placement above VWAP and resistance supports the short trade. The CRYPTO_CORRELATED regime further strengthens the case for the trade, suggesting potential broader market influence.",
+    "timestamp": "2025-06-26T10:24:09.891019",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 142.8,
+      "closed_by": "TP2",
+      "mfe_percentage": 0.85,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
+    }
+  },
+  {
+    "Signal": "Sell",
+    "Entry Price": "143.75",
+    "Take Profit Targets": [
+      "142.73",
+      "142.05"
+    ],
+    "Stop Loss": "144.60",
+    "Confidence": 65,
+    "Scenario": "Trend Continuation",
+    "Trade Setup Type": "Day Trade",
+    "Reasoning": "Price trading below key 1H EMAs (20, 50, 200) & VWAP, with bearish MACD and supportive MTF alignment (price vs EMAs on 15m, 1H, Daily). Entry planned on a retest of local resistance near $143.75. Stop loss placed above 1H EMA20 ($144.50) and Middle Bollinger Band ($144.46). TP1 set at Lower Bollinger Band ($142.73), TP2 at a 2:1 R/R level ($142.05). Low ADX (17.4) suggests a weak trend, warranting cautious risk management.",
+    "Relevant News Headlines": [
+      "No news processed..."
+    ],
+    "Confirmation_Reason": "Verification data confirms price is below key EMAs and approaching the analyst's suggested entry. Key resistance aligns with the analyst's entry idea, presenting a defined risk level. Stop loss placement above resistance and the 20 EMA is sound. TP1 at the lower Bollinger band and a reasonable R/R for TP2 demonstrate appropriate profit targets. Market regime is deemed favorable. Low ADX, while suggesting a weak trend, is accounted for in the tight stop loss placement.",
+    "timestamp": "2025-06-26T12:42:53.214880",
+    "symbol": "SOLUSDT",
+    "performance": {
+      "status": "WIN",
+      "closed_at_price": 142.05,
+      "closed_by": "TP1",
+      "mfe_percentage": 1.63,
+      "mae_percentage": 0.0,
+      "evaluation_details": ""
     }
   }
 ]
