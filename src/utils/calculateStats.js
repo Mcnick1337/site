@@ -11,7 +11,8 @@ async function fetchOHLCForBacktest(symbol, startTime, endTime) {
         const response = await fetch(url);
         if (!response.ok) return [];
         const data = await response.json();
-        return data.map(d => ({ time: parseInt(d[0]) * 1000, high: parseFloat(d[3]), low: parseFloat(d[4]), close: parseFloat(d[2]) }));
+        // --- THE FIX IS HERE: KuCoin timestamps are already in seconds, no need to multiply ---
+        return data.map(d => ({ time: parseInt(d[0]), high: parseFloat(d[3]), low: parseFloat(d[4]), close: parseFloat(d[2]) }));
     } catch (error) {
         console.error("Error fetching OHLC for backtest:", error);
         return [];
@@ -58,15 +59,15 @@ export async function runBacktest({ signals, strategy }) {
             const hitsTP = signalType === 'buy' ? candle.high >= takeProfitPrice : candle.low <= takeProfitPrice;
 
             if (hitsSL && hitsTP) {
-                outcome = { status: 'loss', exitPrice: stopLossPrice, exitTime: candle.time };
+                outcome = { status: 'loss', exitPrice: stopLossPrice, exitTime: candle.time * 1000 };
                 break;
             }
             if (hitsSL) {
-                outcome = { status: 'loss', exitPrice: stopLossPrice, exitTime: candle.time };
+                outcome = { status: 'loss', exitPrice: stopLossPrice, exitTime: candle.time * 1000 };
                 break;
             }
             if (hitsTP) {
-                outcome = { status: 'win', exitPrice: takeProfitPrice, exitTime: candle.time };
+                outcome = { status: 'win', exitPrice: takeProfitPrice, exitTime: candle.time * 1000 };
                 break;
             }
         }
@@ -439,15 +440,14 @@ export function calculateTrendlineStatus(equityCurveData) {
     return { status, color, slope, trendlineData };
 }
 
-// --- ADDED: New function to verify a single V2 Advanced signal ---
 export async function verifySignalOutcome(signal) {
     const { symbol, decision, trade_parameters, timestamp_utc } = signal;
     const { entry_price, stop_loss, take_profit } = trade_parameters;
 
     const signalTime = new Date(timestamp_utc).getTime();
-    // Check for up to 7 days after the signal for an outcome
     const endTime = signalTime + (7 * 24 * 60 * 60 * 1000);
 
+    // --- THE FIX IS HERE: The URL is constructed correctly without extra multiplication ---
     const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${signalTime}&interval=1m&endTime=${endTime}`;
     
     try {
@@ -462,6 +462,7 @@ export async function verifySignalOutcome(signal) {
         for (const candle of ohlcData) {
             const high = parseFloat(candle[2]);
             const low = parseFloat(candle[3]);
+            // KuCoin timestamps are in seconds, convert to ms for JS Date object
             const candleTime = parseInt(candle[0]) * 1000;
 
             if (decision === 'LONG') {
