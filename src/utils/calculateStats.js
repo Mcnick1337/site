@@ -440,45 +440,44 @@ export function calculateTrendlineStatus(equityCurveData) {
     return { status, color, slope, trendlineData };
 }
 
+// --- REPLACED: The old function is replaced with this new, more efficient version ---
 export async function verifySignalOutcome(signal) {
     const { symbol, decision, trade_parameters, timestamp_utc } = signal;
     const { entry_price, stop_loss, take_profit } = trade_parameters;
 
     const signalTime = new Date(timestamp_utc).getTime();
-    const MAX_DAYS_TO_CHECK = 7;
+    // --- UPDATED: Fetch a single 4-day chunk of data ---
+    const endTime = signalTime + (4 * 24 * 60 * 60 * 1000);
 
-    for (let i = 0; i < MAX_DAYS_TO_CHECK; i++) {
-        const startTime = signalTime + (i * 24 * 60 * 60 * 1000);
-        const endTime = startTime + (24 * 60 * 60 * 1000);
-        const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${startTime}&interval=1m&endTime=${endTime}`;
-        
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                console.warn(`Failed to fetch price data for day ${i + 1}`);
-                continue;
-            }
-            const ohlcData = await response.json();
-            if (!ohlcData || ohlcData.length === 0) continue;
+    const url = `/.netlify/functions/crypto-proxy?symbol=${symbol.toUpperCase()}&startTime=${signalTime}&interval=1m&endTime=${endTime}`;
+    
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Failed to fetch price data.");
+        const ohlcData = await response.json();
 
-            for (const candle of ohlcData) {
-                const high = parseFloat(candle[2]);
-                const low = parseFloat(candle[3]);
-                const candleTime = parseInt(candle[0]) * 1000;
-
-                if (decision.toUpperCase() === 'LONG') {
-                    if (high >= take_profit) return { status: 'win', message: `Take Profit hit at ${new Date(candleTime).toLocaleString()}` };
-                    if (low <= stop_loss) return { status: 'loss', message: `Stop Loss hit at ${new Date(candleTime).toLocaleString()}` };
-                } else { // SHORT
-                    if (low <= take_profit) return { status: 'win', message: `Take Profit hit at ${new Date(candleTime).toLocaleString()}` };
-                    if (high >= stop_loss) return { status: 'loss', message: `Stop Loss hit at ${new Date(candleTime).toLocaleString()}` };
-                }
-            }
-        } catch (error) {
-            console.error("Signal verification failed for one chunk:", error);
-            // Continue to the next day even if one chunk fails
+        if (!ohlcData || ohlcData.length === 0) {
+            return { status: 'unknown', message: 'Could not fetch price data to verify signal.' };
         }
-    }
 
-    return { status: 'expired', message: `Signal did not hit TP or SL within ${MAX_DAYS_TO_CHECK} days.` };
+        for (const candle of ohlcData) {
+            const high = parseFloat(candle[2]);
+            const low = parseFloat(candle[3]);
+            const candleTime = parseInt(candle[0]) * 1000;
+
+            if (decision.toUpperCase() === 'LONG') {
+                if (high >= take_profit) return { status: 'win', message: `Take Profit hit at ${new Date(candleTime).toLocaleString()}` };
+                if (low <= stop_loss) return { status: 'loss', message: `Stop Loss hit at ${new Date(candleTime).toLocaleString()}` };
+            } else { // SHORT
+                if (low <= take_profit) return { status: 'win', message: `Take Profit hit at ${new Date(candleTime).toLocaleString()}` };
+                if (high >= stop_loss) return { status: 'loss', message: `Stop Loss hit at ${new Date(candleTime).toLocaleString()}` };
+            }
+        }
+
+        return { status: 'expired', message: 'Signal did not hit TP or SL within 4 days.' };
+
+    } catch (error) {
+        console.error("Signal verification failed:", error);
+        return { status: 'error', message: 'An error occurred during verification.' };
+    }
 }
