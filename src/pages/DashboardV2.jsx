@@ -31,38 +31,37 @@ export const DashboardV2 = ({
   const { signals, metrics, isLoading, filters, currentPage, itemsPerPage } = currentModelState;
   const modelConfig = V2_MODELS[activeV2Tab];
 
-  const availableSymbols = useMemo(() => {
-    const symbols = new Set(signals.map(s => s.symbol));
-    return Array.from(symbols).sort();
-  }, [signals]);
+  // --- THE FIX IS HERE: All data processing is now inside a single, dependent useMemo ---
+  const processedData = useMemo(() => {
+    if (!signals || signals.length === 0) {
+      return {
+        availableSymbols: [],
+        filteredSignals: [],
+        advancedStats: null,
+        totalPages: 0,
+        paginatedSignals: [],
+      };
+    }
 
-  const filteredSignals = useMemo(() => {
-    return signals.filter(signal => {
+    const availableSymbols = Array.from(new Set(signals.map(s => s.symbol))).sort();
+
+    const filteredSignals = signals.filter(signal => {
       const symbolMatch = !filters.symbol || signal.symbol.toLowerCase() === filters.symbol.toLowerCase();
       const directionMatch = !filters.direction || (signal.decision || signal.direction)?.toUpperCase() === filters.direction.toUpperCase();
       const confidenceMatch = (signal.confidence || signal.final_confidence) >= filters.minConfidence;
       return symbolMatch && directionMatch && confidenceMatch;
     });
-  }, [signals, filters]);
 
-  // --- ADDED: New stats calculation for the advanced model ---
-  const advancedStats = useMemo(() => {
-      if (modelConfig.advanced) {
-          return calculateAllStatsV2_Advanced(filteredSignals);
-      }
-      return null;
-  }, [modelConfig.advanced, filteredSignals]);
+    const advancedStats = modelConfig.advanced ? calculateAllStatsV2_Advanced(filteredSignals) : null;
 
-  const totalPages = Math.ceil(filteredSignals.length / itemsPerPage);
-  const paginatedSignals = useMemo(() => {
+    const totalPages = Math.ceil(filteredSignals.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    return filteredSignals.slice(startIndex, endIndex);
-  }, [filteredSignals, currentPage, itemsPerPage]);
+    const paginatedSignals = filteredSignals.slice(startIndex, endIndex);
 
-  if (isLoading && signals.length === 0) {
-    return <div className="text-center p-8 animate-pulse text-gray-400">Loading AI PRO Data...</div>;
-  }
+    return { availableSymbols, filteredSignals, advancedStats, totalPages, paginatedSignals };
+
+  }, [signals, filters, modelConfig, currentPage, itemsPerPage]);
 
   return (
     <div className="flex flex-col w-full">
@@ -74,49 +73,54 @@ export const DashboardV2 = ({
       <TabNav models={V2_MODELS} activeTab={activeV2Tab} setActiveTab={setActiveV2Tab} />
       
       <div className="mt-4">
-        {modelConfig.advanced ? (
-          <>
-            {/* --- UPDATED: Use the new advanced components --- */}
-            <StatsGridV2_Advanced stats={advancedStats} />
-            <DetailsSectionV2_Advanced stats={advancedStats} />
-            <FilterControlsV2 filters={filters} onFilterChange={(key, val) => onFilterChange(activeV2Tab, key, val)} availableSymbols={availableSymbols} />
-            {paginatedSignals.length > 0 ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
-                {paginatedSignals.map((signal) => (
-                  <div key={signal.timestamp_utc} className="card-enter">
-                    <div
-                      onClick={() => onSelectSignalV2Advanced(signal)}
-                      className="w-full h-full cursor-pointer"
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onSelectSignalV2Advanced(signal)}
-                    >
-                      <SignalCardV2_Advanced signal={signal} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <EmptyState title="No Signals Found" message="Try adjusting your filters to find more results." />
-            )}
-          </>
+        {isLoading && signals.length === 0 ? (
+          <div className="text-center p-8 animate-pulse text-gray-400">Loading AI PRO Data...</div>
         ) : (
           <>
-            <StatsGridV2 metrics={metrics} />
-            <FilterControlsV2 filters={filters} onFilterChange={(key, val) => onFilterChange(activeV2Tab, key, val)} availableSymbols={availableSymbols} />
-            {paginatedSignals.length > 0 ? (
-              <SignalCatalogV2 signals={paginatedSignals} metrics={metrics} onSignalClick={onSelectSignalV2} />
+            {modelConfig.advanced ? (
+              <>
+                <StatsGridV2_Advanced stats={processedData.advancedStats} />
+                <DetailsSectionV2_Advanced stats={processedData.advancedStats} />
+                <FilterControlsV2 filters={filters} onFilterChange={(key, val) => onFilterChange(activeV2Tab, key, val)} availableSymbols={processedData.availableSymbols} />
+                {processedData.paginatedSignals.length > 0 ? (
+                  <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
+                    {processedData.paginatedSignals.map((signal) => (
+                      <div key={signal.timestamp_utc} className="card-enter">
+                        <div
+                          onClick={() => onSelectSignalV2Advanced(signal)}
+                          className="w-full h-full cursor-pointer"
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onSelectSignalV2Advanced(signal)}
+                        >
+                          <SignalCardV2_Advanced signal={signal} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <EmptyState title="No Signals Found" message="Try adjusting your filters to find more results." />
+                )}
+              </>
             ) : (
-              <EmptyState title="No Signals Found" message="Try adjusting your filters to find more results." />
+              <>
+                <StatsGridV2 metrics={metrics} />
+                <FilterControlsV2 filters={filters} onFilterChange={(key, val) => onFilterChange(activeV2Tab, key, val)} availableSymbols={processedData.availableSymbols} />
+                {processedData.paginatedSignals.length > 0 ? (
+                  <SignalCatalogV2 signals={processedData.paginatedSignals} metrics={metrics} onSignalClick={onSelectSignalV2} />
+                ) : (
+                  <EmptyState title="No Signals Found" message="Try adjusting your filters to find more results." />
+                )}
+              </>
             )}
+
+            <Pagination
+              currentPage={currentPage}
+              totalPages={processedData.totalPages}
+              onPageChange={(page) => onPageChange(activeV2Tab, page)}
+            />
           </>
         )}
-
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={(page) => onPageChange(activeV2Tab, page)}
-        />
       </div>
     </div>
   );

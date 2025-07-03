@@ -6,6 +6,11 @@ import { SymbolWinRates } from '../charts/SymbolWinRates';
 import { PLDistributionChart } from '../charts/PLDistributionChart';
 
 export const DetailsSectionV2_Advanced = ({ stats }) => {
+    // --- THE FIX IS HERE: Add a guard clause to handle null stats ---
+    if (!stats || Object.keys(stats).length === 0) {
+        return null; // Render nothing if there are no stats to display
+    }
+
     return (
         <div className="my-8">
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 mb-6">

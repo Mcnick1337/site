@@ -10,9 +10,19 @@ const StatCard = ({ label, value, colorClass = 'text-white' }) => (
 );
 
 export const StatsGridV2_Advanced = ({ stats }) => {
+    // --- THE FIX IS HERE: Add a guard clause to handle null stats ---
     if (!stats || Object.keys(stats).length === 0) {
-        return <div className="text-center p-8">Calculating stats...</div>;
+        // Render a placeholder or skeleton state while stats are calculating
+        return (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8 animate-pulse">
+                <div className="bg-white/5 h-32 rounded-2xl"></div>
+                <div className="bg-white/5 h-32 rounded-2xl"></div>
+                <div className="bg-white/5 h-32 rounded-2xl"></div>
+                <div className="bg-white/5 h-32 rounded-2xl"></div>
+            </div>
+        );
     }
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
             <StatCard label="Win Rate" value={`${stats.winRate?.toFixed(2) ?? 0}%`} colorClass="text-cyan-400" />

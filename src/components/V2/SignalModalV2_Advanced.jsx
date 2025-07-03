@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { LightweightChart } from '../charts/LightweightChart';
 import { CheckIcon, XMarkIcon, ClockIcon, ArrowTrendingUpIcon, ArrowTrendingDownIcon, MinusIcon } from '@heroicons/react/20/solid';
+import { verifySignalOutcome } from '../../utils/calculateStats';
 
 async function fetchOHLCDataV2(symbol, signalTime, interval) {
     const hoursToFetch = 120;
@@ -29,8 +30,8 @@ const intervalMap = { '5m': '5min', '15m': '15min', '1h': '1hour', '4h': '4hour'
 
 const DetailItem = ({ label, value, valueClass = '' }) => (
     <div>
-        <p className="text-sm text-gray-400">{label}</p>
-        <p className={`text-lg font-bold ${valueClass}`}>{value}</p>
+        <p className="text-xs text-gray-400">{label}</p>
+        <p className={`text-base font-semibold ${valueClass}`}>{value}</p>
     </div>
 );
 
@@ -79,6 +80,10 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
         PENDING: { text: 'PENDING', color: 'text-gray-400', icon: <MinusIcon className="h-5 w-5" /> },
     }[outcome.status.toUpperCase()] || { text: 'UNKNOWN', color: 'text-gray-500', icon: <MinusIcon className="h-5 w-5" /> };
 
+    // --- THE FIX IS HERE: Defensively check for arrays ---
+    const confluenceFactors = Array.isArray(signal.ai_confluence) ? signal.ai_confluence : [];
+    const counterFactors = Array.isArray(signal.ai_counters) ? signal.ai_counters : [];
+
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50" onClick={handleClose}>
             <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
@@ -115,7 +120,6 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
                         </div>
                     </div>
                     <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:h-[490px] lg:overflow-y-auto custom-scrollbar pr-2">
-                        {/* --- NEW 3-COLUMN LAYOUT --- */}
                         <div className="bg-black/20 p-4 rounded-lg space-y-4">
                             <h3 className="text-lg font-bold text-center">Trade Performance</h3>
                             <div className="grid grid-cols-3 gap-4">
@@ -146,11 +150,15 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
                         <div className="grid grid-cols-1 gap-4">
                             <div>
                                 <h4 className="font-semibold text-green-400 mb-2 flex items-center gap-2"><CheckIcon className="h-5 w-5" />Confluence</h4>
-                                <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2 text-sm">{signal.ai_confluence.map((item, index) => <li key={index}>{item}</li>)}</ul>
+                                <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2 text-sm">
+                                    {confluenceFactors.map((item, index) => <li key={index}>{item}</li>)}
+                                </ul>
                             </div>
                             <div>
                                 <h4 className="font-semibold text-red-400 mb-2 flex items-center gap-2"><XMarkIcon className="h-5 w-5" />Counters</h4>
-                                <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2 text-sm">{signal.ai_counters.map((item, index) => <li key={index}>{item}</li>)}</ul>
+                                <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2 text-sm">
+                                    {counterFactors.map((item, index) => <li key={index}>{item}</li>)}
+                                </ul>
                             </div>
                         </div>
                     </div>
