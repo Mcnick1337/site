@@ -77,8 +77,10 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
         WIN: { text: 'WIN', color: 'text-green-400', icon: <CheckIcon className="h-5 w-5" /> },
         LOSS: { text: 'LOSS', color: 'text-red-400', icon: <XMarkIcon className="h-5 w-5" /> },
         EXPIRED: { text: 'EXPIRED', color: 'text-amber-400', icon: <ClockIcon className="h-5 w-5" /> },
+        LIVE: { text: 'LIVE', color: 'text-blue-400', icon: <ClockIcon className="h-5 w-5 animate-pulse" /> },
         PENDING: { text: 'PENDING', color: 'text-gray-400', icon: <MinusIcon className="h-5 w-5" /> },
     }[outcome.status.toUpperCase()] || { text: 'UNKNOWN', color: 'text-gray-500', icon: <MinusIcon className="h-5 w-5" /> };
+
 
     // --- THE FIX IS HERE: Defensively check for arrays ---
     const confluenceFactors = Array.isArray(signal.ai_confluence) ? signal.ai_confluence : [];

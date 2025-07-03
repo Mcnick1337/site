@@ -22,13 +22,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_time": "2025-07-02T16:08:00+00:00",
             "exit_price": 109450.0,
-            "duration_hours": 8.87,
+            "duration_hours": 3.0,
             "profit_and_loss_usd": 1966.83,
             "profit_and_loss_pct": 1.8299,
-            "max_favorable_excursion_usd": 2017.43,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1976.83,
+            "max_adverse_excursion_usd": 90.88
         }
     },
     {
@@ -54,13 +54,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_time": "2025-07-02T15:56:00+00:00",
             "exit_price": 108658.0,
-            "duration_hours": 10.9,
+            "duration_hours": 2.75,
             "profit_and_loss_usd": 1172.0,
             "profit_and_loss_pct": 1.0904,
-            "max_favorable_excursion_usd": 1455.4,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1273.2,
+            "max_adverse_excursion_usd": 93.71
         }
     },
     {
@@ -86,13 +86,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_time": "2025-07-02T15:56:00+00:00",
             "exit_price": 108700.0,
-            "duration_hours": 10.88,
+            "duration_hours": 2.73,
             "profit_and_loss_usd": 1206.59,
             "profit_and_loss_pct": 1.1225,
-            "max_favorable_excursion_usd": 1447.99,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1265.79,
+            "max_adverse_excursion_usd": 101.12
         }
     },
     {
@@ -118,13 +118,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_time": "2025-07-02T16:03:00+00:00",
             "exit_price": 108800.0,
-            "duration_hours": 10.86,
+            "duration_hours": 2.83,
             "profit_and_loss_usd": 1206.5,
             "profit_and_loss_pct": 1.1214,
-            "max_favorable_excursion_usd": 1347.9,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1230.62,
+            "max_adverse_excursion_usd": 201.21
         }
     },
     {
@@ -150,13 +150,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_time": "2025-07-02T16:09:00+00:00",
             "exit_price": 109500.0,
-            "duration_hours": 8.54,
+            "duration_hours": 2.69,
             "profit_and_loss_usd": 1983.62,
             "profit_and_loss_pct": 1.8449,
-            "max_favorable_excursion_usd": 1984.22,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 2130.07,
+            "max_adverse_excursion_usd": 124.09
         }
     },
     {
@@ -182,13 +182,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_time": "2025-07-02T14:26:00+00:00",
             "exit_price": 108050.0,
-            "duration_hours": 10.58,
+            "duration_hours": 0.93,
             "profit_and_loss_usd": 512.71,
             "profit_and_loss_pct": 0.4768,
-            "max_favorable_excursion_usd": 1404.11,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 530.26,
+            "max_adverse_excursion_usd": 145.0
         }
     },
     {
@@ -214,13 +214,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_time": "2025-07-02T15:11:00+00:00",
             "exit_price": 108500.0,
-            "duration_hours": 10.55,
+            "duration_hours": 1.65,
             "profit_and_loss_usd": 997.36,
             "profit_and_loss_pct": 0.9278,
-            "max_favorable_excursion_usd": 1438.76,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 997.36,
+            "max_adverse_excursion_usd": 110.35
         }
     },
     {
@@ -246,13 +246,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_time": "2025-07-02T13:47:00+00:00",
             "exit_price": 107850.0,
-            "duration_hours": 10.53,
+            "duration_hours": 0.23,
             "profit_and_loss_usd": 326.45,
             "profit_and_loss_pct": 0.3036,
-            "max_favorable_excursion_usd": 1393.85,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 417.26,
+            "max_adverse_excursion_usd": 63.18
         }
     },
     {
@@ -278,13 +278,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_time": "2025-07-02T14:50:00+00:00",
             "exit_price": 108100.0,
-            "duration_hours": 10.51,
+            "duration_hours": 1.26,
             "profit_and_loss_usd": 546.76,
             "profit_and_loss_pct": 0.5084,
-            "max_favorable_excursion_usd": 1347.06,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 546.76,
+            "max_adverse_excursion_usd": 92.87
         }
     },
     {
@@ -310,13 +310,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_time": "2025-07-02T15:55:00+00:00",
             "exit_price": 108600.0,
-            "duration_hours": 10.49,
+            "duration_hours": 2.32,
             "profit_and_loss_usd": 1100.51,
             "profit_and_loss_pct": 1.0237,
-            "max_favorable_excursion_usd": 1400.51,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1121.51,
+            "max_adverse_excursion_usd": 19.49
         }
     },
     {
@@ -342,13 +342,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T15:11:00+00:00",
             "exit_price": 108500.0,
-            "duration_hours": 10.48,
+            "duration_hours": 1.57,
             "profit_and_loss_usd": 930.0,
             "profit_and_loss_pct": 0.8646,
-            "max_favorable_excursion_usd": 1329.4,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 930.0,
+            "max_adverse_excursion_usd": 90.0
         }
     },
     {
@@ -374,12 +374,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T15:56:00+00:00",
             "exit_price": 108685.0,
-            "duration_hours": 10.46,
+            "duration_hours": 2.3,
             "profit_and_loss_usd": 1131.23,
             "profit_and_loss_pct": 1.0518,
-            "max_favorable_excursion_usd": 1339.93,
+            "max_favorable_excursion_usd": 1205.43,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -406,12 +406,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T13:48:00+00:00",
             "exit_price": 107950.0,
-            "duration_hours": 10.44,
+            "duration_hours": 0.14,
             "profit_and_loss_usd": 350.0,
             "profit_and_loss_pct": 0.3253,
-            "max_favorable_excursion_usd": 1293.7,
+            "max_favorable_excursion_usd": 398.0,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -438,13 +438,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T15:02:00+00:00",
             "exit_price": 108235.0,
-            "duration_hours": 10.42,
+            "duration_hours": 1.35,
             "profit_and_loss_usd": 489.91,
             "profit_and_loss_pct": 0.4547,
-            "max_favorable_excursion_usd": 1160.61,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 529.51,
+            "max_adverse_excursion_usd": 155.9
         }
     },
     {
@@ -469,14 +469,14 @@
             "sentiment_score": 0.4
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T13:44:00+00:00",
-            "exit_price": 107742.2,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 16.4,
-            "profit_and_loss_pct": 0.0152,
-            "max_favorable_excursion_usd": 1987.7,
-            "max_adverse_excursion_usd": 79.6
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -502,13 +502,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:40:00+00:00",
+            "exit_time": "2025-07-02T16:06:00+00:00",
             "exit_price": 109200.0,
-            "duration_hours": 8.87,
+            "duration_hours": 2.3,
             "profit_and_loss_usd": 1608.99,
             "profit_and_loss_pct": 1.4955,
-            "max_favorable_excursion_usd": 1655.79,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1625.55,
+            "max_adverse_excursion_usd": 1.82
         }
     },
     {
@@ -534,13 +534,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T15:56:00+00:00",
             "exit_price": 108700.0,
-            "duration_hours": 10.28,
+            "duration_hours": 2.11,
             "profit_and_loss_usd": 766.04,
             "profit_and_loss_pct": 0.7097,
-            "max_favorable_excursion_usd": 983.14,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 825.24,
+            "max_adverse_excursion_usd": 344.77
         }
     },
     {
@@ -566,13 +566,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:35:00+00:00",
+            "exit_time": "2025-07-02T16:08:00+00:00",
             "exit_price": 109400.0,
-            "duration_hours": 8.72,
+            "duration_hours": 2.27,
             "profit_and_loss_usd": 1727.11,
             "profit_and_loss_pct": 1.604,
-            "max_favorable_excursion_usd": 1742.31,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1787.11,
+            "max_adverse_excursion_usd": 83.7
         }
     },
     {
@@ -598,12 +598,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T15:11:00+00:00",
             "exit_price": 108450.0,
-            "duration_hours": 10.19,
+            "duration_hours": 1.27,
             "profit_and_loss_usd": 866.95,
             "profit_and_loss_pct": 0.8058,
-            "max_favorable_excursion_usd": 1338.15,
+            "max_favorable_excursion_usd": 916.95,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -630,12 +630,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T15:11:00+00:00",
             "exit_price": 108500.0,
-            "duration_hours": 10.17,
+            "duration_hours": 1.25,
             "profit_and_loss_usd": 920.0,
             "profit_and_loss_pct": 0.8552,
-            "max_favorable_excursion_usd": 1341.7,
+            "max_favorable_excursion_usd": 920.0,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -661,14 +661,14 @@
             "sentiment_score": 0.8
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T13:58:00+00:00",
-            "exit_price": 107669.0,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 80.55,
-            "profit_and_loss_pct": 0.0749,
-            "max_favorable_excursion_usd": 2125.05,
-            "max_adverse_excursion_usd": 0.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -693,14 +693,14 @@
             "sentiment_score": 0.7
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T13:59:00+00:00",
-            "exit_price": 107752.2,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 82.08,
-            "profit_and_loss_pct": 0.0762,
-            "max_favorable_excursion_usd": 2043.38,
-            "max_adverse_excursion_usd": 0.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -726,12 +726,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:40:00+00:00",
+            "exit_time": "2025-07-02T16:06:00+00:00",
             "exit_price": 109200.0,
-            "duration_hours": 8.67,
+            "duration_hours": 2.1,
             "profit_and_loss_usd": 1610.0,
             "profit_and_loss_pct": 1.4964,
-            "max_favorable_excursion_usd": 1656.8,
+            "max_favorable_excursion_usd": 1626.56,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -758,12 +758,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:39:00+00:00",
+            "exit_time": "2025-07-02T16:08:00+00:00",
             "exit_price": 109270.0,
-            "duration_hours": 8.63,
+            "duration_hours": 2.11,
             "profit_and_loss_usd": 1661.49,
             "profit_and_loss_pct": 1.544,
-            "max_favorable_excursion_usd": 1731.99,
+            "max_favorable_excursion_usd": 1851.49,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -790,12 +790,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T16:03:00+00:00",
             "exit_price": 108800.0,
-            "duration_hours": 10.06,
+            "duration_hours": 2.01,
             "profit_and_loss_usd": 1194.84,
             "profit_and_loss_pct": 1.1104,
-            "max_favorable_excursion_usd": 1323.44,
+            "max_favorable_excursion_usd": 1218.96,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -821,14 +821,14 @@
             "sentiment_score": 0.75
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:04:00+00:00",
-            "exit_price": 107799.3,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 192.71,
-            "profit_and_loss_pct": 0.1791,
-            "max_favorable_excursion_usd": 2106.91,
-            "max_adverse_excursion_usd": 0.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -854,13 +854,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:39:00+00:00",
+            "exit_time": "2025-07-02T16:08:00+00:00",
             "exit_price": 109300.0,
-            "duration_hours": 8.57,
+            "duration_hours": 2.05,
             "profit_and_loss_usd": 1483.2,
             "profit_and_loss_pct": 1.3757,
-            "max_favorable_excursion_usd": 1523.7,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1643.2,
+            "max_adverse_excursion_usd": 157.45
         }
     },
     {
@@ -886,13 +886,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T23:23:00+00:00",
+            "exit_time": "2025-07-02T16:05:00+00:00",
             "exit_price": 109000.0,
-            "duration_hours": 9.28,
+            "duration_hours": 1.98,
             "profit_and_loss_usd": 1300.0,
             "profit_and_loss_pct": 1.2071,
-            "max_favorable_excursion_usd": 1300.0,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1473.34,
+            "max_adverse_excursion_usd": 40.65
         }
     },
     {
@@ -917,14 +917,14 @@
             "sentiment_score": 0.85
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:08:00+00:00",
-            "exit_price": 107831.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -71.31,
-            "profit_and_loss_pct": -0.0661,
-            "max_favorable_excursion_usd": 1810.59,
-            "max_adverse_excursion_usd": 139.61
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -949,14 +949,14 @@
             "sentiment_score": 0.8
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:09:00+00:00",
-            "exit_price": 107836.0,
-            "duration_hours": -0.0,
-            "profit_and_loss_usd": -53.5,
-            "profit_and_loss_pct": -0.0496,
-            "max_favorable_excursion_usd": 1824.0,
-            "max_adverse_excursion_usd": 126.2
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -981,14 +981,14 @@
             "sentiment_score": 0.9
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:11:00+00:00",
-            "exit_price": 107872.4,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 263.14,
-            "profit_and_loss_pct": 0.2445,
-            "max_favorable_excursion_usd": 2104.24,
-            "max_adverse_excursion_usd": 0.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1013,14 +1013,14 @@
             "sentiment_score": 0.8
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:12:00+00:00",
-            "exit_price": 107925.3,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 37.48,
-            "profit_and_loss_pct": 0.0347,
-            "max_favorable_excursion_usd": 1825.68,
-            "max_adverse_excursion_usd": 124.52
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1046,13 +1046,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_time": "2025-07-02T16:09:00+00:00",
             "exit_price": 109500.0,
-            "duration_hours": 7.78,
+            "duration_hours": 1.93,
             "profit_and_loss_usd": 1557.2,
             "profit_and_loss_pct": 1.4426,
-            "max_favorable_excursion_usd": 1557.8,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1703.65,
+            "max_adverse_excursion_usd": 283.45
         }
     },
     {
@@ -1077,14 +1077,14 @@
             "sentiment_score": 0.88
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:15:00+00:00",
-            "exit_price": 107788.4,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -169.1,
-            "profit_and_loss_pct": -0.1566,
-            "max_favorable_excursion_usd": 1756.0,
-            "max_adverse_excursion_usd": 194.2
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1110,12 +1110,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_time": "2025-07-02T16:09:00+00:00",
             "exit_price": 109500.0,
-            "duration_hours": 7.7,
+            "duration_hours": 1.85,
             "profit_and_loss_usd": 1800.0,
             "profit_and_loss_pct": 1.6713,
-            "max_favorable_excursion_usd": 1800.6,
+            "max_favorable_excursion_usd": 1946.45,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -1141,14 +1141,14 @@
             "sentiment_score": 0.68
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:23:00+00:00",
-            "exit_price": 107740.0,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 97.85,
-            "profit_and_loss_pct": 0.0909,
-            "max_favorable_excursion_usd": 2071.35,
-            "max_adverse_excursion_usd": 0.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1173,14 +1173,14 @@
             "sentiment_score": 0.6
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:24:00+00:00",
-            "exit_price": 107743.7,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 43.7,
-            "profit_and_loss_pct": 0.0406,
-            "max_favorable_excursion_usd": 2013.5,
-            "max_adverse_excursion_usd": 0.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1206,12 +1206,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T16:03:00+00:00",
             "exit_price": 108800.0,
-            "duration_hours": 9.69,
+            "duration_hours": 1.64,
             "profit_and_loss_usd": 1160.0,
             "profit_and_loss_pct": 1.0777,
-            "max_favorable_excursion_usd": 1288.6,
+            "max_favorable_excursion_usd": 1184.12,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -1238,12 +1238,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T16:03:00+00:00",
             "exit_price": 108800.0,
-            "duration_hours": 9.66,
+            "duration_hours": 1.61,
             "profit_and_loss_usd": 1150.0,
             "profit_and_loss_pct": 1.0683,
-            "max_favorable_excursion_usd": 1278.6,
+            "max_favorable_excursion_usd": 1174.12,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -1269,14 +1269,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:28:00+00:00",
-            "exit_price": 107821.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -245.95,
-            "profit_and_loss_pct": -0.2276,
-            "max_favorable_excursion_usd": 1645.95,
-            "max_adverse_excursion_usd": 304.25
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1302,13 +1302,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T16:03:00+00:00",
             "exit_price": 108800.0,
-            "duration_hours": 9.62,
+            "duration_hours": 1.57,
             "profit_and_loss_usd": 1050.0,
             "profit_and_loss_pct": 0.9745,
-            "max_favorable_excursion_usd": 1186.2,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1074.12,
+            "max_adverse_excursion_usd": 19.87
         }
     },
     {
@@ -1334,12 +1334,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T16:03:00+00:00",
             "exit_price": 108800.0,
-            "duration_hours": 9.56,
+            "duration_hours": 1.51,
             "profit_and_loss_usd": 1129.95,
             "profit_and_loss_pct": 1.0495,
-            "max_favorable_excursion_usd": 1266.15,
+            "max_favorable_excursion_usd": 1154.07,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -1365,14 +1365,14 @@
             "sentiment_score": 0.5
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:40:00+00:00",
-            "exit_price": 107932.5,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -11.01,
-            "profit_and_loss_pct": -0.0102,
-            "max_favorable_excursion_usd": 1769.99,
-            "max_adverse_excursion_usd": 73.51
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1397,14 +1397,14 @@
             "sentiment_score": 0.45
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T14:44:00+00:00",
-            "exit_price": 107792.7,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -207.3,
-            "profit_and_loss_pct": -0.1919,
-            "max_favorable_excursion_usd": 1713.5,
-            "max_adverse_excursion_usd": 130.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1430,13 +1430,13 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_time": "2025-07-02T16:09:00+00:00",
             "exit_price": 109500.0,
-            "duration_hours": 7.25,
+            "duration_hours": 1.4,
             "profit_and_loss_usd": 1583.26,
             "profit_and_loss_pct": 1.4671,
-            "max_favorable_excursion_usd": 1583.86,
-            "max_adverse_excursion_usd": 0.0
+            "max_favorable_excursion_usd": 1729.71,
+            "max_adverse_excursion_usd": 124.51
         }
     },
     {
@@ -1462,12 +1462,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T16:05:00+00:00",
             "exit_price": 108900.0,
-            "duration_hours": 9.31,
+            "duration_hours": 1.29,
             "profit_and_loss_usd": 1010.0,
             "profit_and_loss_pct": 0.9361,
-            "max_favorable_excursion_usd": 1046.2,
+            "max_favorable_excursion_usd": 1283.34,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -1493,8 +1493,14 @@
             "sentiment_score": 0.25
         },
         "performance": {
-            "status": "LOSS",
-            "exit_time": "2025-07-02T23:55:00+00:00"
+            "status": "WIN",
+            "exit_time": "2025-07-02T21:53:00+00:00",
+            "exit_price": 109450.0,
+            "duration_hours": 0.69,
+            "profit_and_loss_usd": 400.0,
+            "profit_and_loss_pct": 0.3668,
+            "max_favorable_excursion_usd": 406.3,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -1519,14 +1525,14 @@
             "sentiment_score": 0.3
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:15:00+00:00",
-            "exit_price": 109217.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 11.38,
-            "profit_and_loss_pct": 0.0104,
-            "max_favorable_excursion_usd": 329.88,
-            "max_adverse_excursion_usd": 479.62
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1551,14 +1557,14 @@
             "sentiment_score": 0.25
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:16:00+00:00",
-            "exit_price": 109246.0,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": -0.14,
-            "profit_and_loss_pct": -0.0001,
-            "max_favorable_excursion_usd": 289.96,
-            "max_adverse_excursion_usd": 519.54
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1583,14 +1589,14 @@
             "sentiment_score": 0.35
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:20:00+00:00",
-            "exit_price": 109298.9,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 264.52,
-            "profit_and_loss_pct": 0.2426,
-            "max_favorable_excursion_usd": 501.72,
-            "max_adverse_excursion_usd": 307.78
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1615,14 +1621,14 @@
             "sentiment_score": 0.38
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:23:00+00:00",
-            "exit_price": 109284.9,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 252.6,
-            "profit_and_loss_pct": 0.2317,
-            "max_favorable_excursion_usd": 503.8,
-            "max_adverse_excursion_usd": 305.7
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1647,14 +1653,14 @@
             "sentiment_score": -0.2
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:26:00+00:00",
-            "exit_price": 109233.4,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 56.91,
-            "profit_and_loss_pct": 0.0521,
-            "max_favorable_excursion_usd": 563.71,
-            "max_adverse_excursion_usd": 245.79
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1679,14 +1685,14 @@
             "sentiment_score": 0.25
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:30:00+00:00",
-            "exit_price": 109230.8,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 200.8,
-            "profit_and_loss_pct": 0.1842,
-            "max_favorable_excursion_usd": 506.1,
-            "max_adverse_excursion_usd": 303.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1711,14 +1717,14 @@
             "sentiment_score": 0.25
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:34:00+00:00",
-            "exit_price": 109341.5,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 308.59,
-            "profit_and_loss_pct": 0.283,
-            "max_favorable_excursion_usd": 503.19,
-            "max_adverse_excursion_usd": 306.31
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1744,7 +1750,13 @@
         },
         "performance": {
             "status": "LOSS",
-            "exit_time": "2025-07-02T23:53:00+00:00"
+            "exit_time": "2025-07-02T23:41:00+00:00",
+            "exit_price": 108800.0,
+            "duration_hours": 2.1,
+            "profit_and_loss_usd": -553.16,
+            "profit_and_loss_pct": -0.5058,
+            "max_favorable_excursion_usd": 189.15,
+            "max_adverse_excursion_usd": 594.92
         }
     },
     {
@@ -1769,14 +1781,14 @@
             "sentiment_score": 0.4
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:37:00+00:00",
-            "exit_price": 109345.9,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 312.12,
-            "profit_and_loss_pct": 0.2863,
-            "max_favorable_excursion_usd": 502.32,
-            "max_adverse_excursion_usd": 307.18
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1801,14 +1813,14 @@
             "sentiment_score": 0.45
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:39:00+00:00",
-            "exit_price": 109336.1,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 286.1,
-            "profit_and_loss_pct": 0.2624,
-            "max_favorable_excursion_usd": 486.1,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1833,14 +1845,14 @@
             "sentiment_score": 0.15
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:41:00+00:00",
-            "exit_price": 109237.2,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 203.56,
-            "profit_and_loss_pct": 0.1867,
-            "max_favorable_excursion_usd": 502.46,
-            "max_adverse_excursion_usd": 307.04
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1865,14 +1877,14 @@
             "sentiment_score": 0.48
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:42:00+00:00",
-            "exit_price": 109271.3,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 221.3,
-            "profit_and_loss_pct": 0.2029,
-            "max_favorable_excursion_usd": 486.1,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1897,14 +1909,14 @@
             "sentiment_score": 0.54
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:43:00+00:00",
-            "exit_price": 109284.8,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 252.46,
-            "profit_and_loss_pct": 0.2315,
-            "max_favorable_excursion_usd": 503.76,
-            "max_adverse_excursion_usd": 305.74
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1929,14 +1941,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:46:00+00:00",
-            "exit_price": 109251.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 221.27,
-            "profit_and_loss_pct": 0.2029,
-            "max_favorable_excursion_usd": 505.77,
-            "max_adverse_excursion_usd": 303.73
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -1962,7 +1974,13 @@
         },
         "performance": {
             "status": "LOSS",
-            "exit_time": "2025-07-02T23:44:00+00:00"
+            "exit_time": "2025-07-02T23:42:00+00:00",
+            "exit_price": 108750.0,
+            "duration_hours": 1.9,
+            "profit_and_loss_usd": -281.84,
+            "profit_and_loss_pct": -0.2585,
+            "max_favorable_excursion_usd": 510.47,
+            "max_adverse_excursion_usd": 309.95
         }
     },
     {
@@ -1987,14 +2005,14 @@
             "sentiment_score": 0.45
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:50:00+00:00",
-            "exit_price": 109345.9,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 314.06,
-            "profit_and_loss_pct": 0.288,
-            "max_favorable_excursion_usd": 504.26,
-            "max_adverse_excursion_usd": 305.24
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2019,14 +2037,14 @@
             "sentiment_score": 0.75
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T21:51:00+00:00",
-            "exit_price": 109365.1,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 332.86,
-            "profit_and_loss_pct": 0.3053,
-            "max_favorable_excursion_usd": 503.86,
-            "max_adverse_excursion_usd": 305.64
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2051,14 +2069,14 @@
             "sentiment_score": 0.8
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:03:00+00:00",
-            "exit_price": 109390.4,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 353.88,
-            "profit_and_loss_pct": 0.3246,
-            "max_favorable_excursion_usd": 378.68,
-            "max_adverse_excursion_usd": 309.92
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2083,14 +2101,14 @@
             "sentiment_score": 0.7
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:07:00+00:00",
-            "exit_price": 109263.2,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 213.2,
-            "profit_and_loss_pct": 0.1955,
-            "max_favorable_excursion_usd": 365.2,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2115,14 +2133,14 @@
             "sentiment_score": 0.55
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:16:00+00:00",
-            "exit_price": 109261.4,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 228.03,
-            "profit_and_loss_pct": 0.2091,
-            "max_favorable_excursion_usd": 381.83,
-            "max_adverse_excursion_usd": 306.77
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2147,14 +2165,14 @@
             "sentiment_score": 0.6
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:20:00+00:00",
-            "exit_price": 109261.1,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 228.1,
-            "profit_and_loss_pct": 0.2092,
-            "max_favorable_excursion_usd": 382.2,
-            "max_adverse_excursion_usd": 306.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2179,14 +2197,14 @@
             "sentiment_score": 0.5
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:21:00+00:00",
-            "exit_price": 109261.2,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 211.2,
-            "profit_and_loss_pct": 0.1937,
-            "max_favorable_excursion_usd": 365.2,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2211,14 +2229,14 @@
             "sentiment_score": 0.45
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:23:00+00:00",
-            "exit_price": 109256.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 206.6,
-            "profit_and_loss_pct": 0.1895,
-            "max_favorable_excursion_usd": 365.2,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2243,14 +2261,14 @@
             "sentiment_score": 0.5
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:24:00+00:00",
-            "exit_price": 109256.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 206.6,
-            "profit_and_loss_pct": 0.1895,
-            "max_favorable_excursion_usd": 365.2,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2275,14 +2293,14 @@
             "sentiment_score": 0.7
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:25:00+00:00",
-            "exit_price": 109282.8,
-            "duration_hours": -0.0,
-            "profit_and_loss_usd": 232.8,
-            "profit_and_loss_pct": 0.2135,
-            "max_favorable_excursion_usd": 365.2,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2307,14 +2325,14 @@
             "sentiment_score": 0.45
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:27:00+00:00",
-            "exit_price": 109282.8,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 232.8,
-            "profit_and_loss_pct": 0.2135,
-            "max_favorable_excursion_usd": 365.2,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2339,14 +2357,14 @@
             "sentiment_score": 0.4
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:28:00+00:00",
-            "exit_price": 109297.1,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 263.37,
-            "profit_and_loss_pct": 0.2415,
-            "max_favorable_excursion_usd": 381.47,
-            "max_adverse_excursion_usd": 307.13
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2371,14 +2389,14 @@
             "sentiment_score": 0.7
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:32:00+00:00",
-            "exit_price": 109268.7,
-            "duration_hours": 0.02,
-            "profit_and_loss_usd": 236.37,
-            "profit_and_loss_pct": 0.2168,
-            "max_favorable_excursion_usd": 382.87,
-            "max_adverse_excursion_usd": 305.73
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2403,14 +2421,14 @@
             "sentiment_score": 0.45
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:34:00+00:00",
-            "exit_price": 109343.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 310.11,
-            "profit_and_loss_pct": 0.2844,
-            "max_favorable_excursion_usd": 381.71,
-            "max_adverse_excursion_usd": 306.89
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2435,14 +2453,14 @@
             "sentiment_score": 0.45
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:35:00+00:00",
-            "exit_price": 109393.6,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 358.71,
-            "profit_and_loss_pct": 0.329,
-            "max_favorable_excursion_usd": 380.31,
-            "max_adverse_excursion_usd": 308.29
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2467,14 +2485,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:37:00+00:00",
-            "exit_price": 109362.0,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -53.22,
-            "profit_and_loss_pct": -0.0486,
-            "max_favorable_excursion_usd": 0.0,
-            "max_adverse_excursion_usd": 688.62
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2499,14 +2517,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:38:00+00:00",
-            "exit_price": 109362.0,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 312.0,
-            "profit_and_loss_pct": 0.2861,
-            "max_favorable_excursion_usd": 314.2,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2531,14 +2549,14 @@
             "sentiment_score": 0.75
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:39:00+00:00",
-            "exit_price": 109340.5,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 306.16,
-            "profit_and_loss_pct": 0.2808,
-            "max_favorable_excursion_usd": 306.16,
-            "max_adverse_excursion_usd": 307.74
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2564,12 +2582,12 @@
         },
         "performance": {
             "status": "WIN",
-            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_time": "2025-07-02T23:20:00+00:00",
             "exit_price": 109000.0,
-            "duration_hours": 1.41,
+            "duration_hours": 0.64,
             "profit_and_loss_usd": 249.05,
             "profit_and_loss_pct": 0.228,
-            "max_favorable_excursion_usd": 312.85,
+            "max_favorable_excursion_usd": 249.05,
             "max_adverse_excursion_usd": 0.0
         }
     },
@@ -2595,14 +2613,14 @@
             "sentiment_score": 0.8
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:47:00+00:00",
-            "exit_price": 109099.1,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 49.1,
-            "profit_and_loss_pct": 0.045,
-            "max_favorable_excursion_usd": 109.9,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2627,14 +2645,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:50:00+00:00",
-            "exit_price": 109144.2,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 94.2,
-            "profit_and_loss_pct": 0.0864,
-            "max_favorable_excursion_usd": 109.3,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2659,14 +2677,14 @@
             "sentiment_score": 0.5
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:51:00+00:00",
-            "exit_price": 109128.9,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 78.9,
-            "profit_and_loss_pct": 0.0724,
-            "max_favorable_excursion_usd": 109.3,
-            "max_adverse_excursion_usd": 323.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2691,14 +2709,14 @@
             "sentiment_score": 0.6
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:52:00+00:00",
-            "exit_price": 109142.6,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 118.69,
-            "profit_and_loss_pct": 0.1089,
-            "max_favorable_excursion_usd": 135.39,
-            "max_adverse_excursion_usd": 297.31
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2723,14 +2741,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T22:54:00+00:00",
-            "exit_price": 109121.1,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -22.19,
-            "profit_and_loss_pct": -0.0203,
-            "max_favorable_excursion_usd": 16.01,
-            "max_adverse_excursion_usd": 416.69
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2755,14 +2773,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:01:00+00:00",
-            "exit_price": 109119.4,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 103.19,
-            "profit_and_loss_pct": 0.0947,
-            "max_favorable_excursion_usd": 143.09,
-            "max_adverse_excursion_usd": 289.61
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2787,14 +2805,14 @@
             "sentiment_score": 0.68
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:05:00+00:00",
-            "exit_price": 109128.0,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": -32.46,
-            "profit_and_loss_pct": -0.0297,
-            "max_favorable_excursion_usd": 0.0,
-            "max_adverse_excursion_usd": 433.86
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2819,14 +2837,14 @@
             "sentiment_score": 0.56
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:07:00+00:00",
-            "exit_price": 109128.0,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 112.66,
-            "profit_and_loss_pct": 0.1033,
-            "max_favorable_excursion_usd": 112.66,
-            "max_adverse_excursion_usd": 288.74
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2851,14 +2869,14 @@
             "sentiment_score": 0.85
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:11:00+00:00",
-            "exit_price": 109084.5,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 69.89,
-            "profit_and_loss_pct": 0.0641,
-            "max_favorable_excursion_usd": 109.39,
-            "max_adverse_excursion_usd": 288.01
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2883,14 +2901,14 @@
             "sentiment_score": 0.8
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:16:00+00:00",
-            "exit_price": 109094.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 89.95,
-            "profit_and_loss_pct": 0.0825,
-            "max_favorable_excursion_usd": 89.95,
-            "max_adverse_excursion_usd": 278.05
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2915,14 +2933,14 @@
             "sentiment_score": 0.85
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:17:00+00:00",
-            "exit_price": 109062.8,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": 58.44,
-            "profit_and_loss_pct": 0.0536,
-            "max_favorable_excursion_usd": 58.44,
-            "max_adverse_excursion_usd": 277.76
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2947,14 +2965,14 @@
             "sentiment_score": 0.68
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:21:00+00:00",
-            "exit_price": 109004.1,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 1.47,
-            "profit_and_loss_pct": 0.0013,
-            "max_favorable_excursion_usd": 7.27,
-            "max_adverse_excursion_usd": 276.03
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -2979,14 +2997,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:25:00+00:00",
-            "exit_price": 108980.2,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -1.81,
-            "profit_and_loss_pct": -0.0017,
-            "max_favorable_excursion_usd": 6.99,
-            "max_adverse_excursion_usd": 255.41
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3011,14 +3029,14 @@
             "sentiment_score": 0.75
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:27:00+00:00",
-            "exit_price": 108931.7,
-            "duration_hours": 0.02,
-            "profit_and_loss_usd": -57.63,
-            "profit_and_loss_pct": -0.0529,
-            "max_favorable_excursion_usd": 0.0,
-            "max_adverse_excursion_usd": 262.73
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3043,14 +3061,14 @@
             "sentiment_score": 0.7
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:28:00+00:00",
-            "exit_price": 108937.7,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -50.2,
-            "profit_and_loss_pct": -0.0461,
-            "max_favorable_excursion_usd": 1.1,
-            "max_adverse_excursion_usd": 261.3
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3075,14 +3093,14 @@
             "sentiment_score": 0.75
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:31:00+00:00",
-            "exit_price": 108988.9,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": 35.3,
-            "profit_and_loss_pct": 0.0324,
-            "max_favorable_excursion_usd": 35.4,
-            "max_adverse_excursion_usd": 227.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3107,14 +3125,14 @@
             "sentiment_score": 0.8
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:32:00+00:00",
-            "exit_price": 108950.6,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -38.39,
-            "profit_and_loss_pct": -0.0352,
-            "max_favorable_excursion_usd": 0.0,
-            "max_adverse_excursion_usd": 262.39
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3139,14 +3157,14 @@
             "sentiment_score": 0.75
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:35:00+00:00",
-            "exit_price": 108939.7,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": -16.02,
-            "profit_and_loss_pct": -0.0147,
-            "max_favorable_excursion_usd": 0.0,
-            "max_adverse_excursion_usd": 229.12
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3171,14 +3189,14 @@
             "sentiment_score": 0.75
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:38:00+00:00",
-            "exit_price": 108890.4,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -69.6,
-            "profit_and_loss_pct": -0.0639,
-            "max_favorable_excursion_usd": 0.0,
-            "max_adverse_excursion_usd": 233.4
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3203,14 +3221,14 @@
             "sentiment_score": 0.75
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:44:00+00:00",
-            "exit_price": 108723.0,
-            "duration_hours": 0.02,
-            "profit_and_loss_usd": -11.88,
-            "profit_and_loss_pct": -0.0109,
-            "max_favorable_excursion_usd": 153.02,
-            "max_adverse_excursion_usd": 4.78
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3235,14 +3253,14 @@
             "sentiment_score": 0.65
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:45:00+00:00",
-            "exit_price": 108723.1,
-            "duration_hours": 0.01,
-            "profit_and_loss_usd": -15.36,
-            "profit_and_loss_pct": -0.0141,
-            "max_favorable_excursion_usd": 149.44,
-            "max_adverse_excursion_usd": 0.0
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     },
     {
@@ -3267,14 +3285,14 @@
             "sentiment_score": 0.5
         },
         "performance": {
-            "status": "EXPIRED",
-            "exit_time": "2025-07-02T23:46:00+00:00",
-            "exit_price": 108758.5,
-            "duration_hours": 0.0,
-            "profit_and_loss_usd": -62.14,
-            "profit_and_loss_pct": -0.0571,
-            "max_favorable_excursion_usd": 67.26,
-            "max_adverse_excursion_usd": 34.74
+            "status": "LIVE",
+            "exit_time": null,
+            "exit_price": null,
+            "duration_hours": 0,
+            "profit_and_loss_usd": 0,
+            "profit_and_loss_pct": 0,
+            "max_favorable_excursion_usd": 0,
+            "max_adverse_excursion_usd": 0
         }
     }
 ]
