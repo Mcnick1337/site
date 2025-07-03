@@ -3,8 +3,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { LightweightChart } from '../charts/LightweightChart';
-import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid';
-import { verifySignalOutcome } from '../../utils/calculateStats';
+import { CheckIcon, XMarkIcon, ClockIcon, ArrowTrendingUpIcon, ArrowTrendingDownIcon, MinusIcon } from '@heroicons/react/20/solid';
 
 async function fetchOHLCDataV2(symbol, signalTime, interval) {
     const hoursToFetch = 120;
@@ -30,8 +29,15 @@ const intervalMap = { '5m': '5min', '15m': '15min', '1h': '1hour', '4h': '4hour'
 
 const DetailItem = ({ label, value, valueClass = '' }) => (
     <div>
-        <p className="text-xs text-gray-400">{label}</p>
-        <p className={`text-base font-semibold ${valueClass}`}>{value}</p>
+        <p className="text-sm text-gray-400">{label}</p>
+        <p className={`text-lg font-bold ${valueClass}`}>{value}</p>
+    </div>
+);
+
+const PerformanceStat = ({ label, value, valueClass = '' }) => (
+    <div className="text-center bg-black/20 p-3 rounded-lg">
+        <p className="text-xs text-gray-400 uppercase tracking-wider">{label}</p>
+        <p className={`text-xl font-bold ${valueClass}`}>{value}</p>
     </div>
 );
 
@@ -40,8 +46,6 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
     const [ohlcData, setOhlcData] = useState(null);
     const [interval, setInterval] = useState('1h');
     const [crosshairData, setCrosshairData] = useState(null);
-    const [verificationStatus, setVerificationStatus] = useState({ status: 'unverified', message: '' });
-    const [isVerifying, setIsVerifying] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
@@ -55,14 +59,8 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
         return () => clearTimeout(timer);
     }, [signal, interval]);
 
-    const handleVerifySignal = async () => {
-        setIsVerifying(true);
-        const result = await verifySignalOutcome(signal);
-        setVerificationStatus(result);
-        setIsVerifying(false);
-    };
-
     const handleClose = () => setTimeout(onClose, 300);
+
     const displayData = crosshairData || (ohlcData && ohlcData.slice(-1)[0]);
     
     const chartSignalProp = useMemo(() => ({
@@ -73,24 +71,19 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
         "Stop Loss": signal.trade_parameters.stop_loss,
     }), [signal]);
 
-    // --- THE FIX IS HERE: Defensively check for arrays ---
-    const confluenceFactors = Array.isArray(signal.ai_confluence) ? signal.ai_confluence : [];
-    const counterFactors = Array.isArray(signal.ai_counters) ? signal.ai_counters : [];
-
-    const statusStyles = {
-        WIN: 'bg-green-500/20 text-green-300',
-        LOSS: 'bg-red-500/20 text-red-300',
-        EXPIRED: 'bg-amber-500/20 text-amber-300',
-        UNVERIFIED: 'bg-gray-500/20 text-gray-300',
-        ERROR: 'bg-red-800/50 text-red-300',
-        UNKNOWN: 'bg-gray-500/20 text-gray-300',
-    };
+    const outcome = signal.performance || { status: 'PENDING' };
+    const statusInfo = {
+        WIN: { text: 'WIN', color: 'text-green-400', icon: <CheckIcon className="h-5 w-5" /> },
+        LOSS: { text: 'LOSS', color: 'text-red-400', icon: <XMarkIcon className="h-5 w-5" /> },
+        EXPIRED: { text: 'EXPIRED', color: 'text-amber-400', icon: <ClockIcon className="h-5 w-5" /> },
+        PENDING: { text: 'PENDING', color: 'text-gray-400', icon: <MinusIcon className="h-5 w-5" /> },
+    }[outcome.status.toUpperCase()] || { text: 'UNKNOWN', color: 'text-gray-500', icon: <MinusIcon className="h-5 w-5" /> };
 
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50" onClick={handleClose}>
             <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
             <motion.div 
-                className="relative z-10 bg-dark-card w-full max-w-6xl rounded-2xl border border-white/10 shadow-2xl p-6 m-4 flex flex-col"
+                className="relative z-10 bg-dark-card w-full max-w-7xl rounded-2xl border border-white/10 shadow-2xl p-6 m-4 flex flex-col"
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.2 }} onClick={e => e.stopPropagation()}
             >
@@ -112,7 +105,7 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
                                 )}
                             </div>
                         </div>
-                        <div className="relative w-full h-[400px] lg:h-auto flex-grow bg-black/20 rounded-lg">
+                        <div className="relative w-full h-[450px] lg:h-auto flex-grow bg-black/20 rounded-lg">
                             <LightweightChart ohlcData={ohlcData} signal={chartSignalProp} onCrosshairMove={setCrosshairData} />
                             {isLoading && (
                                 <div className="absolute inset-0 flex items-center justify-center bg-dark-card/50 backdrop-blur-sm transition-opacity duration-300 rounded-lg">
@@ -121,41 +114,43 @@ export const SignalModalV2_Advanced = ({ signal, onClose }) => {
                             )}
                         </div>
                     </div>
-                    <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:h-[440px] lg:overflow-y-auto custom-scrollbar pr-2">
-                        <div className="bg-black/20 p-4 rounded-lg">
-                            <h3 className="text-lg font-semibold mb-3">Signal Verification</h3>
-                            <div className="flex gap-4">
-                                <button onClick={handleVerifySignal} disabled={isVerifying} className="flex-grow bg-cyan-600 text-white font-semibold rounded-lg px-4 py-2 h-10 transition-colors hover:bg-cyan-500 disabled:bg-gray-500 disabled:cursor-not-allowed">
-                                    {isVerifying ? 'Verifying...' : 'Verify Signal'}
-                                </button>
-                                <div className={`flex-shrink-0 px-4 py-2 rounded-lg font-bold text-sm flex items-center justify-center ${statusStyles[verificationStatus.status.toUpperCase()]}`}>
-                                    {verificationStatus.status.toUpperCase()}
-                                </div>
+                    <div className="lg:w-1/3 flex-shrink-0 flex flex-col gap-4 lg:h-[490px] lg:overflow-y-auto custom-scrollbar pr-2">
+                        {/* --- NEW 3-COLUMN LAYOUT --- */}
+                        <div className="bg-black/20 p-4 rounded-lg space-y-4">
+                            <h3 className="text-lg font-bold text-center">Trade Performance</h3>
+                            <div className="grid grid-cols-3 gap-4">
+                                <PerformanceStat label="Outcome" value={statusInfo.text} valueClass={statusInfo.color} />
+                                <PerformanceStat label="P/L" value={`${outcome.profit_and_loss_pct?.toFixed(2) || 0}%`} valueClass={outcome.profit_and_loss_pct > 0 ? 'text-green-400' : 'text-red-400'} />
+                                <PerformanceStat label="Duration" value={`${outcome.duration_hours?.toFixed(1) || 0}h`} />
                             </div>
-                            {verificationStatus.message && <p className="text-xs text-gray-400 mt-2">{verificationStatus.message}</p>}
+                            <div className="grid grid-cols-2 gap-4 pt-3 border-t border-white/10">
+                                <PerformanceStat label="Max Favorable" value={`$${outcome.max_favorable_excursion_usd?.toFixed(2) || 0}`} valueClass="text-green-400" />
+                                <PerformanceStat label="Max Adverse" value={`$${outcome.max_adverse_excursion_usd?.toFixed(2) || 0}`} valueClass="text-red-400" />
+                            </div>
                         </div>
-                        <div className="bg-black/20 p-4 rounded-lg grid grid-cols-2 gap-4">
-                            <DetailItem label="Leverage" value={`${signal.trade_parameters.leverage}x`} />
-                            <DetailItem label="Confidence" value={`${(signal.confidence * 100).toFixed(0)}%`} valueClass="text-cyan-400" />
-                            <DetailItem label="Sentiment" value={(signal.market_snapshot.sentiment_score * 100).toFixed(0)} />
-                            <DetailItem label="RSI 14" value={signal.market_snapshot.rsi_14.toFixed(2)} />
+                        
+                        <div className="bg-black/20 p-4 rounded-lg">
+                            <h3 className="text-lg font-bold mb-3 text-center">Market Snapshot</h3>
+                            <div className="grid grid-cols-2 gap-4">
+                                <DetailItem label="Leverage" value={`${signal.trade_parameters.leverage}x`} />
+                                <DetailItem label="Confidence" value={`${(signal.confidence * 100).toFixed(0)}%`} valueClass="text-cyan-400" />
+                                <DetailItem label="Sentiment" value={(signal.market_snapshot.sentiment_score * 100).toFixed(0)} />
+                                <DetailItem label="RSI 14" value={signal.market_snapshot.rsi_14.toFixed(2)} />
+                            </div>
                         </div>
+
                         <div>
                             <h3 className="text-lg font-semibold mb-2">AI Reasoning</h3>
                             <p className="text-sm text-gray-400">{signal.ai_reasoning}</p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 gap-4">
                             <div>
                                 <h4 className="font-semibold text-green-400 mb-2 flex items-center gap-2"><CheckIcon className="h-5 w-5" />Confluence</h4>
-                                <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2 text-sm">
-                                    {confluenceFactors.map((item, index) => <li key={index}>{item}</li>)}
-                                </ul>
+                                <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2 text-sm">{signal.ai_confluence.map((item, index) => <li key={index}>{item}</li>)}</ul>
                             </div>
                             <div>
                                 <h4 className="font-semibold text-red-400 mb-2 flex items-center gap-2"><XMarkIcon className="h-5 w-5" />Counters</h4>
-                                <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2 text-sm">
-                                    {counterFactors.map((item, index) => <li key={index}>{item}</li>)}
-                                </ul>
+                                <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2 text-sm">{signal.ai_counters.map((item, index) => <li key={index}>{item}</li>)}</ul>
                             </div>
                         </div>
                     </div>

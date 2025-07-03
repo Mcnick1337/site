@@ -19,6 +19,16 @@
             "macd_hist": -89.5945739846662,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_price": 109450.0,
+            "duration_hours": 8.87,
+            "profit_and_loss_usd": 1966.83,
+            "profit_and_loss_pct": 1.8299,
+            "max_favorable_excursion_usd": 2017.43,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -41,6 +51,16 @@
             "macd_hist": -89.41460817269837,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_price": 108658.0,
+            "duration_hours": 10.9,
+            "profit_and_loss_usd": 1172.0,
+            "profit_and_loss_pct": 1.0904,
+            "max_favorable_excursion_usd": 1455.4,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -63,6 +83,16 @@
             "macd_hist": -88.94108110717352,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_price": 108700.0,
+            "duration_hours": 10.88,
+            "profit_and_loss_usd": 1206.59,
+            "profit_and_loss_pct": 1.1225,
+            "max_favorable_excursion_usd": 1447.99,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -85,6 +115,16 @@
             "macd_hist": -82.55357113566569,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_price": 108800.0,
+            "duration_hours": 10.86,
+            "profit_and_loss_usd": 1206.5,
+            "profit_and_loss_pct": 1.1214,
+            "max_favorable_excursion_usd": 1347.9,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -107,6 +147,16 @@
             "macd_hist": -70.64319649468757,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_price": 109500.0,
+            "duration_hours": 8.54,
+            "profit_and_loss_usd": 1983.62,
+            "profit_and_loss_pct": 1.8449,
+            "max_favorable_excursion_usd": 1984.22,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -129,6 +179,16 @@
             "macd_hist": -69.30813096762517,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_price": 108050.0,
+            "duration_hours": 10.58,
+            "profit_and_loss_usd": 512.71,
+            "profit_and_loss_pct": 0.4768,
+            "max_favorable_excursion_usd": 1404.11,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -151,6 +211,16 @@
             "macd_hist": -64.01204417316663,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_price": 108500.0,
+            "duration_hours": 10.55,
+            "profit_and_loss_usd": 997.36,
+            "profit_and_loss_pct": 0.9278,
+            "max_favorable_excursion_usd": 1438.76,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -173,6 +243,16 @@
             "macd_hist": -62.5301980193141,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_price": 107850.0,
+            "duration_hours": 10.53,
+            "profit_and_loss_usd": 326.45,
+            "profit_and_loss_pct": 0.3036,
+            "max_favorable_excursion_usd": 1393.85,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -195,6 +275,16 @@
             "macd_hist": -60.783508560622124,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_price": 108100.0,
+            "duration_hours": 10.51,
+            "profit_and_loss_usd": 546.76,
+            "profit_and_loss_pct": 0.5084,
+            "max_favorable_excursion_usd": 1347.06,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -217,6 +307,16 @@
             "macd_hist": -64.21306981418934,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:05:00+00:00",
+            "exit_price": 108600.0,
+            "duration_hours": 10.49,
+            "profit_and_loss_usd": 1100.51,
+            "profit_and_loss_pct": 1.0237,
+            "max_favorable_excursion_usd": 1400.51,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -239,6 +339,16 @@
             "macd_hist": -58.43757123869332,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.7
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108500.0,
+            "duration_hours": 10.48,
+            "profit_and_loss_usd": 930.0,
+            "profit_and_loss_pct": 0.8646,
+            "max_favorable_excursion_usd": 1329.4,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -261,6 +371,16 @@
             "macd_hist": -60.74904702216341,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.4
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108685.0,
+            "duration_hours": 10.46,
+            "profit_and_loss_usd": 1131.23,
+            "profit_and_loss_pct": 1.0518,
+            "max_favorable_excursion_usd": 1339.93,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -283,6 +403,16 @@
             "macd_hist": -57.79875642387384,
             "supertrend_direction": -1.0,
             "sentiment_score": 0.4
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 107950.0,
+            "duration_hours": 10.44,
+            "profit_and_loss_usd": 350.0,
+            "profit_and_loss_pct": 0.3253,
+            "max_favorable_excursion_usd": 1293.7,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -305,6 +435,16 @@
             "macd_hist": -48.54008975720686,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.35
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108235.0,
+            "duration_hours": 10.42,
+            "profit_and_loss_usd": 489.91,
+            "profit_and_loss_pct": 0.4547,
+            "max_favorable_excursion_usd": 1160.61,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -327,6 +467,16 @@
             "macd_hist": -49.324408845523834,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.4
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T13:44:00+00:00",
+            "exit_price": 107742.2,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 16.4,
+            "profit_and_loss_pct": 0.0152,
+            "max_favorable_excursion_usd": 1987.7,
+            "max_adverse_excursion_usd": 79.6
         }
     },
     {
@@ -349,6 +499,16 @@
             "macd_hist": -29.390867196434726,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:40:00+00:00",
+            "exit_price": 109200.0,
+            "duration_hours": 8.87,
+            "profit_and_loss_usd": 1608.99,
+            "profit_and_loss_pct": 1.4955,
+            "max_favorable_excursion_usd": 1655.79,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -371,6 +531,16 @@
             "macd_hist": -22.45835437592268,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108700.0,
+            "duration_hours": 10.28,
+            "profit_and_loss_usd": 766.04,
+            "profit_and_loss_pct": 0.7097,
+            "max_favorable_excursion_usd": 983.14,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -393,6 +563,16 @@
             "macd_hist": -39.11923186880685,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.6
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:35:00+00:00",
+            "exit_price": 109400.0,
+            "duration_hours": 8.72,
+            "profit_and_loss_usd": 1727.11,
+            "profit_and_loss_pct": 1.604,
+            "max_favorable_excursion_usd": 1742.31,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -415,6 +595,16 @@
             "macd_hist": -41.60301534457048,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108450.0,
+            "duration_hours": 10.19,
+            "profit_and_loss_usd": 866.95,
+            "profit_and_loss_pct": 0.8058,
+            "max_favorable_excursion_usd": 1338.15,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -437,6 +627,16 @@
             "macd_hist": -41.60365352121099,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108500.0,
+            "duration_hours": 10.17,
+            "profit_and_loss_usd": 920.0,
+            "profit_and_loss_pct": 0.8552,
+            "max_favorable_excursion_usd": 1341.7,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -459,6 +659,16 @@
             "macd_hist": -33.31501534458167,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T13:58:00+00:00",
+            "exit_price": 107669.0,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 80.55,
+            "profit_and_loss_pct": 0.0749,
+            "max_favorable_excursion_usd": 2125.05,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -481,6 +691,16 @@
             "macd_hist": -39.29600679757223,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.7
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T13:59:00+00:00",
+            "exit_price": 107752.2,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 82.08,
+            "profit_and_loss_pct": 0.0762,
+            "max_favorable_excursion_usd": 2043.38,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -503,6 +723,16 @@
             "macd_hist": -33.156747538320815,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:40:00+00:00",
+            "exit_price": 109200.0,
+            "duration_hours": 8.67,
+            "profit_and_loss_usd": 1610.0,
+            "profit_and_loss_pct": 1.4964,
+            "max_favorable_excursion_usd": 1656.8,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -525,6 +755,16 @@
             "macd_hist": -18.793131208038687,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:39:00+00:00",
+            "exit_price": 109270.0,
+            "duration_hours": 8.63,
+            "profit_and_loss_usd": 1661.49,
+            "profit_and_loss_pct": 1.544,
+            "max_favorable_excursion_usd": 1731.99,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -547,6 +787,16 @@
             "macd_hist": -23.94832209124303,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108800.0,
+            "duration_hours": 10.06,
+            "profit_and_loss_usd": 1194.84,
+            "profit_and_loss_pct": 1.1104,
+            "max_favorable_excursion_usd": 1323.44,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -569,6 +819,16 @@
             "macd_hist": -21.73895456986807,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:04:00+00:00",
+            "exit_price": 107799.3,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 192.71,
+            "profit_and_loss_pct": 0.1791,
+            "max_favorable_excursion_usd": 2106.91,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -591,6 +851,16 @@
             "macd_hist": -19.713381920292306,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:39:00+00:00",
+            "exit_price": 109300.0,
+            "duration_hours": 8.57,
+            "profit_and_loss_usd": 1483.2,
+            "profit_and_loss_pct": 1.3757,
+            "max_favorable_excursion_usd": 1523.7,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -613,6 +883,16 @@
             "macd_hist": -20.477917532823767,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T23:23:00+00:00",
+            "exit_price": 109000.0,
+            "duration_hours": 9.28,
+            "profit_and_loss_usd": 1300.0,
+            "profit_and_loss_pct": 1.2071,
+            "max_favorable_excursion_usd": 1300.0,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -635,6 +915,16 @@
             "macd_hist": -15.170840609751906,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:08:00+00:00",
+            "exit_price": 107831.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -71.31,
+            "profit_and_loss_pct": -0.0661,
+            "max_favorable_excursion_usd": 1810.59,
+            "max_adverse_excursion_usd": 139.61
         }
     },
     {
@@ -657,6 +947,16 @@
             "macd_hist": -16.026635481548283,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:09:00+00:00",
+            "exit_price": 107836.0,
+            "duration_hours": -0.0,
+            "profit_and_loss_usd": -53.5,
+            "profit_and_loss_pct": -0.0496,
+            "max_favorable_excursion_usd": 1824.0,
+            "max_adverse_excursion_usd": 126.2
         }
     },
     {
@@ -679,6 +979,16 @@
             "macd_hist": -17.64951867243812,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.9
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:11:00+00:00",
+            "exit_price": 107872.4,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 263.14,
+            "profit_and_loss_pct": 0.2445,
+            "max_favorable_excursion_usd": 2104.24,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -701,6 +1011,16 @@
             "macd_hist": -16.18426511118028,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:12:00+00:00",
+            "exit_price": 107925.3,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 37.48,
+            "profit_and_loss_pct": 0.0347,
+            "max_favorable_excursion_usd": 1825.68,
+            "max_adverse_excursion_usd": 124.52
         }
     },
     {
@@ -723,6 +1043,16 @@
             "macd_hist": -12.625154000069728,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_price": 109500.0,
+            "duration_hours": 7.78,
+            "profit_and_loss_usd": 1557.2,
+            "profit_and_loss_pct": 1.4426,
+            "max_favorable_excursion_usd": 1557.8,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -745,6 +1075,16 @@
             "macd_hist": -11.687034341952085,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.88
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:15:00+00:00",
+            "exit_price": 107788.4,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -169.1,
+            "profit_and_loss_pct": -0.1566,
+            "max_favorable_excursion_usd": 1756.0,
+            "max_adverse_excursion_usd": 194.2
         }
     },
     {
@@ -767,6 +1107,16 @@
             "macd_hist": -10.949141224837035,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_price": 109500.0,
+            "duration_hours": 7.7,
+            "profit_and_loss_usd": 1800.0,
+            "profit_and_loss_pct": 1.6713,
+            "max_favorable_excursion_usd": 1800.6,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -789,6 +1139,16 @@
             "macd_hist": -6.515089942785096,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.68
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:23:00+00:00",
+            "exit_price": 107740.0,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 97.85,
+            "profit_and_loss_pct": 0.0909,
+            "max_favorable_excursion_usd": 2071.35,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -811,6 +1171,16 @@
             "macd_hist": -8.838691082389659,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.6
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:24:00+00:00",
+            "exit_price": 107743.7,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 43.7,
+            "profit_and_loss_pct": 0.0406,
+            "max_favorable_excursion_usd": 2013.5,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -833,6 +1203,16 @@
             "macd_hist": -7.132844928538077,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.7
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108800.0,
+            "duration_hours": 9.69,
+            "profit_and_loss_usd": 1160.0,
+            "profit_and_loss_pct": 1.0777,
+            "max_favorable_excursion_usd": 1288.6,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -855,6 +1235,16 @@
             "macd_hist": 1.7977989461015795,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.6
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108800.0,
+            "duration_hours": 9.66,
+            "profit_and_loss_usd": 1150.0,
+            "profit_and_loss_pct": 1.0683,
+            "max_favorable_excursion_usd": 1278.6,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -877,6 +1267,16 @@
             "macd_hist": 8.965160769466195,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:28:00+00:00",
+            "exit_price": 107821.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -245.95,
+            "profit_and_loss_pct": -0.2276,
+            "max_favorable_excursion_usd": 1645.95,
+            "max_adverse_excursion_usd": 304.25
         }
     },
     {
@@ -899,6 +1299,16 @@
             "macd_hist": -3.998759458449314,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.6
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108800.0,
+            "duration_hours": 9.62,
+            "profit_and_loss_usd": 1050.0,
+            "profit_and_loss_pct": 0.9745,
+            "max_favorable_excursion_usd": 1186.2,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -921,6 +1331,16 @@
             "macd_hist": -6.894169341895804,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.7
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108800.0,
+            "duration_hours": 9.56,
+            "profit_and_loss_usd": 1129.95,
+            "profit_and_loss_pct": 1.0495,
+            "max_favorable_excursion_usd": 1266.15,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -943,6 +1363,16 @@
             "macd_hist": 2.3574773817489927,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.5
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:40:00+00:00",
+            "exit_price": 107932.5,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -11.01,
+            "profit_and_loss_pct": -0.0102,
+            "max_favorable_excursion_usd": 1769.99,
+            "max_adverse_excursion_usd": 73.51
         }
     },
     {
@@ -965,6 +1395,16 @@
             "macd_hist": 9.152782225066716,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T14:44:00+00:00",
+            "exit_price": 107792.7,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -207.3,
+            "profit_and_loss_pct": -0.1919,
+            "max_favorable_excursion_usd": 1713.5,
+            "max_adverse_excursion_usd": 130.0
         }
     },
     {
@@ -987,6 +1427,16 @@
             "macd_hist": 0.6560984643808752,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-02T22:00:00+00:00",
+            "exit_price": 109500.0,
+            "duration_hours": 7.25,
+            "profit_and_loss_usd": 1583.26,
+            "profit_and_loss_pct": 1.4671,
+            "max_favorable_excursion_usd": 1583.86,
+            "max_adverse_excursion_usd": 0.0
         }
     },
     {
@@ -1009,6 +1459,1822 @@
             "macd_hist": -3.7084608103806715,
             "supertrend_direction": 1.0,
             "sentiment_score": 0.4
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 108900.0,
+            "duration_hours": 9.31,
+            "profit_and_loss_usd": 1010.0,
+            "profit_and_loss_pct": 0.9361,
+            "max_favorable_excursion_usd": 1046.2,
+            "max_adverse_excursion_usd": 0.0
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:11:48.625248+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Confluence of strong bullish signals including an active Supertrend uptrend, positive OBV slope indicating accumulation, and multiple bullish candlestick patterns (HARAMI, INSIDE, SHORTLINE). Market sentiment is also bullish. While MACD shows bearish momentum and the ML forecast suggests a slight dip, these are likely short-term pullbacks within an overall uptrend, presenting a favorable entry point.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 108850.0,
+            "take_profit": 109450.0,
+            "leverage": 78,
+            "size": 39.0,
+            "collateral_required": 54525.0
+        },
+        "market_snapshot": {
+            "price": 109200.41,
+            "rsi_14": 54.55005574427953,
+            "macd_hist": -92.36525417393528,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.25
+        },
+        "performance": {
+            "status": "LOSS",
+            "exit_time": "2025-07-02T23:55:00+00:00"
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:14:29.956017+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish confluence from Supertrend, positive OBV, and bullish candlestick patterns (HARAMI, INSIDE) indicate a likely continuation of the uptrend despite a negative MACD histogram and a slightly lower ML forecast for the immediate next price, which may suggest a minor consolidation before further upward movement. News sentiment is also bullish, supporting the overall positive outlook.",
+        "trade_parameters": {
+            "entry_price": 109206.22,
+            "stop_loss": 108100.0,
+            "take_profit": 110860.0,
+            "leverage": 74,
+            "size": 6.689,
+            "collateral_required": 9872.016416264385
+        },
+        "market_snapshot": {
+            "price": 109206.22,
+            "rsi_14": 54.681399114067716,
+            "macd_hist": -91.99447354715772,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.3
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:15:00+00:00",
+            "exit_price": 109217.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 11.38,
+            "profit_and_loss_pct": 0.0104,
+            "max_favorable_excursion_usd": 329.88,
+            "max_adverse_excursion_usd": 479.62
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:15:51.015243+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "A strong confluence of bullish indicators supports a LONG position. The Supertrend indicates an uptrend, OBV slope is positive, and multiple bullish candlestick patterns (DOJI, INSIDE, SHORTLINE) suggest potential upward movement or a reversal from a minor dip. Market sentiment is bullish due to institutional integration and innovation. While the MACD histogram is negative and the ML forecast suggests a slight dip, these are considered minor pullbacks within the prevailing uptrend, which the bullish candlesticks may be signaling the end of. Capital preservation is prioritized with a clear stop-loss.",
+        "trade_parameters": {
+            "entry_price": 109246.14,
+            "stop_loss": 108700.0,
+            "take_profit": 110338.6,
+            "leverage": 82,
+            "size": 15.014,
+            "collateral_required": 20003.321492657582
+        },
+        "market_snapshot": {
+            "price": 109246.14,
+            "rsi_14": 55.59487304677041,
+            "macd_hist": -92.9908561706435,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.25
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:16:00+00:00",
+            "exit_price": 109246.0,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": -0.14,
+            "profit_and_loss_pct": -0.0001,
+            "max_favorable_excursion_usd": 289.96,
+            "max_adverse_excursion_usd": 519.54
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:19:43.999346+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits a strong underlying uptrend as indicated by the Supertrend and positive OBV slope, suggesting accumulation. Overall market sentiment is bullish due to institutional adoption and new product announcements. While the ML forecast and MACD histogram suggest a short-term pullback, this is interpreted as a potential buying opportunity within the established uptrend, aligning with capital preservation by entering on a dip.",
+        "trade_parameters": {
+            "entry_price": 109034.38,
+            "stop_loss": 108400.0,
+            "take_profit": 110100.0,
+            "leverage": 74,
+            "size": 11.665,
+            "collateral_required": 17187.550048866484
+        },
+        "market_snapshot": {
+            "price": 109371.64,
+            "rsi_14": 58.339259623631435,
+            "macd_hist": -84.98110118488631,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.35
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:20:00+00:00",
+            "exit_price": 109298.9,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 264.52,
+            "profit_and_loss_pct": 0.2426,
+            "max_favorable_excursion_usd": 501.72,
+            "max_adverse_excursion_usd": 307.78
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:22:31.496827+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "The confluence of a confirmed Supertrend Uptrend, positive OBV slope, and moderately bullish market sentiment indicates underlying buying pressure and a continuation of the uptrend. While the ML forecast suggests a slight dip, and MACD histogram is negative with a HIKKAKE bearish pattern, these are considered short-term pullbacks within the broader bullish context, offering a potential buying opportunity. Capital preservation is prioritized by setting a clear stop-loss.",
+        "trade_parameters": {
+            "entry_price": 109032.3,
+            "stop_loss": 108500.0,
+            "take_profit": 110500.0,
+            "leverage": 71,
+            "size": 13.338,
+            "collateral_required": 20483.242532406428
+        },
+        "market_snapshot": {
+            "price": 109276.27,
+            "rsi_14": 56.28638539579897,
+            "macd_hist": -91.06739178316286,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.38
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:23:00+00:00",
+            "exit_price": 109284.9,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 252.6,
+            "profit_and_loss_pct": 0.2317,
+            "max_favorable_excursion_usd": 503.8,
+            "max_adverse_excursion_usd": 305.7
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:25:22.801484+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "SHORT",
+        "confidence": 0.6,
+        "ai_reasoning": "The market is exhibiting immediate bearish pressure, with news indicating 'significant price drops' and a 'struggle to maintain support' despite potential bullish catalysts. This is reinforced by a bearish ML forecast for the next price, a negative MACD histogram, and a HIKKAKE bearish candlestick pattern. While Supertrend indicates an uptrend and OBV slope is positive, the confluence of short-term bearish indicators and market sentiment suggests a continuation of the recent downside.",
+        "trade_parameters": {
+            "entry_price": 109290.31,
+            "stop_loss": 109836.0,
+            "take_profit": 108471.0,
+            "leverage": 68,
+            "size": 12.461,
+            "collateral_required": 20027.911451556658
+        },
+        "market_snapshot": {
+            "price": 109290.31,
+            "rsi_14": 56.60120974020836,
+            "macd_hist": -90.1713917831782,
+            "supertrend_direction": 1.0,
+            "sentiment_score": -0.2
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:26:00+00:00",
+            "exit_price": 109233.4,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 56.91,
+            "profit_and_loss_pct": 0.0521,
+            "max_favorable_excursion_usd": 563.71,
+            "max_adverse_excursion_usd": 245.79
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:29:24.067640+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong underlying bullish sentiment from institutional adoption and positive long-term technicals (Supertrend, OBV) indicate an ongoing uptrend. While short-term indicators (HIKKAKE, negative MACD histogram, ML forecast) suggest a minor pullback, this presents an opportune entry to 'buy the dip' within the broader bullish context.",
+        "trade_parameters": {
+            "entry_price": 109030.0,
+            "stop_loss": 108400.0,
+            "take_profit": 110800.0,
+            "leverage": 71,
+            "size": 11.27,
+            "collateral_required": 17306.34920634921
+        },
+        "market_snapshot": {
+            "price": 109254.13,
+            "rsi_14": 55.7805437396653,
+            "macd_hist": -92.48031486008631,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.25
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:30:00+00:00",
+            "exit_price": 109230.8,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 200.8,
+            "profit_and_loss_pct": 0.1842,
+            "max_favorable_excursion_usd": 506.1,
+            "max_adverse_excursion_usd": 303.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:33:31.431693+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Confluence of Supertrend indicating an uptrend, positive OBV slope showing accumulation, and bullish candlestick patterns (INSIDE, SHORTLINE) suggest underlying strength. While MACD histogram is negative and ML forecast predicts a slight dip, this is interpreted as a potential short-term pullback within an established uptrend, offering a buying opportunity.",
+        "trade_parameters": {
+            "entry_price": 109032.91,
+            "stop_loss": 108269.68,
+            "take_profit": 110559.37,
+            "leverage": 74,
+            "size": 9.696,
+            "collateral_required": 14285.72121116813
+        },
+        "market_snapshot": {
+            "price": 109313.17,
+            "rsi_14": 57.20815939076852,
+            "macd_hist": -88.16634194629103,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.25
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:34:00+00:00",
+            "exit_price": 109341.5,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 308.59,
+            "profit_and_loss_pct": 0.283,
+            "max_favorable_excursion_usd": 503.19,
+            "max_adverse_excursion_usd": 306.31
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:34:49.452988+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits underlying bullish sentiment (News Score, OBV) and an established uptrend (Supertrend). Despite short-term bearish momentum (MACD Histogram) and a slightly lower ML forecast, bullish candlestick patterns (INSIDE, SHORTLINE) suggest a potential bounce or continuation after a minor pullback. This confluence supports a LONG position, prioritizing the dominant trend and pattern signals.",
+        "trade_parameters": {
+            "entry_price": 109353.16,
+            "stop_loss": 108800.0,
+            "take_profit": 110500.0,
+            "leverage": 74,
+            "size": 13.378,
+            "collateral_required": 19768.81191698592
+        },
+        "market_snapshot": {
+            "price": 109353.16,
+            "rsi_14": 58.12061715724155,
+            "macd_hist": -85.61363539358666,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.2
+        },
+        "performance": {
+            "status": "LOSS",
+            "exit_time": "2025-07-02T23:53:00+00:00"
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:36:07.972817+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Bullish market sentiment, strong uptrend indicated by Supertrend and positive OBV, reinforced by bullish candlestick patterns (INSIDE, SHORTLINE). While MACD shows negative momentum and ML forecasts a slight dip, these are likely minor pullbacks within a broader bullish trend, presenting a favorable entry point.",
+        "trade_parameters": {
+            "entry_price": 109033.78,
+            "stop_loss": 108500.0,
+            "take_profit": 110500.0,
+            "leverage": 74,
+            "size": 13.863,
+            "collateral_required": 20426.72636666796
+        },
+        "market_snapshot": {
+            "price": 109353.16,
+            "rsi_14": 58.120840406369545,
+            "macd_hist": -85.61299721694616,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.4
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:37:00+00:00",
+            "exit_price": 109345.9,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 312.12,
+            "profit_and_loss_pct": 0.2863,
+            "max_favorable_excursion_usd": 502.32,
+            "max_adverse_excursion_usd": 307.18
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:38:52.638873+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong underlying bullish trend confirmed by Supertrend, positive OBV, and bullish sentiment driven by institutional adoption. Bullish candlestick patterns (INSIDE, SHORTLINE) suggest a potential bounce or continuation after recent dips. While ML forecast and MACD indicate short-term consolidation/pullback, this presents a potential entry opportunity for a long position, aligning with the broader market narrative.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 108500.0,
+            "take_profit": 110500.0,
+            "leverage": 74,
+            "size": 13.455,
+            "collateral_required": 19827.272727272728
+        },
+        "market_snapshot": {
+            "price": 109361.32,
+            "rsi_14": 58.30200041296724,
+            "macd_hist": -85.09288325682815,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:39:00+00:00",
+            "exit_price": 109336.1,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 286.1,
+            "profit_and_loss_pct": 0.2624,
+            "max_favorable_excursion_usd": 486.1,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:40:14.657932+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits an overall bullish bias, supported by a positive Supertrend, increasing accumulation indicated by a positive OBV slope, and bullish candlestick patterns (INSIDE, SHORTLINE). News sentiment, despite mentioning immediate price weakness, highlights significant bullish signals from institutional adoption. While the MACD histogram is negative and the ML forecast suggests a slight short-term dip, this is interpreted as a potential entry opportunity within the prevailing uptrend. A disciplined entry at the forecasted dip price is advised to capitalize on the expected continuation of the bullish trend, with robust risk management.",
+        "trade_parameters": {
+            "entry_price": 109033.64,
+            "stop_loss": 108400.0,
+            "take_profit": 110000.0,
+            "leverage": 74,
+            "size": 11.679,
+            "collateral_required": 17207.505839277837
+        },
+        "market_snapshot": {
+            "price": 109346.51,
+            "rsi_14": 57.9716275307925,
+            "macd_hist": -86.03802285797963,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.15
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:41:00+00:00",
+            "exit_price": 109237.2,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 203.56,
+            "profit_and_loss_pct": 0.1867,
+            "max_favorable_excursion_usd": 502.46,
+            "max_adverse_excursion_usd": 307.04
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:41:35.577876+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish sentiment, confirmed uptrend by Supertrend and positive OBV, and bullish candlestick patterns (INSIDE, SHORTLINE) suggest continued upward movement. A slight pullback, as indicated by the ML forecast and negative MACD histogram, presents a potential entry opportunity before the uptrend resumes. The overall market structure remains bullish despite short-term technical caution.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 107950.0,
+            "take_profit": 111550.0,
+            "leverage": 78,
+            "size": 7.091,
+            "collateral_required": 9913.636363636364
+        },
+        "market_snapshot": {
+            "price": 109314.85,
+            "rsi_14": 57.24751445097843,
+            "macd_hist": -88.05849009444307,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.48
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:42:00+00:00",
+            "exit_price": 109271.3,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 221.3,
+            "profit_and_loss_pct": 0.2029,
+            "max_favorable_excursion_usd": 486.1,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:42:53.142185+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish news and sentiment, coupled with a confirmed uptrend by Supertrend and positive OBV, indicate a high probability of upward continuation. The 'INSIDE' candlestick pattern suggests a consolidation before the next move up. While MACD is negative and the ML forecast shows a slight dip, these are likely short-term fluctuations within a broader bullish trend, potentially offering a better entry point.",
+        "trade_parameters": {
+            "entry_price": 109032.34,
+            "stop_loss": 108700.0,
+            "take_profit": 110500.0,
+            "leverage": 78,
+            "size": 23.47,
+            "collateral_required": 32807.468255401436
+        },
+        "market_snapshot": {
+            "price": 109286.6,
+            "rsi_14": 56.5799992063195,
+            "macd_hist": -89.86133909728909,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.54
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:43:00+00:00",
+            "exit_price": 109284.8,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 252.46,
+            "profit_and_loss_pct": 0.2315,
+            "max_favorable_excursion_usd": 503.76,
+            "max_adverse_excursion_usd": 305.74
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:45:29.814089+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "Overall market sentiment is strongly bullish, fueled by positive news, institutional interest, and strong holder conviction. Key technical indicators like Supertrend and positive OBV slope confirm an established uptrend. Bullish candlestick patterns (INSIDE, SHORTLINE) suggest a continuation after a potential brief consolidation. While the MACD histogram is negative and the ML forecast suggests a slight short-term dip, these are interpreted as a minor pullback within a robust uptrend, offering a favorable entry point for a long position.",
+        "trade_parameters": {
+            "entry_price": 109030.33,
+            "stop_loss": 108400.0,
+            "take_profit": 110290.33,
+            "leverage": 86,
+            "size": 13.644,
+            "collateral_required": 17297.34107530971
+        },
+        "market_snapshot": {
+            "price": 109276.6,
+            "rsi_14": 56.37919168691512,
+            "macd_hist": -88.00066414746414,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:46:00+00:00",
+            "exit_price": 109251.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 221.27,
+            "profit_and_loss_pct": 0.2029,
+            "max_favorable_excursion_usd": 505.77,
+            "max_adverse_excursion_usd": 303.73
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:48:13.542261+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish sentiment and technical indicators like Supertrend, positive OBV, and bullish candlestick patterns (INSIDE, SHORTLINE) suggest an uptrend continuation. While MACD shows negative momentum and the ML forecast indicates a slight near-term dip, this dip could present a favorable entry point before further upward movement, aligning with overall market conviction and ETF progress.",
+        "trade_parameters": {
+            "entry_price": 109031.84,
+            "stop_loss": 108750.0,
+            "take_profit": 109800.0,
+            "leverage": 78,
+            "size": 27.675,
+            "collateral_required": 38685.722395685974
+        },
+        "market_snapshot": {
+            "price": 109346.62,
+            "rsi_14": 58.132394591787865,
+            "macd_hist": -83.531513150313,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.4
+        },
+        "performance": {
+            "status": "LOSS",
+            "exit_time": "2025-07-02T23:44:00+00:00"
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:49:34.357663+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Overall market sentiment is bullish, driven by strong holder conviction and potential US crypto ETF developments. Key technical indicators like Supertrend and a positive OBV slope confirm an underlying uptrend. Bullish candlestick patterns (INSIDE, SHORTLINE) suggest consolidation or continuation of the upward movement. While the ML forecast and MACD histogram indicate some immediate price weakness and loss of short-term momentum, this is likely a temporary pullback within the larger uptrend, presenting a strategic buying opportunity.",
+        "trade_parameters": {
+            "entry_price": 109031.84,
+            "stop_loss": 107941.84,
+            "take_profit": 111211.84,
+            "leverage": 78,
+            "size": 7.156,
+            "collateral_required": 10002.92110091743
+        },
+        "market_snapshot": {
+            "price": 109346.62,
+            "rsi_14": 58.132394591787865,
+            "macd_hist": -83.531513150313,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:50:00+00:00",
+            "exit_price": 109345.9,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 314.06,
+            "profit_and_loss_pct": 0.288,
+            "max_favorable_excursion_usd": 504.26,
+            "max_adverse_excursion_usd": 305.24
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T21:50:52.661171+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Strong bullish sentiment driven by US crypto ETF progress and robust Bitcoin holder conviction underpins a confirmed uptrend (Supertrend, OBV). While short-term indicators (MACD, ML forecast, news summary's 'short-term price risk') suggest a minor pullback, this presents an opportune entry for a long position, capitalizing on the dip within the broader bullish trend.",
+        "trade_parameters": {
+            "entry_price": 109032.24,
+            "stop_loss": 108700.0,
+            "take_profit": 110200.0,
+            "leverage": 82,
+            "size": 24.681,
+            "collateral_required": 32817.31278593736
+        },
+        "market_snapshot": {
+            "price": 109364.71,
+            "rsi_14": 58.56237398142348,
+            "macd_hist": -82.37768978848783,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T21:51:00+00:00",
+            "exit_price": 109365.1,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 332.86,
+            "profit_and_loss_pct": 0.3053,
+            "max_favorable_excursion_usd": 503.86,
+            "max_adverse_excursion_usd": 305.64
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:02:40.909139+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish news sentiment and a confirmed uptrend by Supertrend and positive OBV indicate an overall bullish market. While short-term bearish candlestick patterns and negative MACD suggest a minor pullback, aligning with the ML forecast for a slightly lower next price, this presents a 'buy the dip' opportunity within the established uptrend. Prioritizing the dominant bullish signals for a long position.",
+        "trade_parameters": {
+            "entry_price": 109036.52,
+            "stop_loss": 108500.0,
+            "take_profit": 110800.0,
+            "leverage": 78,
+            "size": 14.538,
+            "collateral_required": 20322.918064564077
+        },
+        "market_snapshot": {
+            "price": 109367.18,
+            "rsi_14": 57.905131024879786,
+            "macd_hist": -71.49702876535258,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:03:00+00:00",
+            "exit_price": 109390.4,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 353.88,
+            "profit_and_loss_pct": 0.3246,
+            "max_favorable_excursion_usd": 378.68,
+            "max_adverse_excursion_usd": 309.92
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:06:33.051761+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish news sentiment, confirmed by an uptrending Supertrend and positive OBV slope, indicates a robust underlying bullish trend. While short-term indicators like bearish candlestick patterns (CLOSINGMARUBOZU, INSIDE), negative MACD histogram, and a slightly lower ML forecast suggest a minor pullback, this is interpreted as a temporary correction within the established uptrend, presenting a strategic buying opportunity.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 108500.0,
+            "take_profit": 110500.0,
+            "leverage": 74,
+            "size": 13.455,
+            "collateral_required": 19827.272727272728
+        },
+        "market_snapshot": {
+            "price": 109277.4,
+            "rsi_14": 55.00140264653815,
+            "macd_hist": -77.48376380808429,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.7
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:07:00+00:00",
+            "exit_price": 109263.2,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 213.2,
+            "profit_and_loss_pct": 0.1955,
+            "max_favorable_excursion_usd": 365.2,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:15:49.414109+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits a strong underlying uptrend as indicated by the Supertrend and positive OBV slope, supported by bullish market sentiment. While the MACD histogram suggests short-term bearish momentum and the ML forecast predicts a slight dip, these are likely minor retracements within the established uptrend, presenting a strategic entry opportunity for a long position.",
+        "trade_parameters": {
+            "entry_price": 109033.37,
+            "stop_loss": 107500.0,
+            "take_profit": 111760.0,
+            "leverage": 74,
+            "size": 4.826,
+            "collateral_required": 7110.701917997634
+        },
+        "market_snapshot": {
+            "price": 109263.79,
+            "rsi_14": 54.59008202627101,
+            "macd_hist": -77.03478286297258,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.55
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:16:00+00:00",
+            "exit_price": 109261.4,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 228.03,
+            "profit_and_loss_pct": 0.2091,
+            "max_favorable_excursion_usd": 381.83,
+            "max_adverse_excursion_usd": 306.77
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:19:41.030936+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "The market exhibits a strong underlying bullish sentiment driven by increasing institutional adoption and regulatory progress, supported by an uptrending Supertrend and positive OBV. While short-term indicators like MACD and specific bearish candlestick patterns suggest a minor pullback or consolidation, the overall confluence points towards a continuation of the uptrend. The ML forecast for a slightly lower price could present a favorable entry for a long position.",
+        "trade_parameters": {
+            "entry_price": 109033.0,
+            "stop_loss": 107900.0,
+            "take_profit": 110700.0,
+            "leverage": 78,
+            "size": 6.884,
+            "collateral_required": 9623.389232127096
+        },
+        "market_snapshot": {
+            "price": 109247.2,
+            "rsi_14": 54.07778960906261,
+            "macd_hist": -78.09287972907268,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.6
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:20:00+00:00",
+            "exit_price": 109261.1,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 228.1,
+            "profit_and_loss_pct": 0.2092,
+            "max_favorable_excursion_usd": 382.2,
+            "max_adverse_excursion_usd": 306.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:20:59.880182+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "The market exhibits strong bullish sentiment driven by ETF approvals and institutional adoption, supported by an established uptrend indicated by Supertrend and positive OBV slope. While MACD histogram shows negative momentum and the ML forecast suggests a slight short-term dip, these are likely temporary pullbacks within the prevailing uptrend, offering a favorable entry point. Predominantly bullish candlestick patterns further support a continuation of the upward movement.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 107950.0,
+            "take_profit": 111250.0,
+            "leverage": 78,
+            "size": 7.091,
+            "collateral_required": 9913.636363636364
+        },
+        "market_snapshot": {
+            "price": 109261.0,
+            "rsi_14": 54.503197856171646,
+            "macd_hist": -77.21283414501895,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.5
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:21:00+00:00",
+            "exit_price": 109261.2,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 211.2,
+            "profit_and_loss_pct": 0.1937,
+            "max_favorable_excursion_usd": 365.2,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:22:18.598406+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Strong bullish market sentiment driven by institutional adoption and regulatory approvals, supported by an active Supertrend uptrend and positive OBV. While MACD shows negative momentum and ML forecasts a slight short-term dip, the confluence of multiple bullish candlestick patterns suggests a continuation of the uptrend after a potential minor pullback, making a long position favorable.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 108500.0,
+            "take_profit": 110150.0,
+            "leverage": 82,
+            "size": 14.909,
+            "collateral_required": 19827.272727272724
+        },
+        "market_snapshot": {
+            "price": 109260.99,
+            "rsi_14": 54.50288694078599,
+            "macd_hist": -77.21347232165945,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:23:00+00:00",
+            "exit_price": 109256.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 206.6,
+            "profit_and_loss_pct": 0.1895,
+            "max_favorable_excursion_usd": 365.2,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:23:41.827531+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The overall market sentiment is bullish due to new crypto ETF approvals and increased institutional adoption, supported by a confirmed uptrend from the Supertrend indicator and positive buying pressure indicated by the OBV slope. While the ML forecast suggests a minor short-term dip and MACD histogram shows negative momentum, these are likely temporary pullbacks or consolidation phases within the established bullish trend, presenting a buying opportunity.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 108500.0,
+            "take_profit": 111000.0,
+            "leverage": 74,
+            "size": 13.455,
+            "collateral_required": 19827.272727272728
+        },
+        "market_snapshot": {
+            "price": 109256.34,
+            "rsi_14": 54.358694596973876,
+            "macd_hist": -77.51022445841892,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.5
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:24:00+00:00",
+            "exit_price": 109256.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 206.6,
+            "profit_and_loss_pct": 0.1895,
+            "max_favorable_excursion_usd": 365.2,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:25:00.115422+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish market sentiment driven by significant institutional adoption and regulatory approvals. The Supertrend indicator confirms an uptrend, and OBV shows positive buying pressure. While the MACD histogram is negative and the ML forecast suggests a slight short-term dip, the confluence of fundamental strength and primary trend indicators supports a long position. Candlestick patterns are mixed but lean bullish overall.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 107900.0,
+            "take_profit": 111000.0,
+            "leverage": 78,
+            "size": 6.783,
+            "collateral_required": 9482.608695652174
+        },
+        "market_snapshot": {
+            "price": 109256.34,
+            "rsi_14": 54.358694596973876,
+            "macd_hist": -77.51022445841892,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.7
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:25:00+00:00",
+            "exit_price": 109282.8,
+            "duration_hours": -0.0,
+            "profit_and_loss_usd": 232.8,
+            "profit_and_loss_pct": 0.2135,
+            "max_favorable_excursion_usd": 365.2,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:26:18.634378+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "Confluence of strong bullish market sentiment driven by institutional adoption and ETF approvals, confirmed uptrend by Supertrend and positive OBV slope, and numerous bullish candlestick patterns (DOJI, DRAGONFLYDOJI, HARAMI, TAKURI) indicating potential reversal or continuation after a minor pullback. While MACD histogram is negative and ML forecast suggests a slight dip, these are viewed as short-term corrections within a strong underlying bullish trend, presenting a buy-the-dip opportunity.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 107400.0,
+            "take_profit": 111780.0,
+            "leverage": 86,
+            "size": 5.212,
+            "collateral_required": 6609.090909090908
+        },
+        "market_snapshot": {
+            "price": 109282.34,
+            "rsi_14": 55.10349058240471,
+            "macd_hist": -75.8509651991605,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:27:00+00:00",
+            "exit_price": 109282.8,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 232.8,
+            "profit_and_loss_pct": 0.2135,
+            "max_favorable_excursion_usd": 365.2,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:27:35.430634+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.85,
+        "ai_reasoning": "The market exhibits strong bullish sentiment driven by major institutional Bitcoin adoption and SEC ETF approvals. This fundamental strength is supported by a confirmed Supertrend uptrend and positive OBV slope, indicating buying pressure. While the MACD histogram is negative and the ML forecast suggests a slight dip, these are likely short-term consolidations or pullbacks within an overall uptrend, as evidenced by the multitude of bullish candlestick patterns (DOJI, DRAGONFLYDOJI, HARAMI, INSIDE, TAKURI) forming. This confluence points to a high probability of price continuation upwards after a potential minor retrace.",
+        "trade_parameters": {
+            "entry_price": 109033.73,
+            "stop_loss": 107000.0,
+            "take_profit": 113500.0,
+            "leverage": 86,
+            "size": 4.229,
+            "collateral_required": 5361.268703318543
+        },
+        "market_snapshot": {
+            "price": 109280.48,
+            "rsi_14": 55.05588086532403,
+            "macd_hist": -75.96966605386197,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.4
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:28:00+00:00",
+            "exit_price": 109297.1,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 263.37,
+            "profit_and_loss_pct": 0.2415,
+            "max_favorable_excursion_usd": 381.47,
+            "max_adverse_excursion_usd": 307.13
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:31:03.553636+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Overall market sentiment is strongly bullish, supported by an established uptrend (Supertrend) and positive volume accumulation (OBV). While short-term indicators (MACD histogram, ML forecast, and some candlestick patterns) suggest minor consolidation or a slight pullback, this presents a strategic entry point for a continuation of the upward trend.",
+        "trade_parameters": {
+            "entry_price": 109032.33,
+            "stop_loss": 108500.0,
+            "take_profit": 110500.0,
+            "leverage": 74,
+            "size": 13.901,
+            "collateral_required": 20482.093813987496
+        },
+        "market_snapshot": {
+            "price": 109273.15,
+            "rsi_14": 54.796204178048015,
+            "macd_hist": -73.45175882351651,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.7
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:32:00+00:00",
+            "exit_price": 109268.7,
+            "duration_hours": 0.02,
+            "profit_and_loss_usd": 236.37,
+            "profit_and_loss_pct": 0.2168,
+            "max_favorable_excursion_usd": 382.87,
+            "max_adverse_excursion_usd": 305.73
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:33:37.935631+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Overall market sentiment is strongly bullish, driven by institutional adoption and ETF approvals. The Supertrend indicates an established uptrend, supported by a positive OBV slope. While the ML forecast, MACD histogram, and HIKKAKE candlestick suggest a short-term pullback, this is interpreted as a potential buying opportunity within the dominant uptrend.",
+        "trade_parameters": {
+            "entry_price": 109033.49,
+            "stop_loss": 107900.0,
+            "take_profit": 111200.0,
+            "leverage": 74,
+            "size": 6.529,
+            "collateral_required": 9619.272335882937
+        },
+        "market_snapshot": {
+            "price": 109326.87,
+            "rsi_14": 56.29745984512894,
+            "macd_hist": -70.02347392323026,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:34:00+00:00",
+            "exit_price": 109343.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 310.11,
+            "profit_and_loss_pct": 0.2844,
+            "max_favorable_excursion_usd": 381.71,
+            "max_adverse_excursion_usd": 306.89
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:34:59.307013+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Overall market sentiment is moderately bullish, driven by increasing corporate adoption and ETF progress. Technical indicators like Supertrend (Uptrend) and positive OBV confirm an underlying uptrend and buying pressure. While the ML forecast suggests a slight short-term pullback and MACD histogram is negative, this is interpreted as a potential opportunity to enter a long position at a more favorable price within the established bullish trend, rather than a reversal.",
+        "trade_parameters": {
+            "entry_price": 109034.89,
+            "stop_loss": 108500.0,
+            "take_profit": 110000.0,
+            "leverage": 71,
+            "size": 13.274,
+            "collateral_required": 20384.544485782146
+        },
+        "market_snapshot": {
+            "price": 109391.06,
+            "rsi_14": 57.91044467681484,
+            "macd_hist": -65.92701808277815,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.45
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:35:00+00:00",
+            "exit_price": 109393.6,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 358.71,
+            "profit_and_loss_pct": 0.329,
+            "max_favorable_excursion_usd": 380.31,
+            "max_adverse_excursion_usd": 308.29
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:36:18.429888+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.8,
+        "ai_reasoning": "Strong bullish market sentiment and news (institutional adoption, ETF approvals) are primary drivers. Technical indicators like Supertrend and OBV confirm an uptrend and accumulation. While MACD shows short-term bearish momentum and ML forecast is slightly lower, these are likely minor pullbacks within a larger bullish trend, presenting a potential entry opportunity.",
+        "trade_parameters": {
+            "entry_price": 109415.22,
+            "stop_loss": 108700.0,
+            "take_profit": 111000.0,
+            "leverage": 82,
+            "size": 11.465,
+            "collateral_required": 15298.12085791782
+        },
+        "market_snapshot": {
+            "price": 109415.22,
+            "rsi_14": 58.48712609446051,
+            "macd_hist": -64.38518332494021,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:37:00+00:00",
+            "exit_price": 109362.0,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -53.22,
+            "profit_and_loss_pct": -0.0486,
+            "max_favorable_excursion_usd": 0.0,
+            "max_adverse_excursion_usd": 688.62
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:37:36.675637+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Overall market sentiment is strongly bullish due to significant institutional adoption, supported by a Supertrend indicating an uptrend and positive OBV slope. While the ML forecast and MACD histogram suggest minor short-term bearish momentum, these are outweighed by the dominant bullish fundamental and trend indicators. The conflicting candlestick patterns indicate indecision, but the confluence of stronger signals points to an upward continuation.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 108600.0,
+            "take_profit": 109950.0,
+            "leverage": 78,
+            "size": 17.333,
+            "collateral_required": 24233.333333333332
+        },
+        "market_snapshot": {
+            "price": 109378.23,
+            "rsi_14": 57.59764023599363,
+            "macd_hist": -66.74579870955387,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:38:00+00:00",
+            "exit_price": 109362.0,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 312.0,
+            "profit_and_loss_pct": 0.2861,
+            "max_favorable_excursion_usd": 314.2,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:38:59.699859+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish market sentiment and news (institutional adoption, ETF approvals) combined with a confirmed Supertrend uptrend and positive OBV indicate a robust underlying bullish trend. Short-term bearish signals (HIKKAKE, negative MACD, bearish ML forecast) suggest a potential minor pullback, which is viewed as a buying opportunity within the broader uptrend.",
+        "trade_parameters": {
+            "entry_price": 109034.34,
+            "stop_loss": 107944.0,
+            "take_profit": 111215.0,
+            "leverage": 71,
+            "size": 6.512,
+            "collateral_required": 10000.031182933795
+        },
+        "market_snapshot": {
+            "price": 109365.4,
+            "rsi_14": 57.28015153341768,
+            "macd_hist": -67.56457933634118,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:39:00+00:00",
+            "exit_price": 109340.5,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 306.16,
+            "profit_and_loss_pct": 0.2808,
+            "max_favorable_excursion_usd": 306.16,
+            "max_adverse_excursion_usd": 307.74
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:41:31.433296+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "SHORT",
+        "confidence": 0.7,
+        "ai_reasoning": "The confluence of bearish signals including a negative ML forecast, negative MACD histogram, negative OBV slope, and bearish candlestick patterns (Engulfing, Hikkake) strongly suggests short-term downward pressure. While overall market sentiment is slightly positive and Supertrend indicates an uptrend, the immediate technical indicators and specific headwinds for Bitcoin miners outweigh these broader signals for a 15m timeframe.",
+        "trade_parameters": {
+            "entry_price": 109249.05,
+            "stop_loss": 109400.0,
+            "take_profit": 109000.0,
+            "leverage": 74,
+            "size": 49.023,
+            "collateral_required": 72374.3292480968
+        },
+        "market_snapshot": {
+            "price": 109249.05,
+            "rsi_14": 54.00226968680937,
+            "macd_hist": -74.98976452152311,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.25
+        },
+        "performance": {
+            "status": "WIN",
+            "exit_time": "2025-07-03T00:06:00+00:00",
+            "exit_price": 109000.0,
+            "duration_hours": 1.41,
+            "profit_and_loss_usd": 249.05,
+            "profit_and_loss_pct": 0.228,
+            "max_favorable_excursion_usd": 312.85,
+            "max_adverse_excursion_usd": 0.0
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:46:39.469290+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits overwhelmingly bullish sentiment (0.80) driven by institutional adoption and regulatory approvals, strongly supported by a confirmed Supertrend uptrend. While short-term technicals (negative MACD histogram, negative OBV slope, bearish candlestick patterns, and a slightly lower ML forecast) suggest a minor pullback or consolidation, these are likely temporary within the robust broader uptrend. This presents an opportunity to enter a long position on a slight dip, aligning with the dominant bullish fundamental and trend signals.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 108500.0,
+            "take_profit": 110500.0,
+            "leverage": 74,
+            "size": 13.455,
+            "collateral_required": 19827.272727272728
+        },
+        "market_snapshot": {
+            "price": 109133.3,
+            "rsi_14": 50.396020008892684,
+            "macd_hist": -82.6851206513183,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:47:00+00:00",
+            "exit_price": 109099.1,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 49.1,
+            "profit_and_loss_pct": 0.045,
+            "max_favorable_excursion_usd": 109.9,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:49:17.790921+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish market sentiment driven by institutional adoption and regulatory approvals, coupled with a confirmed Supertrend uptrend, indicates a high probability of continued price appreciation. Although MACD and OBV show short-term bearish momentum and volume, multiple bullish candlestick patterns suggest a potential bounce or continuation after a minor pullback. The overall confluence favors a long position, prioritizing the dominant trend and fundamental strength.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 107900.0,
+            "take_profit": 110800.0,
+            "leverage": 78,
+            "size": 6.783,
+            "collateral_required": 9482.608695652174
+        },
+        "market_snapshot": {
+            "price": 109159.46,
+            "rsi_14": 51.20474687043182,
+            "macd_hist": -81.01692691912788,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:50:00+00:00",
+            "exit_price": 109144.2,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 94.2,
+            "profit_and_loss_pct": 0.0864,
+            "max_favorable_excursion_usd": 109.3,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:50:34.127871+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish market sentiment driven by institutional adoption and ETF approvals, coupled with a confirmed Supertrend uptrend, indicates a favorable long position. While short-term indicators like negative MACD and OBV, and a slightly lower ML forecast suggest a minor pullback or consolidation, these are likely temporary within the broader uptrend. The Hammer candlestick supports a potential bounce from a dip.",
+        "trade_parameters": {
+            "entry_price": 109050.0,
+            "stop_loss": 108500.0,
+            "take_profit": 110800.0,
+            "leverage": 74,
+            "size": 13.455,
+            "collateral_required": 19827.272727272728
+        },
+        "market_snapshot": {
+            "price": 109143.29,
+            "rsi_14": 50.7017510684478,
+            "macd_hist": -82.04822036642028,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.5
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:51:00+00:00",
+            "exit_price": 109128.9,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 78.9,
+            "profit_and_loss_pct": 0.0724,
+            "max_favorable_excursion_usd": 109.3,
+            "max_adverse_excursion_usd": 323.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:51:51.451276+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Overall market sentiment is strongly bullish due to institutional adoption and regulatory approvals, reinforced by a confirmed Supertrend uptrend. While short-term indicators like MACD histogram and OBV show bearish momentum and the ML forecast suggests a slight dip, the presence of a bullish HAMMER candlestick indicates potential buying interest at current levels, suggesting a likely continuation of the uptrend after a minor consolidation.",
+        "trade_parameters": {
+            "entry_price": 109023.91,
+            "stop_loss": 108700.0,
+            "take_profit": 110200.0,
+            "leverage": 74,
+            "size": 22.846,
+            "collateral_required": 33658.70457843192
+        },
+        "market_snapshot": {
+            "price": 109143.29,
+            "rsi_14": 50.7017510684478,
+            "macd_hist": -82.04822036642028,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.6
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:52:00+00:00",
+            "exit_price": 109142.6,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 118.69,
+            "profit_and_loss_pct": 0.1089,
+            "max_favorable_excursion_usd": 135.39,
+            "max_adverse_excursion_usd": 297.31
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T22:53:14.623156+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "The market is underpinned by strong bullish sentiment (0.65) and an established uptrend (Supertrend). While short-term momentum (MACD, OBV) shows bearish signs, the appearance of a HAMMER candlestick pattern suggests a potential bullish reversal from the current price level. This confluence indicates that the current dip may be a buying opportunity within the broader uptrend.",
+        "trade_parameters": {
+            "entry_price": 109143.29,
+            "stop_loss": 107500.0,
+            "take_profit": 111600.0,
+            "leverage": 68,
+            "size": 4.138,
+            "collateral_required": 6641.754650731181
+        },
+        "market_snapshot": {
+            "price": 109143.29,
+            "rsi_14": 50.70205927252488,
+            "macd_hist": -82.0475821897798,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T22:54:00+00:00",
+            "exit_price": 109121.1,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -22.19,
+            "profit_and_loss_pct": -0.0203,
+            "max_favorable_excursion_usd": 16.01,
+            "max_adverse_excursion_usd": 416.69
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:00:59.211030+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "Strong bullish news and sentiment, coupled with an 'Uptrend' Supertrend signal and bullish candlestick patterns (INSIDE, SHORTLINE), indicate a positive market bias. However, negative MACD histogram and OBV slope, along with a slightly lower ML forecast, suggest short-term weakness or consolidation. A LONG position is favored, targeting an entry on a minor pullback, with a strict stop-loss due to the conflicting momentum signals, prioritizing capital preservation.",
+        "trade_parameters": {
+            "entry_price": 109016.21,
+            "stop_loss": 107926.0,
+            "take_profit": 111196.0,
+            "leverage": 68,
+            "size": 6.237,
+            "collateral_required": 9999.56063510694
+        },
+        "market_snapshot": {
+            "price": 109168.0,
+            "rsi_14": 51.48708831465522,
+            "macd_hist": -79.64507928566098,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:01:00+00:00",
+            "exit_price": 109119.4,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 103.19,
+            "profit_and_loss_pct": 0.0947,
+            "max_favorable_excursion_usd": 143.09,
+            "max_adverse_excursion_usd": 289.61
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:04:52.126388+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market exhibits strong bullish sentiment driven by significant institutional interest and new infrastructure, supported by an overall Supertrend indicating an uptrend. While short-term technicals like MACD histogram and OBV slope show negative momentum, and the ML forecast suggests a slight dip, these are likely minor pullbacks within a larger bullish context. Multiple bullish candlestick patterns (HAMMER, INSIDE, SHORTLINE) reinforce the potential for upward movement, outweighing the single bearish pattern (HANGINGMAN). Capital preservation is prioritized with a clear stop-loss.",
+        "trade_parameters": {
+            "entry_price": 109160.46,
+            "stop_loss": 108500.0,
+            "take_profit": 110800.0,
+            "leverage": 74,
+            "size": 11.204,
+            "collateral_required": 16527.944160130657
+        },
+        "market_snapshot": {
+            "price": 109160.46,
+            "rsi_14": 51.25098948357497,
+            "macd_hist": -80.12562629420799,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.68
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:05:00+00:00",
+            "exit_price": 109128.0,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": -32.46,
+            "profit_and_loss_pct": -0.0297,
+            "max_favorable_excursion_usd": 0.0,
+            "max_adverse_excursion_usd": 433.86
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:06:14.157939+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish market sentiment and Supertrend indicating an uptrend suggest an overall positive direction. While short-term momentum indicators (MACD, OBV) show bearish divergence and the ML forecast suggests a slight dip, this may represent a temporary pullback within the established uptrend, offering a potential entry for a long position.",
+        "trade_parameters": {
+            "entry_price": 109015.34,
+            "stop_loss": 108000.0,
+            "take_profit": 111000.0,
+            "leverage": 71,
+            "size": 6.993,
+            "collateral_required": 10736.831012271787
+        },
+        "market_snapshot": {
+            "price": 109127.42,
+            "rsi_14": 50.183421774873125,
+            "macd_hist": -82.234800083386,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.56
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:07:00+00:00",
+            "exit_price": 109128.0,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 112.66,
+            "profit_and_loss_pct": 0.1033,
+            "max_favorable_excursion_usd": 112.66,
+            "max_adverse_excursion_usd": 288.74
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:10:11.423572+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "The market exhibits overwhelmingly bullish sentiment driven by institutional adoption and an established uptrend indicated by Supertrend. While short-term indicators (ML forecast, MACD histogram, negative OBV slope, and SHORTLINE candlestick) suggest a potential minor pullback or consolidation, this is viewed as a temporary dip within a stronger overall bullish trend. The strategy is to 'buy the dip' at the forecasted lower price.",
+        "trade_parameters": {
+            "entry_price": 109014.61,
+            "stop_loss": 108500.0,
+            "take_profit": 110500.0,
+            "leverage": 78,
+            "size": 15.157,
+            "collateral_required": 21183.92763451932
+        },
+        "market_snapshot": {
+            "price": 109094.26,
+            "rsi_14": 49.12787549069836,
+            "macd_hist": -84.35099381557455,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:11:00+00:00",
+            "exit_price": 109084.5,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 69.89,
+            "profit_and_loss_pct": 0.0641,
+            "max_favorable_excursion_usd": 109.39,
+            "max_adverse_excursion_usd": 288.01
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:15:24.846321+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish sentiment and news, combined with an established uptrend (Supertrend) and bullish candlestick patterns, indicate a robust underlying positive bias. Although MACD and OBV show short-term bearish momentum, this is likely a minor consolidation offering a strategic entry point to capitalize on the prevailing bullish trend.",
+        "trade_parameters": {
+            "entry_price": 109004.65,
+            "stop_loss": 107914.6,
+            "take_profit": 111729.77,
+            "leverage": 71,
+            "size": 6.513,
+            "collateral_required": 9999.967891381237
+        },
+        "market_snapshot": {
+            "price": 109117.42,
+            "rsi_14": 49.87471108059302,
+            "macd_hist": -80.92762415790531,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:16:00+00:00",
+            "exit_price": 109094.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 89.95,
+            "profit_and_loss_pct": 0.0825,
+            "max_favorable_excursion_usd": 89.95,
+            "max_adverse_excursion_usd": 278.05
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:16:44.373235+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "The overall market sentiment is strongly bullish (0.85), driven by significant institutional investments and mainstream adoption, which are strong fundamental drivers. The Supertrend indicator also confirms an uptrend. While short-term indicators like MACD Histogram and OBV slope show negative momentum, and the ML forecast suggests a slight dip, these are likely minor corrections within a larger bullish trend. The mixed candlestick patterns indicate indecision, which can precede a continuation of the dominant trend. A long position is favored, targeting an entry on a slight pullback.",
+        "trade_parameters": {
+            "entry_price": 109004.36,
+            "stop_loss": 107900.0,
+            "take_profit": 110600.0,
+            "leverage": 71,
+            "size": 6.429,
+            "collateral_required": 9870.364736136762
+        },
+        "market_snapshot": {
+            "price": 109104.11,
+            "rsi_14": 49.41729507314985,
+            "macd_hist": -81.77767543994887,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.85
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:17:00+00:00",
+            "exit_price": 109062.8,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": 58.44,
+            "profit_and_loss_pct": 0.0536,
+            "max_favorable_excursion_usd": 58.44,
+            "max_adverse_excursion_usd": 277.76
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:20:41.056057+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "The market is driven by strong bullish sentiment, fueled by institutional investment and adoption, with Supertrend confirming an uptrend. While short-term technicals (MACD, OBV, SHORTLINE candlestick) show minor bearish momentum or consolidation, these are likely temporary pullbacks within the broader bullish expectation for a price breakout. The ML forecast suggests a slight dip, which could serve as an optimal entry point before the anticipated upward move.",
+        "trade_parameters": {
+            "entry_price": 109002.63,
+            "stop_loss": 108457.63,
+            "take_profit": 110092.63,
+            "leverage": 74,
+            "size": 13.578,
+            "collateral_required": 20000.48256880734
+        },
+        "market_snapshot": {
+            "price": 109024.45,
+            "rsi_14": 46.853037256843365,
+            "macd_hist": -86.86075236303333,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.68
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:21:00+00:00",
+            "exit_price": 109004.1,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 1.47,
+            "profit_and_loss_pct": 0.0013,
+            "max_favorable_excursion_usd": 7.27,
+            "max_adverse_excursion_usd": 276.03
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:24:40.994780+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Despite immediate bearish candlestick patterns (BELTHOLD, CLOSINGMARUBOZU, LONGLINE, MARUBOZU) and negative MACD/OBV indicating current downward momentum, the price is significantly below the lower Bollinger Band, suggesting oversold conditions. This, combined with strong bullish news sentiment (0.65) and a slightly bullish ML forecast ($109001.71), indicates a high probability of a short-term bounce or reversal upwards. The Supertrend also remains in an uptrend, supporting the underlying bullish trend.",
+        "trade_parameters": {
+            "entry_price": 108982.01,
+            "stop_loss": 108500.0,
+            "take_profit": 109800.0,
+            "leverage": 71,
+            "size": 14.73,
+            "collateral_required": 22609.906433476728
+        },
+        "market_snapshot": {
+            "price": 108982.01,
+            "rsi_14": 45.59247166092657,
+            "macd_hist": -89.56917401544814,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:25:00+00:00",
+            "exit_price": 108980.2,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -1.81,
+            "profit_and_loss_pct": -0.0017,
+            "max_favorable_excursion_usd": 6.99,
+            "max_adverse_excursion_usd": 255.41
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:26:04.380184+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "The price is significantly below the lower Bollinger Band, indicating an oversold condition which often precedes a bounce. This technical signal is strongly supported by the overall bullish market sentiment (0.75 score), positive news regarding institutional investments and mainstream adoption, and a slightly bullish ML forecast. While short-term indicators like MACD, OBV, and multiple candlestick patterns currently show bearish momentum, these likely reflect the recent dip that led to the oversold state. The Supertrend also indicates an underlying uptrend, suggesting this is a temporary correction. The confluence of oversold conditions and strong fundamental bullishness points to an imminent recovery.",
+        "trade_parameters": {
+            "entry_price": 108989.33,
+            "stop_loss": 107800.0,
+            "take_profit": 110000.0,
+            "leverage": 68,
+            "size": 5.718,
+            "collateral_required": 9163.92674867361
+        },
+        "market_snapshot": {
+            "price": 108989.33,
+            "rsi_14": 45.80502922824415,
+            "macd_hist": -89.102028716305,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:27:00+00:00",
+            "exit_price": 108931.7,
+            "duration_hours": 0.02,
+            "profit_and_loss_usd": -57.63,
+            "profit_and_loss_pct": -0.0529,
+            "max_favorable_excursion_usd": 0.0,
+            "max_adverse_excursion_usd": 262.73
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:27:25.513417+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Despite immediate bearish candlestick patterns and negative momentum indicators (MACD, OBV), the overarching market sentiment is strongly bullish (0.70) driven by institutional interest and adoption. The Supertrend indicator confirms an underlying uptrend. Price being below the lower Bollinger Band suggests an oversold condition, presenting a potential 'buy the dip' opportunity within the established bullish trend. The ML forecast also indicates a slight upward movement. Capital preservation is addressed by a clear stop-loss, acknowledging the short-term bearish pressure.",
+        "trade_parameters": {
+            "entry_price": 108987.9,
+            "stop_loss": 107890.0,
+            "take_profit": 111160.0,
+            "leverage": 71,
+            "size": 6.467,
+            "collateral_required": 9926.94234447587
+        },
+        "market_snapshot": {
+            "price": 108987.9,
+            "rsi_14": 45.763349373849884,
+            "macd_hist": -89.19328797555826,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.7
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:28:00+00:00",
+            "exit_price": 108937.7,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -50.2,
+            "profit_and_loss_pct": -0.0461,
+            "max_favorable_excursion_usd": 1.1,
+            "max_adverse_excursion_usd": 261.3
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:30:06.793996+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Strong bullish market sentiment (0.75) and institutional investment suggest underlying strength, making dips potential buying opportunities. Price is currently below the lower Bollinger Band on the 15m timeframe, indicating an oversold condition likely to trigger a bounce. The Supertrend remains in an uptrend, supporting the idea that this is a temporary pullback, and the ML forecast also points to a slight upward movement. While short-term momentum indicators (MACD, OBV, candlestick patterns) are bearish, the confluence of strong sentiment, oversold conditions, and the prevailing uptrend suggests a high probability of a short-term rebound.",
+        "trade_parameters": {
+            "entry_price": 108953.6,
+            "stop_loss": 108500.0,
+            "take_profit": 109500.0,
+            "leverage": 71,
+            "size": 15.653,
+            "collateral_required": 24019.753086419445
+        },
+        "market_snapshot": {
+            "price": 108953.6,
+            "rsi_14": 44.785860034545735,
+            "macd_hist": -91.38223384451885,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:31:00+00:00",
+            "exit_price": 108988.9,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": 35.3,
+            "profit_and_loss_pct": 0.0324,
+            "max_favorable_excursion_usd": 35.4,
+            "max_adverse_excursion_usd": 227.0
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:31:30.009646+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.65,
+        "ai_reasoning": "Overwhelmingly bullish market sentiment (0.80) driven by institutional adoption and breakout expectations, combined with an uptrend Supertrend and multiple bullish candlestick patterns (HARAMI, INSIDE, SHORTLINE), suggests an imminent upward move. While short-term momentum indicators (MACD, OBV) are negative, they may represent a temporary consolidation before the anticipated breakout, offering a potential entry point. Capital preservation is addressed with a tight stop-loss.",
+        "trade_parameters": {
+            "entry_price": 108988.99,
+            "stop_loss": 108444.0,
+            "take_profit": 110078.0,
+            "leverage": 71,
+            "size": 13.028,
+            "collateral_required": 19998.346758655927
+        },
+        "market_snapshot": {
+            "price": 108988.99,
+            "rsi_14": 46.06626845490383,
+            "macd_hist": -90.97525305238233,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.8
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:32:00+00:00",
+            "exit_price": 108950.6,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -38.39,
+            "profit_and_loss_pct": -0.0352,
+            "max_favorable_excursion_usd": 0.0,
+            "max_adverse_excursion_usd": 262.39
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:34:55.323390+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish market sentiment (0.75) and multiple bullish candlestick patterns (DOJI, HARAMI, INSIDE) indicate potential upward momentum. The Supertrend also confirms an uptrend. While MACD histogram and OBV slope are bearish, suggesting some underlying selling pressure, the confluence of strong sentiment and immediate price action signals (candlesticks) outweighs these lagging indicators, supported by a slightly bullish ML forecast.",
+        "trade_parameters": {
+            "entry_price": 108955.72,
+            "stop_loss": 108400.0,
+            "take_profit": 110045.0,
+            "leverage": 74,
+            "size": 13.316,
+            "collateral_required": 19606.22615705747
+        },
+        "market_snapshot": {
+            "price": 108955.72,
+            "rsi_14": 44.864248822088,
+            "macd_hist": -93.09910490423354,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:35:00+00:00",
+            "exit_price": 108939.7,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": -16.02,
+            "profit_and_loss_pct": -0.0147,
+            "max_favorable_excursion_usd": 0.0,
+            "max_adverse_excursion_usd": 229.12
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:37:29.537143+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.75,
+        "ai_reasoning": "Strong bullish market sentiment driven by institutional investment and positive news, supported by an uptrend indicated by Supertrend and a slightly bullish ML forecast. Despite some short-term bearish momentum in MACD and OBV, the overall confluence suggests a likely upward move after potential consolidation indicated by multiple bullish Doji patterns.",
+        "trade_parameters": {
+            "entry_price": 108960.0,
+            "stop_loss": 107850.0,
+            "take_profit": 111150.0,
+            "leverage": 78,
+            "size": 7.027,
+            "collateral_required": 9816.216216216217
+        },
+        "market_snapshot": {
+            "price": 108960.0,
+            "rsi_14": 45.0218290885303,
+            "macd_hist": -92.82596530309092,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:38:00+00:00",
+            "exit_price": 108890.4,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -69.6,
+            "profit_and_loss_pct": -0.0639,
+            "max_favorable_excursion_usd": 0.0,
+            "max_adverse_excursion_usd": 233.4
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:43:01.765878+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "The price is significantly below the lower Bollinger Band, indicating an oversold condition. This extreme technical signal, combined with strong bullish market sentiment (0.75), a positive ML forecast ($108979.12), and an overall Supertrend uptrend, suggests a high probability of a bounce or mean reversion despite short-term bearish momentum from MACD and OBV and bearish candlestick patterns. Prioritizing capital preservation by not shorting into an extreme low.",
+        "trade_parameters": {
+            "entry_price": 108734.88,
+            "stop_loss": 108400.0,
+            "take_profit": 109200.0,
+            "leverage": 68,
+            "size": 20.306,
+            "collateral_required": 32469.804108934095
+        },
+        "market_snapshot": {
+            "price": 108734.88,
+            "rsi_14": 39.056954473695946,
+            "macd_hist": -107.1925977817169,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.75
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:44:00+00:00",
+            "exit_price": 108723.0,
+            "duration_hours": 0.02,
+            "profit_and_loss_usd": -11.88,
+            "profit_and_loss_pct": -0.0109,
+            "max_favorable_excursion_usd": 153.02,
+            "max_adverse_excursion_usd": 4.78
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:44:24.992355+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.6,
+        "ai_reasoning": "Despite short-term bearish momentum indicated by MACD, negative OBV slope, and a LONGLINE candlestick pattern, the overall market sentiment is strongly bullish due to institutional accumulation and Bitcoin's breakout potential. The Supertrend remains in an uptrend, and the price is currently below the lower Bollinger Band, suggesting an oversold condition ripe for a bounce within the larger bullish trend. This confluence supports a 'buy the dip' strategy.",
+        "trade_parameters": {
+            "entry_price": 108738.46,
+            "stop_loss": 108150.0,
+            "take_profit": 109915.0,
+            "leverage": 68,
+            "size": 11.556,
+            "collateral_required": 18478.47942086103
+        },
+        "market_snapshot": {
+            "price": 108738.46,
+            "rsi_14": 39.13890163383515,
+            "macd_hist": -106.96413054525766,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.65
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:45:00+00:00",
+            "exit_price": 108723.1,
+            "duration_hours": 0.01,
+            "profit_and_loss_usd": -15.36,
+            "profit_and_loss_pct": -0.0141,
+            "max_favorable_excursion_usd": 149.44,
+            "max_adverse_excursion_usd": 0.0
+        }
+    },
+    {
+        "timestamp_utc": "2025-07-02T23:45:42.777276+00:00",
+        "symbol": "BTCUSDT",
+        "decision": "LONG",
+        "confidence": 0.7,
+        "ai_reasoning": "Strong bullish sentiment, multiple bullish candlestick patterns (BELTHOLD, CLOSINGMARUBOZU, INSIDE, LONGLINE, MARUBOZU), and an uptrending Supertrend indicator suggest a short-term upward movement. The ML forecast also supports a slight price increase. While MACD histogram is negative and OBV slope is declining, the confluence of strong bullish patterns and positive market sentiment outweighs these short-term bearish momentum indicators for a tactical long position.",
+        "trade_parameters": {
+            "entry_price": 108820.64,
+            "stop_loss": 108200.0,
+            "take_profit": 109500.0,
+            "leverage": 74,
+            "size": 11.923,
+            "collateral_required": 17533.61691157516
+        },
+        "market_snapshot": {
+            "price": 108820.64,
+            "rsi_14": 42.290827981453596,
+            "macd_hist": -107.65721091079176,
+            "supertrend_direction": 1.0,
+            "sentiment_score": 0.5
+        },
+        "performance": {
+            "status": "EXPIRED",
+            "exit_time": "2025-07-02T23:46:00+00:00",
+            "exit_price": 108758.5,
+            "duration_hours": 0.0,
+            "profit_and_loss_usd": -62.14,
+            "profit_and_loss_pct": -0.0571,
+            "max_favorable_excursion_usd": 67.26,
+            "max_adverse_excursion_usd": 34.74
         }
     }
 ]

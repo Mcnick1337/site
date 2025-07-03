@@ -1,3 +1,5 @@
+// File: src/components/charts/SymbolWinRates.jsx
+
 export const SymbolWinRates = ({ rates }) => {
     if (!rates || rates.length === 0) {
         return <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center text-gray-400">No symbol data available.</div>;

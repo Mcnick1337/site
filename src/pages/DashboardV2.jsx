@@ -3,12 +3,15 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { V2_MODELS } from '../App';
 import { TabNav } from '../components/TabNav';
-import { SignalCatalogV2 } from '../components/V2/SignalCatalogV2';
-import { SignalCardV2_Advanced } from '../components/V2/SignalCardV2_Advanced';
-import { FilterControlsV2 } from '../components/V2/FilterControlsV2';
-import { StatsGridV2 } from '../components/V2/StatsGridV2';
+import { SignalCatalogV2 } from '../components/v2/SignalCatalogV2';
+import { SignalCardV2_Advanced } from '../components/v2/SignalCardV2_Advanced';
+import { FilterControlsV2 } from '../components/v2/FilterControlsV2';
+import { StatsGridV2 } from '../components/v2/StatsGridV2';
 import { Pagination } from '../components/Pagination';
 import { EmptyState } from '../components/EmptyState';
+import { StatsGridV2_Advanced } from '../components/v2/StatsGridV2_Advanced';
+import { DetailsSectionV2_Advanced } from '../components/v2/DetailsSectionV2_Advanced';
+import { calculateAllStatsV2_Advanced } from '../utils/calculateStats';
 
 export const DashboardV2 = ({
   v2ModelsState,
@@ -42,6 +45,14 @@ export const DashboardV2 = ({
     });
   }, [signals, filters]);
 
+  // --- ADDED: New stats calculation for the advanced model ---
+  const advancedStats = useMemo(() => {
+      if (modelConfig.advanced) {
+          return calculateAllStatsV2_Advanced(filteredSignals);
+      }
+      return null;
+  }, [modelConfig.advanced, filteredSignals]);
+
   const totalPages = Math.ceil(filteredSignals.length / itemsPerPage);
   const paginatedSignals = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -65,12 +76,14 @@ export const DashboardV2 = ({
       <div className="mt-4">
         {modelConfig.advanced ? (
           <>
+            {/* --- UPDATED: Use the new advanced components --- */}
+            <StatsGridV2_Advanced stats={advancedStats} />
+            <DetailsSectionV2_Advanced stats={advancedStats} />
             <FilterControlsV2 filters={filters} onFilterChange={(key, val) => onFilterChange(activeV2Tab, key, val)} availableSymbols={availableSymbols} />
             {paginatedSignals.length > 0 ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
                 {paginatedSignals.map((signal) => (
                   <div key={signal.timestamp_utc} className="card-enter">
-                    {/* --- THE FIX IS HERE: Changed from <button> to <div> --- */}
                     <div
                       onClick={() => onSelectSignalV2Advanced(signal)}
                       className="w-full h-full cursor-pointer"

@@ -492,3 +492,79 @@ export async function verifySignalOutcome(signal) {
 
     return { status: 'expired', message: `Signal did not hit TP or SL within ${MAX_DAYS_TO_CHECK} days.` };
 }
+
+// --- ADDED: New calculation engine for the V2 Advanced model ---
+export function calculateAllStatsV2_Advanced(signals) {
+    if (!signals || signals.length === 0) return {};
+
+    const validTrades = signals.filter(s => s.performance && s.performance.status !== 'PENDING');
+
+    let wins = 0, losses = 0, grossProfit = 0, grossLoss = 0;
+    let equity = 10000, peakEquity = 10000, maxDrawdown = 0;
+    
+    const sortedTrades = [...validTrades].sort((a, b) => new Date(a.performance.exit_time) - new Date(b.performance.exit_time));
+    
+    const initialTimestamp = sortedTrades.length > 0 ? new Date(sortedTrades[0].timestamp_utc).getTime() : Date.now();
+    const equityCurveData = [{ x: initialTimestamp, y: equity }];
+    const returns = [];
+    const symbolStats = {};
+
+    sortedTrades.forEach(signal => {
+        const { performance, trade_parameters, symbol } = signal;
+        const pnl = parseFloat(performance.profit_and_loss_usd);
+        const entry = parseFloat(trade_parameters.entry_price);
+        const risk = Math.abs(entry - parseFloat(trade_parameters.stop_loss));
+        
+        if (performance.status === 'WIN') {
+            wins++;
+            grossProfit += pnl;
+        } else if (performance.status === 'LOSS') {
+            losses++;
+            grossLoss += pnl;
+        }
+
+        if (!symbolStats[symbol]) {
+            symbolStats[symbol] = { wins: 0, losses: 0, grossProfit: 0, grossLoss: 0 };
+        }
+        if (performance.status === 'WIN') symbolStats[symbol].wins++;
+        else if (performance.status === 'LOSS') symbolStats[symbol].losses++;
+        
+        if (pnl > 0) symbolStats[symbol].grossProfit += pnl;
+        else symbolStats[symbol].grossLoss += pnl;
+
+        const rReturn = risk > 0 ? pnl / risk : 0;
+        returns.push(rReturn);
+        
+        equity += (rReturn * 100); // Normalized equity curve based on 1R = $100
+        peakEquity = Math.max(peakEquity, equity);
+        maxDrawdown = Math.max(maxDrawdown, (peakEquity - equity) / peakEquity);
+        equityCurveData.push({ x: new Date(performance.exit_time).getTime(), y: equity });
+    });
+
+    const tradableSignals = wins + losses;
+    const avgReturn = returns.length > 0 ? returns.reduce((a, b) => a + b, 0) / returns.length : 0;
+    const stdDev = returns.length > 0 ? Math.sqrt(returns.map(x => Math.pow(x - avgReturn, 2)).reduce((a, b) => a + b, 0) / returns.length) : 0;
+    
+    const symbolWinRates = Object.entries(symbolStats).map(([symbol, { wins, losses, grossProfit, grossLoss }]) => {
+        const total = wins + losses;
+        return {
+            symbol,
+            winRate: total > 0 ? (wins / total * 100) : 0,
+            wins, losses, total,
+            profitFactor: grossLoss !== 0 ? Math.abs(grossProfit / grossLoss) : Infinity,
+        };
+    }).sort((a, b) => b.total - a.total);
+
+    return {
+        winRate: tradableSignals > 0 ? (wins / tradableSignals) * 100 : 0,
+        tradableSignals,
+        wins,
+        losses,
+        profitFactor: grossLoss !== 0 ? Math.abs(grossProfit / grossLoss) : Infinity,
+        sharpeRatio: stdDev !== 0 ? avgReturn / stdDev : 0,
+        maxDrawdown: maxDrawdown * 100,
+        equityCurveData,
+        returns,
+        symbolWinRates,
+    };
+}
