@@ -497,12 +497,12 @@ export async function verifySignalOutcome(signal) {
 export function calculateAllStatsV2_Advanced(signals) {
     if (!signals || signals.length === 0) return {};
 
-    const validTrades = signals.filter(s => s.performance && s.performance.status !== 'PENDING');
+    const validTrades = signals.filter(s => s.performance && s.performance.status !== 'PENDING' && s.performance.status !== 'LIVE');
 
     let wins = 0, losses = 0, grossProfit = 0, grossLoss = 0;
     let equity = 10000, peakEquity = 10000, maxDrawdown = 0;
     
-    const sortedTrades = [...validTrades].sort((a, b) => new Date(a.performance.exit_time) - new Date(b.performance.exit_time));
+    const sortedTrades = [...validTrades].sort((a, b) => new Date(a.timestamp_utc) - new Date(b.timestamp_utc));
     
     const initialTimestamp = sortedTrades.length > 0 ? new Date(sortedTrades[0].timestamp_utc).getTime() : Date.now();
     const equityCurveData = [{ x: initialTimestamp, y: equity }];
@@ -535,10 +535,11 @@ export function calculateAllStatsV2_Advanced(signals) {
         const rReturn = risk > 0 ? pnl / risk : 0;
         returns.push(rReturn);
         
-        equity += (rReturn * 100); // Normalized equity curve based on 1R = $100
+        equity += (rReturn * 100);
         peakEquity = Math.max(peakEquity, equity);
         maxDrawdown = Math.max(maxDrawdown, (peakEquity - equity) / peakEquity);
-        equityCurveData.push({ x: new Date(performance.exit_time).getTime(), y: equity });
+        
+        equityCurveData.push({ x: new Date(signal.timestamp_utc).getTime(), y: equity });
     });
 
     const tradableSignals = wins + losses;
